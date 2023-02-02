@@ -1,7 +1,7 @@
 ---
 layout: post
-date: 2015-10-22 15:59:00-0400
+date: 2022-11-01 00:00:00-0000
 inline: true
 ---
 
-A simple inline announcement.
+I started my new job as a research associate at the University of Manchester.
