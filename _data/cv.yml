@@ -15,7 +15,7 @@
   contents:
     - title: Ph.D.
       institution: INPT-IRIT, Toulouse, France
-      year: 2019 - 2022
+      year: Oct. 2019 - <br> Oct. 2022
       description:
         - 'Title: <em>"Mixed precision iterative refinement for the solution of large sparse linear systems"</em>.' 
         - title: 'My Ph.D. thesis research includes the following:'
@@ -26,12 +26,12 @@
         - 'Advisors: Alfredo Buttari and Théo Mary.'
     - title: M.Eng. and M.Sc. in Computer Science and Applied Math.
       institution: ENSEEIHT, Toulouse, France
-      year: 2015-2019
+      year: Sep. 2015 -<br> Sep. 2019
       #description:
         #- High Performance Computing and Big Data department.
     - title: Preparatory classes
       institution: Lycée Descartes, Tours, France
-      year: 2013-2015
+      year: Sep. 2013 -<br> Aug. 2015
       #description:
         #- Mathematics and Physics department. Two-year undergraduate intensive courses in mathematics and physics.
 
@@ -40,7 +40,7 @@
   contents:
     - title: Research Associate
       institution: The University of Manchester, Manchester, UK
-      year: 2022 - now
+      year: Nov. 2022 -<br> Now
       description:
         - Member of the Numerical Linear Algebra group working with Pr. Nicholas J. Higham. My research topics cover sparse direct and iterative solvers, high performance computing, rounding error analysis, mixed precision, and approximate computing.
         #- Description 2.
@@ -50,21 +50,21 @@
             #- Sub-description 2.
     - title: Internship
       institution: AMSS (Academy of Sciences), Beijing, China
-      year: 2019
+      year: Apr. 2019 -<br> Sep. 2019
       description:
         - Deep learning approaches to determine the dominant eigenvalues. Study of the sparse matrix case using graph neural network approaches with TensorFlow.
         - 'Advisor: Pr. Liu Xin.'
 
     - title: Group project
       institution: ENSEEIHT, Toulouse, France
-      year: 2019
+      year: Jan. 2019 -<br> Mar. 2019
       description:
         - Supervised postgraduate group project. Use of convolutional neural networks to estimate the nearshore bathymetry through wave motions. This work contributed to a journal article.
         - 'Advisor: Ehouarn Simon.'
 
     - title: Gap year
       institution: IPAL-CNRS, Singapore
-      year: 2017 - 2018
+      year: Sep. 2017 -<br> Sep. 2018
       description:
         - 'Position tracking of fingers on a large 2D surface. Part of a project willing to make wearable technology to help visually impaired people to interact with maps. Different technologies were used: Inertial Measurement Unit (IMU), color tracking, Leap Motion, and the creation of a dot patterns based finger tracker inspired by the Anoto technology.'
         - 'Advisor: Christophe Jouffrais.'
@@ -114,12 +114,12 @@
   type: time_table
   contents:
     - title: MESRI doctoral contract
-      year: 2019-2022
+      year: Oct. 2019 -<br> Oct. 2022
       institution: French government funding
       items: 
         - Government funding covering my wage over the three years of Ph.D. thesis. Obtained after competitive examination. 
     - title: International travel grant
-      year: 2022
+      year: Mar. 2022 -<br> May. 2022
       institution: INPT/CIMI
       items: 
         - Awarded to cover expenses for a three months mission at the University of Manchester for a collaboration with Pr. Nicholas J. Higham.
