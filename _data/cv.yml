@@ -72,32 +72,32 @@
 - title: Teaching experiences
   type: time_table
   contents:
-    - title: Lecture, mixed precision iterative refinement
+    - title: Mixed precision iterative refinement, lecture
       year: Feb. 2023
       institution: Université Paris-Saclay, France
       items: 
         - Design and delivery of a 1-hour lecture in English to postgraduate students on mixed precision iterative refinement.
-    - title: Lecture, insight of my Ph.D.
+    - title: Insight of my Ph.D., lecture 
       year: Feb. 2022
       institution: HPC M.Sc. seminar, France
       items: 
         - A 1-hour talk about my Ph.D. research topic to postgraduate students specialized in high performance computing from many french universities.
-    - title: Lab class, graph theory
+    - title: Graph theory, lab class
       year: 2019-2022
       institution: ENSEEIHT, Toulouse, France
       items: 
         - 'Design, marking, organization, and delivery of two student code projects: “Communities detection” and “Epidemic spreading”. Approximately 8 hours of class each.'
-    - title: Lab class, parallel computing
+    - title: Parallel computing, lab class 
       year: 2019-2022
       institution: ENSEEIHT, Toulouse, France
       items: 
         - 'Delivery of OpenMP and MPI based lab work classes to parallelize simple applications. Design of a 2-hours lab work class part of this teaching unit: “Heterogenous matrix–matrix product with CPU and GPU”.'
-    - title: Lab/Tutorial class, scientific computing
+    - title: Scientific computing, lab/tutorial class 
       year: 2019-2022
       institution: ENSEEIHT, Toulouse, France
       items: 
         - 'Delivery of tutorial and lab work classes to introduce mainstream linear algebra algorithms (direct or iterative linear system solvers, eigenvalues computation, numerical error, etc.).'
-    - title: Lab class, data analysis
+    - title: Data analysis, lab class 
       year: 2019-2022
       institution: ENSEEIHT, Toulouse, France
       items: 
