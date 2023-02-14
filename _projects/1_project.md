@@ -1,22 +1,22 @@
 ---
 layout: page
 title: Performance profile
-description: A performance profile figure comparing the number of iterations of seven algorithms.
+description: A performance profile plot comparing the number of iterations of seven algorithms. 
 img: assets/img/fig1-front.png
 importance: 1
-category: figures
+category: plots
 ---
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.html path="assets/img/fig1.png" title="example image" class="img-fluid rounded z-depth-1" %}
+        {% include figure.html path="assets/img/fig1.png" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
 
+{% highlight latex linenos %}
 
-{% raw %}
-```latex
 % Full code on github: https://github.com/bvieuble/TeXFantasy
+% Appears in my article ``Five-Precision GMRES-based iterative refinement''.
 \begin{tikzpicture}
     \begin{axis}
     [
@@ -30,17 +30,11 @@ category: figures
         xlabel=$\alpha$,
         xtick={2, 4, 6, 8, 10},
         xticklabels={2, 4, 6, 8, 10},
-        x tick label style={/pgf/number format/fixed,
-                            /pgf/number format/fixed zerofill,
-                            /pgf/number format/precision=1},
         axis y line=middle,
         ymin= 0.,
         ymax= 1.,
         y label style={at={(axis description cs:-0.06,0.5)},rotate=90,anchor=south},
         ylabel=$\phi$,
-        y tick label style={/pgf/number format/fixed,
-                            /pgf/number format/fixed zerofill,
-                            /pgf/number format/precision=1},
         ytick={0.2, 0.4, 0.6, 0.8, 1},
         yticklabels={0.2, 0.4, 0.6, 0.8, 1},
         grid = major,
@@ -49,7 +43,6 @@ category: figures
 
         \addplot[const plot mark mid,
                  solid,
-                 every mark/.append style={solid, fill=myorange, fill opacity=0.2},
                  color=myorange,
                  very thick
                  ] 
@@ -57,7 +50,6 @@ category: figures
 
         \addplot[const plot mark mid,
                  solid,
-                 every mark/.append style={solid, fill=mygreen, fill opacity=0.2},
                  color=mygreen,
                  very thick
                  ] 
@@ -65,7 +57,6 @@ category: figures
 
         \addplot[const plot mark mid,
                  solid,
-                 every mark/.append style={solid, fill=myyellow, fill opacity=0.2},
                  color=myyellow,
                  very thick
                  ] 
@@ -73,7 +64,6 @@ category: figures
 
         \addplot[const plot mark mid,
                  solid,
-                 every mark/.append style={solid, fill=myblue, fill opacity=0.2},
                  color=myblue,
                  very thick
                  ] 
@@ -81,7 +71,6 @@ category: figures
 
         \addplot[const plot mark mid,
                  solid,
-                 every mark/.append style={solid, fill=mypurple, fill opacity=0.2},
                  color=mypurple,
                  very thick,
                  ] 
@@ -89,7 +78,6 @@ category: figures
 
         \addplot[const plot mark mid,
                  solid,
-                 every mark/.append style={solid, fill=myred, fill opacity=0.2},
                  color=myred,
                  very thick,
                  ] 
@@ -97,7 +85,6 @@ category: figures
 
         \addplot[const plot mark mid,
                  dashed,
-                 every mark/.append style={solid, fill=myblue, fill opacity=0.2},
                  color=myblue,
                  very thick,
                  ] 
@@ -106,6 +93,4 @@ category: figures
         \legend{BDQ, BDD, BSD, BSS, BBD, BBS, LU: $u_f=$ B}
     \end{axis}
 \end{tikzpicture}
-```
-{% endraw %}
-
+{% endhighlight %}

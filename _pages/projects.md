@@ -5,7 +5,7 @@ permalink: /projects/
 description: Gallery of my LaTeX figures and tables.
 nav: true
 nav_order: 2
-display_categories: [figures,tables]
+display_categories: [plots,tables]
 horizontal: false
 ---
 
