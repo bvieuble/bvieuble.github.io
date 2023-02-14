@@ -10,9 +10,9 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>project 2 | Bastien C. M. Vieublé</title>
+    <title>Bar plot | Bastien C. M. Vieublé</title>
     <meta name="author" content="Bastien C. M. Vieublé">
-    <meta name="description" content="a project with a background image">
+    <meta name="description" content="A bar plot representing the memory consumption of three algorithms over different problems.">
     <meta name="keywords" content="jekyll, jekyll-theme, academic-website, portfolio-website">
 
 
@@ -77,6 +77,9 @@
                 <a class="nav-link" href="/publications/">Publications</a>
               </li>
               <li class="nav-item ">
+                <a class="nav-link" href="/projects/">TeXFantasy</a>
+              </li>
+              <li class="nav-item ">
                 <a class="nav-link" href="/cv/">Resume</a>
               </li>
               <li class="nav-item ">
@@ -110,74 +113,24 @@
         <div class="post">
 
           <header class="post-header">
-            <h1 class="post-title">project 2</h1>
-            <p class="post-description">a project with a background image</p>
+            <h1 class="post-title">Bar plot</h1>
+            <p class="post-description">A bar plot representing the memory consumption of three algorithms over different problems.</p>
           </header>
 
           <article>
-            <p>Every project has a beautiful feature showcase page.
-It’s easy to include images in a flexible 3-column grid format.
-Make your photos 1/3, 2/3, or full width.</p>
-
-<p>To give your project a background in the portfolio page, just add the img tag to the front matter like so:</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>---
-layout: page
-title: project
-description: a project with a background image
-img: /assets/img/12.jpg
----
-</code></pre></div></div>
-
-<div class="row">
+            <div class="row">
     <div class="col-sm mt-3 mt-md-0">
         <figure>
 
   <picture>
     
-    <source class="responsive-img-srcset" media="(max-width: 480px)" srcset="/assets/img/1-480.webp"></source>
-    <source class="responsive-img-srcset" media="(max-width: 800px)" srcset="/assets/img/1-800.webp"></source>
-    <source class="responsive-img-srcset" media="(max-width: 1400px)" srcset="/assets/img/1-1400.webp"></source>
+    <source class="responsive-img-srcset" media="(max-width: 480px)" srcset="/assets/img/fig2-480.webp"></source>
+    <source class="responsive-img-srcset" media="(max-width: 800px)" srcset="/assets/img/fig2-800.webp"></source>
+    <source class="responsive-img-srcset" media="(max-width: 1400px)" srcset="/assets/img/fig2-1400.webp"></source>
     
 
     <!-- Fallback to the original file -->
-    <img src="/assets/img/1.jpg" class="img-fluid rounded z-depth-1" width="auto" height="auto" title="example image" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
-
-  </picture>
-
-</figure>
-
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-        <figure>
-
-  <picture>
-    
-    <source class="responsive-img-srcset" media="(max-width: 480px)" srcset="/assets/img/3-480.webp"></source>
-    <source class="responsive-img-srcset" media="(max-width: 800px)" srcset="/assets/img/3-800.webp"></source>
-    <source class="responsive-img-srcset" media="(max-width: 1400px)" srcset="/assets/img/3-1400.webp"></source>
-    
-
-    <!-- Fallback to the original file -->
-    <img src="/assets/img/3.jpg" class="img-fluid rounded z-depth-1" width="auto" height="auto" title="example image" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
-
-  </picture>
-
-</figure>
-
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-        <figure>
-
-  <picture>
-    
-    <source class="responsive-img-srcset" media="(max-width: 480px)" srcset="/assets/img/5-480.webp"></source>
-    <source class="responsive-img-srcset" media="(max-width: 800px)" srcset="/assets/img/5-800.webp"></source>
-    <source class="responsive-img-srcset" media="(max-width: 1400px)" srcset="/assets/img/5-1400.webp"></source>
-    
-
-    <!-- Fallback to the original file -->
-    <img src="/assets/img/5.jpg" class="img-fluid rounded z-depth-1" width="auto" height="auto" title="example image" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
+    <img src="/assets/img/fig2.png" class="img-fluid rounded z-depth-1" width="auto" height="auto" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
 
   </picture>
 
@@ -185,93 +138,393 @@ img: /assets/img/12.jpg
 
     </div>
 </div>
-<div class="caption">
-    Caption photos easily. On the left, a road goes through a tunnel. Middle, leaves artistically fall in a hipster photoshoot. Right, in another hipster photoshoot, a lumberjack grasps a handful of pine needles.
-</div>
-<div class="row">
-    <div class="col-sm mt-3 mt-md-0">
-        <figure>
 
-  <picture>
-    
-    <source class="responsive-img-srcset" media="(max-width: 480px)" srcset="/assets/img/5-480.webp"></source>
-    <source class="responsive-img-srcset" media="(max-width: 800px)" srcset="/assets/img/5-800.webp"></source>
-    <source class="responsive-img-srcset" media="(max-width: 1400px)" srcset="/assets/img/5-1400.webp"></source>
-    
+<figure class="highlight"><pre><code class="language-latex" data-lang="latex"><table class="rouge-table"><tbody><tr>
+<td class="gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159
+160
+161
+162
+163
+164
+165
+166
+167
+168
+169
+170
+171
+172
+173
+174
+175
+176
+177
+178
+179
+180
+181
+182
+183
+184
+185
+186
+187
+188
+189
+190
+191
+</pre></td>
+<td class="code"><pre><span class="c">% Full code on github: https://github.com/bvieuble/TeXFantasy</span>
+<span class="c">% Appears in my article ``Combining sparse approximate factorizations with mixed precision iterative refinement''.</span>
+<span class="nt">\begin{tikzpicture}</span> 
+    <span class="nt">\begin{axis}</span>
+    [
+        point meta=explicit symbolic,
+        nodes near coords,
+        every node near coord/.append style=<span class="p">{</span>font=<span class="k">\normalsize</span>,above<span class="p">}</span>,
+        legend style=<span class="p">{</span>at=<span class="p">{</span>(0.75,0.95)<span class="p">}</span>,
+        anchor=north,legend columns=-1<span class="p">}</span>,
+        ybar stacked,
+        ymajorgrids,
+        width=1.1<span class="k">\linewidth</span>,
+        height=0.5<span class="k">\linewidth</span>,
+        ylabel=<span class="p">{</span><span class="k">\normalsize</span> Normalized memory by DMUMPS<span class="p">}</span>,
+        axis lines=left,
+        x tick label style=<span class="p">{</span>font=<span class="k">\normalsize</span><span class="p">}</span>,
+        x tick style=<span class="p">{</span>thick<span class="p">}</span>,
+        xmin=-0.5,
+        xmax=<span class="k">\nbrowsa</span>-0.5,
+        xtick=data,
+        xticklabels from table=<span class="p">{</span><span class="k">\groupa</span><span class="p">}{</span>name<span class="p">}</span>,
+        xticklabel style=<span class="p">{</span>font=<span class="k">\normalsize</span><span class="p">}</span>,
+        every extra x tick/.style=<span class="p">{</span>tick style=<span class="p">{</span>draw=none<span class="p">}</span>,
+                                   xticklabel style=<span class="p">{</span>font=<span class="k">\normalsize</span><span class="p">}</span>
+                                   <span class="p">}</span>,
+        ymin=0,
+        ymax=1.6,
+        ytick=<span class="p">{</span>0, 0.25, 0.5, 0.75, 1, 2<span class="p">}</span>,
+        yticklabels=<span class="p">{</span>0, 0.25, 0.5, 0.75, 1, 2<span class="p">}</span>,
+        name=axis1,
+        at=<span class="p">{</span>(0,0)<span class="p">}</span>
+    ]
 
-    <!-- Fallback to the original file -->
-    <img src="/assets/img/5.jpg" class="img-fluid rounded z-depth-1" width="auto" height="auto" title="example image" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
+        <span class="k">\pgfplotsinvokeforeach</span><span class="p">{</span>0,...,<span class="k">\nbrowsa</span>-1<span class="p">}</span> 
+        <span class="p">{</span>
+            <span class="k">\node</span> at (axis cs:#1-0.25,0.1) [circle,scale=0.75,draw=none,
+                    fill=blue!0,inner sep=1pt] <span class="p">{</span>D<span class="p">}</span>;
+            <span class="k">\node</span> at (axis cs:#1,0.1) [circle,scale=0.75,draw=none,fill=blue!0,
+                    inner sep=1pt] <span class="p">{</span>E<span class="p">}</span>;
+            <span class="k">\node</span> at (axis cs:#1+0.25,0.1) [circle,scale=0.75,draw=none,
+                    fill=blue!0,inner sep=1pt] <span class="p">{</span>C<span class="p">}</span>;
+        <span class="p">}</span>
 
-  </picture>
+        <span class="k">\addplot</span> [fill=myblue-mild,bar width=0.1,
+                  bar shift=-0.05,draw=none,forget plot] 
+                    table[x expr=<span class="k">\coordindex</span>, y=factorss] <span class="p">{</span><span class="k">\groupa</span><span class="p">}</span>;
+        <span class="k">\addplot</span> [fill=myred-mild,bar width=0.1, 
+                  bar shift=-0.05,draw=none,forget plot] 
+                    table[x expr=<span class="k">\coordindex</span>, y=actives] <span class="p">{</span><span class="k">\groupa</span><span class="p">}</span>;
+        <span class="k">\resetstackedplots</span>
+        <span class="k">\addplot</span> [fill=myblue-mild,bar width=0.1,
+                  bar shift=0.05,draw=none,forget plot] 
+                    table[x expr=<span class="k">\coordindex</span>, y=factorsd] <span class="p">{</span><span class="k">\groupa</span><span class="p">}</span>;
+        <span class="k">\addplot</span> [fill=mygreen-mild,bar width=0.1, 
+                  bar shift=0.05,draw=none] 
+                    table[x expr=<span class="k">\coordindex</span>, y=krylov] <span class="p">{</span><span class="k">\groupa</span><span class="p">}</span>;
+        <span class="k">\addplot</span> [fill=mygreen-mild,bar width=0.1, 
+                  bar shift=0.05,draw=none,forget plot] 
+                    table[x expr=<span class="k">\coordindex</span>, y=aq,meta=max-kry] <span class="p">{</span><span class="k">\groupa</span><span class="p">}</span>;
 
-</figure>
+        <span class="k">\resetstackedplots</span>
 
-    </div>
-</div>
-<div class="caption">
-    This image can also have a caption. It's like magic.
-</div>
+        <span class="k">\addplot</span> [fill=myblue-mild,bar width=0.2,draw=none,forget plot,
+                  bar shift=-0.25] 
+                    table[x expr=<span class="k">\coordindex</span>,y=factorss] <span class="p">{</span><span class="k">\groupa</span><span class="p">}</span>;
+        <span class="k">\addplot</span> [fill=mygreen-mild,bar width=0.1,draw=none,forget plot,
+                  bar shift=-0.2] 
+                    table[x expr=<span class="k">\coordindex</span>,y=aq] <span class="p">{</span><span class="k">\groupa</span><span class="p">}</span>;
+        <span class="k">\resetstackedplots</span>
+        <span class="k">\addplot</span> [fill=myblue-mild,bar width=0.2,draw=none,forget plot,
+                  bar shift=-0.25] 
+                    table[x expr=<span class="k">\coordindex</span>,y=factorss] <span class="p">{</span><span class="k">\groupa</span><span class="p">}</span>;
+        <span class="k">\addplot</span> [fill=myred-mild,bar width=0.1, 
+                  bar shift=-0.3,draw=none,forget plot] 
+                    table[x expr=<span class="k">\coordindex</span>,y=actives] <span class="p">{</span><span class="k">\groupa</span><span class="p">}</span>;
 
-<p>You can also put regular text between your rows of images.
-Say you wanted to write a little bit about your project before you posted the rest of the images.
-You describe how you toiled, sweated, <em>bled</em> for your project, and then… you reveal its glory in the next row of images.</p>
+        <span class="k">\resetstackedplots</span>
 
-<div class="row justify-content-sm-center">
-    <div class="col-sm-8 mt-3 mt-md-0">
-        <figure>
+        <span class="k">\addplot</span> [fill=myblue-mild,bar width=0.2,draw=none,
+                  bar shift=0.25] 
+                    table[x expr=<span class="k">\coordindex</span>,y=factorsd] <span class="p">{</span><span class="k">\groupa</span><span class="p">}</span>;
+        <span class="k">\addplot</span> [fill=myred-mild,bar width=0.1,draw=none,
+                  bar shift=0.2] 
+                    table[x expr=<span class="k">\coordindex</span>,y=actived] <span class="p">{</span><span class="k">\groupa</span><span class="p">}</span>;
+        <span class="k">\resetstackedplots</span>
+        <span class="k">\addplot</span> [fill=myblue-mild,bar width=0.2,draw=none,forget plot,
+                  bar shift=0.25] 
+                    table[x expr=<span class="k">\coordindex</span>,y=factorsd] <span class="p">{</span><span class="k">\groupa</span><span class="p">}</span>;
+        <span class="k">\addplot</span> [fill=mygreen-mild,bar width=0.1,draw=none,
+                  bar shift=0.3] 
+                    table[x expr=<span class="k">\coordindex</span>,y=aq] <span class="p">{</span><span class="k">\groupa</span><span class="p">}</span>;
 
-  <picture>
-    
-    <source class="responsive-img-srcset" media="(max-width: 480px)" srcset="/assets/img/6-480.webp"></source>
-    <source class="responsive-img-srcset" media="(max-width: 800px)" srcset="/assets/img/6-800.webp"></source>
-    <source class="responsive-img-srcset" media="(max-width: 1400px)" srcset="/assets/img/6-1400.webp"></source>
-    
+        <span class="k">\legend</span><span class="p">{</span>Krylov, Factors, Active, <span class="p">$</span><span class="nb">A</span><span class="p">_</span><span class="nb">q</span><span class="p">$}</span>
+    <span class="nt">\end{axis}</span>
 
-    <!-- Fallback to the original file -->
-    <img src="/assets/img/6.jpg" class="img-fluid rounded z-depth-1" width="auto" height="auto" title="example image" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
+    <span class="nt">\begin{axis}</span>
+    [
+        point meta=explicit symbolic,
+        nodes near coords,
+        legend style=<span class="p">{</span>at=<span class="p">{</span>(0.8,0.95)<span class="p">}</span>,
+        anchor=north,legend columns=-1<span class="p">}</span>,
+        every node near coord/.append style=<span class="p">{</span>font=<span class="k">\normalsize</span>,above<span class="p">}</span>,
+        ybar stacked,
+        ymajorgrids,
+        width=1.1<span class="k">\linewidth</span>,
+        height=0.5<span class="k">\linewidth</span>,
+        ylabel=<span class="p">{</span><span class="k">\normalsize</span> Normalized memory by DMUMPS<span class="p">}</span>,
+        axis lines=left,
+        x tick label style=<span class="p">{</span>font=<span class="k">\normalsize</span><span class="p">}</span>,
+        x tick style=<span class="p">{</span>thick<span class="p">}</span>,
+        xmin=-0.5,
+        xmax=<span class="k">\nbrowsb</span>-0.5,
+        xtick=data,
+        xticklabels from table=<span class="p">{</span><span class="k">\groupb</span><span class="p">}{</span>name<span class="p">}</span>,
+        xticklabel style=<span class="p">{</span>font=<span class="k">\normalsize</span><span class="p">}</span>,
+        ymin=0,
+        ymax=1.6,
+        ytick=<span class="p">{</span>0, 0.25, 0.5, 0.75, 1, 2<span class="p">}</span>,
+        yticklabels=<span class="p">{</span>0, 0.25, 0.5, 0.75, 1, 2<span class="p">}</span>,
+        name=axis2,
+        at=<span class="p">{</span>(0,-0.45<span class="k">\linewidth</span>)<span class="p">}</span>
+    ]
 
-  </picture>
+        <span class="k">\pgfplotsinvokeforeach</span><span class="p">{</span>0,...,<span class="k">\nbrowsb</span>-1<span class="p">}</span> <span class="p">{</span>
+            <span class="k">\node</span> at (axis cs:#1-0.25,0.1) [circle,scale=0.75,draw=none,
+                    fill=blue!0,inner sep=1pt] <span class="p">{</span>D<span class="p">}</span>;
+            <span class="k">\node</span> at (axis cs:#1,0.1) [circle,scale=0.75,draw=none,fill=blue!0,
+                    inner sep=1pt] <span class="p">{</span>E<span class="p">}</span>;
+            <span class="k">\node</span> at (axis cs:#1+0.25,0.1) [circle,scale=0.75,draw=none,
+                    fill=blue!0,inner sep=1pt] <span class="p">{</span>C<span class="p">}</span>;
+        <span class="p">}</span>
 
-</figure>
+        <span class="k">\addplot</span> [fill=myblue-mild,bar width=0.1,
+                  bar shift=-0.05,draw=none,forget plot] 
+                    table[x expr=<span class="k">\coordindex</span>, y=factorss] <span class="p">{</span><span class="k">\groupb</span><span class="p">}</span>;
+        <span class="k">\addplot</span> [fill=myred-mild,bar width=0.1, 
+                  bar shift=-0.05,draw=none,forget plot] 
+                    table[x expr=<span class="k">\coordindex</span>, y=actives] <span class="p">{</span><span class="k">\groupb</span><span class="p">}</span>;
+        <span class="k">\resetstackedplots</span>
+        <span class="k">\addplot</span> [fill=myblue-mild,bar width=0.1,
+                  bar shift=0.05,draw=none,forget plot] 
+                    table[x expr=<span class="k">\coordindex</span>, y=factorsd] <span class="p">{</span><span class="k">\groupb</span><span class="p">}</span>;
+        <span class="k">\addplot</span> [fill=mygreen-mild,bar width=0.1, 
+                  bar shift=0.05,draw=none,forget plot] 
+                    table[x expr=<span class="k">\coordindex</span>, y=krylov] <span class="p">{</span><span class="k">\groupb</span><span class="p">}</span>;
+        <span class="k">\addplot</span> [fill=mygreen-mild,bar width=0.1, 
+                  bar shift=0.05,draw=none,forget plot] 
+                    table[x expr=<span class="k">\coordindex</span>, y=aq, meta=max-kry] <span class="p">{</span><span class="k">\groupb</span><span class="p">}</span>;
 
-    </div>
-    <div class="col-sm-4 mt-3 mt-md-0">
-        <figure>
+        <span class="k">\resetstackedplots</span>
 
-  <picture>
-    
-    <source class="responsive-img-srcset" media="(max-width: 480px)" srcset="/assets/img/11-480.webp"></source>
-    <source class="responsive-img-srcset" media="(max-width: 800px)" srcset="/assets/img/11-800.webp"></source>
-    <source class="responsive-img-srcset" media="(max-width: 1400px)" srcset="/assets/img/11-1400.webp"></source>
-    
+        <span class="k">\addplot</span> [fill=myblue-mild,bar width=0.2,draw=none,forget plot,
+                  bar shift=-0.25] 
+                    table[x expr=<span class="k">\coordindex</span>,y=factorss] <span class="p">{</span><span class="k">\groupb</span><span class="p">}</span>;
+        <span class="k">\addplot</span> [fill=mygreen-mild,bar width=0.1,draw=none,forget plot,
+                  bar shift=-0.2] 
+                    table[x expr=<span class="k">\coordindex</span>,y=aq,meta=meta] <span class="p">{</span><span class="k">\groupb</span><span class="p">}</span>;
+        <span class="k">\resetstackedplots</span>
+        <span class="k">\addplot</span> [fill=myblue-mild,bar width=0.2,draw=none,forget plot,
+                  bar shift=-0.25] 
+                    table[x expr=<span class="k">\coordindex</span>,y=factorss] <span class="p">{</span><span class="k">\groupb</span><span class="p">}</span>;
+        <span class="k">\addplot</span> [fill=myred-mild,bar width=0.1, 
+                  bar shift=-0.3,draw=none,forget plot] 
+                    table[x expr=<span class="k">\coordindex</span>,y=actives] <span class="p">{</span><span class="k">\groupb</span><span class="p">}</span>;
 
-    <!-- Fallback to the original file -->
-    <img src="/assets/img/11.jpg" class="img-fluid rounded z-depth-1" width="auto" height="auto" title="example image" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
+        <span class="k">\resetstackedplots</span>
 
-  </picture>
+        <span class="k">\addplot</span> [fill=myblue-mild,bar width=0.2,draw=none,
+                  bar shift=0.25] 
+                    table[x expr=<span class="k">\coordindex</span>,y=factorsd] <span class="p">{</span><span class="k">\groupb</span><span class="p">}</span>;
+        <span class="k">\addplot</span> [fill=myred-mild,bar width=0.1,draw=none,
+                  bar shift=0.2] 
+                    table[x expr=<span class="k">\coordindex</span>,y=actived] <span class="p">{</span><span class="k">\groupb</span><span class="p">}</span>;
+        <span class="k">\resetstackedplots</span>
+        <span class="k">\addplot</span> [fill=myblue-mild,bar width=0.2,draw=none,forget plot,
+                  bar shift=0.25] 
+                    table[x expr=<span class="k">\coordindex</span>,y=factorsd] <span class="p">{</span><span class="k">\groupb</span><span class="p">}</span>;
+        <span class="k">\addplot</span> [fill=mygreen-mild,bar width=0.1,draw=none,
+                  bar shift=0.3] 
+                    table[x expr=<span class="k">\coordindex</span>,y=aq] <span class="p">{</span><span class="k">\groupb</span><span class="p">}</span>;
+    <span class="nt">\end{axis}</span>
 
-</figure>
-
-    </div>
-</div>
-<div class="caption">
-    You can also have artistically styled 2/3 + 1/3 images, like these.
-</div>
-
-<p>The code is simple.
-Just wrap your images with <code class="language-plaintext highlighter-rouge">&lt;div class="col-sm"&gt;</code> and place them inside <code class="language-plaintext highlighter-rouge">&lt;div class="row"&gt;</code> (read more about the <a href="https://getbootstrap.com/docs/4.4/layout/grid/" rel="external nofollow noopener" target="_blank">Bootstrap Grid</a> system).
-To make images responsive, add <code class="language-plaintext highlighter-rouge">img-fluid</code> class to each; for rounded corners and shadows use <code class="language-plaintext highlighter-rouge">rounded</code> and <code class="language-plaintext highlighter-rouge">z-depth-1</code> classes.
-Here’s the code for the last row of images above:</p>
-
-<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row justify-content-sm-center"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-sm-8 mt-3 mt-md-0"</span><span class="nt">&gt;</span>
-        {% include figure.html path="assets/img/6.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    <span class="nt">&lt;/div&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-sm-4 mt-3 mt-md-0"</span><span class="nt">&gt;</span>
-        {% include figure.html path="assets/img/11.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    <span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;/div&gt;</span>
-</code></pre></div></div>
+    <span class="k">\node</span><span class="na">[rectangle,draw,inner sep=1pt]</span> at (2,3.75) (box) 
+        <span class="p">{</span><span class="k">\small</span>
+        <span class="nt">\begin{tabular}</span><span class="p">{</span>l<span class="p">}</span>
+            <span class="k">\small</span> C: LU, <span class="p">$</span><span class="nb">u</span><span class="p">_</span><span class="nb">f</span><span class="p">$</span>=<span class="k">\textsc</span><span class="p">{</span>d<span class="p">}</span> <span class="k">\\</span>
+            <span class="k">\small</span> D: LU, <span class="p">$</span><span class="nb">u</span><span class="p">_</span><span class="nb">f</span><span class="p">$</span>=<span class="k">\textsc</span><span class="p">{</span>s<span class="p">}</span> <span class="k">\\</span>
+            <span class="k">\small</span> E: GMRES, <span class="p">$</span><span class="nb">u</span><span class="p">_</span><span class="nb">f</span><span class="p">$</span>=<span class="k">\textsc</span><span class="p">{</span>s<span class="p">}</span>
+        <span class="nt">\end{tabular}</span><span class="p">}</span>;
+<span class="nt">\end{tikzpicture}</span>
+</pre></td>
+</tr></tbody></table></code></pre></figure>
 
 
           </article>
@@ -284,7 +537,7 @@ Here’s the code for the last row of images above:</p>
     <footer class="fixed-bottom">
       <div class="container mt-0">
         © Copyright 2023 Bastien C. M. Vieublé. Powered by <a href="https://jekyllrb.com/" target="_blank" rel="external nofollow noopener">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio" rel="external nofollow noopener" target="_blank">al-folio</a> theme. Hosted by <a href="https://pages.github.com/" target="_blank" rel="external nofollow noopener">GitHub Pages</a>.
-Last updated: February 07, 2023.
+Last updated: February 14, 2023.
       </div>
     </footer>
 

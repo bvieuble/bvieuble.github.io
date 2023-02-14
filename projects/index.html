@@ -121,7 +121,7 @@
             <!-- pages/projects.md -->
 <div class="projects">
   <!-- Display categorized projects -->
-  <h2 class="category">figures</h2>
+  <h2 class="category">plots</h2>
   <!-- Generate cards for each project -->
   <div class="grid">
 <!-- _includes/projects.html -->
@@ -147,7 +147,37 @@
 
         <div class="card-body">
           <h2 class="card-title text-lowercase">Performance profile</h2>
-          <p class="card-text">A performance profile figure comparing the number of iterations of seven algorithms.</p>
+          <p class="card-text">A performance profile plot comparing the number of iterations of seven algorithms.</p>
+          <div class="row ml-1 mr-1 p-0">
+          </div>
+        </div>
+      </div>
+    </a>
+</div>
+<!-- _includes/projects.html -->
+<div class="grid-sizer"></div>
+<div class="grid-item">
+  <a href="/projects/2_project/">
+      <div class="card hoverable">
+<figure>
+
+  <picture>
+    
+    <source class="responsive-img-srcset" media="(max-width: 480px)" srcset="/assets/img/fig2-front-480.webp"></source>
+    <source class="responsive-img-srcset" media="(max-width: 800px)" srcset="/assets/img/fig2-front-800.webp"></source>
+    <source class="responsive-img-srcset" media="(max-width: 1400px)" srcset="/assets/img/fig2-front-1400.webp"></source>
+    
+
+    <!-- Fallback to the original file -->
+    <img src="/assets/img/fig2-front.png" width="auto" height="auto" alt="project thumbnail" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
+
+  </picture>
+
+</figure>
+
+        <div class="card-body">
+          <h2 class="card-title text-lowercase">Bar plot</h2>
+          <p class="card-text">A bar plot representing the memory consumption of three algorithms over different problems.</p>
           <div class="row ml-1 mr-1 p-0">
           </div>
         </div>
@@ -171,7 +201,7 @@
     <footer class="fixed-bottom">
       <div class="container mt-0">
         © Copyright 2023 Bastien C. M. Vieublé. Powered by <a href="https://jekyllrb.com/" target="_blank" rel="external nofollow noopener">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio" rel="external nofollow noopener" target="_blank">al-folio</a> theme. Hosted by <a href="https://pages.github.com/" target="_blank" rel="external nofollow noopener">GitHub Pages</a>.
-Last updated: February 09, 2023.
+Last updated: February 14, 2023.
       </div>
     </footer>
 
