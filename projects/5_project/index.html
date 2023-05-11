@@ -10,9 +10,9 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>project 5 | Bastien C. M. Vieublé</title>
+    <title>Scatter plot | Bastien C. M. Vieublé</title>
     <meta name="author" content="Bastien C. M. Vieublé">
-    <meta name="description" content="a project with a background image">
+    <meta name="description" content="A scatter plot displaying the error after convergence of four algorithms on various SuiteSparse problems.">
     <meta name="keywords" content="jekyll, jekyll-theme, academic-website, portfolio-website">
 
 
@@ -77,6 +77,9 @@
                 <a class="nav-link" href="/publications/">Publications</a>
               </li>
               <li class="nav-item ">
+                <a class="nav-link" href="/projects/">TeXFantasy</a>
+              </li>
+              <li class="nav-item ">
                 <a class="nav-link" href="/cv/">Resume</a>
               </li>
               <li class="nav-item ">
@@ -110,74 +113,24 @@
         <div class="post">
 
           <header class="post-header">
-            <h1 class="post-title">project 5</h1>
-            <p class="post-description">a project with a background image</p>
+            <h1 class="post-title">Scatter plot</h1>
+            <p class="post-description">A scatter plot displaying the error after convergence of four algorithms on various SuiteSparse problems.</p>
           </header>
 
           <article>
-            <p>Every project has a beautiful feature showcase page.
-It’s easy to include images in a flexible 3-column grid format.
-Make your photos 1/3, 2/3, or full width.</p>
-
-<p>To give your project a background in the portfolio page, just add the img tag to the front matter like so:</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>---
-layout: page
-title: project
-description: a project with a background image
-img: /assets/img/12.jpg
----
-</code></pre></div></div>
-
-<div class="row">
+            <div class="row">
     <div class="col-sm mt-3 mt-md-0">
         <figure>
 
   <picture>
     
-    <source class="responsive-img-srcset" media="(max-width: 480px)" srcset="/assets/img/1-480.webp"></source>
-    <source class="responsive-img-srcset" media="(max-width: 800px)" srcset="/assets/img/1-800.webp"></source>
-    <source class="responsive-img-srcset" media="(max-width: 1400px)" srcset="/assets/img/1-1400.webp"></source>
+    <source class="responsive-img-srcset" media="(max-width: 480px)" srcset="/assets/img/fig5-480.webp"></source>
+    <source class="responsive-img-srcset" media="(max-width: 800px)" srcset="/assets/img/fig5-800.webp"></source>
+    <source class="responsive-img-srcset" media="(max-width: 1400px)" srcset="/assets/img/fig5-1400.webp"></source>
     
 
     <!-- Fallback to the original file -->
-    <img src="/assets/img/1.jpg" class="img-fluid rounded z-depth-1" width="auto" height="auto" title="example image" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
-
-  </picture>
-
-</figure>
-
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-        <figure>
-
-  <picture>
-    
-    <source class="responsive-img-srcset" media="(max-width: 480px)" srcset="/assets/img/3-480.webp"></source>
-    <source class="responsive-img-srcset" media="(max-width: 800px)" srcset="/assets/img/3-800.webp"></source>
-    <source class="responsive-img-srcset" media="(max-width: 1400px)" srcset="/assets/img/3-1400.webp"></source>
-    
-
-    <!-- Fallback to the original file -->
-    <img src="/assets/img/3.jpg" class="img-fluid rounded z-depth-1" width="auto" height="auto" title="example image" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
-
-  </picture>
-
-</figure>
-
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-        <figure>
-
-  <picture>
-    
-    <source class="responsive-img-srcset" media="(max-width: 480px)" srcset="/assets/img/5-480.webp"></source>
-    <source class="responsive-img-srcset" media="(max-width: 800px)" srcset="/assets/img/5-800.webp"></source>
-    <source class="responsive-img-srcset" media="(max-width: 1400px)" srcset="/assets/img/5-1400.webp"></source>
-    
-
-    <!-- Fallback to the original file -->
-    <img src="/assets/img/5.jpg" class="img-fluid rounded z-depth-1" width="auto" height="auto" title="example image" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
+    <img src="/assets/img/fig5.png" class="img-fluid rounded z-depth-1" width="auto" height="auto" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
 
   </picture>
 
@@ -185,93 +138,135 @@ img: /assets/img/12.jpg
 
     </div>
 </div>
-<div class="caption">
-    Caption photos easily. On the left, a road goes through a tunnel. Middle, leaves artistically fall in a hipster photoshoot. Right, in another hipster photoshoot, a lumberjack grasps a handful of pine needles.
-</div>
-<div class="row">
-    <div class="col-sm mt-3 mt-md-0">
-        <figure>
 
-  <picture>
-    
-    <source class="responsive-img-srcset" media="(max-width: 480px)" srcset="/assets/img/5-480.webp"></source>
-    <source class="responsive-img-srcset" media="(max-width: 800px)" srcset="/assets/img/5-800.webp"></source>
-    <source class="responsive-img-srcset" media="(max-width: 1400px)" srcset="/assets/img/5-1400.webp"></source>
-    
+<figure class="highlight"><pre><code class="language-latex" data-lang="latex"><table class="rouge-table"><tbody><tr>
+<td class="gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+</pre></td>
+<td class="code"><pre><span class="c">% Full code on github: https://github.com/bvieuble/TeXFantasy</span>
+<span class="c">% Appears my the article ``Combining sparse approximate factorizations with mixed-precision iterative refinement''.</span>
+<span class="nt">\begin{tikzpicture}</span>
+    <span class="nt">\begin{axis}</span>
+    [
+        legend style=<span class="p">{</span>at=<span class="p">{</span>(0.4,0.95)<span class="p">}</span>,font=<span class="k">\small</span><span class="p">}</span>,
+        grid = major,
+        width=1.<span class="k">\linewidth</span>,
+        height=0.6<span class="k">\linewidth</span>,
+        grid style=<span class="p">{</span>dashed, gray!50<span class="p">}</span>,
+        extra x ticks=<span class="p">{</span>2E+7,1E+10<span class="p">}</span>,
+        extra x tick labels=<span class="p">{</span><span class="k">\thead</span><span class="p">{</span><span class="k">\small</span> fwd cond<span class="k">\\\small</span> LU-IR3<span class="p">}</span>,
+                             <span class="k">\thead</span><span class="p">{</span><span class="k">\small</span> fwd cond<span class="k">\\\small</span> LU-GMRES-IR5<span class="p">}}</span>,
+        extra x tick style=<span class="p">{</span>grid=none,tick pos=right,ticklabel pos=right,
+                            tick label style=<span class="p">{</span>yshift=-7<span class="p">}</span>,font=<span class="k">\tiny</span><span class="p">}</span>,
+        xmin= 8e0, xmax= 2e14, xmode = log,
+        ymin= 1e-17, ymax= 1e0, ymode=log,
+        xtick=<span class="p">{</span>1e2,1e4,1e6,1e8,1e10,1e12<span class="p">}</span>,
+        xticklabels=<span class="p">{</span>1e2,1e4,1e6,1e8,1e10,1e12<span class="p">}</span>,
+        xlabel=K(A),
+        x label style=<span class="p">{</span>at=<span class="p">{</span>(axis description cs:1.0,0)<span class="p">}</span>,rotate=0<span class="p">}</span>,
+        ytick=<span class="p">{</span>1e-17,1e-9,1e-1<span class="p">}</span>,
+        yticklabels=<span class="p">{</span>1e-17,1e-9,1e-1<span class="p">}</span>,
+        y label style=<span class="p">{</span>at=<span class="p">{</span>(axis description cs:0,1.05)<span class="p">}</span>,rotate=-90<span class="p">}</span>,
+        ylabel=<span class="p">{</span>fwd<span class="p">}</span>,
+        yticklabel style=<span class="p">{</span>rotate=0<span class="p">}</span>,
+        tick align=outside,
+        every tick label/.append style=<span class="p">{</span>font=<span class="k">\normalsize</span><span class="p">}</span>,
+        enlargelimits=false
+    ]
 
-    <!-- Fallback to the original file -->
-    <img src="/assets/img/5.jpg" class="img-fluid rounded z-depth-1" width="auto" height="auto" title="example image" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
+        <span class="k">\addplot</span><span class="na">[mygreen-mild,only marks,mark size=3pt]</span> 
+                 table[x=ka,y=fwddlu] <span class="p">{</span><span class="k">\data</span><span class="p">}</span>;
 
-  </picture>
+        <span class="k">\addplot</span>[scatter,mypurple-mild,only marks,mark=*,mark size=3pt,
+                 nodes near coords,
+                 point meta=explicit symbolic,
+                 visualization depends on=<span class="p">{</span><span class="k">\thisrow</span><span class="p">{</span>angle<span class="p">}</span> <span class="k">\as</span> <span class="k">\angle</span><span class="p">}</span>,
+                 visualization depends on=<span class="p">{</span><span class="k">\thisrow</span><span class="p">{</span>xshift<span class="p">}</span> <span class="k">\as</span> <span class="k">\xshift</span><span class="p">}</span>,
+                 visualization depends on=<span class="p">{</span><span class="k">\thisrow</span><span class="p">{</span>yshift<span class="p">}</span> <span class="k">\as</span> <span class="k">\yshift</span><span class="p">}</span>,
+                 every node near coord/.append style=<span class="p">{</span>color=black,
+                                                      rotate=<span class="k">\angle</span>,
+                                                      xshift=<span class="k">\xshift</span>,
+                                                      yshift=<span class="k">\yshift</span>,
+                                                      font=<span class="k">\normalsize</span><span class="p">}</span>] 
+                  table[x=ka,y=fwdddd,meta=id] <span class="p">{</span><span class="k">\data</span><span class="p">}</span>;
 
-</figure>
+        <span class="k">\addplot</span><span class="na">[myblue-mild,only marks,mark size=3pt]</span>
+                 table[x=ka,y=fwdsdq] <span class="p">{</span><span class="k">\data</span><span class="p">}</span>;
 
-    </div>
-</div>
-<div class="caption">
-    This image can also have a caption. It's like magic.
-</div>
+        <span class="k">\addplot</span><span class="na">[myred-mild,only marks,mark size=3pt]</span> 
+                 table[x=ka,y=fwdsdqdd] <span class="p">{</span><span class="k">\data</span><span class="p">}</span>;
 
-<p>You can also put regular text between your rows of images.
-Say you wanted to write a little bit about your project before you posted the rest of the images.
-You describe how you toiled, sweated, <em>bled</em> for your project, and then… you reveal its glory in the next row of images.</p>
+        <span class="k">\draw</span><span class="na">[dashed,thick]</span> (axis cs:2E+7,0) -- (axis cs:2E+7,1E-18);
+        <span class="k">\draw</span><span class="na">[dashed,thick]</span> (axis cs:1E+10,0) -- (axis cs:1E+10,1E-18);
 
-<div class="row justify-content-sm-center">
-    <div class="col-sm-8 mt-3 mt-md-0">
-        <figure>
-
-  <picture>
-    
-    <source class="responsive-img-srcset" media="(max-width: 480px)" srcset="/assets/img/6-480.webp"></source>
-    <source class="responsive-img-srcset" media="(max-width: 800px)" srcset="/assets/img/6-800.webp"></source>
-    <source class="responsive-img-srcset" media="(max-width: 1400px)" srcset="/assets/img/6-1400.webp"></source>
-    
-
-    <!-- Fallback to the original file -->
-    <img src="/assets/img/6.jpg" class="img-fluid rounded z-depth-1" width="auto" height="auto" title="example image" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
-
-  </picture>
-
-</figure>
-
-    </div>
-    <div class="col-sm-4 mt-3 mt-md-0">
-        <figure>
-
-  <picture>
-    
-    <source class="responsive-img-srcset" media="(max-width: 480px)" srcset="/assets/img/11-480.webp"></source>
-    <source class="responsive-img-srcset" media="(max-width: 800px)" srcset="/assets/img/11-800.webp"></source>
-    <source class="responsive-img-srcset" media="(max-width: 1400px)" srcset="/assets/img/11-1400.webp"></source>
-    
-
-    <!-- Fallback to the original file -->
-    <img src="/assets/img/11.jpg" class="img-fluid rounded z-depth-1" width="auto" height="auto" title="example image" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
-
-  </picture>
-
-</figure>
-
-    </div>
-</div>
-<div class="caption">
-    You can also have artistically styled 2/3 + 1/3 images, like these.
-</div>
-
-<p>The code is simple.
-Just wrap your images with <code class="language-plaintext highlighter-rouge">&lt;div class="col-sm"&gt;</code> and place them inside <code class="language-plaintext highlighter-rouge">&lt;div class="row"&gt;</code> (read more about the <a href="https://getbootstrap.com/docs/4.4/layout/grid/" rel="external nofollow noopener" target="_blank">Bootstrap Grid</a> system).
-To make images responsive, add <code class="language-plaintext highlighter-rouge">img-fluid</code> class to each; for rounded corners and shadows use <code class="language-plaintext highlighter-rouge">rounded</code> and <code class="language-plaintext highlighter-rouge">z-depth-1</code> classes.
-Here’s the code for the last row of images above:</p>
-
-<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row justify-content-sm-center"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-sm-8 mt-3 mt-md-0"</span><span class="nt">&gt;</span>
-        {% include figure.html path="assets/img/6.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    <span class="nt">&lt;/div&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-sm-4 mt-3 mt-md-0"</span><span class="nt">&gt;</span>
-        {% include figure.html path="assets/img/11.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    <span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;/div&gt;</span>
-</code></pre></div></div>
+        <span class="k">\legend</span><span class="p">{</span>DMUMPS,
+                <span class="p">{</span>LU, <span class="p">$</span><span class="nb">u</span><span class="p">_</span><span class="nb">f</span><span class="o">=</span><span class="nb">u</span><span class="p">_</span><span class="nb">r</span><span class="p">$</span>=<span class="k">\textsc</span><span class="p">{</span>d<span class="p">}}</span>,
+                <span class="p">{</span>LU, <span class="p">$</span><span class="nb">u</span><span class="p">_</span><span class="nb">f</span><span class="p">$</span>=<span class="k">\textsc</span><span class="p">{</span>s<span class="p">}</span>, <span class="p">$</span><span class="nb">u</span><span class="p">_</span><span class="nb">r</span><span class="p">$</span>=<span class="k">\textsc</span><span class="p">{</span>q<span class="p">}}</span>,
+                <span class="p">{</span>GMRES, <span class="p">$</span><span class="nb">u</span><span class="p">_</span><span class="nb">f</span><span class="p">$</span>=<span class="k">\textsc</span><span class="p">{</span>s<span class="p">}</span>, <span class="p">$</span><span class="nb">u</span><span class="p">_</span><span class="nb">r</span><span class="p">$</span>=<span class="k">\textsc</span><span class="p">{</span>q<span class="p">}}}</span>
+    <span class="nt">\end{axis}</span>
+<span class="nt">\end{tikzpicture}</span>
+</pre></td>
+</tr></tbody></table></code></pre></figure>
 
 
           </article>
@@ -284,7 +279,7 @@ Here’s the code for the last row of images above:</p>
     <footer class="fixed-bottom">
       <div class="container mt-0">
         © Copyright 2023 Bastien C. M. Vieublé. Powered by <a href="https://jekyllrb.com/" target="_blank" rel="external nofollow noopener">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio" rel="external nofollow noopener" target="_blank">al-folio</a> theme. Hosted by <a href="https://pages.github.com/" target="_blank" rel="external nofollow noopener">GitHub Pages</a>.
-Last updated: February 07, 2023.
+Last updated: May 11, 2023.
       </div>
     </footer>
 
