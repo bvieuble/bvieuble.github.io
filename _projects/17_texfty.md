@@ -14,16 +14,28 @@ category: plots
 </div>
 
 {% highlight latex linenos %}
-% Full, compilable sources including data files are on Github: 
-% https://github.com/bvieuble/TeXFantasy/tree/main/plots/fig2
-% Appears in my thesis ``Mixed precision iterative refinement for the solution 
-% of large sparse linear systems''.
+%%% Full, compilable sources including data files are on Github: 
+%%% https://github.com/bvieuble/TeXFantasy/tree/main/plots/fig2
+%%% Appears in my thesis ``Mixed precision iterative refinement for the 
+%%% solution of large sparse linear systems''.
+
+% Compiled with XeLaTeX
+% TeX-command-extra-options: "-shell-escape"
+\documentclass[convert={outext=.png},border=10pt]{standalone}
+\usepackage{tikz}
+\usepackage{pgfplots, pgfplotstable}
+\pgfplotsset{compat=newest}
+
+\input{color_theme.tex}
+
 \pgfplotstableread[col sep=comma]{data/1138_bus.csv}{\dataa}
 \pgfplotstableread[col sep=comma]{data/bcsstk19.csv}{\datab}
 \pgfplotstableread[col sep=comma]{data/Vehicle_10NN.csv}{\datac}
 \pgfplotstableread[col sep=comma]{data/pores_3.csv}{\datad}
 
-\begin{tikzpicture}
+\begin{document}
+
+\begin{tikzpicture} 
     \begin{axis}
     [
         legend style={at={(.9,.85)}, font=\normalsize},
@@ -53,30 +65,30 @@ category: plots
     ]
 
         \addplot[mark=none,color=myblue,thick]
-            table[x=it,y=ddqsdd]
+            table[x=it,y=ddqsdd] 
             {\dataa};
 
-        \addplot[mark=x,only marks,mark size=4pt,thick,color=myblue,forget
+        \addplot[mark=x,only marks,mark size=4pt,thick,color=myblue,forget 
                  plot, thick]
-            table[x=it,y=ddqsdd-rstrt]
+            table[x=it,y=ddqsdd-rstrt] 
             {\dataa};
 
         \addplot[mark=none,color=myred,thick]
-            table[x=it,y=ddqssd]
+            table[x=it,y=ddqssd] 
             {\dataa};
 
         \addplot[mark=x,only marks,mark size=4pt,thick,color=myred,forget plot,
                  thick]
-            table[x=it,y=ddqssd-rstrt]
+            table[x=it,y=ddqssd-rstrt] 
             {\dataa};
 
         \addplot[mark=none,color=mygreen,thick]
-            table[x=it,y=ddqsss]
+            table[x=it,y=ddqsss] 
             {\dataa};
 
-        \addplot[mark=x,only marks,mark size=4pt,thick,color=mygreen,forget
+        \addplot[mark=x,only marks,mark size=4pt,thick,color=mygreen,forget 
                  plot,thick]
-            table[x=it,y=ddqsss-rstrt]
+            table[x=it,y=ddqsss-rstrt] 
             {\dataa};
 
         \legend{\textsc{sdd}, \textsc{ssd}, \textsc{sss}}
@@ -111,30 +123,30 @@ category: plots
     ]
 
         \addplot[mark=none,color=myblue,thick]
-            table[x=it,y=ddqsdd]
+            table[x=it,y=ddqsdd] 
             {\datab};
 
-        \addplot[mark=x,only marks,mark size=4pt,thick,color=myblue,forget
+        \addplot[mark=x,only marks,mark size=4pt,thick,color=myblue,forget 
                  plot,thick]
-            table[x=it,y=ddqsdd-rstrt]
+            table[x=it,y=ddqsdd-rstrt] 
             {\datab};
 
         \addplot[mark=none,color=myred,thick]
-            table[x=it,y=ddqssd]
+            table[x=it,y=ddqssd] 
             {\datab};
 
         \addplot[mark=x,only marks,mark size=4pt,thick,color=myred,forget plot,
                  thick]
-            table[x=it,y=ddqssd-rstrt]
+            table[x=it,y=ddqssd-rstrt] 
             {\datab};
 
         \addplot[mark=none,color=mygreen,thick]
-            table[x=it,y=ddqsss]
+            table[x=it,y=ddqsss] 
             {\datab};
 
-        \addplot[mark=x,only marks,mark size=4pt,thick,color=mygreen,forget
+        \addplot[mark=x,only marks,mark size=4pt,thick,color=mygreen,forget 
                  plot,thick]
-            table[x=it,y=ddqsss-rstrt]
+            table[x=it,y=ddqsss-rstrt] 
             {\datab};
 
         \legend{\textsc{sdd}, \textsc{ssd}, \textsc{sss}}
@@ -169,30 +181,30 @@ category: plots
     ]
 
         \addplot[mark=none,color=myblue,thick]
-            table[x=it,y=ddqhss]
+            table[x=it,y=ddqhss] 
             {\datac};
 
-        \addplot[mark=x,only marks,mark size=4pt,thick,color=myblue,forget
+        \addplot[mark=x,only marks,mark size=4pt,thick,color=myblue,forget 
                  plot,thick]
-            table[x=it,y=ddqhss-rstrt]
+            table[x=it,y=ddqhss-rstrt] 
             {\datac};
 
         \addplot[mark=none,color=myred,thick]
-            table[x=it,y=ddqhhs]
+            table[x=it,y=ddqhhs] 
             {\datac};
 
         \addplot[mark=x,only marks,mark size=4pt,thick,color=myred,forget plot,
                  thick]
-            table[x=it,y=ddqhhs-rstrt]
+            table[x=it,y=ddqhhs-rstrt] 
             {\datac};
 
         \addplot[mark=none,color=mygreen,thick]
-            table[x=it,y=ddqhhh]
+            table[x=it,y=ddqhhh] 
             {\datac};
 
-        \addplot[mark=x,only marks,mark size=4pt,thick,color=mygreen,forget
+        \addplot[mark=x,only marks,mark size=4pt,thick,color=mygreen,forget 
                  plot,thick]
-            table[x=it,y=ddqhhh-rstrt]
+            table[x=it,y=ddqhhh-rstrt] 
             {\datac};
 
         \legend{\textsc{hss}, \textsc{hhs}, \textsc{hhh}}
@@ -228,33 +240,35 @@ category: plots
     ]
 
         \addplot[mark=none,color=myblue,thick]
-            table[x=it,y=ddqhss]
+            table[x=it,y=ddqhss] 
             {\datad};
 
-        \addplot[mark=x,only marks,mark size=4pt,thick,color=myblue,forget
+        \addplot[mark=x,only marks,mark size=4pt,thick,color=myblue,forget 
                  plot,thick]
-            table[x=it,y=ddqhss-rstrt]
+            table[x=it,y=ddqhss-rstrt] 
             {\datad};
 
         \addplot[mark=none,color=myred,thick]
-            table[x=it,y=ddqhhs]
+            table[x=it,y=ddqhhs] 
             {\datad};
 
         \addplot[mark=x,only marks,mark size=4pt,thick,color=myred,forget plot,
                  thick]
-            table[x=it,y=ddqhhs-rstrt]
+            table[x=it,y=ddqhhs-rstrt] 
             {\datad};
 
         \addplot[mark=none,color=mygreen,thick]
-            table[x=it,y=ddqhhh]
+            table[x=it,y=ddqhhh] 
             {\datad};
 
-        \addplot[mark=x,only marks,mark size=4pt,thick,color=mygreen,forget
+        \addplot[mark=x,only marks,mark size=4pt,thick,color=mygreen,forget 
                  plot,thick]
-            table[x=it,y=ddqhhh-rstrt]
+            table[x=it,y=ddqhhh-rstrt] 
             {\datad};
 
         \legend{\textsc{hss}, \textsc{hhs}, \textsc{hhh}}
     \end{axis}
 \end{tikzpicture}
+
+\end{document}
 {% endhighlight %}

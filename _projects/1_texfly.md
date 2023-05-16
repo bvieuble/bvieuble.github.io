@@ -14,9 +14,22 @@ category: plots
 </div>
 
 {% highlight latex linenos %}
-% Full, compilable sources including data files are on Github: 
-% https://github.com/bvieuble/TeXFantasy/tree/main/perf_profiles/fig1
-% Appears in my article ``Five-Precision GMRES-based iterative refinement''.
+%%% Full, compilable sources including data files are on Github: 
+%%% https://github.com/bvieuble/TeXFantasy/tree/main/perf_profiles/fig1
+%%% Appears in my article ``Five-Precision GMRES-based iterative refinement''.
+
+% Compiled with XeLaTeX
+% TeX-command-extra-options: "-shell-escape"
+\documentclass[convert={outext=.png},border=10pt]{standalone}
+\usepackage{tikz}
+\usepackage{pgfplots, pgfplotstable}
+\pgfplotsset{compat=newest}
+
+\input{color_theme.tex}
+
+\pgfplotstableread[col sep=comma]{data.csv}{\data}
+
+\begin{document}
 \begin{tikzpicture}
     \begin{axis}
     [
@@ -33,12 +46,13 @@ category: plots
         axis y line=middle,
         ymin= 0.,
         ymax= 1.,
-        y label style={at={(axis description cs:-0.06,0.5)},rotate=90,anchor=south},
+        y label style={at={(axis description cs:-0.06,0.5)},rotate=90,
+                           anchor=south},
         ylabel=$\phi$,
         ytick={0.2, 0.4, 0.6, 0.8, 1},
         yticklabels={0.2, 0.4, 0.6, 0.8, 1},
         grid = major,
-        grid style={dashed, gray!30},
+        grid style={dashed, mygray},
     ]
 
         \addplot[const plot mark mid,solid,color=myorange,very thick] 
@@ -53,16 +67,17 @@ category: plots
         \addplot[const plot mark mid,solid,color=myblue,very thick] 
              table[x=val-4,y=perc-4] {\data};
 
-        \addplot[const plot mark mid,solid,color=mypurple,very thick,] 
+        \addplot[const plot mark mid,solid,color=mypurple,very thick] 
              table[x=val-3,y=perc-3] {\data};
 
-        \addplot[const plot mark mid,solid,color=myred,very thick,] 
+        \addplot[const plot mark mid,solid,color=myred,very thick] 
              table[x=val-2,y=perc-2] {\data};
 
-        \addplot[const plot mark mid,dashed,color=myblue,very thick,] 
+        \addplot[const plot mark mid,dashed,color=myblue,very thick] 
              table[x=val-1,y=perc-1] {\data};
 
         \legend{BDQ, BDD, BSD, BSS, BBD, BBS, LU: $u_f=$ B}
     \end{axis}
 \end{tikzpicture}
+\end{document}
 {% endhighlight %}

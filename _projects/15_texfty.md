@@ -14,10 +14,27 @@ category: plots
 </div>
 
 {% highlight latex linenos %}
-% Full, compilable sources including data files are on Github: 
-% https://github.com/bvieuble/TeXFantasy/tree/main/heatmaps/fig1
-% Appears in my thesis ``Mixed precision iterative refinement for the solution
-% of large sparse linear systems''.
+%%% Full, compilable sources including data files are on Github: 
+%%% https://github.com/bvieuble/TeXFantasy/tree/main/heatmaps/fig1
+%%% Appears in my thesis ``Mixed precision iterative refinement for the 
+%%% solution of large sparse linear systems''.
+
+% Compiled with XeLaTeX
+% TeX-command-extra-options: "-shell-escape"
+\documentclass[convert={outext=.png},border=10pt]{standalone}
+\usepackage{tikz}
+\usepackage{pgfplots}
+\pgfplotsset{compat=newest}
+\usepackage{amsmath}
+
+\input{color_theme.tex}
+
+\pgfmathdeclarefunction{lg10}{1}{
+    \pgfmathparse{ln(#1)/ln(10)}
+}
+
+\begin{document}
+
 \begin{tikzpicture}
     \begin{axis}
     [
@@ -37,11 +54,11 @@ category: plots
         yticklabels = {1e0,1e4,1e8,1e12,1e16},
         y tick label style={font=\small,rotate=0},
         axis on top,
-        mesh/ordering=y varies,
+        mesh/ordering=y varies, 
         unbounded coords=jump,
         height=0.4\linewidth,
         width=0.4\linewidth,
-        colormap={whiteblue}{color={black} color={mypurple} color={myblue}
+        colormap={whiteblue}{color={black} color={mypurple} color={myblue} 
             color=(myorange) color=(myyellow)},
         point meta min=0,
         point meta max=3.68,
@@ -51,7 +68,7 @@ category: plots
         at={(0, 0)}
     ]
 
-    \addplot[matrix plot*,mesh/cols=17,mesh/rows=17,point meta=explicit]
+    \addplot[matrix plot*,mesh/cols=17,mesh/rows=17,point meta=explicit] 
         table[meta expr=lg10(\thisrow{it-bbb}),col sep=comma] {data.csv};
     \end{axis}
 
@@ -73,11 +90,11 @@ category: plots
         yticklabels = {,,},
         y tick label style={font=\small,rotate=0},
         axis on top,
-        mesh/ordering=y varies,
+        mesh/ordering=y varies, 
         unbounded coords=jump,
         height=0.4\linewidth,
         width=0.4\linewidth,
-        colormap={whiteblue}{color={black} color={mypurple} color={myblue}
+        colormap={whiteblue}{color={black} color={mypurple} color={myblue} 
             color=(myorange) color=(myyellow)},
         point meta min=0,
         point meta max=3.68,
@@ -94,7 +111,7 @@ category: plots
         at={(200, 0)}
     ]
 
-    \addplot[matrix plot*,mesh/cols=17,mesh/rows=17,point meta=explicit]
+    \addplot[matrix plot*,mesh/cols=17,mesh/rows=17,point meta=explicit] 
         table[meta expr=lg10(\thisrow{it-bbs}),col sep=comma] {data.csv};
     \end{axis}
 
@@ -116,11 +133,11 @@ category: plots
         yticklabels = {,,},
         y tick label style={font=\small,rotate=0},
         axis on top,
-        mesh/ordering=y varies,
+        mesh/ordering=y varies, 
         unbounded coords=jump,
         height=0.4\linewidth,
         width=0.4\linewidth,
-        colormap={whiteblue}{color={black} color={mypurple} color={myblue}
+        colormap={whiteblue}{color={black} color={mypurple} color={myblue} 
             color=(myorange) color=(myyellow)},
         point meta min=0,
         point meta max=3.68,
@@ -130,7 +147,7 @@ category: plots
         at={(400, 0)}
     ]
 
-    \addplot[matrix plot*,mesh/cols=17,mesh/rows=17,point meta=explicit]
+    \addplot[matrix plot*,mesh/cols=17,mesh/rows=17,point meta=explicit] 
         table[meta expr=lg10(\thisrow{it-bss}),col sep=comma] {data.csv};
     \end{axis}
 
@@ -152,11 +169,11 @@ category: plots
         yticklabels = {1e0,1e4,1e8,1e12,1e16},
         y tick label style={font=\small,rotate=0},
         axis on top,
-        mesh/ordering=y varies,
+        mesh/ordering=y varies, 
         unbounded coords=jump,
         height=0.4\linewidth,
         width=0.4\linewidth,
-        colormap={whiteblue}{color={black} color={mypurple} color={myblue}
+        colormap={whiteblue}{color={black} color={mypurple} color={myblue} 
             color=(myorange) color=(myyellow)},
         point meta min=0,
         point meta max=3.68,
@@ -166,7 +183,7 @@ category: plots
         at={(0, -225)}
     ]
 
-    \addplot[matrix plot*,mesh/cols=17,mesh/rows=17,point meta=explicit]
+    \addplot[matrix plot*,mesh/cols=17,mesh/rows=17,point meta=explicit] 
         table[meta expr=lg10(\thisrow{it-sss}),col sep=comma] {data.csv};
     \end{axis}
 
@@ -188,11 +205,11 @@ category: plots
         yticklabels = {,,},
         y tick label style={font=\small,rotate=0},
         axis on top,
-        mesh/ordering=y varies,
+        mesh/ordering=y varies, 
         unbounded coords=jump,
         height=0.4\linewidth,
         width=0.4\linewidth,
-        colormap={whiteblue}{color={black} color={mypurple} color={myblue}
+        colormap={whiteblue}{color={black} color={mypurple} color={myblue} 
             color=(myorange) color=(myyellow)},
         point meta min=0,
         point meta max=3.68,
@@ -202,7 +219,7 @@ category: plots
         at={(200, -225)}
     ]
 
-    \addplot[matrix plot*,mesh/cols=17,mesh/rows=17,point meta=explicit]
+    \addplot[matrix plot*,mesh/cols=17,mesh/rows=17,point meta=explicit] 
         table[meta expr=lg10(\thisrow{it-ssd}),col sep=comma] {data.csv};
     \end{axis}
 
@@ -224,11 +241,11 @@ category: plots
         yticklabels = {,,},
         y tick label style={font=\small,rotate=0},
         axis on top,
-        mesh/ordering=y varies,
+        mesh/ordering=y varies, 
         unbounded coords=jump,
         height=0.4\linewidth,
         width=0.4\linewidth,
-        colormap={whiteblue}{color={black} color={mypurple} color={myblue}
+        colormap={whiteblue}{color={black} color={mypurple} color={myblue} 
             color=(myorange) color=(myyellow)},
         point meta min=0,
         point meta max=3.68,
@@ -238,7 +255,7 @@ category: plots
         at={(400, -225)}
     ]
 
-    \addplot[matrix plot*,mesh/cols=17,mesh/rows=17,point meta=explicit]
+    \addplot[matrix plot*,mesh/cols=17,mesh/rows=17,point meta=explicit] 
         table[meta expr=lg10(\thisrow{it-sdd}),col sep=comma] {data.csv};
     \end{axis}
 
@@ -260,11 +277,11 @@ category: plots
         yticklabels = {1e0,1e4,1e8,1e12,1e16},
         y tick label style={font=\small,rotate=0},
         axis on top,
-        mesh/ordering=y varies,
+        mesh/ordering=y varies, 
         unbounded coords=jump,
         height=0.4\linewidth,
         width=0.4\linewidth,
-        colormap={whiteblue}{color={black} color={mypurple} color={myblue}
+        colormap={whiteblue}{color={black} color={mypurple} color={myblue} 
             color=(myorange) color=(myyellow)},
         point meta min=0,
         point meta max=3.68,
@@ -274,7 +291,7 @@ category: plots
         at={(0, -450)}
     ]
 
-    \addplot[matrix plot*,mesh/cols=17,mesh/rows=17,point meta=explicit]
+    \addplot[matrix plot*,mesh/cols=17,mesh/rows=17,point meta=explicit] 
         table[meta expr=lg10(\thisrow{it-ddd}),col sep=comma] {data.csv};
     \end{axis}
 
@@ -296,11 +313,11 @@ category: plots
         yticklabels = {,,},
         y tick label style={font=\small,rotate=0},
         axis on top,
-        mesh/ordering=y varies,
+        mesh/ordering=y varies, 
         unbounded coords=jump,
         height=0.4\linewidth,
         width=0.4\linewidth,
-        colormap={whiteblue}{color={black} color={mypurple} color={myblue}
+        colormap={whiteblue}{color={black} color={mypurple} color={myblue} 
             color=(myorange) color=(myyellow)},
         point meta min=0,
         point meta max=3.68,
@@ -310,7 +327,7 @@ category: plots
         at={(200, -450)}
     ]
 
-    \addplot[matrix plot*,mesh/cols=17,mesh/rows=17,point meta=explicit]
+    \addplot[matrix plot*,mesh/cols=17,mesh/rows=17,point meta=explicit] 
         table[meta expr=lg10(\thisrow{it-ddq}),col sep=comma] {data.csv};
     \end{axis}
 
@@ -332,11 +349,11 @@ category: plots
         yticklabels = {,,},
         y tick label style={font=\small,rotate=0},
         axis on top,
-        mesh/ordering=y varies,
+        mesh/ordering=y varies, 
         unbounded coords=jump,
         height=0.4\linewidth,
         width=0.4\linewidth,
-        colormap={whiteblue}{color={black} color={mypurple} color={myblue}
+        colormap={whiteblue}{color={black} color={mypurple} color={myblue} 
             color=(myorange) color=(myyellow)},
         point meta min=0,
         point meta max=3.68,
@@ -346,8 +363,10 @@ category: plots
         at={(400, -450)}
     ]
 
-    \addplot[matrix plot*,mesh/cols=17,mesh/rows=17,point meta=explicit]
+    \addplot[matrix plot*,mesh/cols=17,mesh/rows=17,point meta=explicit] 
         table[meta expr=lg10(\thisrow{it-dqq}),col sep=comma] {data.csv};
     \end{axis}
 \end{tikzpicture}
+
+\end{document}
 {% endhighlight %}

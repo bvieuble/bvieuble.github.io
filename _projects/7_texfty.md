@@ -14,10 +14,24 @@ category: tables
 </div>
 
 {% highlight latex linenos %}
-% Full, compilable sources including data files are on Github: 
-% https://github.com/bvieuble/TeXFantasy/tree/main/tables/tab2
-% Appears my the article ``Combining sparse approximate factorizations with 
-% mixed-precision iterative refinement''.
+%%% Full, compilable sources including data files are on Github: 
+%%% https://github.com/bvieuble/TeXFantasy/tree/main/tables/tab2
+%%% Appears in my article ``Combining sparse approximate factorizations with 
+%%% mixed-precision iterative refinement''.
+
+% Compiled with XeLaTeX
+% TeX-command-extra-options: "-shell-escape"
+\documentclass[convert={outext=.png},border=10pt]{standalone}
+\usepackage{tikz}
+\usepackage{pgfplots, pgfplotstable}
+\usepackage{colortbl}
+\usepackage{booktabs}
+\usepackage{makecell}
+\pgfplotsset{compat=newest}
+
+\begin{document}
+\pgfplotstableread[col sep=comma]{data.csv}{\data}
+
 \pgfplotstabletypeset[col sep=comma,
                       string type,
                       font=\normalsize,
@@ -45,4 +59,6 @@ category: tables
                                                column type={r}},
                       every last row/.style={after row=\bottomrule}
                       ]{\data}
+
+\end{document}
 {% endhighlight %}

@@ -14,10 +14,23 @@ category: plots
 </div>
 
 {% highlight latex linenos %}
-% Full, compilable sources including data files are on Github: 
-% https://github.com/bvieuble/TeXFantasy/tree/main/scatter_plots/fig2
-% Appears in my thesis ``Mixed precision iterative refinement for the solution 
-% of large sparse linear systems''.
+%%% Full, compilable sources including data files are on Github: 
+%%% https://github.com/bvieuble/TeXFantasy/tree/main/scatter_plots/fig2
+%%% Appears in my thesis ``Mixed precision iterative refinement for the 
+%%% solution of large sparse linear systems''.
+
+% Compiled with XeLaTeX
+% TeX-command-extra-options: "-shell-escape"
+\documentclass[convert={outext=.png},border=10pt]{standalone}
+\usepackage{tikz}
+\usepackage{pgfplots,pgfplotstable}
+\pgfplotsset{compat=newest}
+
+\input{color_theme.tex}
+
+\begin{document}
+\pgfplotstableset{col sep=comma}
+
 \begin{tikzpicture}
     \begin{axis}
     [
@@ -211,4 +224,6 @@ category: plots
              table[x=ka,y=hdqdq] {data.csv};
     \end{axis}
 \end{tikzpicture}
+
+\end{document}
 {% endhighlight %}

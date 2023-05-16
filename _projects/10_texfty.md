@@ -14,9 +14,23 @@ category: plots
 </div>
 
 {% highlight latex linenos %}
-% Full, compilable sources including data files are on Github: 
-% https://github.com/bvieuble/TeXFantasy/tree/main/plots/fig1
-% Appears in my article ``Five-Precision GMRES-based Iterative Refinement''.
+%%% Full, compilable sources including data files are on Github: 
+%%% https://github.com/bvieuble/TeXFantasy/tree/main/plots/fig1
+%%% Appears in my article ``Five-Precision GMRES-based Iterative Refinement''.
+
+% Compiled with XeLaTeX
+% Generate the GIF with convert -delay 100 -loop 0 -density 200 -alpha on 
+% file.pdf file.gif (package imagemagick is required).
+\documentclass[tikz,border=10pt]{standalone}
+\usepackage{pgfplots}
+\pgfplotsset{compat=newest}
+
+\input{color_theme.tex}
+
+\pgfplotstableread[col sep=comma]{data.csv}{\data}
+
+\begin{document}
+
 \newcommand{\plota}{
     \addplot[mark=*,solid,every mark/.append style={solid,fill=mypurple, 
              fill opacity=0.2},color=mypurple,very thick,mark size=4pt]
@@ -274,4 +288,18 @@ category: plots
                     \textsc{q}}
     \end{axis}
 \end{tikzpicture}
+\end{document}
+
+
+
+
+
+
+
+
+
+
+
+
+
 {% endhighlight %}

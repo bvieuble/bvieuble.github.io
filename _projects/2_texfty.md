@@ -14,11 +14,46 @@ category: plots
 </div>
 
 {% highlight latex linenos %}
-% Full, compilable sources including data files are on Github: 
-% https://github.com/bvieuble/TeXFantasy/tree/main/bars/fig1
-% Appears in my article ``Combining sparse approximate factorizations with 
-% mixed precision iterative refinement''.
-\begin{tikzpicture} 
+%%% Full, compilable sources including data files are on Github: 
+%%% https://github.com/bvieuble/TeXFantasy/tree/main/bars/fig1
+%%% Appears in my article ``Combining sparse approximate factorizations with 
+%%% mixed precision iterative refinement''.
+
+% Compiled with XeLaTeX
+% TeX-command-extra-options: "-shell-escape"
+\documentclass[convert={outext=.png},border=10pt]{standalone}
+%\usepackage{fontspec}
+%\setmainfont{Roboto Light}
+\usepackage{tikz}
+\usepackage{pgfplots, pgfplotstable, pgfplotstablefilter}
+\pgfplotsset{compat=newest}
+
+\input{color_theme.tex}
+
+% Reinit stacked bar command
+\makeatletter
+\newcommand\resetstackedplots{
+\makeatletter
+\pgfplots@stacked@isfirstplottrue
+\makeatother
+}
+
+% Load data and make groups of plots
+\pgfplotstableread[col sep=comma]{data.csv}{\data}
+\pgfplotstablefilter[group equals 1]{\data}{\groupa}
+\pgfplotstablefilter[group equals 2]{\data}{\groupb}
+\pgfplotstablefilter[group equals 3]{\data}{\groupc}
+
+% Get the number of elements in each group 
+\pgfplotstablegetrowsof{\groupa}
+\pgfmathsetmacro{\nbrowsa}{\pgfplotsretval}
+\pgfplotstablegetrowsof{\groupb}
+\pgfmathsetmacro{\nbrowsb}{\pgfplotsretval}
+\pgfplotstablegetrowsof{\groupc}
+\pgfmathsetmacro{\nbrowsc}{\pgfplotsretval}
+
+\begin{document}
+\begin{tikzpicture}
     \begin{axis}
     [
         point meta=explicit symbolic,
@@ -207,4 +242,5 @@ category: plots
             \small E: GMRES, $u_f$=\textsc{s}
         \end{tabular}};
 \end{tikzpicture}
+\end{document}
 {% endhighlight %}

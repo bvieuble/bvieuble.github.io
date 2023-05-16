@@ -14,10 +14,21 @@ category: illustrations
 </div>
 
 {% highlight latex linenos %}
-% Full, compilable sources are on Github: 
-% https://github.com/bvieuble/TeXFantasy/tree/main/illustrations/fig4
-% Appears in my thesis ``Mixed precision iterative refinement for the solution
-% of large sparse linear systems''.
+%%% Full, compilable sources are on Github: 
+%%% https://github.com/bvieuble/TeXFantasy/tree/main/illustrations/fig4
+%%% Appears in my thesis ``Mixed precision iterative refinement for the 
+%%% solution of large sparse linear systems''.
+
+% Compiled with XeLaTeX
+% TeX-command-extra-options: "-shell-escape"
+\documentclass[convert={outext=.png},border=10pt]{standalone}
+\usepackage{tikz}
+\usetikzlibrary{positioning,patterns,patterns.meta}
+
+\input{color_theme.tex}
+
+\begin{document}
+
 \tikzdeclarepattern{
   name=hatch,
   parameters={\hatchsize,\hatchangle,\hatchlinewidth},
@@ -63,4 +74,6 @@ category: illustrations
     \draw[draw=none,thick] (10,-1) rectangle ++(2,0.5);
     \draw[thick,fill=none,draw=black] (0,-1) rectangle ++(12,0.5);
 \end{tikzpicture}
+
+\end{document}
 {% endhighlight %}

@@ -14,10 +14,20 @@ category: plots
 </div>
 
 {% highlight latex linenos %}
-% Full, compilable sources including data files are on Github: 
-% https://github.com/bvieuble/TeXFantasy/tree/main/bars/fig3
-% Appears in my Ph.D. defense ``Mixed precision iterative refinement for the
-% solution of large sparse linear systems''.
+%%% Full, compilable sources including data files are on Github: 
+%%% https://github.com/bvieuble/TeXFantasy/tree/main/bars/fig3
+%%% Appears in my Ph.D. defense ``Mixed precision iterative refinement for the
+%%% solution of large sparse linear systems''.
+
+% Compiled with XeLaTeX
+% Generate the GIF with convert -delay 100 -loop 0 -density 200 -alpha on 
+% file.pdf file.gif (package imagemagick is required).
+\documentclass[tikz,border=10pt]{standalone}
+\usepackage{pgfplots,pgfplotstable}
+\pgfplotsset{compat=newest}
+
+\input{color_theme.tex}
+
 \pgfplotstableread[col sep=comma]{data.csv}{\data}
 \pgfplotsset{select coords between index/.style 2 args={
     x filter/.code={
@@ -28,34 +38,36 @@ category: plots
 \pgfplotstablegetrowsof{\data}
 \pgfmathsetmacro{\nbrows}{\pgfplotsretval}
 
+\begin{document}
+
 \foreach \X in {0,1,2,3,4,5}
 {\begin{tikzpicture} 
     \begin{axis}[
-    point meta=explicit symbolic,
-    nodes near coords,
-    every node near coord/.append style={font=\scriptsize,above},
-    axis lines=left,
-    width=1.1\linewidth,
-    height=0.55\linewidth,
-    xmin=-0.5,
-    xmax=\nbrows,
-    xtick=data,
-    xticklabels from table={\data}{epsilon},
-    x tick label style={font=\tiny},
-    x tick style={thick},
-    xlabel=$\epsilon_{\mbox{\tiny BLR}}$,
-    xlabel style = {at={(axis description cs:1.02,0)},anchor=north east},
-    ybar,
-    ymajorgrids,
-    ymin=0,
-    ymax=1.45,
-    ytick={0, 0.25, 0.5, 0.75, 1},
-    yticklabels={0\%,25\%,50\%,75\%,100\%},
-    y tick label style={font=\scriptsize},
-    legend style={nodes={scale=0.7,transform shape},anchor=west,
-        at={(axis cs:1.7,1.4)},legend columns=4,
-        legend cell align=right, legend image post style={scale=0.5}},
-    at={(0,0)},
+        point meta=explicit symbolic,
+        nodes near coords,
+        every node near coord/.append style={font=\scriptsize,above},
+        axis lines=left,
+        width=1.1\linewidth,
+        height=0.55\linewidth,
+        xmin=-0.5,
+        xmax=\nbrows,
+        xtick=data,
+        xticklabels from table={\data}{epsilon},
+        x tick label style={font=\tiny},
+        x tick style={thick},
+        xlabel=$\epsilon_{\mbox{\tiny BLR}}$,
+        xlabel style = {at={(axis description cs:1.02,0)},anchor=north east},
+        ybar,
+        ymajorgrids,
+        ymin=0,
+        ymax=1.45,
+        ytick={0, 0.25, 0.5, 0.75, 1},
+        yticklabels={0\%,25\%,50\%,75\%,100\%},
+        y tick label style={font=\scriptsize},
+        legend style={nodes={scale=0.7,transform shape},anchor=west,
+            at={(axis cs:1.7,1.4)},legend columns=4,
+            legend cell align=right, legend image post style={scale=0.5}},
+        at={(0,0)},
     ]
 
         \addplot [opacity=0.,forget plot] 
@@ -111,4 +123,6 @@ category: plots
             {\footnotesize Memory};
     \end{axis}
 \end{tikzpicture}}
+
+\end{document}
 {% endhighlight %}

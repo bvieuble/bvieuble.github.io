@@ -14,10 +14,22 @@ category: tables
 </div>
 
 {% highlight latex linenos %}
-% Full, compilable sources including data files are on Github: 
-% https://github.com/bvieuble/TeXFantasy/tree/main/tables/tab1
-% Appears my the article ``Combining sparse approximate factorizations with 
-% mixed-precision iterative refinement''.
+%%% Full, compilable sources including data files are on Github: 
+%%% https://github.com/bvieuble/TeXFantasy/tree/main/tables/tab1
+%%% Appears in my article ``Combining sparse approximate factorizations with 
+%%% mixed-precision iterative refinement''.
+
+% Compiled with XeLaTeX
+% TeX-command-extra-options: "-shell-escape"
+\documentclass[convert={outext=.png},border=10pt]{standalone}
+\usepackage{tikz}
+\usepackage{pgfplots, pgfplotstable}
+\usepackage{booktabs}
+\usepackage{colortbl}
+\usepackage{multirow}
+\pgfplotsset{compat=newest}
+\usepackage{etoolbox}
+
 \newcommand{\PreserveBackslash}[1]{\let\temp=\\#1\let\\=\temp}
 \newcolumntype{C}[1]{>{\PreserveBackslash\centering}p{#1}}
 \newcolumntype{L}[1]{>{\PreserveBackslash\raggedright}p{#1}}
@@ -26,6 +38,12 @@ category: tables
 \newcommand{\colwdthb}{0.05\linewidth}
 \newcommand{\colwdthc}{0.05\linewidth}
 \setlength{\tabcolsep}{6pt}
+
+\pgfplotstableread[col sep=comma]{data.csv}{\data}
+\pgfplotstablegetrowsof{\data}
+\pgfmathsetmacro{\N}{\pgfplotsretval-1}  
+
+\begin{document}
 
 \pgfplotstabletypeset[col sep=comma,
                       string type,
@@ -139,4 +157,5 @@ category: tables
                       },
                       every last row/.style={after row=\bottomrule}
                       ]{\data}
+\end{document}
 {% endhighlight %}

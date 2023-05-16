@@ -14,10 +14,47 @@ category: plots
 </div>
 
 {% highlight latex linenos %}
-% Full, compilable sources including data files are on Github: 
-% https://github.com/bvieuble/TeXFantasy/tree/main/bars/fig2
-% Appears my the article ``Combining sparse approximate factorizations with 
-% mixed-precision iterative refinement''.
+%%% Full, compilable sources including data files are on Github: 
+%%% https://github.com/bvieuble/TeXFantasy/tree/main/bars/fig2
+%%% Appears in my article ``Combining sparse approximate factorizations with 
+%%% mixed-precision iterative refinement''.
+
+% Compiled with XeLaTeX
+% TeX-command-extra-options: "-shell-escape"
+\documentclass[convert={outext=.png},border=10pt]{standalone}
+\usepackage{tikz}
+\usetikzlibrary{shapes.arrows,positioning}
+\usepackage{pgfplots, pgfplotstable, pgfplotstablefilter}
+\pgfplotsset{compat=newest}
+
+\input{color_theme.tex}
+
+% Reinit stacked bar command
+\makeatletter
+\newcommand\resetstackedplots{
+\makeatletter
+\pgfplots@stacked@isfirstplottrue
+\makeatother
+}
+
+% Load data and make groups of plots
+\pgfplotstableread[col sep=comma]{data.csv}{\data}
+\pgfplotstablefilter[group equals 1]{\data}{\groupa}
+\pgfplotstablefilter[group equals 2]{\data}{\groupb}
+\pgfplotstablefilter[group equals 3]{\data}{\groupc}
+\pgfplotstablefilter[group equals 4]{\data}{\groupd}
+
+% Get the number of rows of the data (i.e the number of matrices)
+\pgfplotstablegetrowsof{\groupa}
+\pgfmathsetmacro{\nbrowsa}{\pgfplotsretval}
+\pgfplotstablegetrowsof{\groupb}
+\pgfmathsetmacro{\nbrowsb}{\pgfplotsretval}
+\pgfplotstablegetrowsof{\groupc}
+\pgfmathsetmacro{\nbrowsc}{\pgfplotsretval}
+\pgfplotstablegetrowsof{\groupd}
+\pgfmathsetmacro{\nbrowsd}{\pgfplotsretval}
+
+\begin{document}
 \begin{tikzpicture}
     \begin{axis}
     [
@@ -208,5 +245,7 @@ category: plots
         (7.125,-0.95) 
         (arrow) {aaaaaa};
     \node[] at (7.6,-0.85) (nbLU) {49};
-\end{tikzpicture}}
+\end{tikzpicture}
+
+\end{document}
 {% endhighlight %}

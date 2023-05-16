@@ -14,10 +14,21 @@ category: illustrations
 </div>
 
 {% highlight latex linenos %}
-% Full, compilable sources are on Github: 
-% https://github.com/bvieuble/TeXFantasy/tree/main/illustrations/fig3
-% Appears in my Ph.D. defense ``Mixed precision iterative refinement for the
-% solution of large sparse linear systems''.
+%%% Full, compilable sources are on Github: 
+%%% https://github.com/bvieuble/TeXFantasy/tree/main/illustrations/fig3
+%%% Appears in my Ph.D. defense ``Mixed precision iterative refinement for the
+%%% solution of large sparse linear systems''.
+
+% Compiled with XeLaTeX
+% TeX-command-extra-options: "-shell-escape"
+\documentclass[convert={outext=.png},border=10pt]{standalone}
+\usepackage{tikz}
+\usetikzlibrary{matrix, positioning,fit,backgrounds,arrows.meta}
+
+\input{color_theme.tex}
+
+\begin{document}
+
 \begin{tikzpicture}[>=stealth,thick,baseline]
     \matrix [matrix of math nodes,left delimiter={[},right delimiter={]}, 
     column sep=1mm, row sep=1mm,nodes={minimum width=.7cm,text depth=.14cm,
@@ -102,4 +113,6 @@ category: illustrations
 
     \node[below=10pt of A-6-3] (title) {\large Static pivoting};
 \end{tikzpicture}
+
+\end{document}
 {% endhighlight %}

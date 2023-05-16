@@ -14,9 +14,25 @@ category: plots
 </div>
 
 {% highlight latex linenos %}
-% Full, compilable sources including data files are on Github: 
-% https://github.com/bvieuble/TeXFantasy/tree/main/scatter_plots/fig3
-% Appears my the article ``Combining sparse approximate factorizations with mixed-precision iterative refinement''.
+%%% Full, compilable sources including data files are on Github: 
+%%% https://github.com/bvieuble/TeXFantasy/tree/main/scatter_plots/fig3
+%%% Appears in my article ``Combining sparse approximate factorizations with 
+%%% mixed-precision iterative refinement''.
+
+% Compiled with XeLaTeX
+% TeX-command-extra-options: "-shell-escape"
+\documentclass[convert={outext=.png},border=10pt]{standalone}
+\usepackage{tikz}
+\usepackage{pgfplots, pgfplotstable}
+\usepackage{makecell}
+\pgfplotsset{compat=newest}
+
+\input{color_theme.tex}
+
+\pgfplotstableread[col sep=comma]{data.csv}{\data}
+
+\begin{document}
+
 \begin{tikzpicture}
     \begin{axis}
     [
@@ -77,4 +93,6 @@ category: plots
                 {GMRES, $u_f$=\textsc{s}, $u_r$=\textsc{q}}}
     \end{axis}
 \end{tikzpicture}
+
+\end{document}
 {% endhighlight %}
