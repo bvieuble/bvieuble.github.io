@@ -383,17 +383,43 @@
 241
 242
 243
+244
+245
+246
+247
+248
+249
+250
+251
+252
+253
+254
+255
+256
+257
 </pre></td>
-<td class="code"><pre><span class="c">% Full, compilable sources including data files are on Github: </span>
-<span class="c">% https://github.com/bvieuble/TeXFantasy/tree/main/plots/fig2</span>
-<span class="c">% Appears in my thesis ``Mixed precision iterative refinement for the solution </span>
-<span class="c">% of large sparse linear systems''.</span>
+<td class="code"><pre><span class="c">%%% Full, compilable sources including data files are on Github: </span>
+<span class="c">%%% https://github.com/bvieuble/TeXFantasy/tree/main/plots/fig2</span>
+<span class="c">%%% Appears in my thesis ``Mixed precision iterative refinement for the </span>
+<span class="c">%%% solution of large sparse linear systems''.</span>
+
+<span class="c">% Compiled with XeLaTeX</span>
+<span class="c">% TeX-command-extra-options: "-shell-escape"</span>
+<span class="k">\documentclass</span><span class="na">[convert={outext=.png},border=10pt]</span><span class="p">{</span>standalone<span class="p">}</span>
+<span class="k">\usepackage</span><span class="p">{</span>tikz<span class="p">}</span>
+<span class="k">\usepackage</span><span class="p">{</span>pgfplots, pgfplotstable<span class="p">}</span>
+<span class="k">\pgfplotsset</span><span class="p">{</span>compat=newest<span class="p">}</span>
+
+<span class="k">\input</span><span class="p">{</span>color<span class="p">_</span>theme.tex<span class="p">}</span>
+
 <span class="k">\pgfplotstableread</span><span class="na">[col sep=comma]</span><span class="p">{</span>data/1138<span class="p">_</span>bus.csv<span class="p">}{</span><span class="k">\dataa</span><span class="p">}</span>
 <span class="k">\pgfplotstableread</span><span class="na">[col sep=comma]</span><span class="p">{</span>data/bcsstk19.csv<span class="p">}{</span><span class="k">\datab</span><span class="p">}</span>
 <span class="k">\pgfplotstableread</span><span class="na">[col sep=comma]</span><span class="p">{</span>data/Vehicle<span class="p">_</span>10NN.csv<span class="p">}{</span><span class="k">\datac</span><span class="p">}</span>
 <span class="k">\pgfplotstableread</span><span class="na">[col sep=comma]</span><span class="p">{</span>data/pores<span class="p">_</span>3.csv<span class="p">}{</span><span class="k">\datad</span><span class="p">}</span>
 
-<span class="nt">\begin{tikzpicture}</span>
+<span class="nt">\begin{document}</span>
+
+<span class="nt">\begin{tikzpicture}</span> 
     <span class="nt">\begin{axis}</span>
     [
         legend style=<span class="p">{</span>at=<span class="p">{</span>(.9,.85)<span class="p">}</span>, font=<span class="k">\normalsize</span><span class="p">}</span>,
@@ -423,30 +449,30 @@
     ]
 
         <span class="k">\addplot</span><span class="na">[mark=none,color=myblue,thick]</span>
-            table[x=it,y=ddqsdd]
+            table[x=it,y=ddqsdd] 
             <span class="p">{</span><span class="k">\dataa</span><span class="p">}</span>;
 
-        <span class="k">\addplot</span>[mark=x,only marks,mark size=4pt,thick,color=myblue,forget
+        <span class="k">\addplot</span>[mark=x,only marks,mark size=4pt,thick,color=myblue,forget 
                  plot, thick]
-            table[x=it,y=ddqsdd-rstrt]
+            table[x=it,y=ddqsdd-rstrt] 
             <span class="p">{</span><span class="k">\dataa</span><span class="p">}</span>;
 
         <span class="k">\addplot</span><span class="na">[mark=none,color=myred,thick]</span>
-            table[x=it,y=ddqssd]
+            table[x=it,y=ddqssd] 
             <span class="p">{</span><span class="k">\dataa</span><span class="p">}</span>;
 
         <span class="k">\addplot</span>[mark=x,only marks,mark size=4pt,thick,color=myred,forget plot,
                  thick]
-            table[x=it,y=ddqssd-rstrt]
+            table[x=it,y=ddqssd-rstrt] 
             <span class="p">{</span><span class="k">\dataa</span><span class="p">}</span>;
 
         <span class="k">\addplot</span><span class="na">[mark=none,color=mygreen,thick]</span>
-            table[x=it,y=ddqsss]
+            table[x=it,y=ddqsss] 
             <span class="p">{</span><span class="k">\dataa</span><span class="p">}</span>;
 
-        <span class="k">\addplot</span>[mark=x,only marks,mark size=4pt,thick,color=mygreen,forget
+        <span class="k">\addplot</span>[mark=x,only marks,mark size=4pt,thick,color=mygreen,forget 
                  plot,thick]
-            table[x=it,y=ddqsss-rstrt]
+            table[x=it,y=ddqsss-rstrt] 
             <span class="p">{</span><span class="k">\dataa</span><span class="p">}</span>;
 
         <span class="k">\legend</span><span class="p">{</span><span class="k">\textsc</span><span class="p">{</span>sdd<span class="p">}</span>, <span class="k">\textsc</span><span class="p">{</span>ssd<span class="p">}</span>, <span class="k">\textsc</span><span class="p">{</span>sss<span class="p">}}</span>
@@ -481,30 +507,30 @@
     ]
 
         <span class="k">\addplot</span><span class="na">[mark=none,color=myblue,thick]</span>
-            table[x=it,y=ddqsdd]
+            table[x=it,y=ddqsdd] 
             <span class="p">{</span><span class="k">\datab</span><span class="p">}</span>;
 
-        <span class="k">\addplot</span>[mark=x,only marks,mark size=4pt,thick,color=myblue,forget
+        <span class="k">\addplot</span>[mark=x,only marks,mark size=4pt,thick,color=myblue,forget 
                  plot,thick]
-            table[x=it,y=ddqsdd-rstrt]
+            table[x=it,y=ddqsdd-rstrt] 
             <span class="p">{</span><span class="k">\datab</span><span class="p">}</span>;
 
         <span class="k">\addplot</span><span class="na">[mark=none,color=myred,thick]</span>
-            table[x=it,y=ddqssd]
+            table[x=it,y=ddqssd] 
             <span class="p">{</span><span class="k">\datab</span><span class="p">}</span>;
 
         <span class="k">\addplot</span>[mark=x,only marks,mark size=4pt,thick,color=myred,forget plot,
                  thick]
-            table[x=it,y=ddqssd-rstrt]
+            table[x=it,y=ddqssd-rstrt] 
             <span class="p">{</span><span class="k">\datab</span><span class="p">}</span>;
 
         <span class="k">\addplot</span><span class="na">[mark=none,color=mygreen,thick]</span>
-            table[x=it,y=ddqsss]
+            table[x=it,y=ddqsss] 
             <span class="p">{</span><span class="k">\datab</span><span class="p">}</span>;
 
-        <span class="k">\addplot</span>[mark=x,only marks,mark size=4pt,thick,color=mygreen,forget
+        <span class="k">\addplot</span>[mark=x,only marks,mark size=4pt,thick,color=mygreen,forget 
                  plot,thick]
-            table[x=it,y=ddqsss-rstrt]
+            table[x=it,y=ddqsss-rstrt] 
             <span class="p">{</span><span class="k">\datab</span><span class="p">}</span>;
 
         <span class="k">\legend</span><span class="p">{</span><span class="k">\textsc</span><span class="p">{</span>sdd<span class="p">}</span>, <span class="k">\textsc</span><span class="p">{</span>ssd<span class="p">}</span>, <span class="k">\textsc</span><span class="p">{</span>sss<span class="p">}}</span>
@@ -539,30 +565,30 @@
     ]
 
         <span class="k">\addplot</span><span class="na">[mark=none,color=myblue,thick]</span>
-            table[x=it,y=ddqhss]
+            table[x=it,y=ddqhss] 
             <span class="p">{</span><span class="k">\datac</span><span class="p">}</span>;
 
-        <span class="k">\addplot</span>[mark=x,only marks,mark size=4pt,thick,color=myblue,forget
+        <span class="k">\addplot</span>[mark=x,only marks,mark size=4pt,thick,color=myblue,forget 
                  plot,thick]
-            table[x=it,y=ddqhss-rstrt]
+            table[x=it,y=ddqhss-rstrt] 
             <span class="p">{</span><span class="k">\datac</span><span class="p">}</span>;
 
         <span class="k">\addplot</span><span class="na">[mark=none,color=myred,thick]</span>
-            table[x=it,y=ddqhhs]
+            table[x=it,y=ddqhhs] 
             <span class="p">{</span><span class="k">\datac</span><span class="p">}</span>;
 
         <span class="k">\addplot</span>[mark=x,only marks,mark size=4pt,thick,color=myred,forget plot,
                  thick]
-            table[x=it,y=ddqhhs-rstrt]
+            table[x=it,y=ddqhhs-rstrt] 
             <span class="p">{</span><span class="k">\datac</span><span class="p">}</span>;
 
         <span class="k">\addplot</span><span class="na">[mark=none,color=mygreen,thick]</span>
-            table[x=it,y=ddqhhh]
+            table[x=it,y=ddqhhh] 
             <span class="p">{</span><span class="k">\datac</span><span class="p">}</span>;
 
-        <span class="k">\addplot</span>[mark=x,only marks,mark size=4pt,thick,color=mygreen,forget
+        <span class="k">\addplot</span>[mark=x,only marks,mark size=4pt,thick,color=mygreen,forget 
                  plot,thick]
-            table[x=it,y=ddqhhh-rstrt]
+            table[x=it,y=ddqhhh-rstrt] 
             <span class="p">{</span><span class="k">\datac</span><span class="p">}</span>;
 
         <span class="k">\legend</span><span class="p">{</span><span class="k">\textsc</span><span class="p">{</span>hss<span class="p">}</span>, <span class="k">\textsc</span><span class="p">{</span>hhs<span class="p">}</span>, <span class="k">\textsc</span><span class="p">{</span>hhh<span class="p">}}</span>
@@ -598,35 +624,37 @@
     ]
 
         <span class="k">\addplot</span><span class="na">[mark=none,color=myblue,thick]</span>
-            table[x=it,y=ddqhss]
+            table[x=it,y=ddqhss] 
             <span class="p">{</span><span class="k">\datad</span><span class="p">}</span>;
 
-        <span class="k">\addplot</span>[mark=x,only marks,mark size=4pt,thick,color=myblue,forget
+        <span class="k">\addplot</span>[mark=x,only marks,mark size=4pt,thick,color=myblue,forget 
                  plot,thick]
-            table[x=it,y=ddqhss-rstrt]
+            table[x=it,y=ddqhss-rstrt] 
             <span class="p">{</span><span class="k">\datad</span><span class="p">}</span>;
 
         <span class="k">\addplot</span><span class="na">[mark=none,color=myred,thick]</span>
-            table[x=it,y=ddqhhs]
+            table[x=it,y=ddqhhs] 
             <span class="p">{</span><span class="k">\datad</span><span class="p">}</span>;
 
         <span class="k">\addplot</span>[mark=x,only marks,mark size=4pt,thick,color=myred,forget plot,
                  thick]
-            table[x=it,y=ddqhhs-rstrt]
+            table[x=it,y=ddqhhs-rstrt] 
             <span class="p">{</span><span class="k">\datad</span><span class="p">}</span>;
 
         <span class="k">\addplot</span><span class="na">[mark=none,color=mygreen,thick]</span>
-            table[x=it,y=ddqhhh]
+            table[x=it,y=ddqhhh] 
             <span class="p">{</span><span class="k">\datad</span><span class="p">}</span>;
 
-        <span class="k">\addplot</span>[mark=x,only marks,mark size=4pt,thick,color=mygreen,forget
+        <span class="k">\addplot</span>[mark=x,only marks,mark size=4pt,thick,color=mygreen,forget 
                  plot,thick]
-            table[x=it,y=ddqhhh-rstrt]
+            table[x=it,y=ddqhhh-rstrt] 
             <span class="p">{</span><span class="k">\datad</span><span class="p">}</span>;
 
         <span class="k">\legend</span><span class="p">{</span><span class="k">\textsc</span><span class="p">{</span>hss<span class="p">}</span>, <span class="k">\textsc</span><span class="p">{</span>hhs<span class="p">}</span>, <span class="k">\textsc</span><span class="p">{</span>hhh<span class="p">}}</span>
     <span class="nt">\end{axis}</span>
 <span class="nt">\end{tikzpicture}</span>
+
+<span class="nt">\end{document}</span>
 </pre></td>
 </tr></tbody></table></code></pre></figure>
 

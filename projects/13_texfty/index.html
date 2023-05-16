@@ -189,11 +189,35 @@
 47
 48
 49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
 </pre></td>
-<td class="code"><pre><span class="c">% Full, compilable sources are on Github: </span>
-<span class="c">% https://github.com/bvieuble/TeXFantasy/tree/main/illustrations/fig4</span>
-<span class="c">% Appears in my thesis ``Mixed precision iterative refinement for the solution</span>
-<span class="c">% of large sparse linear systems''.</span>
+<td class="code"><pre><span class="c">%%% Full, compilable sources are on Github: </span>
+<span class="c">%%% https://github.com/bvieuble/TeXFantasy/tree/main/illustrations/fig4</span>
+<span class="c">%%% Appears in my thesis ``Mixed precision iterative refinement for the </span>
+<span class="c">%%% solution of large sparse linear systems''.</span>
+
+<span class="c">% Compiled with XeLaTeX</span>
+<span class="c">% TeX-command-extra-options: "-shell-escape"</span>
+<span class="k">\documentclass</span><span class="na">[convert={outext=.png},border=10pt]</span><span class="p">{</span>standalone<span class="p">}</span>
+<span class="k">\usepackage</span><span class="p">{</span>tikz<span class="p">}</span>
+<span class="k">\usetikzlibrary</span><span class="p">{</span>positioning,patterns,patterns.meta<span class="p">}</span>
+
+<span class="k">\input</span><span class="p">{</span>color<span class="p">_</span>theme.tex<span class="p">}</span>
+
+<span class="nt">\begin{document}</span>
+
 <span class="k">\tikzdeclarepattern</span><span class="p">{</span>
   name=hatch,
   parameters=<span class="p">{</span><span class="k">\hatchsize</span>,<span class="k">\hatchangle</span>,<span class="k">\hatchlinewidth</span><span class="p">}</span>,
@@ -239,6 +263,8 @@
     <span class="k">\draw</span><span class="na">[draw=none,thick]</span> (10,-1) rectangle ++(2,0.5);
     <span class="k">\draw</span><span class="na">[thick,fill=none,draw=black]</span> (0,-1) rectangle ++(12,0.5);
 <span class="nt">\end{tikzpicture}</span>
+
+<span class="nt">\end{document}</span>
 </pre></td>
 </tr></tbody></table></code></pre></figure>
 

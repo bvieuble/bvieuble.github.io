@@ -171,11 +171,41 @@
 29
 30
 31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
 </pre></td>
-<td class="code"><pre><span class="c">% Full, compilable sources including data files are on Github: </span>
-<span class="c">% https://github.com/bvieuble/TeXFantasy/tree/main/tables/tab2</span>
-<span class="c">% Appears my the article ``Combining sparse approximate factorizations with </span>
-<span class="c">% mixed-precision iterative refinement''.</span>
+<td class="code"><pre><span class="c">%%% Full, compilable sources including data files are on Github: </span>
+<span class="c">%%% https://github.com/bvieuble/TeXFantasy/tree/main/tables/tab2</span>
+<span class="c">%%% Appears in my article ``Combining sparse approximate factorizations with </span>
+<span class="c">%%% mixed-precision iterative refinement''.</span>
+
+<span class="c">% Compiled with XeLaTeX</span>
+<span class="c">% TeX-command-extra-options: "-shell-escape"</span>
+<span class="k">\documentclass</span><span class="na">[convert={outext=.png},border=10pt]</span><span class="p">{</span>standalone<span class="p">}</span>
+<span class="k">\usepackage</span><span class="p">{</span>tikz<span class="p">}</span>
+<span class="k">\usepackage</span><span class="p">{</span>pgfplots, pgfplotstable<span class="p">}</span>
+<span class="k">\usepackage</span><span class="p">{</span>colortbl<span class="p">}</span>
+<span class="k">\usepackage</span><span class="p">{</span>booktabs<span class="p">}</span>
+<span class="k">\usepackage</span><span class="p">{</span>makecell<span class="p">}</span>
+<span class="k">\pgfplotsset</span><span class="p">{</span>compat=newest<span class="p">}</span>
+
+<span class="nt">\begin{document}</span>
+<span class="k">\pgfplotstableread</span><span class="na">[col sep=comma]</span><span class="p">{</span>data.csv<span class="p">}{</span><span class="k">\data</span><span class="p">}</span>
+
 <span class="k">\pgfplotstabletypeset</span>[col sep=comma,
                       string type,
                       font=<span class="k">\normalsize</span>,
@@ -203,6 +233,8 @@
                                                column type=<span class="p">{</span>r<span class="p">}}</span>,
                       every last row/.style=<span class="p">{</span>after row=<span class="k">\bottomrule</span><span class="p">}</span>
                       ]<span class="p">{</span><span class="k">\data</span><span class="p">}</span>
+
+<span class="nt">\end{document}</span>
 </pre></td>
 </tr></tbody></table></code></pre></figure>
 

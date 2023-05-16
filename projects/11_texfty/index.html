@@ -241,108 +241,144 @@
 99
 100
 101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
 </pre></td>
-<td class="code"><pre><span class="c">% Full, compilable sources are on Github: </span>
-<span class="c">% https://github.com/bvieuble/TeXFantasy/tree/main/illustrations/fig1</span>
-<span class="c">% Appears in my lecture ``Mixed precision iterative refinement'' (2023).</span>
+<td class="code"><pre><span class="c">%%% Full, compilable sources are on Github: </span>
+<span class="c">%%% https://github.com/bvieuble/TeXFantasy/tree/main/illustrations/fig1</span>
+<span class="c">%%% Appears in my lecture ``Mixed precision iterative refinement'' (2023).</span>
+
+<span class="c">% Compiled with XeLaTeX</span>
+<span class="c">% TeX-command-extra-options: "-shell-escape"</span>
+<span class="k">\documentclass</span><span class="na">[convert={outext=.png},border=10pt]</span><span class="p">{</span>standalone<span class="p">}</span>
+<span class="k">\usepackage</span><span class="p">{</span>tikz<span class="p">}</span> 
+<span class="k">\usetikzlibrary</span><span class="p">{</span>calc,arrows.meta<span class="p">}</span>
+
+<span class="k">\input</span><span class="p">{</span>color<span class="p">_</span>theme.tex<span class="p">}</span>
+
+<span class="nt">\begin{document}</span>
+
+<span class="k">\tikzstyle</span><span class="p">{</span>descript<span class="p">}</span> = [text=black,align=center, minimum height=1.8cm, 
+                        align=center, outer sep=0pt,font=<span class="k">\footnotesize</span>]
+<span class="k">\tikzstyle</span><span class="p">{</span>activity<span class="p">}</span> = [align=center,outer sep=1pt]
+
 <span class="nt">\begin{tikzpicture}</span>[very thick, black, x=0.7cm]<span class="k">\small</span>
 
-<span class="c">%% Coordinates</span>
-<span class="k">\coordinate</span> (O) at (-1.5,0);
-<span class="k">\coordinate</span> (P1) at (4,0);
-<span class="k">\coordinate</span> (P2) at (10,0);
-<span class="k">\coordinate</span> (P3) at (13,0);
-<span class="k">\coordinate</span> (F) at (15,0);
-<span class="k">\coordinate</span> (E1) at (-0.5,0);
-<span class="k">\coordinate</span> (E2) at (2.7,0);
-<span class="k">\coordinate</span> (E3) at (5.5,0);
-<span class="k">\coordinate</span> (E4) at (11.2,0);
-<span class="k">\coordinate</span> (E5) at (13.5,0);
+    <span class="c">%% Coordinates</span>
+    <span class="k">\coordinate</span> (O) at (-1.5,0);
+    <span class="k">\coordinate</span> (P1) at (4,0);
+    <span class="k">\coordinate</span> (P2) at (10,0);
+    <span class="k">\coordinate</span> (P3) at (13,0);
+    <span class="k">\coordinate</span> (F) at (15,0);
+    <span class="k">\coordinate</span> (E1) at (-0.5,0);
+    <span class="k">\coordinate</span> (E2) at (2.7,0);
+    <span class="k">\coordinate</span> (E3) at (5.5,0);
+    <span class="k">\coordinate</span> (E4) at (11.2,0);
+    <span class="k">\coordinate</span> (E5) at (13.5,0);
 
-<span class="c">%% Filled regions</span>
-<span class="k">\fill</span><span class="na">[color=myblue-light]</span> rectangle (<span class="p">$</span><span class="o">(</span><span class="nb">O</span><span class="o">)+(</span><span class="m">1</span><span class="nb">,</span><span class="m">0</span><span class="o">)</span><span class="p">$</span>) -- (P1) -- (<span class="p">$</span><span class="o">(</span><span class="nb">P</span><span class="m">1</span><span class="o">)+(</span><span class="m">0</span><span class="nb">,</span><span class="m">1</span><span class="o">)</span><span class="p">$</span>) --
-(<span class="p">$</span><span class="o">(</span><span class="nb">O</span><span class="o">)+(</span><span class="m">1</span><span class="nb">,</span><span class="m">1</span><span class="o">)</span><span class="p">$</span>); 
-<span class="k">\fill</span><span class="na">[color=mypurple-light]</span> rectangle (P1) -- (P2) -- (<span class="p">$</span><span class="o">(</span><span class="nb">P</span><span class="m">2</span><span class="o">)+(</span><span class="m">0</span><span class="nb">,</span><span class="m">1</span><span class="o">)</span><span class="p">$</span>) -- 
-    (<span class="p">$</span><span class="o">(</span><span class="nb">P</span><span class="m">1</span><span class="o">)+(</span><span class="m">0</span><span class="nb">,</span><span class="m">1</span><span class="o">)</span><span class="p">$</span>); <span class="c">% Work</span>
-<span class="k">\fill</span><span class="na">[color=myorange-light]</span> rectangle (P2) -- (P3) -- (<span class="p">$</span><span class="o">(</span><span class="nb">P</span><span class="m">3</span><span class="o">)+(</span><span class="m">0</span><span class="nb">,</span><span class="m">1</span><span class="o">)</span><span class="p">$</span>) -- 
-    (<span class="p">$</span><span class="o">(</span><span class="nb">P</span><span class="m">2</span><span class="o">)+(</span><span class="m">0</span><span class="nb">,</span><span class="m">1</span><span class="o">)</span><span class="p">$</span>); <span class="c">% Current work</span>
-<span class="k">\shade</span><span class="na">[left color=myred-mild]</span> (<span class="p">$</span><span class="o">(</span><span class="nb">P</span><span class="m">3</span><span class="o">)</span><span class="p">$</span>) rectangle (<span class="p">$</span><span class="o">(</span><span class="nb">F</span><span class="o">)+(</span><span class="m">0</span><span class="nb">,</span><span class="m">1</span><span class="o">)</span><span class="p">$</span>);
+    <span class="c">%% Filled regions</span>
+    <span class="k">\fill</span><span class="na">[color=myblue-light]</span> rectangle (<span class="p">$</span><span class="o">(</span><span class="nb">O</span><span class="o">)+(</span><span class="m">1</span><span class="nb">,</span><span class="m">0</span><span class="o">)</span><span class="p">$</span>) -- (P1) -- (<span class="p">$</span><span class="o">(</span><span class="nb">P</span><span class="m">1</span><span class="o">)+(</span><span class="m">0</span><span class="nb">,</span><span class="m">1</span><span class="o">)</span><span class="p">$</span>)
+    -- (<span class="p">$</span><span class="o">(</span><span class="nb">O</span><span class="o">)+(</span><span class="m">1</span><span class="nb">,</span><span class="m">1</span><span class="o">)</span><span class="p">$</span>); 
+    <span class="k">\fill</span><span class="na">[color=mypurple-light]</span> rectangle (P1) -- (P2) -- (<span class="p">$</span><span class="o">(</span><span class="nb">P</span><span class="m">2</span><span class="o">)+(</span><span class="m">0</span><span class="nb">,</span><span class="m">1</span><span class="o">)</span><span class="p">$</span>) -- 
+        (<span class="p">$</span><span class="o">(</span><span class="nb">P</span><span class="m">1</span><span class="o">)+(</span><span class="m">0</span><span class="nb">,</span><span class="m">1</span><span class="o">)</span><span class="p">$</span>); <span class="c">% Work</span>
+    <span class="k">\fill</span><span class="na">[color=myorange-light]</span> rectangle (P2) -- (P3) -- (<span class="p">$</span><span class="o">(</span><span class="nb">P</span><span class="m">3</span><span class="o">)+(</span><span class="m">0</span><span class="nb">,</span><span class="m">1</span><span class="o">)</span><span class="p">$</span>) -- 
+        (<span class="p">$</span><span class="o">(</span><span class="nb">P</span><span class="m">2</span><span class="o">)+(</span><span class="m">0</span><span class="nb">,</span><span class="m">1</span><span class="o">)</span><span class="p">$</span>); <span class="c">% Current work</span>
+    <span class="k">\shade</span><span class="na">[left color=myred-mild]</span> (<span class="p">$</span><span class="o">(</span><span class="nb">P</span><span class="m">3</span><span class="o">)</span><span class="p">$</span>) rectangle (<span class="p">$</span><span class="o">(</span><span class="nb">F</span><span class="o">)+(</span><span class="m">0</span><span class="nb">,</span><span class="m">1</span><span class="o">)</span><span class="p">$</span>);
 
-<span class="c">%% Text inside filled regions</span>
-<span class="k">\draw</span> (<span class="p">$</span><span class="o">(</span><span class="nb">P</span><span class="m">1</span><span class="o">)+(-</span><span class="m">2</span><span class="nb">.</span><span class="m">5</span><span class="nb">,</span><span class="m">0</span><span class="nb">.</span><span class="m">5</span><span class="o">)</span><span class="p">$</span>) node[activity,myblue] <span class="p">{</span><span class="k">\textbf</span><span class="p">{</span>Extra precision<span class="p">}}</span>;
-<span class="k">\draw</span> (<span class="p">$</span><span class="o">(</span><span class="nb">P</span><span class="m">2</span><span class="o">)+(-</span><span class="m">3</span><span class="nb">,</span><span class="m">0</span><span class="nb">.</span><span class="m">5</span><span class="o">)</span><span class="p">$</span>) node[activity,mypurple] <span class="p">{</span><span class="k">\textbf</span><span class="p">{</span>Fixed precision<span class="p">}}</span>;
-<span class="k">\draw</span> (<span class="p">$</span><span class="o">(</span><span class="nb">P</span><span class="m">3</span><span class="o">)+(-</span><span class="m">1</span><span class="nb">.</span><span class="m">5</span><span class="nb">,</span><span class="m">0</span><span class="nb">.</span><span class="m">5</span><span class="o">)</span><span class="p">$</span>)  node[activity,myorange] <span class="p">{</span><span class="k">\textbf</span><span class="p">{</span>Low precision<span class="p">}}</span>;
+    <span class="c">%% Text inside filled regions</span>
+    <span class="k">\draw</span> (<span class="p">$</span><span class="o">(</span><span class="nb">P</span><span class="m">1</span><span class="o">)+(-</span><span class="m">2</span><span class="nb">.</span><span class="m">5</span><span class="nb">,</span><span class="m">0</span><span class="nb">.</span><span class="m">5</span><span class="o">)</span><span class="p">$</span>) node[activity,myblue] <span class="p">{</span><span class="k">\textbf</span><span class="p">{</span>Extra precision<span class="p">}}</span>;
+    <span class="k">\draw</span> (<span class="p">$</span><span class="o">(</span><span class="nb">P</span><span class="m">2</span><span class="o">)+(-</span><span class="m">3</span><span class="nb">,</span><span class="m">0</span><span class="nb">.</span><span class="m">5</span><span class="o">)</span><span class="p">$</span>) node[activity,mypurple] <span class="p">{</span><span class="k">\textbf</span><span class="p">{</span>Fixed precision<span class="p">}}</span>;
+    <span class="k">\draw</span> (<span class="p">$</span><span class="o">(</span><span class="nb">P</span><span class="m">3</span><span class="o">)+(-</span><span class="m">1</span><span class="nb">.</span><span class="m">5</span><span class="nb">,</span><span class="m">0</span><span class="nb">.</span><span class="m">5</span><span class="o">)</span><span class="p">$</span>)  node[activity,myorange] 
+        <span class="p">{</span><span class="k">\textbf</span><span class="p">{</span>Low precision<span class="p">}}</span>;
 
-<span class="c">%% Description</span>
-<span class="k">\node</span><span class="na">[descript,fill=myblue-light!70,text=myblue,rounded corners]</span> (D1) at 
-    (<span class="p">$</span><span class="o">(</span><span class="nb">P</span><span class="m">1</span><span class="o">)+(-</span><span class="m">3</span><span class="nb">.</span><span class="m">5</span><span class="nb">,</span><span class="o">-</span><span class="m">2</span><span class="nb">.</span><span class="m">5</span><span class="o">)</span><span class="p">$</span>) <span class="p">{</span>
-	<span class="k">\textbf</span><span class="p">{</span>Better accuracy<span class="p">}</span><span class="k">\\</span>
-	<span class="k">\scriptsize</span> <span class="k">\color</span><span class="p">{</span>black<span class="p">}</span>Extra precision <span class="k">\\</span><span class="na">[-4pt]</span> <span class="k">\scriptsize</span> 
-    <span class="k">\color</span><span class="p">{</span>black<span class="p">}</span>for the computation <span class="k">\\</span><span class="na">[-4pt]</span> <span class="k">\scriptsize</span> <span class="k">\color</span><span class="p">{</span>black<span class="p">}</span>of the 
-    residual.<span class="k">\\</span><span class="na">[-4pt]</span><span class="p">}</span>;
+    <span class="c">%% Description</span>
+    <span class="k">\node</span><span class="na">[descript,fill=myblue-light!70,text=myblue,rounded corners]</span> (D1) at 
+        (<span class="p">$</span><span class="o">(</span><span class="nb">P</span><span class="m">1</span><span class="o">)+(-</span><span class="m">3</span><span class="nb">.</span><span class="m">5</span><span class="nb">,</span><span class="o">-</span><span class="m">2</span><span class="nb">.</span><span class="m">5</span><span class="o">)</span><span class="p">$</span>) <span class="p">{</span>
+      <span class="k">\textbf</span><span class="p">{</span>Better accuracy<span class="p">}</span><span class="k">\\</span>
+      <span class="k">\scriptsize</span> <span class="k">\color</span><span class="p">{</span>black<span class="p">}</span>Extra precision <span class="k">\\</span><span class="na">[-4pt]</span> <span class="k">\scriptsize</span> 
+        <span class="k">\color</span><span class="p">{</span>black<span class="p">}</span>for the computation <span class="k">\\</span><span class="na">[-4pt]</span> <span class="k">\scriptsize</span> <span class="k">\color</span><span class="p">{</span>black<span class="p">}</span>of 
+        the residual.<span class="k">\\</span><span class="na">[-4pt]</span><span class="p">}</span>;
 
-<span class="k">\node</span><span class="na">[descript,fill=mypurple-light!70,text=mypurple,rounded corners]</span> (D2) at 
-    (<span class="p">$</span><span class="o">(</span><span class="nb">P</span><span class="m">2</span><span class="o">)+(-</span><span class="m">5</span><span class="nb">,</span><span class="o">-</span><span class="m">2</span><span class="nb">.</span><span class="m">5</span><span class="o">)</span><span class="p">$</span>) <span class="p">{</span>
-	<span class="k">\textbf</span><span class="p">{</span>Recover stability<span class="p">}</span><span class="k">\\</span>
-	<span class="k">\scriptsize</span> <span class="k">\color</span><span class="p">{</span>black<span class="p">}</span>Residual, correction <span class="k">\\</span><span class="na">[-4pt]</span> <span class="k">\scriptsize</span> 
-  <span class="k">\color</span><span class="p">{</span>black<span class="p">}</span>equation, and update, <span class="k">\\</span><span class="na">[-4pt]</span> <span class="k">\scriptsize</span> <span class="k">\color</span><span class="p">{</span>black<span class="p">}</span>all 
-  computed <span class="k">\\</span><span class="na">[-4pt]</span> <span class="k">\scriptsize</span> <span class="k">\color</span><span class="p">{</span>black<span class="p">}</span>in working precision.<span class="p">}</span>;
+    <span class="k">\node</span><span class="na">[descript,fill=mypurple-light!70,text=mypurple,rounded corners]</span> (D2) 
+        at (<span class="p">$</span><span class="o">(</span><span class="nb">P</span><span class="m">2</span><span class="o">)+(-</span><span class="m">5</span><span class="nb">,</span><span class="o">-</span><span class="m">2</span><span class="nb">.</span><span class="m">5</span><span class="o">)</span><span class="p">$</span>) <span class="p">{</span>
+      <span class="k">\textbf</span><span class="p">{</span>Recover stability<span class="p">}</span><span class="k">\\</span>
+      <span class="k">\scriptsize</span> <span class="k">\color</span><span class="p">{</span>black<span class="p">}</span>Residual, correction <span class="k">\\</span><span class="na">[-4pt]</span> <span class="k">\scriptsize</span> 
+      <span class="k">\color</span><span class="p">{</span>black<span class="p">}</span>equation, and update, <span class="k">\\</span><span class="na">[-4pt]</span> <span class="k">\scriptsize</span> <span class="k">\color</span><span class="p">{</span>black<span class="p">}</span>all 
+      computed <span class="k">\\</span><span class="na">[-4pt]</span> <span class="k">\scriptsize</span> <span class="k">\color</span><span class="p">{</span>black<span class="p">}</span>in working precision.<span class="p">}</span>;
 
-<span class="k">\node</span><span class="na">[descript,fill=myorange-light!70,text=myorange,rounded corners]</span> (D3) at 
-    (<span class="p">$</span><span class="o">(</span><span class="nb">P</span><span class="m">3</span><span class="o">)+(-</span><span class="m">3</span><span class="nb">.</span><span class="m">5</span><span class="nb">,</span><span class="o">-</span><span class="m">2</span><span class="nb">.</span><span class="m">5</span><span class="o">)</span><span class="p">$</span>) <span class="p">{</span>
-	<span class="k">\textbf</span><span class="p">{</span>Get performance<span class="p">}</span><span class="k">\\</span>
-	<span class="k">\scriptsize</span> <span class="k">\color</span><span class="p">{</span>black<span class="p">}</span>Solver run <span class="k">\\</span><span class="na">[-4pt]</span> 
-    <span class="k">\scriptsize</span> <span class="k">\color</span><span class="p">{</span>black<span class="p">}</span>in low precision <span class="k">\\</span><span class="na">[-4pt]</span> <span class="k">\scriptsize</span> 
-    <span class="k">\color</span><span class="p">{</span>black<span class="p">}</span>for the correction <span class="k">\\</span><span class="na">[-4pt]</span> <span class="k">\scriptsize</span> 
-    <span class="k">\color</span><span class="p">{</span>black<span class="p">}</span>equation.<span class="p">}</span>;
+    <span class="k">\node</span><span class="na">[descript,fill=myorange-light!70,text=myorange,rounded corners]</span> (D3) 
+        at (<span class="p">$</span><span class="o">(</span><span class="nb">P</span><span class="m">3</span><span class="o">)+(-</span><span class="m">3</span><span class="nb">.</span><span class="m">5</span><span class="nb">,</span><span class="o">-</span><span class="m">2</span><span class="nb">.</span><span class="m">5</span><span class="o">)</span><span class="p">$</span>) <span class="p">{</span>
+      <span class="k">\textbf</span><span class="p">{</span>Get performance<span class="p">}</span><span class="k">\\</span>
+      <span class="k">\scriptsize</span> <span class="k">\color</span><span class="p">{</span>black<span class="p">}</span>Solver run <span class="k">\\</span><span class="na">[-4pt]</span> 
+        <span class="k">\scriptsize</span> <span class="k">\color</span><span class="p">{</span>black<span class="p">}</span>in low precision <span class="k">\\</span><span class="na">[-4pt]</span> <span class="k">\scriptsize</span> 
+        <span class="k">\color</span><span class="p">{</span>black<span class="p">}</span>for the correction <span class="k">\\</span><span class="na">[-4pt]</span> <span class="k">\scriptsize</span> 
+        <span class="k">\color</span><span class="p">{</span>black<span class="p">}</span>equation.<span class="p">}</span>;
 
-<span class="k">\node</span><span class="na">[descript,fill=myred-light!70,text=myred,rounded corners]</span> (D4) at 
-    (<span class="p">$</span><span class="o">(</span><span class="nb">F</span><span class="o">)+(-</span><span class="m">1</span><span class="nb">.</span><span class="m">5</span><span class="nb">,</span><span class="o">-</span><span class="m">2</span><span class="nb">.</span><span class="m">5</span><span class="o">)</span><span class="p">$</span>) <span class="p">{</span>
-	<span class="k">\textbf</span><span class="p">{</span>All in one<span class="p">}</span><span class="k">\\</span>
-	<span class="k">\scriptsize</span> <span class="k">\color</span><span class="p">{</span>black<span class="p">}</span>Extra precision <span class="k">\\</span><span class="na">[-4pt]</span> <span class="k">\scriptsize</span> <span class="k">\color</span><span class="p">{</span>black<span class="p">}</span>on
-  the residual <span class="k">\\</span><span class="na">[-4pt]</span> <span class="k">\scriptsize</span> <span class="k">\color</span><span class="p">{</span>black<span class="p">}</span>and low on the <span class="k">\\</span><span class="na">[-4pt]</span> 
-  <span class="k">\scriptsize</span> <span class="k">\color</span><span class="p">{</span>black<span class="p">}</span>solver.
-    <span class="p">}</span>;
-	
-<span class="c">%% Events</span>
-<span class="k">\draw</span><span class="na">[&lt;-,thick,color=black,dashed]</span> (<span class="p">$</span><span class="o">(</span><span class="nb">E</span><span class="m">1</span><span class="o">)+(</span><span class="m">0</span><span class="nb">,</span><span class="m">0</span><span class="nb">.</span><span class="m">1</span><span class="o">)</span><span class="p">$</span>) -- (<span class="p">$</span><span class="o">(</span><span class="nb">E</span><span class="m">1</span><span class="o">)+(</span><span class="m">0</span><span class="nb">,</span><span class="m">1</span><span class="nb">.</span><span class="m">5</span><span class="o">)</span><span class="p">$</span>) node
-[above=0pt,align=center,black] <span class="p">{</span><span class="k">\scriptsize</span> <span class="k">\textbf</span><span class="p">{</span>1948<span class="p">}</span> <span class="k">\\</span> <span class="k">\scriptsize</span> First
-<span class="k">\\</span><span class="na">[-4pt]</span><span class="k">\scriptsize</span> appearance.<span class="p">}</span>;
-<span class="k">\draw</span><span class="na">[&lt;-,thick,color=black,dashed]</span> (<span class="p">$</span><span class="o">(</span><span class="nb">E</span><span class="m">2</span><span class="o">)+(</span><span class="m">0</span><span class="nb">,</span><span class="m">0</span><span class="nb">.</span><span class="m">1</span><span class="o">)</span><span class="p">$</span>) -- (<span class="p">$</span><span class="o">(</span><span class="nb">E</span><span class="m">2</span><span class="o">)+(</span><span class="m">0</span><span class="nb">,</span><span class="m">1</span><span class="nb">.</span><span class="m">5</span><span class="o">)</span><span class="p">$</span>) node
-[above=0pt,align=center,black] <span class="p">{</span><span class="k">\scriptsize</span> <span class="k">\textbf</span><span class="p">{</span>1963<span class="p">}</span> <span class="k">\\</span> <span class="k">\scriptsize</span> First
-analysis. <span class="k">\\</span><span class="na">[-4pt]</span><span class="p">}</span>;
-<span class="k">\draw</span><span class="na">[&lt;-,thick,color=black,dashed]</span> (<span class="p">$</span><span class="o">(</span><span class="nb">E</span><span class="m">3</span><span class="o">)+(</span><span class="m">0</span><span class="nb">,</span><span class="m">0</span><span class="nb">.</span><span class="m">1</span><span class="o">)</span><span class="p">$</span>) -- (<span class="p">$</span><span class="o">(</span><span class="nb">E</span><span class="m">3</span><span class="o">)+(</span><span class="m">0</span><span class="nb">,</span><span class="m">1</span><span class="nb">.</span><span class="m">5</span><span class="o">)</span><span class="p">$</span>) node
-[above=0pt,align=center,black] <span class="p">{</span><span class="k">\scriptsize</span> <span class="k">\textbf</span><span class="p">{</span>1977<span class="p">}</span> <span class="k">\\</span> <span class="k">\scriptsize</span>
-Analysis in <span class="k">\\</span><span class="na">[-4pt]</span> <span class="k">\scriptsize</span> fixed precision.<span class="p">}</span>;
-<span class="k">\draw</span><span class="na">[&lt;-,thick,color=black,dashed]</span> (<span class="p">$</span><span class="o">(</span><span class="nb">E</span><span class="m">4</span><span class="o">)+(</span><span class="m">0</span><span class="nb">,</span><span class="m">0</span><span class="nb">.</span><span class="m">1</span><span class="o">)</span><span class="p">$</span>) -- (<span class="p">$</span><span class="o">(</span><span class="nb">E</span><span class="m">4</span><span class="o">)+(</span><span class="m">0</span><span class="nb">,</span><span class="m">1</span><span class="nb">.</span><span class="m">5</span><span class="o">)</span><span class="p">$</span>) node
-[above=0pt,align=center,black] <span class="p">{</span><span class="k">\scriptsize</span> <span class="k">\textbf</span><span class="p">{</span>2006<span class="p">}</span> <span class="k">\\</span> <span class="k">\scriptsize</span>
-Low precision <span class="k">\\</span><span class="na">[-4pt]</span> <span class="k">\scriptsize</span> factorization.<span class="p">}</span>;
-<span class="k">\draw</span><span class="na">[&lt;-,thick,color=black,dashed]</span> (<span class="p">$</span><span class="o">(</span><span class="nb">E</span><span class="m">5</span><span class="o">)+(</span><span class="m">0</span><span class="nb">,</span><span class="m">0</span><span class="nb">.</span><span class="m">1</span><span class="o">)</span><span class="p">$</span>) -- (<span class="p">$</span><span class="o">(</span><span class="nb">E</span><span class="m">5</span><span class="o">)+(</span><span class="m">0</span><span class="nb">,</span><span class="m">1</span><span class="nb">.</span><span class="m">5</span><span class="o">)</span><span class="p">$</span>) node
-[above=0pt,align=center,black] <span class="p">{</span><span class="k">\scriptsize</span> <span class="k">\textbf</span><span class="p">{</span>2018<span class="p">}</span> <span class="k">\\</span> <span class="k">\scriptsize</span>
-Generalized <span class="k">\\</span><span class="na">[-4pt]</span> <span class="k">\scriptsize</span> analysis.<span class="p">}</span>;
+    <span class="k">\node</span><span class="na">[descript,fill=myred-light!70,text=myred,rounded corners]</span> (D4) at 
+        (<span class="p">$</span><span class="o">(</span><span class="nb">F</span><span class="o">)+(-</span><span class="m">1</span><span class="nb">.</span><span class="m">5</span><span class="nb">,</span><span class="o">-</span><span class="m">2</span><span class="nb">.</span><span class="m">5</span><span class="o">)</span><span class="p">$</span>) <span class="p">{</span>
+      <span class="k">\textbf</span><span class="p">{</span>All in one<span class="p">}</span><span class="k">\\</span>
+      <span class="k">\scriptsize</span> <span class="k">\color</span><span class="p">{</span>black<span class="p">}</span>Extra precision <span class="k">\\</span><span class="na">[-4pt]</span> <span class="k">\scriptsize</span> 
+      <span class="k">\color</span><span class="p">{</span>black<span class="p">}</span>on the residual <span class="k">\\</span><span class="na">[-4pt]</span> <span class="k">\scriptsize</span> <span class="k">\color</span><span class="p">{</span>black<span class="p">}</span>and low on 
+      the <span class="k">\\</span><span class="na">[-4pt]</span> <span class="k">\scriptsize</span> <span class="k">\color</span><span class="p">{</span>black<span class="p">}</span>solver.
+        <span class="p">}</span>;
+      
+    <span class="c">%% Events</span>
+    <span class="k">\draw</span><span class="na">[&lt;-,thick,color=black,dashed]</span> (<span class="p">$</span><span class="o">(</span><span class="nb">E</span><span class="m">1</span><span class="o">)+(</span><span class="m">0</span><span class="nb">,</span><span class="m">0</span><span class="nb">.</span><span class="m">1</span><span class="o">)</span><span class="p">$</span>) -- (<span class="p">$</span><span class="o">(</span><span class="nb">E</span><span class="m">1</span><span class="o">)+(</span><span class="m">0</span><span class="nb">,</span><span class="m">1</span><span class="nb">.</span><span class="m">5</span><span class="o">)</span><span class="p">$</span>) 
+    node [above=0pt,align=center,black] <span class="p">{</span><span class="k">\scriptsize</span> <span class="k">\textbf</span><span class="p">{</span>1948<span class="p">}</span> <span class="k">\\</span> 
+    <span class="k">\scriptsize</span> First <span class="k">\\</span><span class="na">[-4pt]</span><span class="k">\scriptsize</span> appearance.<span class="p">}</span>;
+    <span class="k">\draw</span><span class="na">[&lt;-,thick,color=black,dashed]</span> (<span class="p">$</span><span class="o">(</span><span class="nb">E</span><span class="m">2</span><span class="o">)+(</span><span class="m">0</span><span class="nb">,</span><span class="m">0</span><span class="nb">.</span><span class="m">1</span><span class="o">)</span><span class="p">$</span>) -- (<span class="p">$</span><span class="o">(</span><span class="nb">E</span><span class="m">2</span><span class="o">)+(</span><span class="m">0</span><span class="nb">,</span><span class="m">1</span><span class="nb">.</span><span class="m">5</span><span class="o">)</span><span class="p">$</span>) 
+    node [above=0pt,align=center,black] <span class="p">{</span><span class="k">\scriptsize</span> <span class="k">\textbf</span><span class="p">{</span>1963<span class="p">}</span> <span class="k">\\</span> 
+    <span class="k">\scriptsize</span> First analysis. <span class="k">\\</span><span class="na">[-4pt]</span><span class="p">}</span>;
+    <span class="k">\draw</span><span class="na">[&lt;-,thick,color=black,dashed]</span> (<span class="p">$</span><span class="o">(</span><span class="nb">E</span><span class="m">3</span><span class="o">)+(</span><span class="m">0</span><span class="nb">,</span><span class="m">0</span><span class="nb">.</span><span class="m">1</span><span class="o">)</span><span class="p">$</span>) -- (<span class="p">$</span><span class="o">(</span><span class="nb">E</span><span class="m">3</span><span class="o">)+(</span><span class="m">0</span><span class="nb">,</span><span class="m">1</span><span class="nb">.</span><span class="m">5</span><span class="o">)</span><span class="p">$</span>) 
+    node [above=0pt,align=center,black] <span class="p">{</span><span class="k">\scriptsize</span> <span class="k">\textbf</span><span class="p">{</span>1977<span class="p">}</span> <span class="k">\\</span> 
+    <span class="k">\scriptsize</span> Analysis in <span class="k">\\</span><span class="na">[-4pt]</span> <span class="k">\scriptsize</span> fixed precision.<span class="p">}</span>;
+    <span class="k">\draw</span><span class="na">[&lt;-,thick,color=black,dashed]</span> (<span class="p">$</span><span class="o">(</span><span class="nb">E</span><span class="m">4</span><span class="o">)+(</span><span class="m">0</span><span class="nb">,</span><span class="m">0</span><span class="nb">.</span><span class="m">1</span><span class="o">)</span><span class="p">$</span>) -- (<span class="p">$</span><span class="o">(</span><span class="nb">E</span><span class="m">4</span><span class="o">)+(</span><span class="m">0</span><span class="nb">,</span><span class="m">1</span><span class="nb">.</span><span class="m">5</span><span class="o">)</span><span class="p">$</span>) 
+    node [above=0pt,align=center,black] <span class="p">{</span><span class="k">\scriptsize</span> <span class="k">\textbf</span><span class="p">{</span>2006<span class="p">}</span> <span class="k">\\</span> 
+    <span class="k">\scriptsize</span> Low precision <span class="k">\\</span><span class="na">[-4pt]</span> <span class="k">\scriptsize</span> factorization.<span class="p">}</span>;
+    <span class="k">\draw</span><span class="na">[&lt;-,thick,color=black,dashed]</span> (<span class="p">$</span><span class="o">(</span><span class="nb">E</span><span class="m">5</span><span class="o">)+(</span><span class="m">0</span><span class="nb">,</span><span class="m">0</span><span class="nb">.</span><span class="m">1</span><span class="o">)</span><span class="p">$</span>) -- (<span class="p">$</span><span class="o">(</span><span class="nb">E</span><span class="m">5</span><span class="o">)+(</span><span class="m">0</span><span class="nb">,</span><span class="m">1</span><span class="nb">.</span><span class="m">5</span><span class="o">)</span><span class="p">$</span>) 
+    node [above=0pt,align=center,black] <span class="p">{</span><span class="k">\scriptsize</span> <span class="k">\textbf</span><span class="p">{</span>2018<span class="p">}</span> <span class="k">\\</span> 
+    <span class="k">\scriptsize</span> Generalized <span class="k">\\</span><span class="na">[-4pt]</span> <span class="k">\scriptsize</span> analysis.<span class="p">}</span>;
 
-<span class="c">%% Arrows</span>
-<span class="k">\path</span><span class="na">[-&gt;,color=myblue]</span> (<span class="p">$</span><span class="o">(</span><span class="nb">P</span><span class="m">1</span><span class="o">)+(-</span><span class="m">3</span><span class="nb">,</span><span class="o">-</span><span class="m">0</span><span class="nb">.</span><span class="m">1</span><span class="o">)</span><span class="p">$</span>) edge [out=-90, in=90]  
-  (<span class="p">$</span><span class="o">(</span><span class="nb">D</span><span class="m">1</span><span class="o">)+(</span><span class="m">0</span><span class="nb">,</span><span class="m">1</span><span class="o">)</span><span class="p">$</span>);
-<span class="k">\path</span><span class="na">[-&gt;,color=mypurple]</span> (<span class="p">$</span><span class="o">(</span><span class="nb">P</span><span class="m">2</span><span class="o">)+(-</span><span class="m">3</span><span class="nb">,</span><span class="o">-</span><span class="m">0</span><span class="nb">.</span><span class="m">1</span><span class="o">)</span><span class="p">$</span>) edge [out=-90, in=90]  
-  (<span class="p">$</span><span class="o">(</span><span class="nb">D</span><span class="m">2</span><span class="o">)+(</span><span class="m">0</span><span class="nb">,</span><span class="m">1</span><span class="o">)</span><span class="p">$</span>);
-<span class="k">\path</span><span class="na">[-&gt;,color=myorange]</span>(<span class="p">$</span><span class="o">(</span><span class="nb">P</span><span class="m">3</span><span class="o">)+(-</span><span class="m">2</span><span class="nb">,</span><span class="o">-</span><span class="m">0</span><span class="nb">.</span><span class="m">1</span><span class="o">)</span><span class="p">$</span>)  edge [out=-70, in=90]  
-  (<span class="p">$</span><span class="o">(</span><span class="nb">D</span><span class="m">3</span><span class="o">)+(</span><span class="m">0</span><span class="nb">,</span><span class="m">1</span><span class="o">)</span><span class="p">$</span>);
-<span class="k">\path</span><span class="na">[-&gt;,color=myred]</span>(<span class="p">$</span><span class="o">(</span><span class="nb">F</span><span class="o">)+(-</span><span class="m">1</span><span class="nb">.</span><span class="m">5</span><span class="nb">,</span><span class="o">-</span><span class="m">0</span><span class="nb">.</span><span class="m">1</span><span class="o">)</span><span class="p">$</span>)  edge [out=-140, in=90]  
-  (<span class="p">$</span><span class="o">(</span><span class="nb">D</span><span class="m">4</span><span class="o">)+(</span><span class="m">0</span><span class="nb">,</span><span class="m">1</span><span class="o">)</span><span class="p">$</span>);
-<span class="k">\draw</span><span class="na">[-&gt;]</span> (O) -- (F);
+    <span class="c">%% Arrows</span>
+    <span class="k">\path</span><span class="na">[-&gt;,color=myblue]</span> (<span class="p">$</span><span class="o">(</span><span class="nb">P</span><span class="m">1</span><span class="o">)+(-</span><span class="m">3</span><span class="nb">,</span><span class="o">-</span><span class="m">0</span><span class="nb">.</span><span class="m">1</span><span class="o">)</span><span class="p">$</span>) edge [out=-90, in=90]  
+      (<span class="p">$</span><span class="o">(</span><span class="nb">D</span><span class="m">1</span><span class="o">)+(</span><span class="m">0</span><span class="nb">,</span><span class="m">1</span><span class="o">)</span><span class="p">$</span>);
+    <span class="k">\path</span><span class="na">[-&gt;,color=mypurple]</span> (<span class="p">$</span><span class="o">(</span><span class="nb">P</span><span class="m">2</span><span class="o">)+(-</span><span class="m">3</span><span class="nb">,</span><span class="o">-</span><span class="m">0</span><span class="nb">.</span><span class="m">1</span><span class="o">)</span><span class="p">$</span>) edge [out=-90, in=90]  
+      (<span class="p">$</span><span class="o">(</span><span class="nb">D</span><span class="m">2</span><span class="o">)+(</span><span class="m">0</span><span class="nb">,</span><span class="m">1</span><span class="o">)</span><span class="p">$</span>);
+    <span class="k">\path</span><span class="na">[-&gt;,color=myorange]</span>(<span class="p">$</span><span class="o">(</span><span class="nb">P</span><span class="m">3</span><span class="o">)+(-</span><span class="m">2</span><span class="nb">,</span><span class="o">-</span><span class="m">0</span><span class="nb">.</span><span class="m">1</span><span class="o">)</span><span class="p">$</span>)  edge [out=-70, in=90]  
+      (<span class="p">$</span><span class="o">(</span><span class="nb">D</span><span class="m">3</span><span class="o">)+(</span><span class="m">0</span><span class="nb">,</span><span class="m">1</span><span class="o">)</span><span class="p">$</span>);
+    <span class="k">\path</span><span class="na">[-&gt;,color=myred]</span>(<span class="p">$</span><span class="o">(</span><span class="nb">F</span><span class="o">)+(-</span><span class="m">1</span><span class="nb">.</span><span class="m">5</span><span class="nb">,</span><span class="o">-</span><span class="m">0</span><span class="nb">.</span><span class="m">1</span><span class="o">)</span><span class="p">$</span>)  edge [out=-140, in=90]  
+      (<span class="p">$</span><span class="o">(</span><span class="nb">D</span><span class="m">4</span><span class="o">)+(</span><span class="m">0</span><span class="nb">,</span><span class="m">1</span><span class="o">)</span><span class="p">$</span>);
+    <span class="k">\draw</span><span class="na">[-&gt;]</span> (O) -- (F);
 
-<span class="c">%% Ticks</span>
-<span class="k">\foreach</span> <span class="k">\x</span> in <span class="p">{</span>0,2,...,14<span class="p">}</span>
-<span class="k">\draw</span>(<span class="k">\x</span>,3pt) -- (<span class="k">\x</span>,-3pt);
+    <span class="c">%% Ticks</span>
+    <span class="k">\foreach</span> <span class="k">\x</span> in <span class="p">{</span>0,2,...,14<span class="p">}</span>
+    <span class="k">\draw</span>(<span class="k">\x</span>,3pt) -- (<span class="k">\x</span>,-3pt);
 
-<span class="c">%% Labels</span>
-<span class="k">\foreach</span> <span class="k">\i</span> <span class="k">\j</span> in
-<span class="p">{</span>0/1950,2/1960,4/1970,6/1980,8/1990,10/2000,12/2010,14/2020<span class="p">}{</span>
-	<span class="k">\draw</span> (<span class="k">\i</span>,0) node[below=3pt] <span class="p">{</span><span class="k">\j</span><span class="p">}</span> ;
-<span class="p">}</span>
+    <span class="c">%% Labels</span>
+    <span class="k">\foreach</span> <span class="k">\i</span> <span class="k">\j</span> in
+    <span class="p">{</span>0/1950,2/1960,4/1970,6/1980,8/1990,10/2000,12/2010,14/2020<span class="p">}{</span>
+      <span class="k">\draw</span> (<span class="k">\i</span>,0) node[below=3pt] <span class="p">{</span><span class="k">\j</span><span class="p">}</span> ;
+    <span class="p">}</span>
 
 <span class="nt">\end{tikzpicture}</span>
+
+<span class="nt">\end{document}</span>
 </pre></td>
 </tr></tbody></table></code></pre></figure>
 

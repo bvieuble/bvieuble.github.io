@@ -400,10 +400,39 @@
 258
 259
 260
+261
+262
+263
+264
+265
+266
+267
+268
+269
+270
+271
+272
+273
+274
+275
 </pre></td>
-<td class="code"><pre><span class="c">% Full, compilable sources including data files are on Github: </span>
-<span class="c">% https://github.com/bvieuble/TeXFantasy/tree/main/plots/fig1</span>
-<span class="c">% Appears in my article ``Five-Precision GMRES-based Iterative Refinement''.</span>
+<td class="code"><pre><span class="c">%%% Full, compilable sources including data files are on Github: </span>
+<span class="c">%%% https://github.com/bvieuble/TeXFantasy/tree/main/plots/fig1</span>
+<span class="c">%%% Appears in my article ``Five-Precision GMRES-based Iterative Refinement''.</span>
+
+<span class="c">% Compiled with XeLaTeX</span>
+<span class="c">% Generate the GIF with convert -delay 100 -loop 0 -density 200 -alpha on </span>
+<span class="c">% file.pdf file.gif (package imagemagick is required).</span>
+<span class="k">\documentclass</span><span class="na">[tikz,border=10pt]</span><span class="p">{</span>standalone<span class="p">}</span>
+<span class="k">\usepackage</span><span class="p">{</span>pgfplots<span class="p">}</span>
+<span class="k">\pgfplotsset</span><span class="p">{</span>compat=newest<span class="p">}</span>
+
+<span class="k">\input</span><span class="p">{</span>color<span class="p">_</span>theme.tex<span class="p">}</span>
+
+<span class="k">\pgfplotstableread</span><span class="na">[col sep=comma]</span><span class="p">{</span>data.csv<span class="p">}{</span><span class="k">\data</span><span class="p">}</span>
+
+<span class="nt">\begin{document}</span>
+
 <span class="k">\newcommand</span><span class="p">{</span><span class="k">\plota</span><span class="p">}{</span>
     <span class="k">\addplot</span>[mark=*,solid,every mark/.append style=<span class="p">{</span>solid,fill=mypurple, 
              fill opacity=0.2<span class="p">}</span>,color=mypurple,very thick,mark size=4pt]
@@ -661,6 +690,7 @@
                     <span class="k">\textsc</span><span class="p">{</span>q<span class="p">}}</span>
     <span class="nt">\end{axis}</span>
 <span class="nt">\end{tikzpicture}</span>
+<span class="nt">\end{document}</span>
 </pre></td>
 </tr></tbody></table></code></pre></figure>
 

@@ -337,11 +337,39 @@
 195
 196
 197
+198
+199
+200
+201
+202
+203
+204
+205
+206
+207
+208
+209
+210
+211
+212
 </pre></td>
-<td class="code"><pre><span class="c">% Full, compilable sources including data files are on Github: </span>
-<span class="c">% https://github.com/bvieuble/TeXFantasy/tree/main/scatter_plots/fig2</span>
-<span class="c">% Appears in my thesis ``Mixed precision iterative refinement for the solution </span>
-<span class="c">% of large sparse linear systems''.</span>
+<td class="code"><pre><span class="c">%%% Full, compilable sources including data files are on Github: </span>
+<span class="c">%%% https://github.com/bvieuble/TeXFantasy/tree/main/scatter_plots/fig2</span>
+<span class="c">%%% Appears in my thesis ``Mixed precision iterative refinement for the </span>
+<span class="c">%%% solution of large sparse linear systems''.</span>
+
+<span class="c">% Compiled with XeLaTeX</span>
+<span class="c">% TeX-command-extra-options: "-shell-escape"</span>
+<span class="k">\documentclass</span><span class="na">[convert={outext=.png},border=10pt]</span><span class="p">{</span>standalone<span class="p">}</span>
+<span class="k">\usepackage</span><span class="p">{</span>tikz<span class="p">}</span>
+<span class="k">\usepackage</span><span class="p">{</span>pgfplots,pgfplotstable<span class="p">}</span>
+<span class="k">\pgfplotsset</span><span class="p">{</span>compat=newest<span class="p">}</span>
+
+<span class="k">\input</span><span class="p">{</span>color<span class="p">_</span>theme.tex<span class="p">}</span>
+
+<span class="nt">\begin{document}</span>
+<span class="k">\pgfplotstableset</span><span class="p">{</span>col sep=comma<span class="p">}</span>
+
 <span class="nt">\begin{tikzpicture}</span>
     <span class="nt">\begin{axis}</span>
     [
@@ -535,6 +563,8 @@
              table[x=ka,y=hdqdq] <span class="p">{</span>data.csv<span class="p">}</span>;
     <span class="nt">\end{axis}</span>
 <span class="nt">\end{tikzpicture}</span>
+
+<span class="nt">\end{document}</span>
 </pre></td>
 </tr></tbody></table></code></pre></figure>
 

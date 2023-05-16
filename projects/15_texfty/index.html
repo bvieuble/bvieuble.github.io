@@ -476,11 +476,47 @@
 334
 335
 336
+337
+338
+339
+340
+341
+342
+343
+344
+345
+346
+347
+348
+349
+350
+351
+352
+353
+354
+355
 </pre></td>
-<td class="code"><pre><span class="c">% Full, compilable sources including data files are on Github: </span>
-<span class="c">% https://github.com/bvieuble/TeXFantasy/tree/main/heatmaps/fig1</span>
-<span class="c">% Appears in my thesis ``Mixed precision iterative refinement for the solution</span>
-<span class="c">% of large sparse linear systems''.</span>
+<td class="code"><pre><span class="c">%%% Full, compilable sources including data files are on Github: </span>
+<span class="c">%%% https://github.com/bvieuble/TeXFantasy/tree/main/heatmaps/fig1</span>
+<span class="c">%%% Appears in my thesis ``Mixed precision iterative refinement for the </span>
+<span class="c">%%% solution of large sparse linear systems''.</span>
+
+<span class="c">% Compiled with XeLaTeX</span>
+<span class="c">% TeX-command-extra-options: "-shell-escape"</span>
+<span class="k">\documentclass</span><span class="na">[convert={outext=.png},border=10pt]</span><span class="p">{</span>standalone<span class="p">}</span>
+<span class="k">\usepackage</span><span class="p">{</span>tikz<span class="p">}</span>
+<span class="k">\usepackage</span><span class="p">{</span>pgfplots<span class="p">}</span>
+<span class="k">\pgfplotsset</span><span class="p">{</span>compat=newest<span class="p">}</span>
+<span class="k">\usepackage</span><span class="p">{</span>amsmath<span class="p">}</span>
+
+<span class="k">\input</span><span class="p">{</span>color<span class="p">_</span>theme.tex<span class="p">}</span>
+
+<span class="k">\pgfmathdeclarefunction</span><span class="p">{</span>lg10<span class="p">}{</span>1<span class="p">}{</span>
+    <span class="k">\pgfmathparse</span><span class="p">{</span>ln(#1)/ln(10)<span class="p">}</span>
+<span class="p">}</span>
+
+<span class="nt">\begin{document}</span>
+
 <span class="nt">\begin{tikzpicture}</span>
     <span class="nt">\begin{axis}</span>
     [
@@ -500,11 +536,11 @@
         yticklabels = <span class="p">{</span>1e0,1e4,1e8,1e12,1e16<span class="p">}</span>,
         y tick label style=<span class="p">{</span>font=<span class="k">\small</span>,rotate=0<span class="p">}</span>,
         axis on top,
-        mesh/ordering=y varies,
+        mesh/ordering=y varies, 
         unbounded coords=jump,
         height=0.4<span class="k">\linewidth</span>,
         width=0.4<span class="k">\linewidth</span>,
-        colormap=<span class="p">{</span>whiteblue<span class="p">}{</span>color=<span class="p">{</span>black<span class="p">}</span> color=<span class="p">{</span>mypurple<span class="p">}</span> color=<span class="p">{</span>myblue<span class="p">}</span>
+        colormap=<span class="p">{</span>whiteblue<span class="p">}{</span>color=<span class="p">{</span>black<span class="p">}</span> color=<span class="p">{</span>mypurple<span class="p">}</span> color=<span class="p">{</span>myblue<span class="p">}</span> 
             color=(myorange) color=(myyellow)<span class="p">}</span>,
         point meta min=0,
         point meta max=3.68,
@@ -514,7 +550,7 @@
         at=<span class="p">{</span>(0, 0)<span class="p">}</span>
     ]
 
-    <span class="k">\addplot</span><span class="na">[matrix plot*,mesh/cols=17,mesh/rows=17,point meta=explicit]</span>
+    <span class="k">\addplot</span><span class="na">[matrix plot*,mesh/cols=17,mesh/rows=17,point meta=explicit]</span> 
         table[meta expr=lg10(<span class="k">\thisrow</span><span class="p">{</span>it-bbb<span class="p">}</span>),col sep=comma] <span class="p">{</span>data.csv<span class="p">}</span>;
     <span class="nt">\end{axis}</span>
 
@@ -536,11 +572,11 @@
         yticklabels = <span class="p">{</span>,,<span class="p">}</span>,
         y tick label style=<span class="p">{</span>font=<span class="k">\small</span>,rotate=0<span class="p">}</span>,
         axis on top,
-        mesh/ordering=y varies,
+        mesh/ordering=y varies, 
         unbounded coords=jump,
         height=0.4<span class="k">\linewidth</span>,
         width=0.4<span class="k">\linewidth</span>,
-        colormap=<span class="p">{</span>whiteblue<span class="p">}{</span>color=<span class="p">{</span>black<span class="p">}</span> color=<span class="p">{</span>mypurple<span class="p">}</span> color=<span class="p">{</span>myblue<span class="p">}</span>
+        colormap=<span class="p">{</span>whiteblue<span class="p">}{</span>color=<span class="p">{</span>black<span class="p">}</span> color=<span class="p">{</span>mypurple<span class="p">}</span> color=<span class="p">{</span>myblue<span class="p">}</span> 
             color=(myorange) color=(myyellow)<span class="p">}</span>,
         point meta min=0,
         point meta max=3.68,
@@ -557,7 +593,7 @@
         at=<span class="p">{</span>(200, 0)<span class="p">}</span>
     ]
 
-    <span class="k">\addplot</span><span class="na">[matrix plot*,mesh/cols=17,mesh/rows=17,point meta=explicit]</span>
+    <span class="k">\addplot</span><span class="na">[matrix plot*,mesh/cols=17,mesh/rows=17,point meta=explicit]</span> 
         table[meta expr=lg10(<span class="k">\thisrow</span><span class="p">{</span>it-bbs<span class="p">}</span>),col sep=comma] <span class="p">{</span>data.csv<span class="p">}</span>;
     <span class="nt">\end{axis}</span>
 
@@ -579,11 +615,11 @@
         yticklabels = <span class="p">{</span>,,<span class="p">}</span>,
         y tick label style=<span class="p">{</span>font=<span class="k">\small</span>,rotate=0<span class="p">}</span>,
         axis on top,
-        mesh/ordering=y varies,
+        mesh/ordering=y varies, 
         unbounded coords=jump,
         height=0.4<span class="k">\linewidth</span>,
         width=0.4<span class="k">\linewidth</span>,
-        colormap=<span class="p">{</span>whiteblue<span class="p">}{</span>color=<span class="p">{</span>black<span class="p">}</span> color=<span class="p">{</span>mypurple<span class="p">}</span> color=<span class="p">{</span>myblue<span class="p">}</span>
+        colormap=<span class="p">{</span>whiteblue<span class="p">}{</span>color=<span class="p">{</span>black<span class="p">}</span> color=<span class="p">{</span>mypurple<span class="p">}</span> color=<span class="p">{</span>myblue<span class="p">}</span> 
             color=(myorange) color=(myyellow)<span class="p">}</span>,
         point meta min=0,
         point meta max=3.68,
@@ -593,7 +629,7 @@
         at=<span class="p">{</span>(400, 0)<span class="p">}</span>
     ]
 
-    <span class="k">\addplot</span><span class="na">[matrix plot*,mesh/cols=17,mesh/rows=17,point meta=explicit]</span>
+    <span class="k">\addplot</span><span class="na">[matrix plot*,mesh/cols=17,mesh/rows=17,point meta=explicit]</span> 
         table[meta expr=lg10(<span class="k">\thisrow</span><span class="p">{</span>it-bss<span class="p">}</span>),col sep=comma] <span class="p">{</span>data.csv<span class="p">}</span>;
     <span class="nt">\end{axis}</span>
 
@@ -615,11 +651,11 @@
         yticklabels = <span class="p">{</span>1e0,1e4,1e8,1e12,1e16<span class="p">}</span>,
         y tick label style=<span class="p">{</span>font=<span class="k">\small</span>,rotate=0<span class="p">}</span>,
         axis on top,
-        mesh/ordering=y varies,
+        mesh/ordering=y varies, 
         unbounded coords=jump,
         height=0.4<span class="k">\linewidth</span>,
         width=0.4<span class="k">\linewidth</span>,
-        colormap=<span class="p">{</span>whiteblue<span class="p">}{</span>color=<span class="p">{</span>black<span class="p">}</span> color=<span class="p">{</span>mypurple<span class="p">}</span> color=<span class="p">{</span>myblue<span class="p">}</span>
+        colormap=<span class="p">{</span>whiteblue<span class="p">}{</span>color=<span class="p">{</span>black<span class="p">}</span> color=<span class="p">{</span>mypurple<span class="p">}</span> color=<span class="p">{</span>myblue<span class="p">}</span> 
             color=(myorange) color=(myyellow)<span class="p">}</span>,
         point meta min=0,
         point meta max=3.68,
@@ -629,7 +665,7 @@
         at=<span class="p">{</span>(0, -225)<span class="p">}</span>
     ]
 
-    <span class="k">\addplot</span><span class="na">[matrix plot*,mesh/cols=17,mesh/rows=17,point meta=explicit]</span>
+    <span class="k">\addplot</span><span class="na">[matrix plot*,mesh/cols=17,mesh/rows=17,point meta=explicit]</span> 
         table[meta expr=lg10(<span class="k">\thisrow</span><span class="p">{</span>it-sss<span class="p">}</span>),col sep=comma] <span class="p">{</span>data.csv<span class="p">}</span>;
     <span class="nt">\end{axis}</span>
 
@@ -651,11 +687,11 @@
         yticklabels = <span class="p">{</span>,,<span class="p">}</span>,
         y tick label style=<span class="p">{</span>font=<span class="k">\small</span>,rotate=0<span class="p">}</span>,
         axis on top,
-        mesh/ordering=y varies,
+        mesh/ordering=y varies, 
         unbounded coords=jump,
         height=0.4<span class="k">\linewidth</span>,
         width=0.4<span class="k">\linewidth</span>,
-        colormap=<span class="p">{</span>whiteblue<span class="p">}{</span>color=<span class="p">{</span>black<span class="p">}</span> color=<span class="p">{</span>mypurple<span class="p">}</span> color=<span class="p">{</span>myblue<span class="p">}</span>
+        colormap=<span class="p">{</span>whiteblue<span class="p">}{</span>color=<span class="p">{</span>black<span class="p">}</span> color=<span class="p">{</span>mypurple<span class="p">}</span> color=<span class="p">{</span>myblue<span class="p">}</span> 
             color=(myorange) color=(myyellow)<span class="p">}</span>,
         point meta min=0,
         point meta max=3.68,
@@ -665,7 +701,7 @@
         at=<span class="p">{</span>(200, -225)<span class="p">}</span>
     ]
 
-    <span class="k">\addplot</span><span class="na">[matrix plot*,mesh/cols=17,mesh/rows=17,point meta=explicit]</span>
+    <span class="k">\addplot</span><span class="na">[matrix plot*,mesh/cols=17,mesh/rows=17,point meta=explicit]</span> 
         table[meta expr=lg10(<span class="k">\thisrow</span><span class="p">{</span>it-ssd<span class="p">}</span>),col sep=comma] <span class="p">{</span>data.csv<span class="p">}</span>;
     <span class="nt">\end{axis}</span>
 
@@ -687,11 +723,11 @@
         yticklabels = <span class="p">{</span>,,<span class="p">}</span>,
         y tick label style=<span class="p">{</span>font=<span class="k">\small</span>,rotate=0<span class="p">}</span>,
         axis on top,
-        mesh/ordering=y varies,
+        mesh/ordering=y varies, 
         unbounded coords=jump,
         height=0.4<span class="k">\linewidth</span>,
         width=0.4<span class="k">\linewidth</span>,
-        colormap=<span class="p">{</span>whiteblue<span class="p">}{</span>color=<span class="p">{</span>black<span class="p">}</span> color=<span class="p">{</span>mypurple<span class="p">}</span> color=<span class="p">{</span>myblue<span class="p">}</span>
+        colormap=<span class="p">{</span>whiteblue<span class="p">}{</span>color=<span class="p">{</span>black<span class="p">}</span> color=<span class="p">{</span>mypurple<span class="p">}</span> color=<span class="p">{</span>myblue<span class="p">}</span> 
             color=(myorange) color=(myyellow)<span class="p">}</span>,
         point meta min=0,
         point meta max=3.68,
@@ -701,7 +737,7 @@
         at=<span class="p">{</span>(400, -225)<span class="p">}</span>
     ]
 
-    <span class="k">\addplot</span><span class="na">[matrix plot*,mesh/cols=17,mesh/rows=17,point meta=explicit]</span>
+    <span class="k">\addplot</span><span class="na">[matrix plot*,mesh/cols=17,mesh/rows=17,point meta=explicit]</span> 
         table[meta expr=lg10(<span class="k">\thisrow</span><span class="p">{</span>it-sdd<span class="p">}</span>),col sep=comma] <span class="p">{</span>data.csv<span class="p">}</span>;
     <span class="nt">\end{axis}</span>
 
@@ -723,11 +759,11 @@
         yticklabels = <span class="p">{</span>1e0,1e4,1e8,1e12,1e16<span class="p">}</span>,
         y tick label style=<span class="p">{</span>font=<span class="k">\small</span>,rotate=0<span class="p">}</span>,
         axis on top,
-        mesh/ordering=y varies,
+        mesh/ordering=y varies, 
         unbounded coords=jump,
         height=0.4<span class="k">\linewidth</span>,
         width=0.4<span class="k">\linewidth</span>,
-        colormap=<span class="p">{</span>whiteblue<span class="p">}{</span>color=<span class="p">{</span>black<span class="p">}</span> color=<span class="p">{</span>mypurple<span class="p">}</span> color=<span class="p">{</span>myblue<span class="p">}</span>
+        colormap=<span class="p">{</span>whiteblue<span class="p">}{</span>color=<span class="p">{</span>black<span class="p">}</span> color=<span class="p">{</span>mypurple<span class="p">}</span> color=<span class="p">{</span>myblue<span class="p">}</span> 
             color=(myorange) color=(myyellow)<span class="p">}</span>,
         point meta min=0,
         point meta max=3.68,
@@ -737,7 +773,7 @@
         at=<span class="p">{</span>(0, -450)<span class="p">}</span>
     ]
 
-    <span class="k">\addplot</span><span class="na">[matrix plot*,mesh/cols=17,mesh/rows=17,point meta=explicit]</span>
+    <span class="k">\addplot</span><span class="na">[matrix plot*,mesh/cols=17,mesh/rows=17,point meta=explicit]</span> 
         table[meta expr=lg10(<span class="k">\thisrow</span><span class="p">{</span>it-ddd<span class="p">}</span>),col sep=comma] <span class="p">{</span>data.csv<span class="p">}</span>;
     <span class="nt">\end{axis}</span>
 
@@ -759,11 +795,11 @@
         yticklabels = <span class="p">{</span>,,<span class="p">}</span>,
         y tick label style=<span class="p">{</span>font=<span class="k">\small</span>,rotate=0<span class="p">}</span>,
         axis on top,
-        mesh/ordering=y varies,
+        mesh/ordering=y varies, 
         unbounded coords=jump,
         height=0.4<span class="k">\linewidth</span>,
         width=0.4<span class="k">\linewidth</span>,
-        colormap=<span class="p">{</span>whiteblue<span class="p">}{</span>color=<span class="p">{</span>black<span class="p">}</span> color=<span class="p">{</span>mypurple<span class="p">}</span> color=<span class="p">{</span>myblue<span class="p">}</span>
+        colormap=<span class="p">{</span>whiteblue<span class="p">}{</span>color=<span class="p">{</span>black<span class="p">}</span> color=<span class="p">{</span>mypurple<span class="p">}</span> color=<span class="p">{</span>myblue<span class="p">}</span> 
             color=(myorange) color=(myyellow)<span class="p">}</span>,
         point meta min=0,
         point meta max=3.68,
@@ -773,7 +809,7 @@
         at=<span class="p">{</span>(200, -450)<span class="p">}</span>
     ]
 
-    <span class="k">\addplot</span><span class="na">[matrix plot*,mesh/cols=17,mesh/rows=17,point meta=explicit]</span>
+    <span class="k">\addplot</span><span class="na">[matrix plot*,mesh/cols=17,mesh/rows=17,point meta=explicit]</span> 
         table[meta expr=lg10(<span class="k">\thisrow</span><span class="p">{</span>it-ddq<span class="p">}</span>),col sep=comma] <span class="p">{</span>data.csv<span class="p">}</span>;
     <span class="nt">\end{axis}</span>
 
@@ -795,11 +831,11 @@
         yticklabels = <span class="p">{</span>,,<span class="p">}</span>,
         y tick label style=<span class="p">{</span>font=<span class="k">\small</span>,rotate=0<span class="p">}</span>,
         axis on top,
-        mesh/ordering=y varies,
+        mesh/ordering=y varies, 
         unbounded coords=jump,
         height=0.4<span class="k">\linewidth</span>,
         width=0.4<span class="k">\linewidth</span>,
-        colormap=<span class="p">{</span>whiteblue<span class="p">}{</span>color=<span class="p">{</span>black<span class="p">}</span> color=<span class="p">{</span>mypurple<span class="p">}</span> color=<span class="p">{</span>myblue<span class="p">}</span>
+        colormap=<span class="p">{</span>whiteblue<span class="p">}{</span>color=<span class="p">{</span>black<span class="p">}</span> color=<span class="p">{</span>mypurple<span class="p">}</span> color=<span class="p">{</span>myblue<span class="p">}</span> 
             color=(myorange) color=(myyellow)<span class="p">}</span>,
         point meta min=0,
         point meta max=3.68,
@@ -809,10 +845,12 @@
         at=<span class="p">{</span>(400, -450)<span class="p">}</span>
     ]
 
-    <span class="k">\addplot</span><span class="na">[matrix plot*,mesh/cols=17,mesh/rows=17,point meta=explicit]</span>
+    <span class="k">\addplot</span><span class="na">[matrix plot*,mesh/cols=17,mesh/rows=17,point meta=explicit]</span> 
         table[meta expr=lg10(<span class="k">\thisrow</span><span class="p">{</span>it-dqq<span class="p">}</span>),col sep=comma] <span class="p">{</span>data.csv<span class="p">}</span>;
     <span class="nt">\end{axis}</span>
 <span class="nt">\end{tikzpicture}</span>
+
+<span class="nt">\end{document}</span>
 </pre></td>
 </tr></tbody></table></code></pre></figure>
 

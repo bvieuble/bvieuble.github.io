@@ -265,11 +265,42 @@
 123
 124
 125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
 </pre></td>
-<td class="code"><pre><span class="c">% Full, compilable sources including data files are on Github: </span>
-<span class="c">% https://github.com/bvieuble/TeXFantasy/tree/main/tables/tab1</span>
-<span class="c">% Appears my the article ``Combining sparse approximate factorizations with </span>
-<span class="c">% mixed-precision iterative refinement''.</span>
+<td class="code"><pre><span class="c">%%% Full, compilable sources including data files are on Github: </span>
+<span class="c">%%% https://github.com/bvieuble/TeXFantasy/tree/main/tables/tab1</span>
+<span class="c">%%% Appears in my article ``Combining sparse approximate factorizations with </span>
+<span class="c">%%% mixed-precision iterative refinement''.</span>
+
+<span class="c">% Compiled with XeLaTeX</span>
+<span class="c">% TeX-command-extra-options: "-shell-escape"</span>
+<span class="k">\documentclass</span><span class="na">[convert={outext=.png},border=10pt]</span><span class="p">{</span>standalone<span class="p">}</span>
+<span class="k">\usepackage</span><span class="p">{</span>tikz<span class="p">}</span>
+<span class="k">\usepackage</span><span class="p">{</span>pgfplots, pgfplotstable<span class="p">}</span>
+<span class="k">\usepackage</span><span class="p">{</span>booktabs<span class="p">}</span>
+<span class="k">\usepackage</span><span class="p">{</span>colortbl<span class="p">}</span>
+<span class="k">\usepackage</span><span class="p">{</span>multirow<span class="p">}</span>
+<span class="k">\pgfplotsset</span><span class="p">{</span>compat=newest<span class="p">}</span>
+<span class="k">\usepackage</span><span class="p">{</span>etoolbox<span class="p">}</span>
+
 <span class="k">\newcommand</span><span class="p">{</span><span class="k">\PreserveBackslash</span><span class="p">}</span>[1]<span class="p">{</span><span class="k">\let\temp</span>=<span class="k">\\</span>#1<span class="k">\let\\</span>=<span class="k">\temp</span><span class="p">}</span>
 <span class="k">\newcolumntype</span><span class="p">{</span>C<span class="p">}</span>[1]<span class="p">{</span>&gt;<span class="p">{</span><span class="k">\PreserveBackslash\centering</span><span class="p">}</span>p<span class="p">{</span>#1<span class="p">}}</span>
 <span class="k">\newcolumntype</span><span class="p">{</span>L<span class="p">}</span>[1]<span class="p">{</span>&gt;<span class="p">{</span><span class="k">\PreserveBackslash\raggedright</span><span class="p">}</span>p<span class="p">{</span>#1<span class="p">}}</span>
@@ -278,6 +309,12 @@
 <span class="k">\newcommand</span><span class="p">{</span><span class="k">\colwdthb</span><span class="p">}{</span>0.05<span class="k">\linewidth</span><span class="p">}</span>
 <span class="k">\newcommand</span><span class="p">{</span><span class="k">\colwdthc</span><span class="p">}{</span>0.05<span class="k">\linewidth</span><span class="p">}</span>
 <span class="k">\setlength</span><span class="p">{</span><span class="k">\tabcolsep</span><span class="p">}{</span>6pt<span class="p">}</span>
+
+<span class="k">\pgfplotstableread</span><span class="na">[col sep=comma]</span><span class="p">{</span>data.csv<span class="p">}{</span><span class="k">\data</span><span class="p">}</span>
+<span class="k">\pgfplotstablegetrowsof</span><span class="p">{</span><span class="k">\data</span><span class="p">}</span>
+<span class="k">\pgfmathsetmacro</span><span class="p">{</span><span class="k">\N</span><span class="p">}{</span><span class="k">\pgfplotsretval</span>-1<span class="p">}</span>  
+
+<span class="nt">\begin{document}</span>
 
 <span class="k">\pgfplotstabletypeset</span>[col sep=comma,
                       string type,
@@ -391,6 +428,7 @@
                       <span class="p">}</span>,
                       every last row/.style=<span class="p">{</span>after row=<span class="k">\bottomrule</span><span class="p">}</span>
                       ]<span class="p">{</span><span class="k">\data</span><span class="p">}</span>
+<span class="nt">\end{document}</span>
 </pre></td>
 </tr></tbody></table></code></pre></figure>
 

@@ -333,12 +333,83 @@
 191
 192
 193
+194
+195
+196
+197
+198
+199
+200
+201
+202
+203
+204
+205
+206
+207
+208
+209
+210
+211
+212
+213
+214
+215
+216
+217
+218
+219
+220
+221
+222
+223
+224
+225
+226
+227
+228
+229
 </pre></td>
-<td class="code"><pre><span class="c">% Full, compilable sources including data files are on Github: </span>
-<span class="c">% https://github.com/bvieuble/TeXFantasy/tree/main/bars/fig1</span>
-<span class="c">% Appears in my article ``Combining sparse approximate factorizations with </span>
-<span class="c">% mixed precision iterative refinement''.</span>
-<span class="nt">\begin{tikzpicture}</span> 
+<td class="code"><pre><span class="c">%%% Full, compilable sources including data files are on Github: </span>
+<span class="c">%%% https://github.com/bvieuble/TeXFantasy/tree/main/bars/fig1</span>
+<span class="c">%%% Appears in my article ``Combining sparse approximate factorizations with </span>
+<span class="c">%%% mixed precision iterative refinement''.</span>
+
+<span class="c">% Compiled with XeLaTeX</span>
+<span class="c">% TeX-command-extra-options: "-shell-escape"</span>
+<span class="k">\documentclass</span><span class="na">[convert={outext=.png},border=10pt]</span><span class="p">{</span>standalone<span class="p">}</span>
+<span class="c">%\usepackage{fontspec}</span>
+<span class="c">%\setmainfont{Roboto Light}</span>
+<span class="k">\usepackage</span><span class="p">{</span>tikz<span class="p">}</span>
+<span class="k">\usepackage</span><span class="p">{</span>pgfplots, pgfplotstable, pgfplotstablefilter<span class="p">}</span>
+<span class="k">\pgfplotsset</span><span class="p">{</span>compat=newest<span class="p">}</span>
+
+<span class="k">\input</span><span class="p">{</span>color<span class="p">_</span>theme.tex<span class="p">}</span>
+
+<span class="c">% Reinit stacked bar command</span>
+<span class="k">\makeatletter</span>
+<span class="k">\newcommand\resetstackedplots</span><span class="p">{</span>
+<span class="k">\makeatletter</span>
+<span class="k">\pgfplots</span>@stacked@isfirstplottrue
+<span class="k">\makeatother</span>
+<span class="p">}</span>
+
+<span class="c">% Load data and make groups of plots</span>
+<span class="k">\pgfplotstableread</span><span class="na">[col sep=comma]</span><span class="p">{</span>data.csv<span class="p">}{</span><span class="k">\data</span><span class="p">}</span>
+<span class="k">\pgfplotstablefilter</span><span class="na">[group equals 1]</span><span class="p">{</span><span class="k">\data</span><span class="p">}{</span><span class="k">\groupa</span><span class="p">}</span>
+<span class="k">\pgfplotstablefilter</span><span class="na">[group equals 2]</span><span class="p">{</span><span class="k">\data</span><span class="p">}{</span><span class="k">\groupb</span><span class="p">}</span>
+<span class="k">\pgfplotstablefilter</span><span class="na">[group equals 3]</span><span class="p">{</span><span class="k">\data</span><span class="p">}{</span><span class="k">\groupc</span><span class="p">}</span>
+
+<span class="c">% Get the number of elements in each group </span>
+<span class="k">\pgfplotstablegetrowsof</span><span class="p">{</span><span class="k">\groupa</span><span class="p">}</span>
+<span class="k">\pgfmathsetmacro</span><span class="p">{</span><span class="k">\nbrowsa</span><span class="p">}{</span><span class="k">\pgfplotsretval</span><span class="p">}</span>
+<span class="k">\pgfplotstablegetrowsof</span><span class="p">{</span><span class="k">\groupb</span><span class="p">}</span>
+<span class="k">\pgfmathsetmacro</span><span class="p">{</span><span class="k">\nbrowsb</span><span class="p">}{</span><span class="k">\pgfplotsretval</span><span class="p">}</span>
+<span class="k">\pgfplotstablegetrowsof</span><span class="p">{</span><span class="k">\groupc</span><span class="p">}</span>
+<span class="k">\pgfmathsetmacro</span><span class="p">{</span><span class="k">\nbrowsc</span><span class="p">}{</span><span class="k">\pgfplotsretval</span><span class="p">}</span>
+
+<span class="nt">\begin{document}</span>
+<span class="nt">\begin{tikzpicture}</span>
     <span class="nt">\begin{axis}</span>
     [
         point meta=explicit symbolic,
@@ -527,6 +598,7 @@
             <span class="k">\small</span> E: GMRES, <span class="p">$</span><span class="nb">u</span><span class="p">_</span><span class="nb">f</span><span class="p">$</span>=<span class="k">\textsc</span><span class="p">{</span>s<span class="p">}</span>
         <span class="nt">\end{tabular}</span><span class="p">}</span>;
 <span class="nt">\end{tikzpicture}</span>
+<span class="nt">\end{document}</span>
 </pre></td>
 </tr></tbody></table></code></pre></figure>
 

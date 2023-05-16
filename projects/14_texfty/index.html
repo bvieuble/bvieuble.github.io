@@ -253,26 +253,48 @@
 111
 112
 113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
 </pre></td>
-<td class="code"><pre><span class="c">% Full, compilable sources are on Github: </span>
-<span class="c">% https://github.com/bvieuble/TeXFantasy/tree/main/illustrations/fig5</span>
-<span class="c">% Appears in my thesis ``Mixed precision iterative refinement for the solution</span>
-<span class="c">% of large sparse linear systems''.</span>
+<td class="code"><pre><span class="c">%%% Full, compilable sources are on Github: </span>
+<span class="c">%%% https://github.com/bvieuble/TeXFantasy/tree/main/illustrations/fig5</span>
+<span class="c">%%% Appears in my thesis ``Mixed precision iterative refinement for the </span>
+<span class="c">%%% solution of large sparse linear systems''.</span>
+
+<span class="c">% Compiled with XeLaTeX</span>
+<span class="c">% TeX-command-extra-options: "-shell-escape"</span>
+<span class="k">\documentclass</span><span class="na">[convert={outext=.png},border=10pt]</span><span class="p">{</span>standalone<span class="p">}</span>
+<span class="k">\usepackage</span><span class="p">{</span>tikz<span class="p">}</span>
+
+<span class="k">\input</span><span class="p">{</span>color<span class="p">_</span>theme.tex<span class="p">}</span>
+
+<span class="nt">\begin{document}</span>
+
 <span class="nt">\begin{tikzpicture}</span>[scale=0.3]
     <span class="nt">\begin{scope}</span>[shift=<span class="p">{</span>(0,0)<span class="p">}</span>]
         <span class="k">\fill</span><span class="na">[myblue-light]</span> (0,0) rectangle (1,2);
         <span class="k">\fill</span><span class="na">[mygreen-light]</span> (1,0) rectangle (9,2);
         <span class="k">\fill</span><span class="na">[myred-light]</span> (9,0) rectangle (32,2);
         <span class="k">\draw</span><span class="na">[thin]</span> (0,0) grid[ystep=2] (32,2);
-        <span class="k">\draw</span><span class="na">[thin]</span> (0.5,2.1) -- (0.5,2.6);
-        <span class="k">\draw</span><span class="na">[thin]</span> (1,2.1) -- (1,2.6) -- (8.95,2.6) -- (8.95,2.1);
-        <span class="k">\draw</span><span class="na">[thin]</span> (9.05,2.1) -- (9.05,2.6) -- (32,2.6) -- (32,2.1);
+        <span class="k">\draw</span><span class="na">[thin]</span> (0.5,2.1) -- (0.5,2.6); 
+        <span class="k">\draw</span><span class="na">[thin]</span> (1,2.1) -- (1,2.6) -- (8.95,2.6) -- (8.95,2.1); 
+        <span class="k">\draw</span><span class="na">[thin]</span> (9.05,2.1) -- (9.05,2.6) -- (32,2.6) -- (32,2.1); 
         <span class="k">\footnotesize</span>
-        <span class="k">\node</span> at (0.5,3.25)<span class="p">{</span>sign<span class="p">}</span>;
-        <span class="k">\node</span><span class="na">[align=center]</span> at (5,3.9)<span class="p">{</span>exponent <span class="k">\\</span> (8 bits)<span class="p">}</span>;
-        <span class="k">\node</span><span class="na">[align=center]</span> at (20.5,3.9)<span class="p">{</span>signif. <span class="k">\\</span> (23 bits)<span class="p">}</span>;
+        <span class="k">\node</span> at (0.5,3.25)<span class="p">{</span>sign<span class="p">}</span>; 
+        <span class="k">\node</span><span class="na">[align=center]</span> at (5,3.9)<span class="p">{</span>exponent <span class="k">\\</span> (8 bits)<span class="p">}</span>; 
+        <span class="k">\node</span><span class="na">[align=center]</span> at (20.5,3.9)<span class="p">{</span>signif. <span class="k">\\</span> (23 bits)<span class="p">}</span>; 
         <span class="k">\normalsize</span>
-        <span class="k">\node</span> at (16,-1)<span class="p">{</span>fp32<span class="p">}</span>;
+        <span class="k">\node</span> at (16,-1)<span class="p">{</span>fp32<span class="p">}</span>; 
         <span class="k">\footnotesize</span>
         <span class="k">\node</span> at (16,-2.5)<span class="p">{</span>Range <span class="p">$</span><span class="m">10</span><span class="p">^{</span><span class="nv">\pm</span><span class="nb"> </span><span class="m">38</span><span class="p">}$</span>, <span class="p">$</span><span class="nb">u</span><span class="o">=</span><span class="m">6</span><span class="nv">\times</span><span class="m">10</span><span class="p">^{</span><span class="o">-</span><span class="m">8</span><span class="p">}$}</span>;
     <span class="nt">\end{scope}</span>
@@ -282,15 +304,15 @@
         <span class="k">\fill</span><span class="na">[mygreen-light]</span> (1,0) rectangle (6,2);
         <span class="k">\fill</span><span class="na">[myred-light]</span> (6,0) rectangle (16,2);
         <span class="k">\draw</span><span class="na">[thin]</span> (0,0) grid[ystep=2] (16,2);
-        <span class="k">\draw</span><span class="na">[thin]</span> (0.5,2.1) -- (0.5,2.6);
-        <span class="k">\draw</span><span class="na">[thin]</span> (1,2.1) -- (1,2.6) -- (5.95,2.6) -- (5.95,2.1);
-        <span class="k">\draw</span><span class="na">[thin]</span> (6.05,2.1) -- (6.05,2.6) -- (16,2.6) -- (16,2.1);
+        <span class="k">\draw</span><span class="na">[thin]</span> (0.5,2.1) -- (0.5,2.6); 
+        <span class="k">\draw</span><span class="na">[thin]</span> (1,2.1) -- (1,2.6) -- (5.95,2.6) -- (5.95,2.1); 
+        <span class="k">\draw</span><span class="na">[thin]</span> (6.05,2.1) -- (6.05,2.6) -- (16,2.6) -- (16,2.1); 
         <span class="k">\footnotesize</span>
-        <span class="k">\node</span> at (0.5,3.25)<span class="p">{</span>sign<span class="p">}</span>;
-        <span class="k">\node</span><span class="na">[align=center]</span> at (3.5,3.9)<span class="p">{</span>exponent <span class="k">\\</span> (5 bits)<span class="p">}</span>;
-        <span class="k">\node</span><span class="na">[align=center]</span> at (11,3.9)<span class="p">{</span>signif. <span class="k">\\</span> (10 bits)<span class="p">}</span>;
+        <span class="k">\node</span> at (0.5,3.25)<span class="p">{</span>sign<span class="p">}</span>; 
+        <span class="k">\node</span><span class="na">[align=center]</span> at (3.5,3.9)<span class="p">{</span>exponent <span class="k">\\</span> (5 bits)<span class="p">}</span>; 
+        <span class="k">\node</span><span class="na">[align=center]</span> at (11,3.9)<span class="p">{</span>signif. <span class="k">\\</span> (10 bits)<span class="p">}</span>; 
         <span class="k">\normalsize</span>
-        <span class="k">\node</span> at (8,-1)<span class="p">{</span>fp16<span class="p">}</span>;
+        <span class="k">\node</span> at (8,-1)<span class="p">{</span>fp16<span class="p">}</span>; 
         <span class="k">\footnotesize</span>
         <span class="k">\node</span> at (8,-2.5)<span class="p">{</span>Range <span class="p">$</span><span class="m">10</span><span class="p">^{</span><span class="nv">\pm</span><span class="nb"> </span><span class="m">5</span><span class="p">}$</span>, <span class="p">$</span><span class="nb">u</span><span class="o">=</span><span class="m">5</span><span class="nv">\times</span><span class="m">10</span><span class="p">^{</span><span class="o">-</span><span class="m">4</span><span class="p">}$}</span>;
     <span class="nt">\end{scope}</span>
@@ -300,15 +322,15 @@
         <span class="k">\fill</span><span class="na">[mygreen-light]</span> (1,0) rectangle (9,2);
         <span class="k">\fill</span><span class="na">[myred-light]</span> (9,0) rectangle (16,2);
         <span class="k">\draw</span><span class="na">[thin]</span> (0,0) grid[ystep=2] (16,2);
-        <span class="k">\draw</span><span class="na">[thin]</span> (0.5,2.1) -- (0.5,2.6);
-        <span class="k">\draw</span><span class="na">[thin]</span> (1,2.1) -- (1,2.6) -- (8.95,2.6) -- (8.95,2.1);
-        <span class="k">\draw</span><span class="na">[thin]</span> (9.05,2.1) -- (9.05,2.6) -- (16,2.6) -- (16,2.1);
+        <span class="k">\draw</span><span class="na">[thin]</span> (0.5,2.1) -- (0.5,2.6); 
+        <span class="k">\draw</span><span class="na">[thin]</span> (1,2.1) -- (1,2.6) -- (8.95,2.6) -- (8.95,2.1); 
+        <span class="k">\draw</span><span class="na">[thin]</span> (9.05,2.1) -- (9.05,2.6) -- (16,2.6) -- (16,2.1); 
         <span class="k">\footnotesize</span>
-        <span class="k">\node</span> at (0.5,3.25)<span class="p">{</span>sign<span class="p">}</span>;
-        <span class="k">\node</span><span class="na">[align=center]</span> at (5,3.9)<span class="p">{</span>exponent <span class="k">\\</span> (8 bits)<span class="p">}</span>;
-        <span class="k">\node</span><span class="na">[align=center]</span> at (12.5,3.9)<span class="p">{</span>signif. <span class="k">\\</span> (7 bits)<span class="p">}</span>;
+        <span class="k">\node</span> at (0.5,3.25)<span class="p">{</span>sign<span class="p">}</span>; 
+        <span class="k">\node</span><span class="na">[align=center]</span> at (5,3.9)<span class="p">{</span>exponent <span class="k">\\</span> (8 bits)<span class="p">}</span>; 
+        <span class="k">\node</span><span class="na">[align=center]</span> at (12.5,3.9)<span class="p">{</span>signif. <span class="k">\\</span> (7 bits)<span class="p">}</span>; 
         <span class="k">\normalsize</span>
-        <span class="k">\node</span> at (8,-1)<span class="p">{</span>bfloat16<span class="p">}</span>;
+        <span class="k">\node</span> at (8,-1)<span class="p">{</span>bfloat16<span class="p">}</span>; 
         <span class="k">\footnotesize</span>
         <span class="k">\node</span> at (8,-2.5)<span class="p">{</span>Range <span class="p">$</span><span class="m">10</span><span class="p">^{</span><span class="nv">\pm</span><span class="nb"> </span><span class="m">38</span><span class="p">}$</span>, <span class="p">$</span><span class="nb">u</span><span class="o">=</span><span class="m">4</span><span class="nv">\times</span><span class="m">10</span><span class="p">^{</span><span class="o">-</span><span class="m">3</span><span class="p">}$}</span>;
     <span class="nt">\end{scope}</span>
@@ -318,15 +340,15 @@
         <span class="k">\fill</span><span class="na">[mygreen-light]</span> (1,0) rectangle (9,2);
         <span class="k">\fill</span><span class="na">[myred-light]</span> (9,0) rectangle (19,2);
         <span class="k">\draw</span><span class="na">[thin]</span> (0,0) grid[ystep=2] (19,2);
-        <span class="k">\draw</span><span class="na">[thin]</span> (0.5,2.1) -- (0.5,2.6);
-        <span class="k">\draw</span><span class="na">[thin]</span> (1,2.1) -- (1,2.6) -- (8.95,2.6) -- (8.95,2.1);
-        <span class="k">\draw</span><span class="na">[thin]</span> (9.05,2.1) -- (9.05,2.6) -- (19,2.6) -- (19,2.1);
+        <span class="k">\draw</span><span class="na">[thin]</span> (0.5,2.1) -- (0.5,2.6); 
+        <span class="k">\draw</span><span class="na">[thin]</span> (1,2.1) -- (1,2.6) -- (8.95,2.6) -- (8.95,2.1); 
+        <span class="k">\draw</span><span class="na">[thin]</span> (9.05,2.1) -- (9.05,2.6) -- (19,2.6) -- (19,2.1); 
         <span class="k">\footnotesize</span>
-        <span class="k">\node</span> at (0.5,3.25)<span class="p">{</span>sign<span class="p">}</span>;
-        <span class="k">\node</span><span class="na">[align=center]</span> at (5,3.9)<span class="p">{</span>exponent <span class="k">\\</span> (8 bits)<span class="p">}</span>;
-        <span class="k">\node</span><span class="na">[align=center]</span> at (14,3.9)<span class="p">{</span>signif. <span class="k">\\</span> (10 bits)<span class="p">}</span>;
+        <span class="k">\node</span> at (0.5,3.25)<span class="p">{</span>sign<span class="p">}</span>; 
+        <span class="k">\node</span><span class="na">[align=center]</span> at (5,3.9)<span class="p">{</span>exponent <span class="k">\\</span> (8 bits)<span class="p">}</span>; 
+        <span class="k">\node</span><span class="na">[align=center]</span> at (14,3.9)<span class="p">{</span>signif. <span class="k">\\</span> (10 bits)<span class="p">}</span>; 
         <span class="k">\normalsize</span>
-        <span class="k">\node</span> at (9.5,-1)<span class="p">{</span>tfloat32<span class="p">}</span>;
+        <span class="k">\node</span> at (9.5,-1)<span class="p">{</span>tfloat32<span class="p">}</span>; 
         <span class="k">\footnotesize</span>
         <span class="k">\node</span> at (9.5,-2.5)<span class="p">{</span>Range <span class="p">$</span><span class="m">10</span><span class="p">^{</span><span class="nv">\pm</span><span class="nb"> </span><span class="m">38</span><span class="p">}$</span>, <span class="p">$</span><span class="nb">u</span><span class="o">=</span><span class="m">5</span><span class="nv">\times</span><span class="m">10</span><span class="p">^{</span><span class="o">-</span><span class="m">4</span><span class="p">}$}</span>;
     <span class="nt">\end{scope}</span>
@@ -336,15 +358,15 @@
         <span class="k">\fill</span><span class="na">[mygreen-light]</span> (1,0) rectangle (5,2);
         <span class="k">\fill</span><span class="na">[myred-light]</span> (5,0) rectangle (8,2);
         <span class="k">\draw</span><span class="na">[thin]</span> (0,0) grid[ystep=2] (8,2);
-        <span class="k">\draw</span><span class="na">[thin]</span> (0.5,2.1) -- (0.5,2.6);
-        <span class="k">\draw</span><span class="na">[thin]</span> (1,2.1) -- (1,2.6) -- (4.95,2.6) -- (4.95,2.1);
-        <span class="k">\draw</span><span class="na">[thin]</span> (5.05,2.1) -- (5.05,2.6) -- (8,2.6) -- (8,2.1);
+        <span class="k">\draw</span><span class="na">[thin]</span> (0.5,2.1) -- (0.5,2.6); 
+        <span class="k">\draw</span><span class="na">[thin]</span> (1,2.1) -- (1,2.6) -- (4.95,2.6) -- (4.95,2.1); 
+        <span class="k">\draw</span><span class="na">[thin]</span> (5.05,2.1) -- (5.05,2.6) -- (8,2.6) -- (8,2.1); 
         <span class="k">\footnotesize</span>
-        <span class="k">\node</span> at (0.5,3.25)<span class="p">{</span>sign<span class="p">}</span>;
-        <span class="k">\node</span><span class="na">[align=center]</span> at (3,3.9)<span class="p">{</span>exponent <span class="k">\\</span> (4 bits)<span class="p">}</span>;
-        <span class="k">\node</span><span class="na">[align=center]</span> at (6.5,3.9)<span class="p">{</span>signif. <span class="k">\\</span> (3 bits)<span class="p">}</span>;
+        <span class="k">\node</span> at (0.5,3.25)<span class="p">{</span>sign<span class="p">}</span>; 
+        <span class="k">\node</span><span class="na">[align=center]</span> at (3,3.9)<span class="p">{</span>exponent <span class="k">\\</span> (4 bits)<span class="p">}</span>; 
+        <span class="k">\node</span><span class="na">[align=center]</span> at (6.5,3.9)<span class="p">{</span>signif. <span class="k">\\</span> (3 bits)<span class="p">}</span>; 
         <span class="k">\normalsize</span>
-        <span class="k">\node</span> at (4,-1)<span class="p">{</span>fp8 (E4M3)<span class="p">}</span>;
+        <span class="k">\node</span> at (4,-1)<span class="p">{</span>fp8 (E4M3)<span class="p">}</span>; 
         <span class="k">\footnotesize</span>
         <span class="k">\node</span> at (4,-2.5)<span class="p">{</span>Range <span class="p">$</span><span class="m">10</span><span class="p">^{</span><span class="nv">\pm</span><span class="nb"> </span><span class="m">2</span><span class="p">}$</span>, <span class="p">$</span><span class="nb">u</span><span class="o">=</span><span class="m">6</span><span class="nv">\times</span><span class="m">10</span><span class="p">^{</span><span class="o">-</span><span class="m">2</span><span class="p">}$}</span>;
     <span class="nt">\end{scope}</span>
@@ -354,19 +376,21 @@
         <span class="k">\fill</span><span class="na">[mygreen-light]</span> (1,0) rectangle (6,2);
         <span class="k">\fill</span><span class="na">[myred-light]</span> (6,0) rectangle (8,2);
         <span class="k">\draw</span><span class="na">[thin]</span> (0,0) grid[ystep=2] (8,2);
-        <span class="k">\draw</span><span class="na">[thin]</span> (0.5,2.1) -- (0.5,2.6);
-        <span class="k">\draw</span><span class="na">[thin]</span> (1,2.1) -- (1,2.6) -- (5.95,2.6) -- (5.95,2.1);
-        <span class="k">\draw</span><span class="na">[thin]</span> (6.05,2.1) -- (6.05,2.6) -- (8,2.6) -- (8,2.1);
+        <span class="k">\draw</span><span class="na">[thin]</span> (0.5,2.1) -- (0.5,2.6); 
+        <span class="k">\draw</span><span class="na">[thin]</span> (1,2.1) -- (1,2.6) -- (5.95,2.6) -- (5.95,2.1); 
+        <span class="k">\draw</span><span class="na">[thin]</span> (6.05,2.1) -- (6.05,2.6) -- (8,2.6) -- (8,2.1); 
         <span class="k">\footnotesize</span>
-        <span class="k">\node</span> at (0.5,3.25)<span class="p">{</span>sign<span class="p">}</span>;
-        <span class="k">\node</span><span class="na">[align=center]</span> at (3,3.9)<span class="p">{</span>exponent <span class="k">\\</span> (5 bits)<span class="p">}</span>;
-        <span class="k">\node</span><span class="na">[align=center]</span> at (6.5,3.9)<span class="p">{</span>signif. <span class="k">\\</span> (2 bits)<span class="p">}</span>;
+        <span class="k">\node</span> at (0.5,3.25)<span class="p">{</span>sign<span class="p">}</span>; 
+        <span class="k">\node</span><span class="na">[align=center]</span> at (3,3.9)<span class="p">{</span>exponent <span class="k">\\</span> (5 bits)<span class="p">}</span>; 
+        <span class="k">\node</span><span class="na">[align=center]</span> at (6.5,3.9)<span class="p">{</span>signif. <span class="k">\\</span> (2 bits)<span class="p">}</span>; 
         <span class="k">\normalsize</span>
-        <span class="k">\node</span> at (4,-1)<span class="p">{</span>fp8 (E5M2)<span class="p">}</span>;
+        <span class="k">\node</span> at (4,-1)<span class="p">{</span>fp8 (E5M2)<span class="p">}</span>; 
         <span class="k">\footnotesize</span>
         <span class="k">\node</span> at (4,-2.5)<span class="p">{</span>Range <span class="p">$</span><span class="m">10</span><span class="p">^{</span><span class="nv">\pm</span><span class="nb"> </span><span class="m">5</span><span class="p">}$</span>, <span class="p">$</span><span class="nb">u</span><span class="o">=</span><span class="m">1</span><span class="nv">\times</span><span class="m">10</span><span class="p">^{</span><span class="o">-</span><span class="m">1</span><span class="p">}$}</span>;
     <span class="nt">\end{scope}</span>
 <span class="nt">\end{tikzpicture}</span>
+
+<span class="nt">\end{document}</span>
 </pre></td>
 </tr></tbody></table></code></pre></figure>
 

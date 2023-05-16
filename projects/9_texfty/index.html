@@ -215,15 +215,100 @@
 73
 74
 75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
 </pre></td>
-<td class="code"><pre><span class="c">% Full, compilable sources are on Github: </span>
-<span class="c">% https://github.com/bvieuble/TeXFantasy/tree/main/illustrations/fig2</span>
-<span class="c">% Appears in my lecture ``Mixed precision iterative refinement'' (2023).</span>
+<td class="code"><pre><span class="c">%%% Full, compilable sources are on Github: </span>
+<span class="c">%%% https://github.com/bvieuble/TeXFantasy/tree/main/illustrations/fig2</span>
+<span class="c">%%% Appears in my lecture ``Mixed precision iterative refinement'' (2023).</span>
+
+<span class="c">% Compiled with XeLaTeX</span>
+<span class="c">% Generate the GIF with convert -delay 100 -loop 0 -density 200 -alpha on </span>
+<span class="c">% file.pdf file.gif (package imagemagick is required)</span>
+<span class="k">\documentclass</span><span class="na">[tikz,border=10pt]</span><span class="p">{</span>standalone<span class="p">}</span>
+<span class="k">\usepackage</span><span class="p">{</span>pgfplots<span class="p">}</span>
+<span class="k">\pgfplotsset</span><span class="p">{</span>compat=newest<span class="p">}</span>
+<span class="k">\usepackage</span><span class="p">{</span>bm<span class="p">}</span>
+
+<span class="k">\input</span><span class="p">{</span>color<span class="p">_</span>theme.tex<span class="p">}</span>
+
+<span class="k">\newcommand</span><span class="p">{</span><span class="k">\alertgm</span><span class="p">}</span>[1]<span class="p">{</span><span class="k">\color</span><span class="p">{</span>mygreen<span class="p">}</span> <span class="k">\bm</span><span class="p">{</span>#1<span class="p">}}</span>
+<span class="k">\newcommand</span><span class="p">{</span><span class="k">\alertrm</span><span class="p">}</span>[1]<span class="p">{</span><span class="k">\color</span><span class="p">{</span>myred<span class="p">}</span> <span class="k">\bm</span><span class="p">{</span>#1<span class="p">}}</span>
+
+<span class="nt">\begin{document}</span>
+
+<span class="k">\newcommand</span><span class="p">{</span><span class="k">\plota</span><span class="p">}{</span>
+  <span class="k">\addplot</span><span class="na">[myblue,no marks,domain=-0.5:9,thick]</span> <span class="p">{</span>0.5*x - 0.75<span class="p">}</span>;
+  <span class="k">\node</span><span class="na">[rotate=20]</span> at (axis cs:6,2.6) <span class="p">{$</span><span class="nb">f</span><span class="o">(</span><span class="nb">x</span><span class="o">)</span><span class="nb"> </span><span class="o">=</span><span class="nb"> Ax</span><span class="o">-</span><span class="nb">b</span><span class="p">$}</span>;
+<span class="p">}</span>
+<span class="k">\newcommand</span><span class="p">{</span><span class="k">\plotb</span><span class="p">}{</span>
+    <span class="k">\addplot</span><span class="na">[myblue,no marks,domain=-0.5:9,thick]</span> <span class="p">{</span>0.5*x - 0.75<span class="p">}</span>;
+    <span class="k">\draw</span> [dashed,thick] (axis cs:<span class="p">{</span>8,0<span class="p">}</span>) -- (axis cs:<span class="p">{</span>8,3.2<span class="p">}</span>);
+	  <span class="k">\addplot</span> [only marks,mygreen,mark=*] coordinates <span class="p">{</span> (8,3.25) <span class="p">}</span>;
+    <span class="k">\node</span> at (axis cs:8,3.7) <span class="p">{$</span><span class="nv">\alertgm</span><span class="p">{</span><span class="nb">f</span><span class="o">(</span><span class="nb">x</span><span class="p">_</span><span class="m">0</span><span class="o">)</span><span class="p">}$}</span>;
+    <span class="k">\node</span><span class="na">[rotate=20]</span> at (axis cs:6,2.6) <span class="p">{$</span><span class="nb">f</span><span class="o">(</span><span class="nb">x</span><span class="o">)</span><span class="nb"> </span><span class="o">=</span><span class="nb"> Ax</span><span class="o">-</span><span class="nb">b</span><span class="p">$}</span>;
+<span class="p">}</span>
+<span class="k">\newcommand</span><span class="p">{</span><span class="k">\plotc</span><span class="p">}{</span>
+    <span class="k">\addplot</span><span class="na">[myblue,no marks,domain=-0.5:9,thick]</span> <span class="p">{</span>0.5*x - 0.75<span class="p">}</span>;
+    <span class="k">\draw</span> [dashed,thick] (axis cs:<span class="p">{</span>8,0<span class="p">}</span>) -- (axis cs:<span class="p">{</span>8,2.9<span class="p">}</span>);
+	  <span class="k">\addplot</span> [only marks,myred,mark=*] coordinates <span class="p">{</span> (8,2.9) <span class="p">}</span>;
+    <span class="k">\node</span> at (axis cs:8.6,2.9) <span class="p">{$</span><span class="nv">\alertrm</span><span class="p">{</span><span class="nv">\widehat</span><span class="p">{</span><span class="nb">f</span><span class="p">}</span><span class="o">(</span><span class="nb">x</span><span class="p">_</span><span class="m">0</span><span class="o">)</span><span class="p">}$}</span>;
+    <span class="k">\node</span><span class="na">[rotate=20]</span> at (axis cs:6,2.6) <span class="p">{$</span><span class="nb">f</span><span class="o">(</span><span class="nb">x</span><span class="o">)</span><span class="nb"> </span><span class="o">=</span><span class="nb"> Ax</span><span class="o">-</span><span class="nb">b</span><span class="p">$}</span>;
+<span class="p">}</span>
+<span class="k">\newcommand</span><span class="p">{</span><span class="k">\plotd</span><span class="p">}{</span>
+    <span class="k">\addplot</span><span class="na">[myblue,no marks,domain=-0.5:9,thick]</span> <span class="p">{</span>0.5*x - 0.75<span class="p">}</span>;
+    <span class="k">\addplot</span><span class="na">[mygreen,no marks,domain=-0.5:9,thick,restrict y to domain={-1:5}]</span> 
+    <span class="p">{</span>0.5*x - 1.1<span class="p">}</span>;
+	  <span class="k">\addplot</span> [only marks,mark=*] coordinates <span class="p">{</span> (8,2.9) <span class="p">}</span>;
+    <span class="k">\node</span><span class="na">[rotate=25]</span> at (axis cs:7,2) <span class="p">{$</span><span class="nv">\alertgm</span><span class="p">{</span><span class="nv">\nabla</span><span class="nb"> f</span><span class="o">(</span><span class="nb">x</span><span class="p">_</span><span class="m">0</span><span class="o">)</span><span class="p">}$}</span>;
+    <span class="k">\node</span><span class="na">[rotate=20]</span> at (axis cs:6,2.6) <span class="p">{$</span><span class="nb">f</span><span class="o">(</span><span class="nb">x</span><span class="o">)</span><span class="nb"> </span><span class="o">=</span><span class="nb"> Ax</span><span class="o">-</span><span class="nb">b</span><span class="p">$}</span>;
+<span class="p">}</span>
 <span class="k">\newcommand</span><span class="p">{</span><span class="k">\plote</span><span class="p">}{</span>
     <span class="k">\addplot</span><span class="na">[myblue,no marks,domain=-0.5:9,thick]</span> <span class="p">{</span>0.5*x - 0.75<span class="p">}</span>;
     <span class="k">\addplot</span><span class="na">[myred,no marks,domain=-0.5:9,thick,restrict y to domain={-1:5}]</span>
     <span class="p">{</span>0.65*x - 2.3<span class="p">}</span>;
-    <span class="k">\addplot</span> [only marks,mark=*] coordinates <span class="p">{</span> (8,2.9) <span class="p">}</span>;
+	  <span class="k">\addplot</span> [only marks,mark=*] coordinates <span class="p">{</span> (8,2.9) <span class="p">}</span>;
     <span class="k">\node</span><span class="na">[rotate=30]</span> at (axis cs:7.1,1.9) <span class="p">{$</span><span class="nv">\alertrm</span><span class="p">{</span><span class="nv">\widehat</span><span class="p">{</span><span class="nv">\nabla</span><span class="p">}</span><span class="nb"> 
     f</span><span class="o">(</span><span class="nb">x</span><span class="p">_</span><span class="m">0</span><span class="o">)</span><span class="p">}$}</span>;
     <span class="k">\node</span><span class="na">[rotate=20]</span> at (axis cs:6,2.6) <span class="p">{$</span><span class="nb">f</span><span class="o">(</span><span class="nb">x</span><span class="o">)</span><span class="nb"> </span><span class="o">=</span><span class="nb"> Ax</span><span class="o">-</span><span class="nb">b</span><span class="p">$}</span>;
@@ -232,7 +317,7 @@
     <span class="k">\addplot</span><span class="na">[myblue,no marks,domain=-0.5:9,thick]</span> <span class="p">{</span>0.5*x - 0.75<span class="p">}</span>;
     <span class="k">\addplot</span><span class="na">[no marks,domain=-0.5:9,thick,restrict y to domain={-1:5}]</span>
     <span class="p">{</span>0.65*x - 2.3<span class="p">}</span>;
-    <span class="k">\addplot</span> [only marks,mygreen,mark=*] coordinates <span class="p">{</span> (3.55,0) <span class="p">}</span>;
+	  <span class="k">\addplot</span> [only marks,mygreen,mark=*] coordinates <span class="p">{</span> (3.55,0) <span class="p">}</span>;
     <span class="k">\node</span><span class="na">[rotate=20]</span> at (axis cs:6,2.6) <span class="p">{$</span><span class="nb">f</span><span class="o">(</span><span class="nb">x</span><span class="o">)</span><span class="nb"> </span><span class="o">=</span><span class="nb"> Ax</span><span class="o">-</span><span class="nb">b</span><span class="p">$}</span>;
     <span class="k">\node</span> at (axis cs:3.55,-0.4) <span class="p">{</span><span class="k">\large</span> <span class="k">\alertgm</span><span class="p">{$</span><span class="nb">x</span><span class="p">_{</span><span class="m">1</span><span class="p">}$}}</span>;
 <span class="p">}</span>
@@ -240,16 +325,16 @@
     <span class="k">\addplot</span><span class="na">[myblue,no marks,domain=-0.5:9,thick]</span> <span class="p">{</span>0.5*x - 0.75<span class="p">}</span>;
     <span class="k">\addplot</span><span class="na">[no marks,domain=-0.5:9,thick,restrict y to domain={-1:5}]</span>
     <span class="p">{</span>0.65*x - 2.3<span class="p">}</span>;
-    <span class="k">\addplot</span> [only marks,myred,mark=*] coordinates <span class="p">{</span> (3.9,0) <span class="p">}</span>;
+	  <span class="k">\addplot</span> [only marks,myred,mark=*] coordinates <span class="p">{</span> (3.9,0) <span class="p">}</span>;
     <span class="k">\node</span><span class="na">[rotate=20]</span> at (axis cs:6,2.6) <span class="p">{$</span><span class="nb">f</span><span class="o">(</span><span class="nb">x</span><span class="o">)</span><span class="nb"> </span><span class="o">=</span><span class="nb"> Ax</span><span class="o">-</span><span class="nb">b</span><span class="p">$}</span>;
     <span class="k">\node</span> at (axis cs:3.9,-0.4) <span class="p">{</span><span class="k">\large</span> <span class="k">\alertrm</span><span class="p">{$</span><span class="nv">\widehat</span><span class="p">{</span><span class="nb">x</span><span class="p">}_{</span><span class="m">1</span><span class="p">}$}}</span>;
 <span class="p">}</span>
 <span class="k">\newcommand</span><span class="p">{</span><span class="k">\ploth</span><span class="p">}{</span>
     <span class="k">\addplot</span><span class="na">[myblue,no marks,domain=-0.5:9,thick]</span> <span class="p">{</span>0.5*x - 0.75<span class="p">}</span>;
     <span class="k">\draw</span> [dashed,thick] (axis cs:<span class="p">{</span>3.9,0<span class="p">}</span>) -- (axis cs:<span class="p">{</span>3.9,1.6<span class="p">}</span>);
-    <span class="k">\addplot</span> [only marks,mark=*] coordinates <span class="p">{</span> (3.9,1.6) <span class="p">}</span>;
+	  <span class="k">\addplot</span> [only marks,mark=*] coordinates <span class="p">{</span> (3.9,1.6) <span class="p">}</span>;
     <span class="k">\node</span> at (axis cs:3.9,2.1) <span class="p">{$</span><span class="nv">\widehat</span><span class="p">{</span><span class="nb">f</span><span class="p">}</span><span class="o">(</span><span class="nb">x</span><span class="p">_</span><span class="m">1</span><span class="o">)</span><span class="p">$}</span>;
-    <span class="k">\addplot</span> [only marks,mark=|] coordinates <span class="p">{</span> (3.9,0) <span class="p">}</span>;
+	  <span class="k">\addplot</span> [only marks,mark=|] coordinates <span class="p">{</span> (3.9,0) <span class="p">}</span>;
     <span class="k">\node</span> at (axis cs:3.9,-0.4) <span class="p">{</span><span class="k">\large</span> <span class="p">$</span><span class="nv">\widehat</span><span class="p">{</span><span class="nb">x</span><span class="p">}_{</span><span class="m">1</span><span class="p">}$}</span>;
 <span class="p">}</span>
 <span class="k">\newcommand</span><span class="p">{</span><span class="k">\ploti</span><span class="p">}{</span>
@@ -257,40 +342,41 @@
     <span class="k">\addplot</span><span class="na">[no marks,domain=-0.5:9,thick]</span> <span class="p">{</span>0.45*x - 0.155<span class="p">}</span>;
   	<span class="k">\addplot</span> [only marks,mark=*] coordinates <span class="p">{</span> (3.9,1.6) <span class="p">}</span>;
     <span class="k">\node</span><span class="na">[rotate=20]</span> at (axis cs:2.7,1.5) <span class="p">{$</span><span class="nv">\widehat</span><span class="p">{</span><span class="nv">\nabla</span><span class="p">}</span><span class="nb">f</span><span class="o">(</span><span class="nb">x</span><span class="p">_</span><span class="m">1</span><span class="o">)</span><span class="p">$}</span>;
-    <span class="k">\addplot</span> [only marks,mark=|] coordinates <span class="p">{</span> (3.9,0) <span class="p">}</span>;
+	  <span class="k">\addplot</span> [only marks,mark=|] coordinates <span class="p">{</span> (3.9,0) <span class="p">}</span>;
     <span class="k">\node</span> at (axis cs:3.9,-0.4) <span class="p">{</span><span class="k">\large</span> <span class="p">$</span><span class="nv">\widehat</span><span class="p">{</span><span class="nb">x</span><span class="p">}_{</span><span class="m">1</span><span class="p">}$}</span>;
 <span class="p">}</span>
 <span class="k">\newcommand</span><span class="p">{</span><span class="k">\plotj</span><span class="p">}{</span>
     <span class="k">\addplot</span><span class="na">[myblue,no marks,domain=-0.5:9,thick]</span> <span class="p">{</span>0.5*x - 0.75<span class="p">}</span>;
     <span class="k">\addplot</span><span class="na">[no marks,domain=-0.5:9,thick]</span> <span class="p">{</span>0.45*x - 0.155<span class="p">}</span>;
-    <span class="k">\addplot</span> [only marks,mark=*] coordinates <span class="p">{</span> (0.7,0) <span class="p">}</span>;
+	  <span class="k">\addplot</span> [only marks,mark=*] coordinates <span class="p">{</span> (0.7,0) <span class="p">}</span>;
     <span class="k">\node</span> at (axis cs:0.7,-0.4) <span class="p">{</span><span class="k">\large</span> <span class="p">$</span><span class="nv">\widehat</span><span class="p">{</span><span class="nb">x</span><span class="p">}_{</span><span class="m">2</span><span class="p">}$}</span>;
-    <span class="k">\addplot</span> [only marks,mark=|] coordinates <span class="p">{</span> (3.9,0) <span class="p">}</span>;
+	  <span class="k">\addplot</span> [only marks,mark=|] coordinates <span class="p">{</span> (3.9,0) <span class="p">}</span>;
     <span class="k">\node</span> at (axis cs:3.9,-0.4) <span class="p">{</span><span class="k">\large</span> <span class="p">$</span><span class="nv">\widehat</span><span class="p">{</span><span class="nb">x</span><span class="p">}_{</span><span class="m">1</span><span class="p">}$}</span>;
 <span class="p">}</span>
 
 <span class="k">\foreach</span> <span class="k">\whichplot</span> in
     <span class="p">{</span><span class="k">\plota</span>,<span class="k">\plotb</span>,<span class="k">\plotc</span>,<span class="k">\plotd</span>,<span class="k">\plote</span>,<span class="k">\plotf</span>,<span class="k">\plotg</span>,<span class="k">\ploth</span>,<span class="k">\ploti</span>,<span class="k">\plotj</span><span class="p">}</span>
 <span class="p">{</span><span class="nt">\begin{tikzpicture}</span>
-<span class="nt">\begin{axis}</span>
-    [
-        ymajorticks=false,
-        xtick=<span class="p">{</span>8,1.5<span class="p">}</span>,
-        xticklabels = <span class="p">{</span><span class="k">\large</span> <span class="p">$</span><span class="nb">x</span><span class="p">_</span><span class="m">0</span><span class="p">$</span>, <span class="k">\large</span> <span class="p">$</span><span class="nb">x</span><span class="p">$}</span>,
-        width=1.1<span class="k">\textwidth</span>,
-        height=0.6<span class="k">\textwidth</span>,
-        ymin=-1,
-        ymax=5,
-        xmax=9,
-        xmin=-0.5,
-        axis lines=middle,
-        tick style=<span class="p">{</span>black, very thick<span class="p">}</span>,
-    ]
+    <span class="nt">\begin{axis}</span>
+        [
+            ymajorticks=false,
+            xtick=<span class="p">{</span>8,1.5<span class="p">}</span>,
+            xticklabels = <span class="p">{</span><span class="k">\large</span> <span class="p">$</span><span class="nb">x</span><span class="p">_</span><span class="m">0</span><span class="p">$</span>, <span class="k">\large</span> <span class="p">$</span><span class="nb">x</span><span class="p">$}</span>,
+            width=1.1<span class="k">\textwidth</span>,
+            height=0.6<span class="k">\textwidth</span>,
+            ymin=-1,
+            ymax=5,
+            xmax=9,
+            xmin=-0.5,
+            axis lines=middle,
+            tick style=<span class="p">{</span>black, very thick<span class="p">}</span>,
+        ]
 
-    <span class="k">\whichplot</span>
+        <span class="k">\whichplot</span>
 
-<span class="nt">\end{axis}</span>
+    <span class="nt">\end{axis}</span>
 <span class="nt">\end{tikzpicture}</span><span class="p">}</span>
+<span class="nt">\end{document}</span>
 </pre></td>
 </tr></tbody></table></code></pre></figure>
 

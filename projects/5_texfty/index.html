@@ -203,10 +203,44 @@
 61
 62
 63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
 </pre></td>
-<td class="code"><pre><span class="c">% Full, compilable sources including data files are on Github: </span>
-<span class="c">% https://github.com/bvieuble/TeXFantasy/tree/main/scatter_plots/fig3</span>
-<span class="c">% Appears my the article ``Combining sparse approximate factorizations with mixed-precision iterative refinement''.</span>
+<td class="code"><pre><span class="c">%%% Full, compilable sources including data files are on Github: </span>
+<span class="c">%%% https://github.com/bvieuble/TeXFantasy/tree/main/scatter_plots/fig3</span>
+<span class="c">%%% Appears in my article ``Combining sparse approximate factorizations with </span>
+<span class="c">%%% mixed-precision iterative refinement''.</span>
+
+<span class="c">% Compiled with XeLaTeX</span>
+<span class="c">% TeX-command-extra-options: "-shell-escape"</span>
+<span class="k">\documentclass</span><span class="na">[convert={outext=.png},border=10pt]</span><span class="p">{</span>standalone<span class="p">}</span>
+<span class="k">\usepackage</span><span class="p">{</span>tikz<span class="p">}</span>
+<span class="k">\usepackage</span><span class="p">{</span>pgfplots, pgfplotstable<span class="p">}</span>
+<span class="k">\usepackage</span><span class="p">{</span>makecell<span class="p">}</span>
+<span class="k">\pgfplotsset</span><span class="p">{</span>compat=newest<span class="p">}</span>
+
+<span class="k">\input</span><span class="p">{</span>color<span class="p">_</span>theme.tex<span class="p">}</span>
+
+<span class="k">\pgfplotstableread</span><span class="na">[col sep=comma]</span><span class="p">{</span>data.csv<span class="p">}{</span><span class="k">\data</span><span class="p">}</span>
+
+<span class="nt">\begin{document}</span>
+
 <span class="nt">\begin{tikzpicture}</span>
     <span class="nt">\begin{axis}</span>
     [
@@ -267,6 +301,8 @@
                 <span class="p">{</span>GMRES, <span class="p">$</span><span class="nb">u</span><span class="p">_</span><span class="nb">f</span><span class="p">$</span>=<span class="k">\textsc</span><span class="p">{</span>s<span class="p">}</span>, <span class="p">$</span><span class="nb">u</span><span class="p">_</span><span class="nb">r</span><span class="p">$</span>=<span class="k">\textsc</span><span class="p">{</span>q<span class="p">}}}</span>
     <span class="nt">\end{axis}</span>
 <span class="nt">\end{tikzpicture}</span>
+
+<span class="nt">\end{document}</span>
 </pre></td>
 </tr></tbody></table></code></pre></figure>
 

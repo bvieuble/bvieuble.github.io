@@ -237,11 +237,35 @@
 95
 96
 97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
 </pre></td>
-<td class="code"><pre><span class="c">% Full, compilable sources including data files are on Github: </span>
-<span class="c">% https://github.com/bvieuble/TeXFantasy/tree/main/bars/fig3</span>
-<span class="c">% Appears in my Ph.D. defense ``Mixed precision iterative refinement for the</span>
-<span class="c">% solution of large sparse linear systems''.</span>
+<td class="code"><pre><span class="c">%%% Full, compilable sources including data files are on Github: </span>
+<span class="c">%%% https://github.com/bvieuble/TeXFantasy/tree/main/bars/fig3</span>
+<span class="c">%%% Appears in my Ph.D. defense ``Mixed precision iterative refinement for the</span>
+<span class="c">%%% solution of large sparse linear systems''.</span>
+
+<span class="c">% Compiled with XeLaTeX</span>
+<span class="c">% Generate the GIF with convert -delay 100 -loop 0 -density 200 -alpha on </span>
+<span class="c">% file.pdf file.gif (package imagemagick is required).</span>
+<span class="k">\documentclass</span><span class="na">[tikz,border=10pt]</span><span class="p">{</span>standalone<span class="p">}</span>
+<span class="k">\usepackage</span><span class="p">{</span>pgfplots,pgfplotstable<span class="p">}</span>
+<span class="k">\pgfplotsset</span><span class="p">{</span>compat=newest<span class="p">}</span>
+
+<span class="k">\input</span><span class="p">{</span>color<span class="p">_</span>theme.tex<span class="p">}</span>
+
 <span class="k">\pgfplotstableread</span><span class="na">[col sep=comma]</span><span class="p">{</span>data.csv<span class="p">}{</span><span class="k">\data</span><span class="p">}</span>
 <span class="k">\pgfplotsset</span><span class="p">{</span>select coords between index/.style 2 args=<span class="p">{</span>
     x filter/.code=<span class="p">{</span>
@@ -252,34 +276,36 @@
 <span class="k">\pgfplotstablegetrowsof</span><span class="p">{</span><span class="k">\data</span><span class="p">}</span>
 <span class="k">\pgfmathsetmacro</span><span class="p">{</span><span class="k">\nbrows</span><span class="p">}{</span><span class="k">\pgfplotsretval</span><span class="p">}</span>
 
+<span class="nt">\begin{document}</span>
+
 <span class="k">\foreach</span> <span class="k">\X</span> in <span class="p">{</span>0,1,2,3,4,5<span class="p">}</span>
 <span class="p">{</span><span class="nt">\begin{tikzpicture}</span> 
     <span class="nt">\begin{axis}</span>[
-    point meta=explicit symbolic,
-    nodes near coords,
-    every node near coord/.append style=<span class="p">{</span>font=<span class="k">\scriptsize</span>,above<span class="p">}</span>,
-    axis lines=left,
-    width=1.1<span class="k">\linewidth</span>,
-    height=0.55<span class="k">\linewidth</span>,
-    xmin=-0.5,
-    xmax=<span class="k">\nbrows</span>,
-    xtick=data,
-    xticklabels from table=<span class="p">{</span><span class="k">\data</span><span class="p">}{</span>epsilon<span class="p">}</span>,
-    x tick label style=<span class="p">{</span>font=<span class="k">\tiny</span><span class="p">}</span>,
-    x tick style=<span class="p">{</span>thick<span class="p">}</span>,
-    xlabel=<span class="p">$</span><span class="nv">\epsilon</span><span class="p">_{</span><span class="nv">\mbox</span><span class="p">{</span><span class="nv">\tiny</span><span class="nb"> BLR</span><span class="p">}}$</span>,
-    xlabel style = <span class="p">{</span>at=<span class="p">{</span>(axis description cs:1.02,0)<span class="p">}</span>,anchor=north east<span class="p">}</span>,
-    ybar,
-    ymajorgrids,
-    ymin=0,
-    ymax=1.45,
-    ytick=<span class="p">{</span>0, 0.25, 0.5, 0.75, 1<span class="p">}</span>,
-    yticklabels=<span class="p">{</span>0<span class="k">\%</span>,25<span class="k">\%</span>,50<span class="k">\%</span>,75<span class="k">\%</span>,100<span class="k">\%</span><span class="p">}</span>,
-    y tick label style=<span class="p">{</span>font=<span class="k">\scriptsize</span><span class="p">}</span>,
-    legend style=<span class="p">{</span>nodes=<span class="p">{</span>scale=0.7,transform shape<span class="p">}</span>,anchor=west,
-        at=<span class="p">{</span>(axis cs:1.7,1.4)<span class="p">}</span>,legend columns=4,
-        legend cell align=right, legend image post style=<span class="p">{</span>scale=0.5<span class="p">}}</span>,
-    at=<span class="p">{</span>(0,0)<span class="p">}</span>,
+        point meta=explicit symbolic,
+        nodes near coords,
+        every node near coord/.append style=<span class="p">{</span>font=<span class="k">\scriptsize</span>,above<span class="p">}</span>,
+        axis lines=left,
+        width=1.1<span class="k">\linewidth</span>,
+        height=0.55<span class="k">\linewidth</span>,
+        xmin=-0.5,
+        xmax=<span class="k">\nbrows</span>,
+        xtick=data,
+        xticklabels from table=<span class="p">{</span><span class="k">\data</span><span class="p">}{</span>epsilon<span class="p">}</span>,
+        x tick label style=<span class="p">{</span>font=<span class="k">\tiny</span><span class="p">}</span>,
+        x tick style=<span class="p">{</span>thick<span class="p">}</span>,
+        xlabel=<span class="p">$</span><span class="nv">\epsilon</span><span class="p">_{</span><span class="nv">\mbox</span><span class="p">{</span><span class="nv">\tiny</span><span class="nb"> BLR</span><span class="p">}}$</span>,
+        xlabel style = <span class="p">{</span>at=<span class="p">{</span>(axis description cs:1.02,0)<span class="p">}</span>,anchor=north east<span class="p">}</span>,
+        ybar,
+        ymajorgrids,
+        ymin=0,
+        ymax=1.45,
+        ytick=<span class="p">{</span>0, 0.25, 0.5, 0.75, 1<span class="p">}</span>,
+        yticklabels=<span class="p">{</span>0<span class="k">\%</span>,25<span class="k">\%</span>,50<span class="k">\%</span>,75<span class="k">\%</span>,100<span class="k">\%</span><span class="p">}</span>,
+        y tick label style=<span class="p">{</span>font=<span class="k">\scriptsize</span><span class="p">}</span>,
+        legend style=<span class="p">{</span>nodes=<span class="p">{</span>scale=0.7,transform shape<span class="p">}</span>,anchor=west,
+            at=<span class="p">{</span>(axis cs:1.7,1.4)<span class="p">}</span>,legend columns=4,
+            legend cell align=right, legend image post style=<span class="p">{</span>scale=0.5<span class="p">}}</span>,
+        at=<span class="p">{</span>(0,0)<span class="p">}</span>,
     ]
 
         <span class="k">\addplot</span> [opacity=0.,forget plot] 
@@ -335,6 +361,8 @@
             <span class="p">{</span><span class="k">\footnotesize</span> Memory<span class="p">}</span>;
     <span class="nt">\end{axis}</span>
 <span class="nt">\end{tikzpicture}</span><span class="p">}</span>
+
+<span class="nt">\end{document}</span>
 </pre></td>
 </tr></tbody></table></code></pre></figure>
 
