@@ -1,7 +1,7 @@
 ---
 layout: page
 title: TeXFantasy
-permalink: /projects/
+permalink: /texfantasy/
 description: Gallery of my LaTeX figures and tables.
 nav: true
 nav_order: 2

@@ -1,0 +1,353 @@
+---
+layout: page
+title: heatmap
+description: A heatmap plot displaying the number of iterations according to the condition numbers of the matrix A and its preconditioner M.
+img: assets/img/fig13-front.png
+importance: 1
+category: plots
+---
+
+<div class="row">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.html path="assets/img/fig13.png" class="img-fluid rounded z-depth-1" %}
+    </div>
+</div>
+
+{% highlight latex linenos %}
+
+% Full code on github: https://github.com/bvieuble/TeXFantasy
+%  Appears in my thesis ``Mixed precision iterative refinement for the solution
+% of large sparse linear systems''.
+\begin{tikzpicture}
+    \begin{axis}
+    [
+        enlarge x limits={abs=0.},
+        enlarge y limits={abs=0.},
+        grid=minor,
+        minor xtick={1.5,2.5,...,16.5},
+        minor ytick={1.5,2.5,...,16.5},
+        minor grid style={mygray,very thin},
+        tick style={draw=none},
+        x label style={font=\normalsize},
+        xtick = {1,5,9,13,17},
+        xticklabels = {,,},
+        x tick label style={font=\small},
+        y label style={font=\normalsize},
+        ytick = {1,5,9,13,17},
+        yticklabels = {1e0,1e4,1e8,1e12,1e16},
+        y tick label style={font=\small,rotate=0},
+        axis on top,
+        mesh/ordering=y varies,
+        unbounded coords=jump,
+        height=0.4\linewidth,
+        width=0.4\linewidth,
+        colormap={whiteblue}{color={black} color={mypurple} color={myblue}
+            color=(myorange) color=(myyellow)},
+        point meta min=0,
+        point meta max=3.68,
+        title={\normalsize\textsc{bbb}},
+        ylabel=K(M),
+        xlabel={},
+        at={(0, 0)}
+    ]
+
+    \addplot[matrix plot*,mesh/cols=17,mesh/rows=17,point meta=explicit]
+        table[meta expr=lg10(\thisrow{it-bbb}),col sep=comma] {data.csv};
+    \end{axis}
+
+    \begin{axis}
+    [
+        enlarge x limits={abs=0.},
+        enlarge y limits={abs=0.},
+        grid=minor,
+        minor xtick={1.5,2.5,...,16.5},
+        minor ytick={1.5,2.5,...,16.5},
+        minor grid style={mygray,very thin},
+        tick style={draw=none},
+        x label style={font=\normalsize},
+        xtick = {1,5,9,13,17},
+        xticklabels = {,,},
+        x tick label style={font=\small},
+        y label style={font=\normalsize},
+        ytick = {1,5,9,13,17},
+        yticklabels = {,,},
+        y tick label style={font=\small,rotate=0},
+        axis on top,
+        mesh/ordering=y varies,
+        unbounded coords=jump,
+        height=0.4\linewidth,
+        width=0.4\linewidth,
+        colormap={whiteblue}{color={black} color={mypurple} color={myblue}
+            color=(myorange) color=(myyellow)},
+        point meta min=0,
+        point meta max=3.68,
+        title={\normalsize\textsc{bbs}},
+        ylabel={},
+        xlabel={},
+        colorbar horizontal,
+        colorbar style={at={(0,1.4)},anchor=north west,
+           xlabel={\#it},xticklabel pos=upper,
+           xtick={0,1,2,3,3.68},
+           xticklabels={$1$, $10^1$, $10^2$, $10^3$},
+           x tick label style={font=\small,rotate=0},
+       },
+        at={(200, 0)}
+    ]
+
+    \addplot[matrix plot*,mesh/cols=17,mesh/rows=17,point meta=explicit]
+        table[meta expr=lg10(\thisrow{it-bbs}),col sep=comma] {data.csv};
+    \end{axis}
+
+    \begin{axis}
+    [
+        enlarge x limits={abs=0.},
+        enlarge y limits={abs=0.},
+        grid=minor,
+        minor xtick={1.5,2.5,...,16.5},
+        minor ytick={1.5,2.5,...,16.5},
+        minor grid style={mygray,very thin},
+        tick style={draw=none},
+        x label style={font=\normalsize},
+        xtick = {1,5,9,13,17},
+        xticklabels = {,,},
+        x tick label style={font=\small},
+        y label style={font=\normalsize},
+        ytick = {1,5,9,13,17},
+        yticklabels = {,,},
+        y tick label style={font=\small,rotate=0},
+        axis on top,
+        mesh/ordering=y varies,
+        unbounded coords=jump,
+        height=0.4\linewidth,
+        width=0.4\linewidth,
+        colormap={whiteblue}{color={black} color={mypurple} color={myblue}
+            color=(myorange) color=(myyellow)},
+        point meta min=0,
+        point meta max=3.68,
+        title={\normalsize\textsc{bss}},
+        ylabel={},
+        xlabel={},
+        at={(400, 0)}
+    ]
+
+    \addplot[matrix plot*,mesh/cols=17,mesh/rows=17,point meta=explicit]
+        table[meta expr=lg10(\thisrow{it-bss}),col sep=comma] {data.csv};
+    \end{axis}
+
+    \begin{axis}
+    [
+        enlarge x limits={abs=0.},
+        enlarge y limits={abs=0.},
+        grid=minor,
+        minor xtick={1.5,2.5,...,16.5},
+        minor ytick={1.5,2.5,...,16.5},
+        minor grid style={mygray,very thin},
+        tick style={draw=none},
+        x label style={font=\normalsize},
+        xtick = {1,5,9,13,17},
+        xticklabels = {,,},
+        x tick label style={font=\small},
+        y label style={font=\normalsize},
+        ytick = {1,5,9,13,17},
+        yticklabels = {1e0,1e4,1e8,1e12,1e16},
+        y tick label style={font=\small,rotate=0},
+        axis on top,
+        mesh/ordering=y varies,
+        unbounded coords=jump,
+        height=0.4\linewidth,
+        width=0.4\linewidth,
+        colormap={whiteblue}{color={black} color={mypurple} color={myblue}
+            color=(myorange) color=(myyellow)},
+        point meta min=0,
+        point meta max=3.68,
+        title={\normalsize\textsc{sss}},
+        ylabel=K(M),
+        xlabel={},
+        at={(0, -225)}
+    ]
+
+    \addplot[matrix plot*,mesh/cols=17,mesh/rows=17,point meta=explicit]
+        table[meta expr=lg10(\thisrow{it-sss}),col sep=comma] {data.csv};
+    \end{axis}
+
+    \begin{axis}
+    [
+        enlarge x limits={abs=0.},
+        enlarge y limits={abs=0.},
+        grid=minor,
+        minor xtick={1.5,2.5,...,16.5},
+        minor ytick={1.5,2.5,...,16.5},
+        minor grid style={mygray,very thin},
+        tick style={draw=none},
+        x label style={font=\normalsize},
+        xtick = {1,5,9,13,17},
+        xticklabels = {,,},
+        x tick label style={font=\small},
+        y label style={font=\normalsize},
+        ytick = {1,5,9,13,17},
+        yticklabels = {,,},
+        y tick label style={font=\small,rotate=0},
+        axis on top,
+        mesh/ordering=y varies,
+        unbounded coords=jump,
+        height=0.4\linewidth,
+        width=0.4\linewidth,
+        colormap={whiteblue}{color={black} color={mypurple} color={myblue}
+            color=(myorange) color=(myyellow)},
+        point meta min=0,
+        point meta max=3.68,
+        title={\normalsize\textsc{ssd}},
+        ylabel={},
+        xlabel={},
+        at={(200, -225)}
+    ]
+
+    \addplot[matrix plot*,mesh/cols=17,mesh/rows=17,point meta=explicit]
+        table[meta expr=lg10(\thisrow{it-ssd}),col sep=comma] {data.csv};
+    \end{axis}
+
+    \begin{axis}
+    [
+        enlarge x limits={abs=0.},
+        enlarge y limits={abs=0.},
+        grid=minor,
+        minor xtick={1.5,2.5,...,16.5},
+        minor ytick={1.5,2.5,...,16.5},
+        minor grid style={mygray,very thin},
+        tick style={draw=none},
+        x label style={font=\normalsize},
+        xtick = {1,5,9,13,17},
+        xticklabels = {,,},
+        x tick label style={font=\small},
+        y label style={font=\normalsize},
+        ytick = {1,5,9,13,17},
+        yticklabels = {,,},
+        y tick label style={font=\small,rotate=0},
+        axis on top,
+        mesh/ordering=y varies,
+        unbounded coords=jump,
+        height=0.4\linewidth,
+        width=0.4\linewidth,
+        colormap={whiteblue}{color={black} color={mypurple} color={myblue}
+            color=(myorange) color=(myyellow)},
+        point meta min=0,
+        point meta max=3.68,
+        title={\normalsize\textsc{sdd}},
+        ylabel={},
+        xlabel={},
+        at={(400, -225)}
+    ]
+
+    \addplot[matrix plot*,mesh/cols=17,mesh/rows=17,point meta=explicit]
+        table[meta expr=lg10(\thisrow{it-sdd}),col sep=comma] {data.csv};
+    \end{axis}
+
+    \begin{axis}
+    [
+        enlarge x limits={abs=0.},
+        enlarge y limits={abs=0.},
+        grid=minor,
+        minor xtick={1.5,2.5,...,16.5},
+        minor ytick={1.5,2.5,...,16.5},
+        minor grid style={mygray,very thin},
+        tick style={draw=none},
+        x label style={font=\normalsize},
+        xtick = {1,5,9,13,17},
+        xticklabels = {1e0,1e4,1e8,1e12,1e16},
+        x tick label style={font=\small},
+        y label style={font=\normalsize},
+        ytick = {1,5,9,13,17},
+        yticklabels = {1e0,1e4,1e8,1e12,1e16},
+        y tick label style={font=\small,rotate=0},
+        axis on top,
+        mesh/ordering=y varies,
+        unbounded coords=jump,
+        height=0.4\linewidth,
+        width=0.4\linewidth,
+        colormap={whiteblue}{color={black} color={mypurple} color={myblue}
+            color=(myorange) color=(myyellow)},
+        point meta min=0,
+        point meta max=3.68,
+        title={\normalsize\textsc{ddd}},
+        ylabel=K(M),
+        xlabel=K(A),
+        at={(0, -450)}
+    ]
+
+    \addplot[matrix plot*,mesh/cols=17,mesh/rows=17,point meta=explicit]
+        table[meta expr=lg10(\thisrow{it-ddd}),col sep=comma] {data.csv};
+    \end{axis}
+
+    \begin{axis}
+    [
+        enlarge x limits={abs=0.},
+        enlarge y limits={abs=0.},
+        grid=minor,
+        minor xtick={1.5,2.5,...,16.5},
+        minor ytick={1.5,2.5,...,16.5},
+        minor grid style={mygray,very thin},
+        tick style={draw=none},
+        x label style={font=\normalsize},
+        xtick = {1,5,9,13,17},
+        xticklabels = {1e0,1e4,1e8,1e12,1e16},
+        x tick label style={font=\small},
+        y label style={font=\normalsize},
+        ytick = {1,5,9,13,17},
+        yticklabels = {,,},
+        y tick label style={font=\small,rotate=0},
+        axis on top,
+        mesh/ordering=y varies,
+        unbounded coords=jump,
+        height=0.4\linewidth,
+        width=0.4\linewidth,
+        colormap={whiteblue}{color={black} color={mypurple} color={myblue}
+            color=(myorange) color=(myyellow)},
+        point meta min=0,
+        point meta max=3.68,
+        title={\normalsize\textsc{ddq}},
+        ylabel={},
+        xlabel=K(A),
+        at={(200, -450)}
+    ]
+
+    \addplot[matrix plot*,mesh/cols=17,mesh/rows=17,point meta=explicit]
+        table[meta expr=lg10(\thisrow{it-ddq}),col sep=comma] {data.csv};
+    \end{axis}
+
+    \begin{axis}
+    [
+        enlarge x limits={abs=0.},
+        enlarge y limits={abs=0.},
+        grid=minor,
+        minor xtick={1.5,2.5,...,16.5},
+        minor ytick={1.5,2.5,...,16.5},
+        minor grid style={mygray,very thin},
+        tick style={draw=none},
+        x label style={font=\normalsize},
+        xtick = {1,5,9,13,17},
+        xticklabels = {1e0,1e4,1e8,1e12,1e16},
+        x tick label style={font=\small},
+        y label style={font=\normalsize},
+        ytick = {1,5,9,13,17},
+        yticklabels = {,,},
+        y tick label style={font=\small,rotate=0},
+        axis on top,
+        mesh/ordering=y varies,
+        unbounded coords=jump,
+        height=0.4\linewidth,
+        width=0.4\linewidth,
+        colormap={whiteblue}{color={black} color={mypurple} color={myblue}
+            color=(myorange) color=(myyellow)},
+        point meta min=0,
+        point meta max=3.68,
+        title={\normalsize\textsc{dqq}},
+        ylabel={},
+        xlabel=K(A),
+        at={(400, -450)}
+    ]
+
+    \addplot[matrix plot*,mesh/cols=17,mesh/rows=17,point meta=explicit]
+        table[meta expr=lg10(\thisrow{it-dqq}),col sep=comma] {data.csv};
+    \end{axis}
+\end{tikzpicture}
+{% endhighlight %}

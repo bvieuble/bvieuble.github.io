@@ -1,10 +1,10 @@
 ---
 layout: page
-title: function plot (anim)
+title: function (anim)
 description: An animated plot representing the convergence of iterative refinement. 
 img: assets/img/fig7-front.png
 importance: 1
-category: plots 
+category: illustrations 
 ---
 
 <div class="row">
