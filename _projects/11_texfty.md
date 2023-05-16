@@ -15,7 +15,7 @@ category: illustrations
 
 {% highlight latex linenos %}
 
-% Full code on github: https://github.com/bvieuble/TeXFantasy
+% Full code on github: https://github.com/bvieuble/TeXFantasy/tree/main/illustrations/fig1
 % Appears in my lecture ``Mixed precision iterative refinement'' (2023).
 \begin{tikzpicture}[very thick, black, x=0.7cm]\small
 

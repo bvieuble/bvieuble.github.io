@@ -15,8 +15,9 @@ category: plots
 
 {% highlight latex linenos %}
 
-% Full code on github: https://github.com/bvieuble/TeXFantasy
-% Appears in my thesis ``Mixed precision iterative refinement for the solution of large sparse linear systems''.
+% Full code on github: https://github.com/bvieuble/TeXFantasy/tree/main/scatter_plots/fig2
+% Appears in my thesis ``Mixed precision iterative refinement for the solution 
+% of large sparse linear systems''.
 \begin{tikzpicture}
     \begin{axis}
     [
@@ -43,15 +44,10 @@ category: plots
         at={(0, 0)}
     ]
 
-        \addplot[scatter,
-                 mark=*, 
-                 solid,
+        \addplot[scatter,mark=*,solid,
                  every mark/.append style={solid, fill=myred, 
                                            fill opacity=0.2},
-                 color=myred,
-                 only marks,
-                 very thick
-                 ] 
+                 color=myred,only marks,very thick] 
              table[x=ka,y=lu-h] {data.csv};
     \end{axis}
 
@@ -80,15 +76,10 @@ category: plots
         at={(0.5\linewidth, 0)}
     ]
 
-        \addplot[scatter,
-                 mark=*, 
-                 solid,
+        \addplot[scatter,mark=*,solid,
                  every mark/.append style={solid, fill=myred, 
                                            fill opacity=0.2},
-                 color=myred,
-                 only marks,
-                 very thick
-                 ] 
+                 color=myred,only marks,very thick] 
              table[x=ka,y=hdqhs] {data.csv};
     \end{axis}
 
@@ -117,15 +108,10 @@ category: plots
         at={(0, -0.3\linewidth)}
     ]
 
-        \addplot[scatter,
-                 mark=*, 
-                 solid,
+        \addplot[scatter,mark=*,solid,
                  every mark/.append style={solid, fill=myred, 
                                            fill opacity=0.2},
-                 color=myred,
-                 only marks,
-                 very thick
-                 ] 
+                 color=myred,only marks,very thick] 
              table[x=ka,y=hdqss] {data.csv};
     \end{axis}
 
@@ -154,15 +140,10 @@ category: plots
         at={(0.5\linewidth, -0.3\linewidth)}
     ]
 
-        \addplot[scatter,
-                 mark=*, 
-                 solid,
+        \addplot[scatter,mark=*,solid,
                  every mark/.append style={solid, fill=myred, 
                                            fill opacity=0.2},
-                 color=myred,
-                 only marks,
-                 very thick
-                 ] 
+                 color=myred,only marks,very thick] 
              table[x=ka,y=hdqsd] {data.csv};
     \end{axis}
 
@@ -191,15 +172,10 @@ category: plots
         at={(0, -0.6\linewidth)}
     ]
 
-        \addplot[scatter,
-                 mark=*, 
-                 solid,
+        \addplot[scatter,mark=*,solid,
                  every mark/.append style={solid, fill=myred, 
                                            fill opacity=0.2},
-                 color=myred,
-                 only marks,
-                 very thick
-                 ] 
+                 color=myred,only marks,very thick] 
              table[x=ka,y=hdqdd] {data.csv};
     \end{axis}
 
@@ -228,15 +204,10 @@ category: plots
         at={(0.5\linewidth, -0.6\linewidth)}
     ]
 
-        \addplot[scatter,
-                 mark=*, 
-                 solid,
+        \addplot[scatter,mark=*,solid,
                  every mark/.append style={solid, fill=myred, 
                                            fill opacity=0.2},
-                 color=myred,
-                 only marks,
-                 very thick
-                 ] 
+                 color=myred,only marks,very thick] 
              table[x=ka,y=hdqdq] {data.csv};
     \end{axis}
 \end{tikzpicture}

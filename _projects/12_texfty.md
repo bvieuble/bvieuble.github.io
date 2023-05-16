@@ -15,7 +15,7 @@ category: illustrations
 
 {% highlight latex linenos %}
 
-% Full code on github: https://github.com/bvieuble/TeXFantasy
+% Full code on github: https://github.com/bvieuble/TeXFantasy/tree/main/illustrations/fig3
 % Appears in my Ph.D. defense ``Mixed precision iterative refinement for the
 % solution of large sparse linear systems''.
 \begin{tikzpicture}[>=stealth,thick,baseline]

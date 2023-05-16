@@ -15,8 +15,8 @@ category: plots
 
 {% highlight latex linenos %}
 
-% Full code on github: https://github.com/bvieuble/TeXFantasy
-%  Appears in my Ph.D. defense ``Mixed precision iterative refinement for the
+% Full code on github: https://github.com/bvieuble/TeXFantasy/tree/main/bars/fig3
+% Appears in my Ph.D. defense ``Mixed precision iterative refinement for the
 % solution of large sparse linear systems''.
 \pgfplotstableread[col sep=comma]{data.csv}{\data}
 \pgfplotsset{select coords between index/.style 2 args={

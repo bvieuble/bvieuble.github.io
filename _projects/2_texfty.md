@@ -15,8 +15,9 @@ category: plots
 
 {% highlight latex linenos %}
 
-% Full code on github: https://github.com/bvieuble/TeXFantasy
-% Appears in my article ``Combining sparse approximate factorizations with mixed precision iterative refinement''.
+% Full code on github: https://github.com/bvieuble/TeXFantasy/tree/main/bars/fig1
+% Appears in my article ``Combining sparse approximate factorizations with 
+% mixed precision iterative refinement''.
 \begin{tikzpicture} 
     \begin{axis}
     [

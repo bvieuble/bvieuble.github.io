@@ -15,7 +15,7 @@ category: plots
 
 {% highlight latex linenos %}
 
-% Full code on github: https://github.com/bvieuble/TeXFantasy
+% Full code on github: https://github.com/bvieuble/TeXFantasy/tree/main/plots/fig1
 % Appears in my article ``Five-Precision GMRES-based Iterative Refinement''.
 \newcommand{\plota}{
     \addplot[mark=*,solid,every mark/.append style={solid,fill=mypurple, 

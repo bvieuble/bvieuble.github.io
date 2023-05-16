@@ -15,7 +15,7 @@ category: illustrations
 
 {% highlight latex linenos %}
 
-% Full code on github: https://github.com/bvieuble/TeXFantasy
+% Full code on github: https://github.com/bvieuble/TeXFantasy/tree/main/illustrations/fig2
 % Appears in my lecture ``Mixed precision iterative refinement'' (2023).
 \newcommand{\plote}{
     \addplot[myblue,no marks,domain=-0.5:9,thick] {0.5*x - 0.75};

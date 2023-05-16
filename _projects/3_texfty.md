@@ -15,8 +15,9 @@ category: plots
 
 {% highlight latex linenos %}
 
-% Full code on github: https://github.com/bvieuble/TeXFantasy
-% Appears in my thesis ``Mixed precision iterative refinement for the solution of large sparse linear systems''.
+% Full code on github: https://github.com/bvieuble/TeXFantasy/tree/main/scatter_plots/fig1
+% Appears in my thesis ``Mixed precision iterative refinement for the solution 
+% of large sparse linear systems''.
 \begin{tikzpicture}
     \begin{axis}[
         width=1.\linewidth,
@@ -36,14 +37,8 @@ category: plots
                     color=(myred) color=(myred) color=(myred)}
     ]
 
-        \addplot[scatter,
-                 very thick,
-                 only marks,
-                 clip mode=individual,
-                 mark size=2pt,
-                 fill opacity=0.2,
-                 mark=*, 
-                 ] 
+        \addplot[scatter,very thick,only marks,clip mode=individual,
+                 mark size=2pt,fill opacity=0.2,mark=*] 
              table[x=kbef,y=kaft] {\data};
 
         \draw[black, thick]

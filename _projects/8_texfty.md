@@ -15,8 +15,9 @@ category: tables
 
 {% highlight latex linenos %}
 
-% Full code on github: https://github.com/bvieuble/TeXFantasy
-% Appears my the article ``Combining sparse approximate factorizations with mixed-precision iterative refinement''.
+% Full code on github: https://github.com/bvieuble/TeXFantasy/tree/main/tables/tab1
+% Appears my the article ``Combining sparse approximate factorizations with 
+% mixed-precision iterative refinement''.
 \newcommand{\PreserveBackslash}[1]{\let\temp=\\#1\let\\=\temp}
 \newcolumntype{C}[1]{>{\PreserveBackslash\centering}p{#1}}
 \newcolumntype{L}[1]{>{\PreserveBackslash\raggedright}p{#1}}
