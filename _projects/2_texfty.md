@@ -22,8 +22,6 @@ category: plots
 % Compiled with XeLaTeX
 % TeX-command-extra-options: "-shell-escape"
 \documentclass[convert={outext=.png},border=10pt]{standalone}
-%\usepackage{fontspec}
-%\setmainfont{Roboto Light}
 \usepackage{tikz}
 \usepackage{pgfplots, pgfplotstable, pgfplotstablefilter}
 \pgfplotsset{compat=newest}
