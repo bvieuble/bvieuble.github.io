@@ -14,8 +14,8 @@ category: plots
 </div>
 
 {% highlight latex linenos %}
-
-% Full code on github: https://github.com/bvieuble/TeXFantasy/tree/main/plots/fig2
+% Full, compilable sources including data files are on Github: 
+% https://github.com/bvieuble/TeXFantasy/tree/main/plots/fig2
 % Appears in my thesis ``Mixed precision iterative refinement for the solution 
 % of large sparse linear systems''.
 \pgfplotstableread[col sep=comma]{data/1138_bus.csv}{\dataa}

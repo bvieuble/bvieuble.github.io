@@ -14,8 +14,8 @@ category: plots
 </div>
 
 {% highlight latex linenos %}
-
-% Full code on github: https://github.com/bvieuble/TeXFantasy/tree/main/heatmaps/fig1
+% Full, compilable sources including data files are on Github: 
+% https://github.com/bvieuble/TeXFantasy/tree/main/heatmaps/fig1
 % Appears in my thesis ``Mixed precision iterative refinement for the solution
 % of large sparse linear systems''.
 \begin{tikzpicture}

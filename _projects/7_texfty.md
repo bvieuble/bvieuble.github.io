@@ -1,6 +1,6 @@
 ---
 layout: page
-title: matrix index table
+title: matrix index 
 description: A table containing a list of matrices and their properties.
 img: assets/img/tab2.png
 importance: 1
@@ -14,8 +14,8 @@ category: tables
 </div>
 
 {% highlight latex linenos %}
-
-% Full code on github: https://github.com/bvieuble/TeXFantasy/tree/main/tables/tab2
+% Full, compilable sources including data files are on Github: 
+% https://github.com/bvieuble/TeXFantasy/tree/main/tables/tab2
 % Appears my the article ``Combining sparse approximate factorizations with 
 % mixed-precision iterative refinement''.
 \pgfplotstabletypeset[col sep=comma,

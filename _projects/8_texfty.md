@@ -1,6 +1,6 @@
 ---
 layout: page
-title: matrix index table
+title: consumption samples
 description: A table containing the execution times and memory consumptions for different matrices, alorithms, and parameters.
 img: assets/img/tab1-front.png
 importance: 1
@@ -14,8 +14,8 @@ category: tables
 </div>
 
 {% highlight latex linenos %}
-
-% Full code on github: https://github.com/bvieuble/TeXFantasy/tree/main/tables/tab1
+% Full, compilable sources including data files are on Github: 
+% https://github.com/bvieuble/TeXFantasy/tree/main/tables/tab1
 % Appears my the article ``Combining sparse approximate factorizations with 
 % mixed-precision iterative refinement''.
 \newcommand{\PreserveBackslash}[1]{\let\temp=\\#1\let\\=\temp}

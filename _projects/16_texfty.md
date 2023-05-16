@@ -1,6 +1,6 @@
 ---
 layout: page
-title: bar plot (anim)
+title: bar plot (gif)
 description: A bar plot representing the execution time and the memory consumption for different threshold parameters.
 img: assets/img/fig14-front.png
 importance: 1
@@ -14,8 +14,8 @@ category: plots
 </div>
 
 {% highlight latex linenos %}
-
-% Full code on github: https://github.com/bvieuble/TeXFantasy/tree/main/bars/fig3
+% Full, compilable sources including data files are on Github: 
+% https://github.com/bvieuble/TeXFantasy/tree/main/bars/fig3
 % Appears in my Ph.D. defense ``Mixed precision iterative refinement for the
 % solution of large sparse linear systems''.
 \pgfplotstableread[col sep=comma]{data.csv}{\data}

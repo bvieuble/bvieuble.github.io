@@ -1,6 +1,6 @@
 ---
 layout: page
-title: figure
+title: pivoting
 description: An illustration of partial and static pivoting.
 img: assets/img/fig10-front.png
 importance: 1
@@ -14,8 +14,8 @@ category: illustrations
 </div>
 
 {% highlight latex linenos %}
-
-% Full code on github: https://github.com/bvieuble/TeXFantasy/tree/main/illustrations/fig3
+% Full, compilable sources are on Github: 
+% https://github.com/bvieuble/TeXFantasy/tree/main/illustrations/fig3
 % Appears in my Ph.D. defense ``Mixed precision iterative refinement for the
 % solution of large sparse linear systems''.
 \begin{tikzpicture}[>=stealth,thick,baseline]

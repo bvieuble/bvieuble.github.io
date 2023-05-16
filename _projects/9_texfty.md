@@ -1,6 +1,6 @@
 ---
 layout: page
-title: function (anim)
+title: function (gif)
 description: An animated plot representing the convergence of iterative refinement. 
 img: assets/img/fig7-front.png
 importance: 1
@@ -14,8 +14,8 @@ category: illustrations
 </div>
 
 {% highlight latex linenos %}
-
-% Full code on github: https://github.com/bvieuble/TeXFantasy/tree/main/illustrations/fig2
+% Full, compilable sources are on Github: 
+% https://github.com/bvieuble/TeXFantasy/tree/main/illustrations/fig2
 % Appears in my lecture ``Mixed precision iterative refinement'' (2023).
 \newcommand{\plote}{
     \addplot[myblue,no marks,domain=-0.5:9,thick] {0.5*x - 0.75};

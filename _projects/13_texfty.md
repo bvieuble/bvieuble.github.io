@@ -1,6 +1,6 @@
 ---
 layout: page
-title: figure
+title: consumption
 description: An illustration of the memory consumption of iterative refinement.
 img: assets/img/fig11-front.png
 importance: 1
@@ -14,8 +14,8 @@ category: illustrations
 </div>
 
 {% highlight latex linenos %}
-
-% Full code on github: https://github.com/bvieuble/TeXFantasy/tree/main/illustrations/fig4
+% Full, compilable sources are on Github: 
+% https://github.com/bvieuble/TeXFantasy/tree/main/illustrations/fig4
 % Appears in my thesis ``Mixed precision iterative refinement for the solution
 % of large sparse linear systems''.
 \tikzdeclarepattern{

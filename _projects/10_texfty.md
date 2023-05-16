@@ -1,6 +1,6 @@
 ---
 layout: page
-title: plot (anim)
+title: plot (gif)
 description: An animated plot representing the percentage of convergence according to the condition number for different algorithms. 
 img: assets/img/fig8-front.png
 importance: 1
@@ -14,8 +14,8 @@ category: plots
 </div>
 
 {% highlight latex linenos %}
-
-% Full code on github: https://github.com/bvieuble/TeXFantasy/tree/main/plots/fig1
+% Full, compilable sources including data files are on Github: 
+% https://github.com/bvieuble/TeXFantasy/tree/main/plots/fig1
 % Appears in my article ``Five-Precision GMRES-based Iterative Refinement''.
 \newcommand{\plota}{
     \addplot[mark=*,solid,every mark/.append style={solid,fill=mypurple, 
