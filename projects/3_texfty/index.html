@@ -174,14 +174,10 @@
 32
 33
 34
-35
-36
-37
-38
-39
 </pre></td>
-<td class="code"><pre><span class="c">% Full code on github: https://github.com/bvieuble/TeXFantasy</span>
-<span class="c">% Appears in my thesis ``Mixed precision iterative refinement for the solution of large sparse linear systems''.</span>
+<td class="code"><pre><span class="c">% Full code on github: https://github.com/bvieuble/TeXFantasy/tree/main/scatter_plots/fig1</span>
+<span class="c">% Appears in my thesis ``Mixed precision iterative refinement for the solution </span>
+<span class="c">% of large sparse linear systems''.</span>
 <span class="nt">\begin{tikzpicture}</span>
     <span class="nt">\begin{axis}</span>[
         width=1.<span class="k">\linewidth</span>,
@@ -201,14 +197,8 @@
                     color=(myred) color=(myred) color=(myred)<span class="p">}</span>
     ]
 
-        <span class="k">\addplot</span>[scatter,
-                 very thick,
-                 only marks,
-                 clip mode=individual,
-                 mark size=2pt,
-                 fill opacity=0.2,
-                 mark=*, 
-                 ] 
+        <span class="k">\addplot</span>[scatter,very thick,only marks,clip mode=individual,
+                 mark size=2pt,fill opacity=0.2,mark=*] 
              table[x=kbef,y=kaft] <span class="p">{</span><span class="k">\data</span><span class="p">}</span>;
 
         <span class="k">\draw</span><span class="na">[black, thick]</span>

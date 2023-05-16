@@ -336,38 +336,10 @@
 194
 195
 196
-197
-198
-199
-200
-201
-202
-203
-204
-205
-206
-207
-208
-209
-210
-211
-212
-213
-214
-215
-216
-217
-218
-219
-220
-221
-222
-223
-224
-225
 </pre></td>
-<td class="code"><pre><span class="c">% Full code on github: https://github.com/bvieuble/TeXFantasy</span>
-<span class="c">% Appears in my thesis ``Mixed precision iterative refinement for the solution of large sparse linear systems''.</span>
+<td class="code"><pre><span class="c">% Full code on github: https://github.com/bvieuble/TeXFantasy/tree/main/scatter_plots/fig2</span>
+<span class="c">% Appears in my thesis ``Mixed precision iterative refinement for the solution </span>
+<span class="c">% of large sparse linear systems''.</span>
 <span class="nt">\begin{tikzpicture}</span>
     <span class="nt">\begin{axis}</span>
     [
@@ -394,15 +366,10 @@
         at=<span class="p">{</span>(0, 0)<span class="p">}</span>
     ]
 
-        <span class="k">\addplot</span>[scatter,
-                 mark=*, 
-                 solid,
+        <span class="k">\addplot</span>[scatter,mark=*,solid,
                  every mark/.append style=<span class="p">{</span>solid, fill=myred, 
                                            fill opacity=0.2<span class="p">}</span>,
-                 color=myred,
-                 only marks,
-                 very thick
-                 ] 
+                 color=myred,only marks,very thick] 
              table[x=ka,y=lu-h] <span class="p">{</span>data.csv<span class="p">}</span>;
     <span class="nt">\end{axis}</span>
 
@@ -431,15 +398,10 @@
         at=<span class="p">{</span>(0.5<span class="k">\linewidth</span>, 0)<span class="p">}</span>
     ]
 
-        <span class="k">\addplot</span>[scatter,
-                 mark=*, 
-                 solid,
+        <span class="k">\addplot</span>[scatter,mark=*,solid,
                  every mark/.append style=<span class="p">{</span>solid, fill=myred, 
                                            fill opacity=0.2<span class="p">}</span>,
-                 color=myred,
-                 only marks,
-                 very thick
-                 ] 
+                 color=myred,only marks,very thick] 
              table[x=ka,y=hdqhs] <span class="p">{</span>data.csv<span class="p">}</span>;
     <span class="nt">\end{axis}</span>
 
@@ -468,15 +430,10 @@
         at=<span class="p">{</span>(0, -0.3<span class="k">\linewidth</span>)<span class="p">}</span>
     ]
 
-        <span class="k">\addplot</span>[scatter,
-                 mark=*, 
-                 solid,
+        <span class="k">\addplot</span>[scatter,mark=*,solid,
                  every mark/.append style=<span class="p">{</span>solid, fill=myred, 
                                            fill opacity=0.2<span class="p">}</span>,
-                 color=myred,
-                 only marks,
-                 very thick
-                 ] 
+                 color=myred,only marks,very thick] 
              table[x=ka,y=hdqss] <span class="p">{</span>data.csv<span class="p">}</span>;
     <span class="nt">\end{axis}</span>
 
@@ -505,15 +462,10 @@
         at=<span class="p">{</span>(0.5<span class="k">\linewidth</span>, -0.3<span class="k">\linewidth</span>)<span class="p">}</span>
     ]
 
-        <span class="k">\addplot</span>[scatter,
-                 mark=*, 
-                 solid,
+        <span class="k">\addplot</span>[scatter,mark=*,solid,
                  every mark/.append style=<span class="p">{</span>solid, fill=myred, 
                                            fill opacity=0.2<span class="p">}</span>,
-                 color=myred,
-                 only marks,
-                 very thick
-                 ] 
+                 color=myred,only marks,very thick] 
              table[x=ka,y=hdqsd] <span class="p">{</span>data.csv<span class="p">}</span>;
     <span class="nt">\end{axis}</span>
 
@@ -542,15 +494,10 @@
         at=<span class="p">{</span>(0, -0.6<span class="k">\linewidth</span>)<span class="p">}</span>
     ]
 
-        <span class="k">\addplot</span>[scatter,
-                 mark=*, 
-                 solid,
+        <span class="k">\addplot</span>[scatter,mark=*,solid,
                  every mark/.append style=<span class="p">{</span>solid, fill=myred, 
                                            fill opacity=0.2<span class="p">}</span>,
-                 color=myred,
-                 only marks,
-                 very thick
-                 ] 
+                 color=myred,only marks,very thick] 
              table[x=ka,y=hdqdd] <span class="p">{</span>data.csv<span class="p">}</span>;
     <span class="nt">\end{axis}</span>
 
@@ -579,15 +526,10 @@
         at=<span class="p">{</span>(0.5<span class="k">\linewidth</span>, -0.6<span class="k">\linewidth</span>)<span class="p">}</span>
     ]
 
-        <span class="k">\addplot</span>[scatter,
-                 mark=*, 
-                 solid,
+        <span class="k">\addplot</span>[scatter,mark=*,solid,
                  every mark/.append style=<span class="p">{</span>solid, fill=myred, 
                                            fill opacity=0.2<span class="p">}</span>,
-                 color=myred,
-                 only marks,
-                 very thick
-                 ] 
+                 color=myred,only marks,very thick] 
              table[x=ka,y=hdqdq] <span class="p">{</span>data.csv<span class="p">}</span>;
     <span class="nt">\end{axis}</span>
 <span class="nt">\end{tikzpicture}</span>
