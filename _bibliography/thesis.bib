@@ -9,4 +9,35 @@
   PDF = {https://filedn.eu/lyDamYXd3jSjd2K2sKty8BJ/thesis.pdf},
   note = {(The most up-to-date version of my manuscript. Use preferably this
           version. Feel free to contact me if you spot any typos or errors.)},
+  abstract={The increasing availability of very low precisions (tfloat32, fp16, bfloat16, fp8) in hardware
+pushes modern high performance computing to embrace mixed precision standards. By
+employing mostly low precision and by making wise use of high precision, mixed precision
+algorithms can leverage the low precision advantages while preserving the quality of the
+computed solution. Mixed precision iterative refinement is one of the oldest and most
+famous representatives of these algorithms; this method was shown to be very effective in
+reducing the resource consumption of linear solvers while delivering accurate solutions in
+a robust way. <br>
+This thesis is dedicated to investigating the use of this algorithm for the solution of large
+sparse linear systems. We structure the document as follows. <br>
+Our first concern is to provide a comprehensive understanding of iterative refinement.
+This part of our work covers a survey listing the different research studies on this algorithm
+that explains its evolutions throughout time and a technical description of a selected set
+of state-of-the-art iterative refinement algorithms. <br>
+Then, we focus on improving sparse direct solvers with iterative refinement. We pro-
+ceed in two steps. First, we relax restrictive requirements on the LU-GMRES-IR3 algorithm,
+which is a form of iterative refinement capable of handling inaccurate factorizations for
+ill-conditioned problems. It leads us to propose the LU-GMRES-IR5 algorithm that has
+five independent precision parameters and is more suited to the solution of large sparse
+systems. Second, we address the parallel implementation of state-of-the-art iterative re-
+finement algorithms combined with state-of-the-art approximate sparse factorizations to
+solve real-life problems from academic and industrial applications. Our performance study
+demonstrates significant reductions in time and memory with respect to a standard sparse
+direct solver in double precision. <br>
+Finally, we use iterative refinement to improve sparse iterative solvers. We develop an
+analysis for a new mixed precision preconditioned GMRES (M-GMRES-IR6) that aims at
+covering previous existing implementations that are not yet covered by an analysis and at
+proposing a new mixed precision strategy based on the application of the preconditioner
+in a lower precision than the application of the original matrix A. Our numerical results
+pave the way towards promising resource savings for parallel implementations of
+GMRES.}
 }
