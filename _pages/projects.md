@@ -2,12 +2,15 @@
 layout: page
 title: TeXFantasy
 permalink: /texfantasy/
-description: Gallery of my LaTeX figures and tables.
+description: Gallery of LaTeX figures and tables.
 nav: true
 nav_order: 2
 display_categories: [plots,illustrations,tables]
 horizontal: false
 ---
+TeXFantasy is a gallery of Latex figures that I used for various documents, 
+from teaching materials to scientific journal articles. Follow the project on
+[Github](https://github.com/bvieuble/TeXFantasy)!
 
 <!-- pages/projects.md -->
 <div class="projects">
