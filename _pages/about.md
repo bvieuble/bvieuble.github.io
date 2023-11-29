@@ -19,19 +19,29 @@ selected_papers: false # includes a list of papers marked as "selected={true}"
 social: false  # includes social icons at the bottom of the page
 ---
 
-I am a Research Associate of the 
-[Numerical Linear Algebra Group](https://nla-group.org/) of the
-[University of Manchester](https://www.manchester.ac.uk/) working with 
-[Professor Nicholas J. Higham](https://nhigham.com/) . Previously, I was a 
-Ph.D. student in the 
+I received an M.Sc. in applied mathematics and computer science from 
+[ENSEEIHT](https://www.enseeiht.fr/fr/index.html) (french engineering school) 
+in September 2019.
+
+I completed my Ph.D. thesis (Sep 2019 - Nov 2022) in the 
 [APO](https://www.irit.fr/en/departement/dep-hpc-simulation-optimization/apo-team/) team
 at Institut de Recherche en Informatique de Toulouse 
 ([IRIT](https://www.irit.fr/)) under the supervision of 
 [Alfredo Buttari](https://scholar.google.com/citations?user=sLuYk0wAAAAJ&hl=en)
-and [Théo Mary](https://www-pequan.lip6.fr/~tmary/).
+and [Théo Mary](https://www-pequan.lip6.fr/~tmary/). 
 
-I received an M.Sc. in applied mathematics and computer science from [ENSEEIHT](https://www.enseeiht.fr/fr/index.html) (french engineering school) in September 2019. I completed my Ph.D. in Numerical Linear Algebra and High Performance Computing in November 2022.
+I was a Research Associate in the 
+[Numerical Linear Algebra Group](https://nla-group.org/) of the
+[University of Manchester](https://www.manchester.ac.uk/) working with 
+[Professor Nicholas J. Higham](https://nhigham.com/). 
 
-I work in collaboration with [MUMPS Technologies](https://mumps-tech.com/) to improve the MUMPS sparse direct solver.
+I am now working at the Chinese Academy of Sciences in Beijing under the 
+supervision of [Professor Xin Liu](http://lsec.cc.ac.cn/~liuxin/).
 
-My research interests cover various topics related to linear algebra, mixed precision, approximate computing, sparse direct and iterative linear solvers, and high performance computing.
+I have strong ties with [MUMPS Technologies](https://mumps-tech.com/) with
+whom I collaborated and will continue to collaborate on the improvement of the 
+the MUMPS sparse direct solver.
+
+My research interests cover various topics related to linear algebra, mixed
+precision, approximate computing, sparse direct and iterative linear solvers,
+and high performance computing.
