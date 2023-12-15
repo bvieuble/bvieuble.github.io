@@ -9,9 +9,9 @@ profile:
   image: me.jpg
   image_circular: false # crops the image to make it circular
   address: >
-    <p>Academy of Mathematics and Systems Science</p>
-    <p>Chinese Academy of Sciences</p>
-    <p>Haidian District</p>
+    <p>Academy of Mathematics and Systems Science,</p>
+    <p>Chinese Academy of Sciences,</p>
+    <p>Haidian District,</p>
     <p>Beijing, China</p>
 
 news: true  # includes a list of news items
