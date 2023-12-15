@@ -12,7 +12,7 @@ profile:
     <p>Academy of Mathematics and Systems Science,</p>
     <p>Chinese Academy of Sciences,</p>
     <p>Haidian District,</p>
-    <p>Beijing, China</p>
+    <p>Beijing, China.</p>
 
 news: true  # includes a list of news items
 selected_papers: false # includes a list of papers marked as "selected={true}"
