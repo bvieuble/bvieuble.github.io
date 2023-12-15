@@ -9,10 +9,10 @@ profile:
   image: me.jpg
   image_circular: false # crops the image to make it circular
   address: >
-    <p>Department of Mathematics</p>
-    <p>Alan Turing building</p>
-    <p>The University of Manchester, M13 9PL</p>
-    <p>Manchester, UK</p>
+    <p>Academy of Mathematics and Systems Science</p>
+    <p>Chinese Academy of Sciences</p>
+    <p>Haidian District</p>
+    <p>Beijing, China</p>
 
 news: true  # includes a list of news items
 selected_papers: false # includes a list of papers marked as "selected={true}"
