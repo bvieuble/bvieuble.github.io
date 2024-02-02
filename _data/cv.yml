@@ -8,7 +8,7 @@
     - name: Languages
       value: French, English
     - name: Location
-      value: Alan Turing Building, The University of Manchester, UK
+      value: Haidian District, Beijing, China.
 
 - title: Education
   type: time_table
@@ -38,16 +38,18 @@
 - title: Research experiences
   type: time_table
   contents:
+    - title: Postdoctoral Researchers
+      institution: Academy of Mathematics and Systems Science, Chinese Academy of Sciences, Beijing, China
+      year: Dec. 2023 -<br> Now
+      description:
+        - Member of the numerical optimization group working with Pr. Xin Liu.
+
     - title: Research Associate
       institution: The University of Manchester, Manchester, UK
-      year: Nov. 2022 -<br> Now
+      year: Nov. 2022 -<br> Nov 2023
       description:
-        - Member of the Numerical Linear Algebra group working with Pr. Nicholas J. Higham. My research topics cover sparse direct and iterative solvers, high performance computing, rounding error analysis, mixed precision, and approximate computing.
-        #- Description 2.
-        #- title: Description 3.
-          #contents:
-            #- Sub-description 1.
-            #- Sub-description 2.
+        - Member of the Numerical Linear Algebra group of the University of Manchester working with Pr. Nicholas J. Higham.
+
     - title: Internship
       institution: AMSS (Academy of Sciences), Beijing, China
       year: Apr. 2019 -<br> Sep. 2019
@@ -73,7 +75,7 @@
   type: time_table
   contents:
     - title: Mixed precision iterative refinement, lecture
-      year: Feb. 2023
+      year: Feb. 2023 <br> and Jan. 2024
       institution: Université Paris-Saclay, France
       items: 
         - Design and delivery of a 1-hour lecture in English to postgraduate students on mixed precision iterative refinement.
@@ -110,9 +112,13 @@
       #year: 2015-now
       #description: A beautiful, simple, clean, and responsive Jekyll theme for academics.
 
-- title: Grants
+- title: Grants & Awards
   type: time_table
   contents:
+    - title: Leopold Escande prize
+      year: Sep. 2023
+      items: 
+        - Prize awarded to the 15% best thesis of INP Toulouse for the scientific excellence and the originality of the work.
     - title: MESRI doctoral contract
       year: Oct. 2019 -<br> Oct. 2022
       institution: French government funding
