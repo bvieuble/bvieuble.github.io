@@ -10,9 +10,9 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Scatter plot | Bastien C. M. Vieublé</title>
+    <title>floating-point (copy) | Bastien C. M. Vieublé</title>
     <meta name="author" content="Bastien C. M. Vieublé">
-    <meta name="description" content="A scatter plot representing the condition numbers of SuiteSparse matrices after scaling.">
+    <meta name="description" content="An illustration explaining floating-point computation.">
     <meta name="keywords" content="jekyll, jekyll-theme, academic-website, portfolio-website">
 
 
@@ -33,7 +33,7 @@
     <link rel="shortcut icon" href="/assets/img/nla-logo.jpg">
     
     <link rel="stylesheet" href="/assets/css/main.css">
-    <link rel="canonical" href="https://bvieuble.github.io/projects/3_texfty/">
+    <link rel="canonical" href="https://bvieuble.github.io/projects/18_texfty/">
     
     <!-- Dark Mode -->
     
@@ -110,8 +110,8 @@
         <div class="post">
 
           <header class="post-header">
-            <h1 class="post-title">Scatter plot</h1>
-            <p class="post-description">A scatter plot representing the condition numbers of SuiteSparse matrices after scaling.</p>
+            <h1 class="post-title">floating-point (copy)</h1>
+            <p class="post-description">An illustration explaining floating-point computation.</p>
           </header>
 
           <article>
@@ -121,13 +121,13 @@
 
   <picture>
     
-    <source class="responsive-img-srcset" media="(max-width: 480px)" srcset="/assets/img/fig3-480.webp"></source>
-    <source class="responsive-img-srcset" media="(max-width: 800px)" srcset="/assets/img/fig3-800.webp"></source>
-    <source class="responsive-img-srcset" media="(max-width: 1400px)" srcset="/assets/img/fig3-1400.webp"></source>
+    <source class="responsive-img-srcset" media="(max-width: 480px)" srcset="/assets/img/fig16-480.webp"></source>
+    <source class="responsive-img-srcset" media="(max-width: 800px)" srcset="/assets/img/fig16-800.webp"></source>
+    <source class="responsive-img-srcset" media="(max-width: 1400px)" srcset="/assets/img/fig16-1400.webp"></source>
     
 
     <!-- Fallback to the original file -->
-    <img src="/assets/img/fig3.png" class="img-fluid rounded z-depth-1" width="auto" height="auto" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
+    <img src="/assets/img/fig16.png" class="img-fluid rounded z-depth-1" width="auto" height="auto" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
 
   </picture>
 
@@ -187,54 +187,56 @@
 48
 49
 50
+51
 </pre></td>
-<td class="code"><pre><span class="c">%%% Full, compilable sources including data files are on Github: </span>
-<span class="c">%%% https://github.com/bvieuble/TeXFantasy/tree/main/scatter_plots/fig1</span>
-<span class="c">%%% Appears in my thesis ``Mixed precision iterative refinement for the </span>
-<span class="c">%%% solution of large sparse linear systems''.</span>
-
-<span class="c">% Compiled with XeLaTeX</span>
-<span class="c">% TeX-command-extra-options: "-shell-escape"</span>
+<td class="code"><pre><span class="c">%%% Compiled with XeLaTeX</span>
+<span class="c">%%% TeX-command-extra-options: "-shell-escape"</span>
+<span class="c">%%% Original illustration in: https://jasss.soc.surrey.ac.uk/9/4/4.html</span>
 <span class="k">\documentclass</span><span class="na">[convert={outext=.png},border=10pt]</span><span class="p">{</span>standalone<span class="p">}</span>
+<span class="c">% \usepackage{fontspec}</span>
+<span class="c">% \setmainfont{Roboto Light}</span>
 <span class="k">\usepackage</span><span class="p">{</span>tikz<span class="p">}</span>
-<span class="k">\usepackage</span><span class="p">{</span>pgfplots, pgfplotstable<span class="p">}</span>
-<span class="k">\pgfplotsset</span><span class="p">{</span>compat=newest<span class="p">}</span>
+<span class="k">\usetikzlibrary</span><span class="p">{</span>calc,positioning,shapes.geometric,arrows.meta<span class="p">}</span>
+<span class="k">\usepackage</span><span class="p">{</span>amsmath<span class="p">}</span>
+<span class="k">\usepackage</span><span class="p">{</span>amssymb<span class="p">}</span>
+<span class="k">\usepackage</span><span class="p">{</span>bm<span class="p">}</span>
+
+<span class="k">\DeclareMathOperator</span><span class="p">{</span><span class="k">\fl</span><span class="p">}{</span><span class="k">\operatorname</span><span class="p">{</span>f<span class="k">\kern</span>.2ptl<span class="p">}}</span>
 
 <span class="k">\input</span><span class="p">{</span>color<span class="p">_</span>theme.tex<span class="p">}</span>
 
 <span class="nt">\begin{document}</span>
-<span class="k">\pgfplotstableread</span><span class="na">[col sep=comma]</span><span class="p">{</span>data.csv<span class="p">}{</span><span class="k">\data</span><span class="p">}</span>
 
 <span class="nt">\begin{tikzpicture}</span>
-    <span class="nt">\begin{axis}</span>
-    [
-        width=1.<span class="k">\linewidth</span>,
-        height=0.6<span class="k">\linewidth</span>,
-        grid,
-        grid style=<span class="p">{</span>dashed, mygray-light<span class="p">}</span>,
-        xmin= 1.,
-        xmax= 1e20,
-        xmode=log,
-        xlabel=Original condition number <span class="p">$</span><span class="nv">\kappa</span><span class="o">(</span><span class="nb">A</span><span class="o">)</span><span class="p">$</span>,
-        ymin= 1.,
-        ymax= 1e20,
-        ymode=log,
-        ylabel=Scaled condition number <span class="p">$</span><span class="nv">\kappa</span><span class="o">(</span><span class="nb">A</span><span class="p">_</span><span class="nb">s</span><span class="o">)</span><span class="p">$</span>,
-        enlargelimits=false,
-        colormap=<span class="p">{}{</span>color=<span class="p">{</span>myblue<span class="p">}</span> color=<span class="p">{</span>mypurple<span class="p">}</span> color=<span class="p">{</span>myyellow<span class="p">}</span> 
-                    color=(myred) color=(myred) color=(myred)<span class="p">}</span>
-    ]
+    <span class="k">\draw</span><span class="na">[fill=gray!10]</span> (0,0) ellipse (5 and 3);
+    <span class="k">\draw</span><span class="na">[fill=gray!30]</span> (-1.75,0) ellipse (3 and 2);
 
-        <span class="k">\addplot</span>[scatter,very thick,only marks,clip mode=individual,
-                 mark size=2pt,fill opacity=0.2,mark=*] 
-            table[x=kbef,y=kaft] <span class="p">{</span><span class="k">\data</span><span class="p">}</span>;
+    <span class="k">\node</span><span class="na">[align=left]</span> at (2,-1.8) <span class="p">{</span><span class="k">\large</span> Real numbers<span class="p">}</span>;
+    <span class="k">\node</span><span class="na">[align=left]</span> at (-3.5,0) 
+        <span class="p">{</span><span class="k">\large</span> Floating<span class="k">\\\large</span> -point<span class="k">\\\large</span> numbers<span class="p">}</span>;
 
-        <span class="k">\draw</span><span class="na">[black, thick]</span>
-            (axis cs:1e0,1e0) -- 
-            (axis cs:1e20,1e20);
+    <span class="k">\node</span><span class="na">[align=center]</span> (fla) at (-1.75,-1.25) <span class="p">{$</span><span class="nv">\fl</span><span class="o">(</span><span class="nb">a</span><span class="o">)</span><span class="p">$}</span>;
+    <span class="k">\node</span><span class="na">[align=center]</span> (a) at (0,-2.5) <span class="p">{$</span><span class="nb">a</span><span class="p">$}</span>; 
+    <span class="k">\path</span><span class="na">[-{Stealth[open,round]</span><span class="p">}</span>,dashed,thick] (a) edge node[below left] 
+        <span class="p">{</span><span class="k">\scriptsize</span> <span class="p">$</span><span class="nv">\fl</span><span class="o">(</span><span class="nv">\cdot</span><span class="o">)</span><span class="p">$}</span> (fla);
 
-        <span class="k">\node</span><span class="na">[rotate=30]</span> at (5e11,5e12) (id) <span class="p">{$</span><span class="nv">\kappa</span><span class="o">(</span><span class="nb">A</span><span class="o">)=</span><span class="nv">\kappa</span><span class="o">(</span><span class="nb">A</span><span class="p">_</span><span class="nb">s</span><span class="o">)</span><span class="p">$}</span>;
-    <span class="nt">\end{axis}</span>
+    <span class="k">\node</span><span class="na">[align=center]</span> (flb) at (-1.75,1.25) <span class="p">{$</span><span class="nv">\fl</span><span class="o">(</span><span class="nb">b</span><span class="o">)</span><span class="p">$}</span>;
+    <span class="k">\node</span><span class="na">[align=center]</span> (b) at (0,2.5) <span class="p">{$</span><span class="nb">b</span><span class="p">$}</span>;
+    <span class="k">\path</span><span class="na">[-{Stealth[open,round]</span><span class="p">}</span>,dashed,thick] (b) edge  node[above left] 
+        <span class="p">{</span><span class="k">\scriptsize</span> <span class="p">$</span><span class="nv">\fl</span><span class="o">(</span><span class="nv">\cdot</span><span class="o">)</span><span class="p">$}</span> (flb);
+
+    <span class="k">\node</span><span class="na">[align=center]</span> (flab) at (3.25,0) <span class="p">{$</span><span class="nv">\fl</span><span class="o">(</span><span class="nb">a</span><span class="o">)</span><span class="nb"> </span><span class="nv">\otimes</span><span class="nb"> </span><span class="nv">\fl</span><span class="o">(</span><span class="nb">b</span><span class="o">)</span><span class="p">$}</span>;
+    <span class="k">\path</span><span class="na">[-{Stealth[round]</span><span class="p">}</span>,thick] (fla) edge [out=0, in=-140] 
+        (<span class="p">$</span><span class="o">(</span><span class="nb">flab</span><span class="o">)+(-</span><span class="m">0</span><span class="nb">.</span><span class="m">5</span><span class="nb">,</span><span class="o">-</span><span class="m">0</span><span class="nb">.</span><span class="m">3</span><span class="o">)</span><span class="p">$</span>);
+    <span class="k">\path</span><span class="na">[-{Stealth[round]</span><span class="p">}</span>,thick] (flb) edge [out=0, in=140] 
+        (<span class="p">$</span><span class="o">(</span><span class="nb">flab</span><span class="o">)+(</span><span class="m">0</span><span class="nb">.</span><span class="m">5</span><span class="nb">,</span><span class="m">0</span><span class="nb">.</span><span class="m">3</span><span class="o">)</span><span class="p">$</span>);
+
+    <span class="k">\node</span><span class="na">[align=center]</span> (flflab) at (-0.75,0) <span class="p">{$</span><span class="nv">\bm</span><span class="p">{</span><span class="nv">\fl</span><span class="o">(</span><span class="nb">a </span><span class="nv">\otimes</span><span class="nb"> b</span><span class="o">)</span><span class="p">}$</span> <span class="k">\\</span> 
+    <span class="p">$</span><span class="o">(=</span><span class="nv">\fl</span><span class="o">(</span><span class="nv">\fl</span><span class="o">(</span><span class="nb">a</span><span class="o">)</span><span class="nb"> </span><span class="nv">\otimes</span><span class="nb"> </span><span class="nv">\fl</span><span class="o">(</span><span class="nb">b</span><span class="o">)))</span><span class="p">$}</span>;
+    <span class="k">\path</span><span class="na">[-{Stealth[open,round]</span><span class="p">}</span>,dashed,thick] (flab) edge 
+        node[below,near start] <span class="p">{</span><span class="k">\scriptsize</span> <span class="p">$</span><span class="nv">\fl</span><span class="o">(</span><span class="nv">\cdot</span><span class="o">)</span><span class="p">$}</span> (flflab);
+
+    <span class="k">\node</span><span class="na">[align=center]</span> (ab) at (1.5,2) <span class="p">{$</span><span class="nv">\bm</span><span class="p">{</span><span class="nb">a</span><span class="nv">\otimes</span><span class="nb"> b</span><span class="p">}$}</span>;
 <span class="nt">\end{tikzpicture}</span>
 
 <span class="nt">\end{document}</span>
