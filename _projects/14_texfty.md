@@ -1,6 +1,6 @@
 ---
 layout: page
-title: floating point
+title: floating-point
 description: An illustration of the different low precision floating point arithmetics available in hardware.
 img: assets/img/fig12-front.png
 importance: 1
