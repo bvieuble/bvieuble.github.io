@@ -115,6 +115,10 @@
 - title: Grants & Awards
   type: time_table
   contents:
+    - title: Research Fund for International Young Scientists
+      year: Sep. 2024
+      items: 
+        - Grant of 200,000RMB awarded by the National Natural Science Foundation of China for my project "Resource-efficient approximate computing GMRES for the solution of linear systems of equations".
     - title: Leopold Escande prize
       year: Sep. 2023
       items: 
