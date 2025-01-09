@@ -1,0 +1,244 @@
+---
+layout: page
+title: Bar plot
+description: A bar plot representing the memory consumption of three algorithms over different problems. 
+img: /assets/img/texfantasy/tex2-front.png
+importance: 1
+category: plots
+---
+
+<div class="row">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.liquid loading="eager" path="/assets/img/texfantasy/tex2.png" title="example image" class="img-fluid rounded z-depth-1" %}
+    </div>
+</div>
+
+{% highlight latex linenos %}
+%%% Full, compilable sources including data files are on Github: 
+%%% https://github.com/bvieuble/TeXFantasy/tree/main/bars/fig1
+%%% Appears in my article ``Combining sparse approximate factorizations with 
+%%% mixed precision iterative refinement''.
+
+% Compiled with XeLaTeX
+% TeX-command-extra-options: "-shell-escape"
+\documentclass[convert={outext=.png},border=10pt]{standalone}
+\usepackage{tikz}
+\usepackage{pgfplots, pgfplotstable, pgfplotstablefilter}
+\pgfplotsset{compat=newest}
+
+\input{color_theme.tex}
+
+% Reinit stacked bar command
+\makeatletter
+\newcommand\resetstackedplots{
+\makeatletter
+\pgfplots@stacked@isfirstplottrue
+\makeatother
+}
+
+% Load data and make groups of plots
+\pgfplotstableread[col sep=comma]{data.csv}{\data}
+\pgfplotstablefilter[group equals 1]{\data}{\groupa}
+\pgfplotstablefilter[group equals 2]{\data}{\groupb}
+\pgfplotstablefilter[group equals 3]{\data}{\groupc}
+
+% Get the number of elements in each group 
+\pgfplotstablegetrowsof{\groupa}
+\pgfmathsetmacro{\nbrowsa}{\pgfplotsretval}
+\pgfplotstablegetrowsof{\groupb}
+\pgfmathsetmacro{\nbrowsb}{\pgfplotsretval}
+\pgfplotstablegetrowsof{\groupc}
+\pgfmathsetmacro{\nbrowsc}{\pgfplotsretval}
+
+\begin{document}
+\begin{tikzpicture}
+    \begin{axis}
+    [
+        point meta=explicit symbolic,
+        nodes near coords,
+        every node near coord/.append style={font=\normalsize,above},
+        legend style={at={(0.75,0.95)},
+        anchor=north,legend columns=-1},
+        ybar stacked,
+        ymajorgrids,
+        width=1.1\linewidth,
+        height=0.5\linewidth,
+        ylabel={\normalsize Normalized memory by DMUMPS},
+        axis lines=left,
+        x tick label style={font=\normalsize},
+        x tick style={thick},
+        xmin=-0.5,
+        xmax=\nbrowsa-0.5,
+        xtick=data,
+        xticklabels from table={\groupa}{name},
+        xticklabel style={font=\normalsize},
+        every extra x tick/.style={tick style={draw=none},
+                                   xticklabel style={font=\normalsize}
+                                   },
+        ymin=0,
+        ymax=1.6,
+        ytick={0, 0.25, 0.5, 0.75, 1, 2},
+        yticklabels={0, 0.25, 0.5, 0.75, 1, 2},
+        name=axis1,
+        at={(0,0)}
+    ]
+
+        \pgfplotsinvokeforeach{0,...,\nbrowsa-1} 
+        {
+            \node at (axis cs:#1-0.25,0.1) [circle,scale=0.75,draw=none,
+                    fill=blue!0,inner sep=1pt] {D};
+            \node at (axis cs:#1,0.1) [circle,scale=0.75,draw=none,fill=blue!0,
+                    inner sep=1pt] {E};
+            \node at (axis cs:#1+0.25,0.1) [circle,scale=0.75,draw=none,
+                    fill=blue!0,inner sep=1pt] {C};
+        }
+
+        \addplot [fill=myblue-mild,bar width=0.1,
+                  bar shift=-0.05,draw=none,forget plot] 
+                    table[x expr=\coordindex, y=factorss] {\groupa};
+        \addplot [fill=myred-mild,bar width=0.1, 
+                  bar shift=-0.05,draw=none,forget plot] 
+                    table[x expr=\coordindex, y=actives] {\groupa};
+        \resetstackedplots
+        \addplot [fill=myblue-mild,bar width=0.1,
+                  bar shift=0.05,draw=none,forget plot] 
+                    table[x expr=\coordindex, y=factorsd] {\groupa};
+        \addplot [fill=mygreen-mild,bar width=0.1, 
+                  bar shift=0.05,draw=none] 
+                    table[x expr=\coordindex, y=krylov] {\groupa};
+        \addplot [fill=mygreen-mild,bar width=0.1, 
+                  bar shift=0.05,draw=none,forget plot] 
+                    table[x expr=\coordindex, y=aq,meta=max-kry] {\groupa};
+
+        \resetstackedplots
+
+        \addplot [fill=myblue-mild,bar width=0.2,draw=none,forget plot,
+                  bar shift=-0.25] 
+                    table[x expr=\coordindex,y=factorss] {\groupa};
+        \addplot [fill=mygreen-mild,bar width=0.1,draw=none,forget plot,
+                  bar shift=-0.2] 
+                    table[x expr=\coordindex,y=aq] {\groupa};
+        \resetstackedplots
+        \addplot [fill=myblue-mild,bar width=0.2,draw=none,forget plot,
+                  bar shift=-0.25] 
+                    table[x expr=\coordindex,y=factorss] {\groupa};
+        \addplot [fill=myred-mild,bar width=0.1, 
+                  bar shift=-0.3,draw=none,forget plot] 
+                    table[x expr=\coordindex,y=actives] {\groupa};
+
+        \resetstackedplots
+
+        \addplot [fill=myblue-mild,bar width=0.2,draw=none,
+                  bar shift=0.25] 
+                    table[x expr=\coordindex,y=factorsd] {\groupa};
+        \addplot [fill=myred-mild,bar width=0.1,draw=none,
+                  bar shift=0.2] 
+                    table[x expr=\coordindex,y=actived] {\groupa};
+        \resetstackedplots
+        \addplot [fill=myblue-mild,bar width=0.2,draw=none,forget plot,
+                  bar shift=0.25] 
+                    table[x expr=\coordindex,y=factorsd] {\groupa};
+        \addplot [fill=mygreen-mild,bar width=0.1,draw=none,
+                  bar shift=0.3] 
+                    table[x expr=\coordindex,y=aq] {\groupa};
+
+        \legend{Krylov, Factors, Active, $A_q$}
+    \end{axis}
+
+    \begin{axis}
+    [
+        point meta=explicit symbolic,
+        nodes near coords,
+        legend style={at={(0.8,0.95)},
+        anchor=north,legend columns=-1},
+        every node near coord/.append style={font=\normalsize,above},
+        ybar stacked,
+        ymajorgrids,
+        width=1.1\linewidth,
+        height=0.5\linewidth,
+        ylabel={\normalsize Normalized memory by DMUMPS},
+        axis lines=left,
+        x tick label style={font=\normalsize},
+        x tick style={thick},
+        xmin=-0.5,
+        xmax=\nbrowsb-0.5,
+        xtick=data,
+        xticklabels from table={\groupb}{name},
+        xticklabel style={font=\normalsize},
+        ymin=0,
+        ymax=1.6,
+        ytick={0, 0.25, 0.5, 0.75, 1, 2},
+        yticklabels={0, 0.25, 0.5, 0.75, 1, 2},
+        name=axis2,
+        at={(0,-0.45\linewidth)}
+    ]
+
+        \pgfplotsinvokeforeach{0,...,\nbrowsb-1} {
+            \node at (axis cs:#1-0.25,0.1) [circle,scale=0.75,draw=none,
+                    fill=blue!0,inner sep=1pt] {D};
+            \node at (axis cs:#1,0.1) [circle,scale=0.75,draw=none,fill=blue!0,
+                    inner sep=1pt] {E};
+            \node at (axis cs:#1+0.25,0.1) [circle,scale=0.75,draw=none,
+                    fill=blue!0,inner sep=1pt] {C};
+        }
+
+        \addplot [fill=myblue-mild,bar width=0.1,
+                  bar shift=-0.05,draw=none,forget plot] 
+                    table[x expr=\coordindex, y=factorss] {\groupb};
+        \addplot [fill=myred-mild,bar width=0.1, 
+                  bar shift=-0.05,draw=none,forget plot] 
+                    table[x expr=\coordindex, y=actives] {\groupb};
+        \resetstackedplots
+        \addplot [fill=myblue-mild,bar width=0.1,
+                  bar shift=0.05,draw=none,forget plot] 
+                    table[x expr=\coordindex, y=factorsd] {\groupb};
+        \addplot [fill=mygreen-mild,bar width=0.1, 
+                  bar shift=0.05,draw=none,forget plot] 
+                    table[x expr=\coordindex, y=krylov] {\groupb};
+        \addplot [fill=mygreen-mild,bar width=0.1, 
+                  bar shift=0.05,draw=none,forget plot] 
+                    table[x expr=\coordindex, y=aq, meta=max-kry] {\groupb};
+
+        \resetstackedplots
+
+        \addplot [fill=myblue-mild,bar width=0.2,draw=none,forget plot,
+                  bar shift=-0.25] 
+                    table[x expr=\coordindex,y=factorss] {\groupb};
+        \addplot [fill=mygreen-mild,bar width=0.1,draw=none,forget plot,
+                  bar shift=-0.2] 
+                    table[x expr=\coordindex,y=aq,meta=meta] {\groupb};
+        \resetstackedplots
+        \addplot [fill=myblue-mild,bar width=0.2,draw=none,forget plot,
+                  bar shift=-0.25] 
+                    table[x expr=\coordindex,y=factorss] {\groupb};
+        \addplot [fill=myred-mild,bar width=0.1, 
+                  bar shift=-0.3,draw=none,forget plot] 
+                    table[x expr=\coordindex,y=actives] {\groupb};
+
+        \resetstackedplots
+
+        \addplot [fill=myblue-mild,bar width=0.2,draw=none,
+                  bar shift=0.25] 
+                    table[x expr=\coordindex,y=factorsd] {\groupb};
+        \addplot [fill=myred-mild,bar width=0.1,draw=none,
+                  bar shift=0.2] 
+                    table[x expr=\coordindex,y=actived] {\groupb};
+        \resetstackedplots
+        \addplot [fill=myblue-mild,bar width=0.2,draw=none,forget plot,
+                  bar shift=0.25] 
+                    table[x expr=\coordindex,y=factorsd] {\groupb};
+        \addplot [fill=mygreen-mild,bar width=0.1,draw=none,
+                  bar shift=0.3] 
+                    table[x expr=\coordindex,y=aq] {\groupb};
+    \end{axis}
+
+    \node[rectangle,draw,inner sep=1pt] at (2,3.75) (box) 
+        {\small
+        \begin{tabular}{l}
+            \small C: LU, $u_f$=\textsc{d} \\
+            \small D: LU, $u_f$=\textsc{s} \\
+            \small E: GMRES, $u_f$=\textsc{s}
+        \end{tabular}};
+\end{tikzpicture}
+\end{document}
+{% endhighlight %}

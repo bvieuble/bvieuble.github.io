@@ -1,115 +1,211 @@
----
----
-
-@string{aps = {American Physical Society,}}
-
-@book{einstein1920relativity,
-  title={Relativity: the Special and General Theory},
-  author={Einstein, Albert},
-  year={1920},
-  publisher={Methuen & Co Ltd},
-  html={relativity.html}
+@article{bhmv24,
+    bibtex_show={true},
+    selected={true},
+    abbr = {preprint},
+    slides = {bhmv24_slides.pdf},
+    title = {A modular framework for the backward error analysis of GMRES},
+    author = {Buttari, Alfredo and Higham, Nicholas J. and Mary, Théo and 
+    Vieublé, Bastien},
+    year = {2024},
+    pdf = {https://hal.science/hal-04525918},
+    abstract={The Generalized Minimal Residual methods (GMRES) for the solution
+    of general square linear systems is a class of Krylov-based iterative
+    solvers for which there exist backward error analyses that guarantee the 
+    computed solution in inexact arithmetic to reach certain attainable 
+    accuracies. Unfortunately, these existing backward error analyses cover a 
+    relatively small subset of the possible GMRES variants and cannot be used 
+    straightforwardly in general to derive new backward error analyses for 
+    variants that do not yet have one. We propose a backward error analysis
+    framework for GMRES that substantially simplifies the process of 
+    determining error bounds of most existing and future variants of GMRES. 
+    This framework describes modular bounds for the attainable normwise 
+    backward and forward errors of the computed solution that can be 
+    specialized for a given GMRES variant under minimal assumptions. To assess 
+    the relevance of our framework we first show that it is compatible with the
+    previous rounding error analyses of GMRES in the sense that it delivers 
+    (almost) the same error bounds under (almost) the same conditions. Second,
+    we explain how to use this framework to determine new error bounds for
+    GMRES algorithms that do not have yet a backward error analysis, such as 
+    simpler GMRES, CGS2-GMRES, mixed precision GMRES, and more.},
 }
 
-@book{einstein1956investigations,
+@article{abhl23,
+    bibtex_show={true},
+    abbr = {ACM TOMS},
+    slides = {abhl22_slides.pdf},
+    title = {{Combining sparse approximate factorizations with mixed precision
+      iterative refinement}},
+    author = {Amestoy, Patrick R. and Buttari, Alfredo and Higham, Nicholas J. and
+      L'Excellent, Jean-Yves and Mary, Théo and Vieublé, Bastien},
+    journal = {ACM Trans. Math. Softw.},
+    issue_date = {March 2023},
+    publisher = {Association for Computing Machinery},
+    address = {New York, NY, USA},
+    volume = {49},
+    number = {1},
+    month = {mar},
+    articleno = {4},
+    numpages = {29},
+    year = {2023},
+    issn = {0098-3500},
+    doi = {10.1145/3582493},
+    url = {https://doi.org/10.1145/3582493},
+    pdf = {https://hal.archives-ouvertes.fr/hal-03536031/file/paper.pdf},
+    abstract={The standard LU factorization-based solution process for linear
+    systems can be enhanced in speed or accuracy by employing mixed-precision
+    iterative refinement. Most recent work has focused on dense systems. We 
+    investigate the potential of mixed-precision iterative refinement to 
+    enhance methods for sparse systems based on approximate sparse 
+    factorizations. In doing so, we first develop a new error analysis for 
+    LU- and GMRES-based iterative refinement under a general model of LU
+    factorization that accounts for the approximation methods typically used 
+    by modern sparse solvers, such as low-rank approximations or relaxed
+    pivoting strategies. We then provide a detailed performance analysis of
+    both the execution time and memory consumption of different algorithms,
+    based on a selected set of iterative refinement variants and approximate
+    sparse factorizations. Our performance study uses the multifrontal solver
+    MUMPS, which can exploit block low-rank factorization and static 
+    pivoting. We evaluate the performance of the algorithms on large, sparse
+    problems coming from a variety of real-life and industrial applications
+    showing that mixed-precision iterative refinement combined with 
+    approximate sparse factorization can lead to considerable reductions of 
+    both the time and memory consumption.},
+}
+
+@article{abhl24,
+    bibtex_show={true},
+    abbr = {SIMAX},
+    slides = {abhl21_slides.pdf},
+    title = {{Five-Precision GMRES-based Iterative Refinement}},
+    author = {Amestoy, Patrick R. and Buttari, Alfredo and Higham, Nicholas J. and
+      L'Excellent, Jean-Yves and Mary, Théo and Vieublé, Bastien},
+    journal = {SIAM J. Matrix Anal. Appl.},
+    year = {2023},
+    volume = {45},
+    number = {1},
+    pages = {529-552},
+    year = {2024},
+    doi = {10.1137/23M1549079},
+    url = {https://doi.org/10.1137/23M1549079},
+    eprint = {https://doi.org/10.1137/23M1549079},
+    doi={10.1137/23M1549079},
+    pdf = {http://eprints.maths.manchester.ac.uk/2852/},
+    abstract={GMRES-based iterative refinement in three precisions (GMRES-IR3),
+    which has been introduced and studied in~\cite{cahi17,cahi18}, uses a low 
+    precision LU factorization to accelerate the solution of a linear system 
+    without compromising numerical stability or robustness.  GMRES-IR3 solves 
+    the update equation of iterative refinement using GMRES preconditioned by 
+    the LU factors, where all operations within GMRES are carried out in the 
+    working precision $u$, except for the matrix-vector products and the 
+    application of the preconditioner, which require the use of extra precision
+    $u^2$.  The use of extra precision can be expensive, and is especially 
+    unattractive if it is not available in hardware; for this reason, existing 
+    implementations have not used extra precision, despite the absence of an 
+    error analysis for this approach. In this article, we propose to relax the
+    requirements on the precisions used within GMRES, allowing the use of 
+    arbitrary precisions $u_p$ (for applying the preconditioned matrix--vector 
+    product) and $u_g$ (for the rest of the operations). We obtain the 
+    five-precision GMRES-based iterative refinement (GMRES-IR5) algorithm which
+    has the potential to solve relatively badly conditioned problems in less 
+    time and memory than GMRES-IR3. The essence of this work is to carry out an
+    extensive numerical study of GMRES-IR5. In that regard, our article 
+    contains the following contributions. We develop a rounding error analysis
+    that generalizes that of GMRES-IR3, obtaining conditions under which the 
+    forward and backward errors converge to their limiting values. Our analysis
+    makes use of a new result on the backward stability of MGS-GMRES in two 
+    precisions. On hardware where three or more arithmetics are available, 
+    which is becoming very common, the number of possible combinations of 
+    precisions in GMRES-IR5 is extremely large. We provide an analysis of our 
+    theoretical results that identifies a relatively small subset of relevant
+    combinations.  By choosing from within this subset one can achieve 
+    different levels of tradeoff between cost and robustness, which allows for
+    a finer choice of precisions depending on the problem difficulty and the 
+    available hardware. We carry out numerical experiments on both random dense
+    matrices and real-life matrices from a wide range of applications to 
+    validate our theoretical analysis.}
+}
+
+@article{btaa20,
+    bibtex_show={true},
+    abbr = {JCR},
+    title = {{A Deep Learning Approach for Estimation of the Nearshore Bathymetry}},
+    author = {Rachid Benshila and Gr{\'e}goire Thoumyre and Mahmoud Al Najar 
+    and Gr{\'e}goire Abessolo and Rafael Almar and Erwin Bergsma and Guillaume
+    Hugonnard and Laurent Labracherie and Benjamin Lavie and Tom Ragonneau and
+    Ehouarn Simon and Bastien Vieubl{\'e} and Dennis Wilson},
+    journal = {Journal of Coastal Research},
+    year = {2020},
+    volume = {95},
+    number = {SI},
+    pages = {1011-1015},
+    year = {2020},
+    month = {06},
+    issn = {0749-0208},
+    doi = {10.2112/SI95-197.1},
+    url = {https://doi.org/10.2112/SI95-197.1},
+    eprint = {https://meridian.allenpress.com/jcr/article-pdf/95/SI/1011/2517763/i1551-5036-95-sp1-1011.pdf},
+    abstract={Bathymetry is an important factor in determining wave and current
+    transformation in coastal and surface areas but is often poorly understood.
+    However, its knowledge is crucial for hydro-morphodynamic forecasting and
+    monitoring. Available for a long time only via in-situ measurement, the 
+    advent of video and satellite imagery has allowed the emergence of 
+    inversion methods from surface observations. With the advent of methods and
+    architectures adapted to big data, a treatment via a deep learning approach
+    seems now promising. This article provides a first overview of such 
+    possibilities with synthetic cases and its potential application on a real 
+    case.},
+}
+
+@thesis{vi22,
   bibtex_show={true},
-  title={Investigations on the Theory of the Brownian Movement},
-  author={Einstein, Albert},
-  year={1956},
-  publisher={Courier Corporation},
-  preview={brownian-motion.gif}
-}
-
-@article{einstein1950meaning,
-  abbr={AJP},
-  bibtex_show={true},
-  title={The meaning of relativity},
-  author={Einstein, Albert and Taub, AH},
-  journal={American Journal of Physics},
-  volume={18},
-  number={6},
-  pages={403--404},
-  year={1950},
-  publisher={American Association of Physics Teachers}
-}
-
-@article{PhysRev.47.777,
-  abbr={PhysRev},
-  title={Can Quantum-Mechanical Description of Physical Reality Be Considered Complete?},
-  author={Einstein*†, A. and Podolsky*, B. and Rosen*, N.},
-  abstract={In a complete theory there is an element corresponding to each element of reality. A sufficient condition for the reality of a physical quantity is the possibility of predicting it with certainty, without disturbing the system. In quantum mechanics in the case of two physical quantities described by non-commuting operators, the knowledge of one precludes the knowledge of the other. Then either (1) the description of reality given by the wave function in quantum mechanics is not complete or (2) these two quantities cannot have simultaneous reality. Consideration of the problem of making predictions concerning a system on the basis of measurements made on another system that had previously interacted with it leads to the result that if (1) is false then (2) is also false. One is thus led to conclude that the description of reality as given by a wave function is not complete.},
-  journal={Phys. Rev.},
-  location={New Jersey},
-  volume={47},
-  issue={10},
-  pages={777--780},
-  numpages={0},
-  year={1935},
-  month={May},
-  publisher=aps,
-  doi={10.1103/PhysRev.47.777},
-  url={http://link.aps.org/doi/10.1103/PhysRev.47.777},
-  html={https://journals.aps.org/pr/abstract/10.1103/PhysRev.47.777},
-  pdf={example_pdf.pdf},
-  altmetric={248277},
-  dimensions={true},
-  google_scholar_id={qyhmnyLat1gC},
-  video={https://www.youtube-nocookie.com/embed/aqz-KE-bpKQ},
-  additional_info={. *More Information* can be [found here](https://github.com/alshedivat/al-folio/)},
-  annotation={* Example use of superscripts<br>† Albert Einstein},
   selected={true},
-  inspirehep_id = {3255}
+  abbr = {thesis},
+  slides = {defense_slides.pdf},
+  title = {{Mixed precision iterative refinement for the solution of large
+      sparse linear systems}},
+  author = {Vieubl{\'e}, Bastien},
+  year = {2022},
+  month = Nov,
+  pdf = {thesis.pdf},
+  number = {2022INPT0093},
+  school = {{Institut National Polytechnique de Toulouse - INPT}},
+  year = {2022},
+  month = Nov,
+  type = {Theses},
+  hal_id = {tel-03975935},
+  hal_version = {v1},
+  url = {https://hal.science/tel-03975935},
+  abstract={The increasing availability of very low precisions (tfloat32, fp16, bfloat16, fp8) in hardware
+pushes modern high performance computing to embrace mixed precision standards. By
+employing mostly low precision and by making wise use of high precision, mixed precision
+algorithms can leverage the low precision advantages while preserving the quality of the
+computed solution. Mixed precision iterative refinement is one of the oldest and most
+famous representatives of these algorithms; this method was shown to be very effective in
+reducing the resource consumption of linear solvers while delivering accurate solutions in
+a robust way. <br>
+This thesis is dedicated to investigating the use of this algorithm for the solution of large
+sparse linear systems. We structure the document as follows. <br>
+Our first concern is to provide a comprehensive understanding of iterative refinement.
+This part of our work covers a survey listing the different research studies on this algorithm
+that explains its evolutions throughout time and a technical description of a selected set
+of state-of-the-art iterative refinement algorithms. <br>
+Then, we focus on improving sparse direct solvers with iterative refinement. We pro-
+ceed in two steps. First, we relax restrictive requirements on the LU-GMRES-IR3 algorithm,
+which is a form of iterative refinement capable of handling inaccurate factorizations for
+ill-conditioned problems. It leads us to propose the LU-GMRES-IR5 algorithm that has
+five independent precision parameters and is more suited to the solution of large sparse
+systems. Second, we address the parallel implementation of state-of-the-art iterative re-
+finement algorithms combined with state-of-the-art approximate sparse factorizations to
+solve real-life problems from academic and industrial applications. Our performance study
+demonstrates significant reductions in time and memory with respect to a standard sparse
+direct solver in double precision. <br>
+Finally, we use iterative refinement to improve sparse iterative solvers. We develop an
+analysis for a new mixed precision preconditioned GMRES (M-GMRES-IR6) that aims at
+covering previous existing implementations that are not yet covered by an analysis and at
+proposing a new mixed precision strategy based on the application of the preconditioner
+in a lower precision than the application of the original matrix A. Our numerical results
+pave the way towards promising resource savings for parallel implementations of
+GMRES.}
 }
 
-@article{einstein1905molekularkinetischen,
-  title={{\"U}ber die von der molekularkinetischen Theorie der W{\"a}rme geforderte Bewegung von in ruhenden Fl{\"u}ssigkeiten suspendierten Teilchen},
-  author={Einstein, A.},
-  journal={Annalen der physik},
-  volume={322},
-  number={8},
-  pages={549--560},
-  year={1905},
-  publisher={Wiley Online Library}
-}
 
-@article{einstein1905movement,
-  abbr={Ann. Phys.},
-  title={Un the movement of small particles suspended in statiunary liquids required by the molecular-kinetic theory 0f heat},
-  author={Einstein, A.},
-  journal={Ann. Phys.},
-  volume={17},
-  pages={549--560},
-  year={1905}
-}
-
-@article{einstein1905electrodynamics,
-  title={On the electrodynamics of moving bodies},
-  author={Einstein, A.},
-  year={1905}
-}
-
-@Article{einstein1905photoelectriceffect,
-  bibtex_show={true},
-  abbr={Ann. Phys.},
-  title="{{\"U}ber einen die Erzeugung und Verwandlung des Lichtes betreffenden heuristischen Gesichtspunkt}",
-  author={Albert Einstein},
-  abstract={This is the abstract text.},
-  journal={Ann. Phys.},
-  volume={322},
-  number={6},
-  pages={132--148},
-  year={1905},
-  doi={10.1002/andp.19053220607},
-  award={Albert Einstein receveid the **Nobel Prize in Physics** 1921 *for his services to Theoretical Physics, and especially for his discovery of the law of the photoelectric effect*},
-  award_name={Nobel Prize}
-}
-
-@book{przibram1967letters,
-  bibtex_show={true},
-  title={Letters on wave mechanics},
-  author={Einstein, Albert and Schrödinger, Erwin and Planck, Max and Lorentz, Hendrik Antoon and Przibram, Karl},
-  year={1967},
-  publisher={Vision},
-  preview={wave-mechanics.gif},
-  abbr={Vision}
-}
