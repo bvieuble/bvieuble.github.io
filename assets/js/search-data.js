@@ -23,13 +23,6 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/publications/";
           },
-        },{id: "nav-projects",
-          title: "projects",
-          description: "A growing collection of your cool projects.",
-          section: "Navigation",
-          handler: () => {
-            window.location.href = "/projects/";
-          },
         },{id: "nav-texfantasy",
           title: "TexFantasy",
           description: "Gallery of LaTeX figures and tables.",
@@ -416,88 +409,43 @@ ninja.data = [{
           section: "News",},{id: "news-i-am-extremely-grateful-to-have-been-awarded-the-research-fund-for-international-young-scientists-of-nsfc-national-natural-science-foundation-of-china-for-my-project-entitled-resource-efficient-approximate-computing-gmres-for-the-solution-of-linear-systems-of-equations",
           title: 'I am extremely grateful to have been awarded the Research Fund for International...',
           description: "",
-          section: "News",},{id: "projects-project-1",
-          title: 'project 1',
-          description: "with background image",
-          section: "Projects",handler: () => {
-              window.location.href = "/projects/1_project/";
-            },},{id: "projects-project-2",
-          title: 'project 2',
-          description: "a project with a background image and giscus comments",
-          section: "Projects",handler: () => {
-              window.location.href = "/projects/2_project/";
-            },},{id: "projects-project-3-with-very-long-name",
-          title: 'project 3 with very long name',
-          description: "a project that redirects to another website",
-          section: "Projects",handler: () => {
-              window.location.href = "/projects/3_project/";
-            },},{id: "projects-project-4",
-          title: 'project 4',
-          description: "another without an image",
-          section: "Projects",handler: () => {
-              window.location.href = "/projects/4_project/";
-            },},{id: "projects-project-5",
-          title: 'project 5',
-          description: "a project with a background image",
-          section: "Projects",handler: () => {
-              window.location.href = "/projects/5_project/";
-            },},{id: "projects-project-6",
-          title: 'project 6',
-          description: "a project with no image",
-          section: "Projects",handler: () => {
-              window.location.href = "/projects/6_project/";
-            },},{id: "projects-project-7",
-          title: 'project 7',
-          description: "with background image",
-          section: "Projects",handler: () => {
-              window.location.href = "/projects/7_project/";
-            },},{id: "projects-project-8",
-          title: 'project 8',
-          description: "an other project with a background image and giscus comments",
-          section: "Projects",handler: () => {
-              window.location.href = "/projects/8_project/";
-            },},{id: "projects-project-9",
-          title: 'project 9',
-          description: "another project with an image 🎉",
-          section: "Projects",handler: () => {
-              window.location.href = "/projects/9_project/";
-            },},{id: "texfantasy-plot-gif",
-          title: 'plot (gif)',
+          section: "News",},{id: "texfantasy-plot-gif",
+          title: 'Plot (gif)',
           description: "An animated plot representing the percentage of convergence according to the condition number for different algorithms.",
           section: "Texfantasy",handler: () => {
               window.location.href = "/texfantasy/10_tex/";
             },},{id: "texfantasy-timeline",
-          title: 'timeline',
+          title: 'Timeline',
           description: "A timeline made in Tikz.",
           section: "Texfantasy",handler: () => {
               window.location.href = "/texfantasy/11_tex/";
             },},{id: "texfantasy-pivoting",
-          title: 'pivoting',
+          title: 'Pivoting',
           description: "An illustration of partial and static pivoting.",
           section: "Texfantasy",handler: () => {
               window.location.href = "/texfantasy/12_tex/";
             },},{id: "texfantasy-consumption",
-          title: 'consumption',
+          title: 'Consumption',
           description: "An illustration of the memory consumption of iterative refinement.",
           section: "Texfantasy",handler: () => {
               window.location.href = "/texfantasy/13_tex/";
             },},{id: "texfantasy-floating-point",
-          title: 'floating-point',
+          title: 'Floating-point',
           description: "An illustration of the different low precision floating point arithmetics available in hardware.",
           section: "Texfantasy",handler: () => {
               window.location.href = "/texfantasy/14_tex/";
             },},{id: "texfantasy-bar-plot-gif",
-          title: 'bar plot (gif)',
+          title: 'Bar plot (gif)',
           description: "A bar plot representing the execution time and the memory consumption for different threshold parameters.",
           section: "Texfantasy",handler: () => {
               window.location.href = "/texfantasy/15_tex/";
             },},{id: "texfantasy-plot",
-          title: 'plot',
+          title: 'Plot',
           description: "A plot representing the convergence of mixed precision restarted GMRES for different set of precisions and matrices.",
           section: "Texfantasy",handler: () => {
               window.location.href = "/texfantasy/16_tex/";
             },},{id: "texfantasy-floating-point-copy",
-          title: 'floating-point (copy)',
+          title: 'Floating-point (copy)',
           description: "An illustration explaining floating-point computation.",
           section: "Texfantasy",handler: () => {
               window.location.href = "/texfantasy/17_tex/";
@@ -527,22 +475,22 @@ ninja.data = [{
           section: "Texfantasy",handler: () => {
               window.location.href = "/texfantasy/5_tex/";
             },},{id: "texfantasy-bar-plot",
-          title: 'bar plot',
+          title: 'Bar plot',
           description: "A bar plot representing the execution time of five algorithms over different problems.",
           section: "Texfantasy",handler: () => {
               window.location.href = "/texfantasy/6_tex/";
             },},{id: "texfantasy-matrix-index",
-          title: 'matrix index',
+          title: 'Matrix index',
           description: "A table containing a list of matrices and their properties.",
           section: "Texfantasy",handler: () => {
               window.location.href = "/texfantasy/7_tex/";
             },},{id: "texfantasy-consumption-samples",
-          title: 'consumption samples',
+          title: 'Consumption samples',
           description: "A table containing execution times and memory consumptions associated to different matrices, alorithms, and parameters.",
           section: "Texfantasy",handler: () => {
               window.location.href = "/texfantasy/8_tex/";
             },},{id: "texfantasy-function-gif",
-          title: 'function (gif)',
+          title: 'Function (gif)',
           description: "An animated plot representing the convergence of iterative refinement.",
           section: "Texfantasy",handler: () => {
               window.location.href = "/texfantasy/9_tex/";
