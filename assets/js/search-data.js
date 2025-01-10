@@ -466,6 +466,41 @@ ninja.data = [{
           description: "An animated plot representing the percentage of convergence according to the condition number for different algorithms.",
           section: "Texfantasy",handler: () => {
               window.location.href = "/texfantasy/10_tex/";
+            },},{id: "texfantasy-timeline",
+          title: 'timeline',
+          description: "A timeline made in Tikz.",
+          section: "Texfantasy",handler: () => {
+              window.location.href = "/texfantasy/11_tex/";
+            },},{id: "texfantasy-pivoting",
+          title: 'pivoting',
+          description: "An illustration of partial and static pivoting.",
+          section: "Texfantasy",handler: () => {
+              window.location.href = "/texfantasy/12_tex/";
+            },},{id: "texfantasy-consumption",
+          title: 'consumption',
+          description: "An illustration of the memory consumption of iterative refinement.",
+          section: "Texfantasy",handler: () => {
+              window.location.href = "/texfantasy/13_tex/";
+            },},{id: "texfantasy-floating-point",
+          title: 'floating-point',
+          description: "An illustration of the different low precision floating point arithmetics available in hardware.",
+          section: "Texfantasy",handler: () => {
+              window.location.href = "/texfantasy/14_tex/";
+            },},{id: "texfantasy-bar-plot-gif",
+          title: 'bar plot (gif)',
+          description: "A bar plot representing the execution time and the memory consumption for different threshold parameters.",
+          section: "Texfantasy",handler: () => {
+              window.location.href = "/texfantasy/15_tex/";
+            },},{id: "texfantasy-plot",
+          title: 'plot',
+          description: "A plot representing the convergence of mixed precision restarted GMRES for different set of precisions and matrices.",
+          section: "Texfantasy",handler: () => {
+              window.location.href = "/texfantasy/16_tex/";
+            },},{id: "texfantasy-floating-point-copy",
+          title: 'floating-point (copy)',
+          description: "An illustration explaining floating-point computation.",
+          section: "Texfantasy",handler: () => {
+              window.location.href = "/texfantasy/17_tex/";
             },},{id: "texfantasy-performance-profile",
           title: 'Performance profile',
           description: "A performance profile plot comparing the number of iterations of seven algorithms.",
@@ -506,6 +541,11 @@ ninja.data = [{
           description: "A table containing execution times and memory consumptions associated to different matrices, alorithms, and parameters.",
           section: "Texfantasy",handler: () => {
               window.location.href = "/texfantasy/8_tex/";
+            },},{id: "texfantasy-function-gif",
+          title: 'function (gif)',
+          description: "An animated plot representing the convergence of iterative refinement.",
+          section: "Texfantasy",handler: () => {
+              window.location.href = "/texfantasy/9_tex/";
             },},{
         id: 'social-email',
         title: 'email',
