@@ -1,6 +1,6 @@
 ---
 layout: page
-title: pivoting
+title: Pivoting
 description: An illustration of partial and static pivoting.
 img: assets/img/texfantasy/tex10-front.png
 importance: 1

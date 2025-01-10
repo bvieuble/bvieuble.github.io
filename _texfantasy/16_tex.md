@@ -1,6 +1,6 @@
 ---
 layout: page
-title: plot
+title: Plot
 description: A plot representing the convergence of mixed precision restarted GMRES for different set of precisions and matrices.
 img: assets/img/texfantasy/tex14-front.png
 importance: 1

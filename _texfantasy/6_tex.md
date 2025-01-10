@@ -1,6 +1,6 @@
 ---
 layout: page
-title: bar plot
+title: Bar plot
 description: A bar plot representing the execution time of five algorithms over different problems.
 img: assets/img/texfantasy/tex6-front.png
 importance: 1

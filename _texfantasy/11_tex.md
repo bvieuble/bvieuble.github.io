@@ -1,6 +1,6 @@
 ---
 layout: page
-title: timeline
+title: Timeline
 description: A timeline made in Tikz.
 img: assets/img/texfantasy/tex9-front.png
 importance: 1

@@ -1,6 +1,6 @@
 ---
 layout: page
-title: consumption
+title: Consumption
 description: An illustration of the memory consumption of iterative refinement.
 img: assets/img/texfantasy/tex11-front.png
 importance: 1

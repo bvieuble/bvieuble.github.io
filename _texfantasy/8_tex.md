@@ -1,6 +1,6 @@
 ---
 layout: page
-title: consumption samples
+title: Consumption samples
 description: A table containing execution times and memory consumptions associated to different matrices, alorithms, and parameters.
 img: assets/img/texfantasy/tex17-front.png
 importance: 1

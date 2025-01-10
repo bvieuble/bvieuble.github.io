@@ -1,6 +1,6 @@
 ---
 layout: page
-title: plot (gif)
+title: Plot (gif)
 description: An animated plot representing the percentage of convergence according to the condition number for different algorithms. 
 img: assets/img/texfantasy/tex8-front.png
 importance: 1

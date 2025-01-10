@@ -1,6 +1,6 @@
 ---
 layout: page
-title: floating-point (copy)
+title: Floating-point (copy)
 description: An illustration explaining floating-point computation.
 img: assets/img/texfantasy/tex15-front.png
 importance: 1

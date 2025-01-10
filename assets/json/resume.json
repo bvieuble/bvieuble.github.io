@@ -5,7 +5,7 @@
     "image": "",
     "email": "bastien.vieuble@amss.ac.cn",
     "url": "https://bvieuble.github.io",
-    "summary": "My research focuses on using approximate computing techniques for the ease of high performance linear algebra algorithms. I attach great importance to covering the algorithms from a theory-focused standpoint to their implementation on parallel supercomputers for the solution of academic and industrial applications.",
+    "summary": "My research focuses on using approximate computing techniques for the ease of high performance linear algebra algorithms. I attach great importance to covering the algorithms from a theory-focused standpoint to their implementation on parallel supercomputers for the solution of academic and industrial applications. ",
     "location": {
       "address": "South Building, Academy of Mathematics and Systems Science, Haidian District",
       "postalCode": "",
@@ -42,7 +42,7 @@
       "url": "https://amss.cas.cn/",
       "startDate": "2019-04-01",
       "endDate": "2019-09-01",
-      "summary": "Deep learning approaches to determine the dominant eigenvalues. Study on sparse matrices using graph neural network with TensorFlow. Advisor: Prof. Xin Liu.",
+      "summary": "Deep learning approaches to determine the dominant eigenvalues.",
       "highlights": []
     },
     {
@@ -52,7 +52,7 @@
       "url": "https://ipal.cnrs.fr/",
       "startDate": "2017-09-01",
       "endDate": "2018-09-01",
-      "summary": "Position tracking of fingers on a large 2D surface. Part of a project willing to make wearable technology to help visually impaired people to interact with maps. Different technologies were used: Inertial Measurement Unit (IMU), color tracking, Leap Motion, and the creation of a dot patterns based finger tracker inspired by the Anoto technology. Advisor: Christophe Jouffrais.",
+      "summary": "Position tracking of fingers on a large 2D surface.",
       "highlights": []
     }
   ],
@@ -66,7 +66,7 @@
       "startDate": "2019-10-01",
       "endDate": "2022-10-01",
       "score": "",
-      "courses": ["Improvement of direct and iterative solvers for the solution of linear systems with approximate computing techniques.", "Rounding error analysis of mixed precision algorithms.", "Parallel implementation and performance analysis of mixed precision algorithms on parallel supercomputers using academic and industrial applications."]
+      "courses": []
     },
     {
       "institution": "ENSEEIHT",
@@ -111,7 +111,7 @@
       "date": "2022-03",
       "awarder": "INPT",
       "url": "https://www.inp-toulouse.fr/en/index.html",
-      "summary": "Awarded to cover expenses for a three months mission at the University of Manchester for a collaboration with Prof. Nicholas J. Higham."
+      "summary": "Awarded to cover expenses for a three months mission at the University of Manchester."
     },
     {
       "title": "MESRI doctoral contract",
@@ -130,7 +130,10 @@
         "Numerical Linear Algebra",
         "Linear Systems of Equations",
         "Matrix computation",
-        "Factorization and Orthogonalization"
+        "Factorization and Orthogonalization",
+        "Krylov subspace methods",
+        "Preconditioning",
+        "Sparse matrices"
       ]
     },
     {
@@ -140,7 +143,18 @@
       "keywords": [
         "Mathematical Software",
         "Parallel computing",
+        "OpenMP and MPI",
         "Floating point arithmetics"
+      ]
+    },
+    {
+      "name": "Programming languages",
+      "level": "Casual",
+      "icon": "fa-solid fa-hashtag",
+      "keywords": [
+        "Julia",
+        "Fortran",
+        "Latex"
       ]
     },
     {
@@ -170,7 +184,14 @@
       "fluency": "Beginner",
       "icon": ""
     }
-  ],
+  ], 
+  "meta": [
+    {
+      "language": "French",
+      "fluency": "Native speaker",
+      "icon": ""
+    }
+  ], 
   "projects": [
     {
       "name": "Exascale Computing Project",
@@ -179,6 +200,14 @@
       "startDate": "2022-11-01",
       "endDate": "2023-09-01",
       "url": "https://xsdk.info/"
+    },
+    {
+      "name": "MUMPS solver",
+      "summary": "My Ph.D. thesis was made in collaboration with MUMPS Tech. developing the solver MUMPS which I helped improve. The MUMPS solver is used by many important international companies, such as, EDF, Michelin, ANSYS, SHELL, etc.",
+      "highlights": [],
+      "startDate": "2019-10-01",
+      "endDate": "2022-10-01",
+      "url": "https://mumps-solver.org/index.php?page=home"
     }
   ]
 }

@@ -1,6 +1,6 @@
 ---
 layout: page
-title: matrix index 
+title: Matrix index 
 description: A table containing a list of matrices and their properties.
 img: assets/img/texfantasy/tex18-front.png
 importance: 1

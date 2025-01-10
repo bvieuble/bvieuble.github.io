@@ -1,6 +1,6 @@
 ---
 layout: page
-title: bar plot (gif)
+title: Bar plot (gif)
 description: A bar plot representing the execution time and the memory consumption for different threshold parameters.
 img: assets/img/texfantasy/tex13-front.png
 importance: 1

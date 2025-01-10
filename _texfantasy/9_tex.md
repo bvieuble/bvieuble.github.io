@@ -1,6 +1,6 @@
 ---
 layout: page
-title: function (gif)
+title: Function (gif)
 description: An animated plot representing the convergence of iterative refinement. 
 img: /assets/img/texfantasy/tex7-front.png
 importance: 1

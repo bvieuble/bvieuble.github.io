@@ -1,6 +1,6 @@
 ---
 layout: page
-title: floating-point
+title: Floating-point
 description: An illustration of the different low precision floating point arithmetics available in hardware.
 img: assets/img/texfantasy/tex12-front.png
 importance: 1

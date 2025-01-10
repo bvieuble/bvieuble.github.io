@@ -12,15 +12,13 @@
   type: time_table
   contents:
     - title: PhD
-      institution: University of Zurich, Zurich, Switzerland
       year: 1905
+      institution: University of Zurich, Zurich, Switzerland
+      location: Switzerland
+      department: Description 1.
+      maindescription: Teaching at Palmer Physical Laboratory (now 302 Frist Campus Center). While not a professor at Princeton, I associated with the physics professors and continued to give lectures on campus.
       description:
-        - Description 1.
-        - Description 2.
-        - title: Description 3.
-          contents:
-            - Sub-description 1.
-            - Sub-description 2.
+        - Relativity.
     - title: Federal teaching diploma
       institution: Eidgenössische Technische Hochschule, Zurich, Switzerland
       year: 1900
@@ -92,6 +90,12 @@
         - Description 2.
 
 - title: Other Interests
-  type: list
+  type: list_groups
   contents:
-    - <u>Hobbies:</u> Hobby 1, Hobby 2, etc.
+    - category: Applied Mathematics
+      icon: fa-solid fa-hashtag
+      school: INP
+      items:
+        - name: Linear Systems of Equations
+        - name: Linear Systems of Equations
+        - name: Linear Systems of Equations

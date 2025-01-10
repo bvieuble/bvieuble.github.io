@@ -148,9 +148,6 @@ collections:
       layout: post
     output: true
     permalink: /:collection/:title/
-  projects:
-    output: true
-    permalink: /:collection/:title/
   texfantasy:
     output: true
     permalink: /:collection/:title/
@@ -648,3 +645,4 @@ jsonresume:
   - languages
   - interests
   - references
+  - meta
