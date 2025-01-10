@@ -203,7 +203,7 @@
     },
     {
       "name": "MUMPS solver",
-      "summary": "My Ph.D. thesis was made in collaboration with MUMPS Tech. developing the solver MUMPS which I helped improve. The MUMPS solver is used by many important international companies, such as, EDF, Michelin, ANSYS, SHELL, etc.",
+      "summary": "My Ph.D. thesis was made in collaboration with MUMPS Technology to help improve the sparse direct solver MUMPS. The MUMPS solver is used by many important international companies, such as, EDF, Michelin, ANSYS, SHELL, etc.",
       "highlights": [],
       "startDate": "2019-10-01",
       "endDate": "2022-10-01",
