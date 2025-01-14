@@ -5,7 +5,7 @@
     "image": "",
     "email": "bastien.vieuble@amss.ac.cn",
     "url": "https://bvieuble.github.io",
-    "summary": "My research focuses on using approximate computing techniques for the ease of high performance linear algebra algorithms. I attach great importance to covering the algorithms from a theory-focused standpoint to their implementation on parallel supercomputers for the solution of academic and industrial applications. ",
+    "summary": "My research focuses on using approximate computing techniques for the ease of high performance linear algebra algorithms. I attach great importance to covering the algorithms from a theory-focused standpoint to their implementation on parallel supercomputers for the solution of academic and industrial applications.",
     "location": {
       "address": "South Building, Academy of Mathematics and Systems Science, Haidian District",
       "postalCode": "",
@@ -37,22 +37,22 @@
     },
     {
       "name": "Academy of Mathematics and Systems Science, Chinese Academy of Sciences",
-      "position": "Intern",
+      "position": "Research intern",
       "location": "Beijing, China",
       "url": "https://amss.cas.cn/",
       "startDate": "2019-04-01",
       "endDate": "2019-09-01",
-      "summary": "Deep learning approaches to determine the dominant eigenvalues.",
+      "summary": "Deep learning approaches to determine the dominant eigenvalues of sparse matrices.",
       "highlights": []
     },
     {
       "name": "IPAL-CNRS",
-      "position": "Intern",
+      "position": "Research intern",
       "location": "Singapore",
       "url": "https://ipal.cnrs.fr/",
       "startDate": "2017-09-01",
       "endDate": "2018-09-01",
-      "summary": "Position tracking of fingers on a large 2D surface.",
+      "summary": "Development of solutions for the position tracking of fingers on a large 2D surface to help design wearable devices to help visually impaired people interact with maps.",
       "highlights": []
     }
   ],
