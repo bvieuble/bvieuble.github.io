@@ -1,7 +1,7 @@
 ---
 layout: casanla
 permalink: /casanla/
-title: CAS-ANLA (2025)
+title: CAS-ANLA
 description: The Chinese Academy of Sciences Workshop on Approximate computing in Numerical Linear Algebra (2025 Edition).
 nav: true
 nav_order: 7
