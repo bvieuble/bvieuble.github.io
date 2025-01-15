@@ -37,8 +37,8 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/cv/";
           },
-        },{id: "nav-cas-anla-2025",
-          title: "CAS-ANLA (2025)",
+        },{id: "nav-cas-anla",
+          title: "CAS-ANLA",
           description: "The Chinese Academy of Sciences Workshop on Approximate computing in Numerical Linear Algebra (2025 Edition).",
           section: "Navigation",
           handler: () => {
@@ -96,6 +96,9 @@ ninja.data = [{
           description: "",
           section: "News",},{id: "news-i-am-extremely-grateful-to-have-been-awarded-the-research-fund-for-international-young-scientists-of-nsfc-national-natural-science-foundation-of-china-for-my-project-entitled-resource-efficient-approximate-computing-gmres-for-the-solution-of-linear-systems-of-equations",
           title: 'I am extremely grateful to have been awarded the Research Fund for International...',
+          description: "",
+          section: "News",},{id: "news-we-are-looking-for-speakers-for-the-cas-anla-workshop-happening-at-the-academy-of-mathematics-and-systems-science-in-beijing-on-april-23rd-and-24th-2025-you-can-find-the-current-list-of-plenary-speakers-and-more-info-on-the-workshop-on-the-webpage",
+          title: 'We are looking for speakers for the CAS-ANLA workshop happening at the Academy...',
           description: "",
           section: "News",},{id: "texfantasy-plot-gif",
           title: 'Plot (gif)',
