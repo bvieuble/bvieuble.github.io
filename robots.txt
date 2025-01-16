@@ -1,1 +1,1 @@
-User-agent: * Disallow: Sitemap: https://bvieuble.github.io/sitemap.xml
+User-agent: * Disallow: Sitemap: https://bvieuble.me/sitemap.xml
