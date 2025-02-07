@@ -44,15 +44,15 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/casanla/";
           },
-        },{id: "post-academic-visit-in-china",
+        },{id: "post-academic-visit-in-china-1-3",
       
-        title: "Academic visit in China",
+        title: "Academic visit in China (1/3)",
       
-      description: "Everything you need to know about preparing your short academic visit in China",
+      description: "Everything you need to know about preparing your short academic visit in China. Part 1/3 - Introduction and visa.",
       section: "Posts",
       handler: () => {
         
-          window.location.href = "/blog/2025/chinavisit/";
+          window.location.href = "/blog/2025/chinavisit1/";
         
       },
     },{id: "news-i-started-my-new-job-as-a-research-associate-at-the-university-of-manchester",
