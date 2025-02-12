@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Academic visit in China (1/3)
-date: 2025-02-14 00:01:00
+date: 2025-02-10 00:01:00
 description: Everything you need to know about preparing your short academic visit in China. Part 1/3 - Introduction and visa.
 tags: china travel visit
 categories: chinalife
@@ -168,3 +168,16 @@ documents listed in
 
   - Continue to Part 2 (internet, payments, and other essentials): [Academic visit in China (2/3)](https://bvieuble.me/blog/2025/chinavisit2)
   - Continue to Part 3 (once arrived): [Academic visit in China (3/3)](https://bvieuble.me/blog/2025/chinavisit3)
+
+
+
+
+
+
+
+
+
+
+
+
+
