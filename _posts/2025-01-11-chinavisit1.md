@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Academic visit in China (1/3)
-date: 2025-01-10 00:01:00
+date: 2025-02-14 00:01:00
 description: Everything you need to know about preparing your short academic visit in China. Part 1/3 - Introduction and visa.
 tags: china travel visit
 categories: chinalife
@@ -32,12 +32,11 @@ good tips.
 
 If you wish to keep up with me, we will cover three main topics which should
 help you get the best experience possible out of your academic visit in China. 
-The first part of my guide named *"Academic visit in China"*, which you are now reading,
+The first part of my guide, which you are now reading,
 covers your right of entry into mainland Chinese territory. This 
 includes your eligibility for visa exemption and, if not eligible, the 
 procedure to apply for a visa for the purpose of an academic visit. If you are
-already up-to-date on visa matters and have already gathered the required 
-documents for a smooth immigration, you can go check out the next parts of the
+already up-to-date on visa matters, you can go check out the next parts of the
 guide listed in [Continue the Guide](#continue-the-guide).
 
 ## Visa or not visa?
@@ -111,7 +110,7 @@ In short, you should be asked to provide the following documents to apply for an
   - **Passport** with two blank visa pages, plus a photocopy of the passport's bio page.
   - A **Visa Application Form** which has to be filled out online on the [Chinese visa Application Center](https://bio.visaforchina.cn/) website and which should be printed and signed. Note that you must pick the country/city where you wish to apply for the visa at this step.
   - Passport-sized **photo** in color and with a white background.
-  - An **official invitation letter** from your host. A scanned and printed version of the letter is generally acceptable. Sometimes, the invitation mentions the city where you must apply for the visa. For this reason, let your host know early on which city you would like to submit your application. 
+  - An **official invitation letter** from your host. A scanned and printed version of the letter is generally acceptable. Sometimes, the invitation mentions the city where you must apply for the visa. For this reason, let your host know early in which city you would like to submit your application. 
   - A proof of legal residence if you are applying in a country other than your home country (e.g., a visa or residence permit).
 
 Once you have filled and validated the application on the [Chinese visa 
@@ -151,7 +150,7 @@ while in Shenzhen for a conference, you won't be able to go back under a
 single-entry visa!
 
 Note also that in addition of your passport and
-visa, while at the immigration desk, you may also be asked to provide the 
+visa, while at the immigration desk, you may be asked to provide the 
 documents listed in 
 [Visa exemption](#visa-exemption).
 
@@ -169,16 +168,3 @@ documents listed in
 
   - Continue to Part 2 (internet, payments, and other essentials): [Academic visit in China (2/3)](https://bvieuble.me/blog/2025/chinavisit2)
   - Continue to Part 3 (once arrived): [Academic visit in China (3/3)](https://bvieuble.me/blog/2025/chinavisit3)
-
-
-
-
-
-
-
-
-
-
-
-
-
