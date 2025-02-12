@@ -44,7 +44,29 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/casanla/";
           },
-        },{id: "news-i-started-my-new-job-as-a-research-associate-at-the-university-of-manchester",
+        },{id: "post-academic-visit-in-china-2-3",
+      
+        title: "Academic visit in China (2/3)",
+      
+      description: "Everything you need to know about preparing your short academic visit in China. Part 2/3 - Internet, payments, and other essentials.",
+      section: "Posts",
+      handler: () => {
+        
+          window.location.href = "/blog/2025/chinavisit2/";
+        
+      },
+    },{id: "post-academic-visit-in-china-1-3",
+      
+        title: "Academic visit in China (1/3)",
+      
+      description: "Everything you need to know about preparing your short academic visit in China. Part 1/3 - Introduction and visa.",
+      section: "Posts",
+      handler: () => {
+        
+          window.location.href = "/blog/2025/chinavisit1/";
+        
+      },
+    },{id: "news-i-started-my-new-job-as-a-research-associate-at-the-university-of-manchester",
           title: 'I started my new job as a research associate at the University of...',
           description: "",
           section: "News",},{id: "news-i-defended-my-ph-d-thesis-entitled-mixed-precision-iterative-refinement-for-the-solution-of-large-sparse-linear-systems-in-front-of-my-jury-composed-of-sherry-li-julien-langou-erin-carson-emmanuel-agullo-marc-baboulin-and-serge-gratton-many-thanks-for-their-time-and-their-kind-evaluation-you-can-find-the-defense-slides-here-and-the-manuscript-here",
