@@ -44,7 +44,18 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/casanla/";
           },
-        },{id: "post-academic-visit-in-china-2-3",
+        },{id: "post-academic-visit-in-china-3-3",
+      
+        title: "Academic visit in China (3/3)",
+      
+      description: "Everything you need to know about preparing your short academic visit in China. Part 3/3 - Once arrived.",
+      section: "Posts",
+      handler: () => {
+        
+          window.location.href = "/blog/2025/chinavisit3/";
+        
+      },
+    },{id: "post-academic-visit-in-china-2-3",
       
         title: "Academic visit in China (2/3)",
       
