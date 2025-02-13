@@ -63,7 +63,13 @@ The good news is there are solutions! Some of them are in a gray area regarding 
 
 An option you might consider is to subscribe to an **international data plan** with your current mobile phone operator if they offer such a service. Carefully check if mainland China is included in the coverage, and don't hesitate to contact your operator for more details. In particular, confirm with them that you will be able to access the Western internet. You can then use your phone (or any other device carrying the SIM) as a hotspot.
 
-If your phone is eSIM compatible, you can also buy data plans covering mainland China from various **eSIM service providers**. You can consider buying from [Airalo](https://www.airalo.com/) or [Nomad](https://www.getnomad.app/) which, at the time of writing this post, are reported to work well in China to get access to Western internet. You have plenty of other options outside of the two services mentioned. Beware that these plans are generally data-only and do not provide a local number.
+If your phone is eSIM compatible, you can also buy data plans covering mainland 
+China from various **eSIM service providers**. You can consider buying from
+[Airalo](https://www.airalo.com/) or [Nomad](https://www.getnomad.app/) which,
+at the time of writing this post, are reported to work well in China to access 
+Western services. You have plenty of other options outside of the two services 
+mentioned. Beware that these plans are generally data-only and do not provide a
+local number.
 
 In my opinion, international data plans and eSIM are the most reliable 
 solutions for an academic visitor, but they provide you with a limited amount 
@@ -114,7 +120,12 @@ In mainland China, many daily life services are only accessible or substantially
 
 I might have missed some, but it is definitely a good start. The good thing is you can achieve all of this by installing only three phone apps: **Alipay**, **WeChat**, and **Amap**. Ultimately, you can complete this list with any app you may feel the need to use.
 
-I strongly recommend **installing and setting up every phone app you need BEFORE your departure**. Many problems that are hard to anticipate can occur due to the blocking of many of your favorite internet services and other various reasons when you are in China. Moreover, if you find yourself having an issue installing an app, you might not be able to rely on Google, YouTube, Reddit, etc., to troubleshoot and find a solution. I emphasize that Alipay and WeChat can be both, and should be, set from the comfort of your home before your trip.
+I strongly recommend **installing and setting up every phone app you need 
+BEFORE your departure**. Many problems that are hard to anticipate can occur 
+due to the blocking of many of your favorite internet services and other 
+various reasons when you are in China. Moreover, if you find yourself having an
+issue installing an app, you might not be able to rely on Google, YouTube, 
+Reddit, etc., to troubleshoot and find a solution.
 
 <!-- First, because the Google Play store for android phone -->
 <!-- is blocked and you may not be able to download easily the .apk of some of the -->
@@ -177,8 +188,16 @@ I emphasize that Alipay is a behemoth in China, and you can be reassured that yo
 Alipay embeds almost every essential you need for your travel. There is,
 however, one exception: you cannot call and chat with your peers in China. This is what WeChat is used for. Basically, it is a sort of WhatsApp on steroids where, in addition to chatting with your friends, you can do almost everything Alipay does and more. However, unless you feel strongly about using WeChat, Alipay has a friendlier interface for foreigners for the same functionalities.
 
-In my opinion, installing WeChat is optional, and whether you should install it or not depends on the nature of your visit. An example of a use case is if you need to send messages or call your academic hosts or other peers you might meet during your visit. If you choose not to get a 
-[Chinese SIM](https://bvieuble.me/blog/2025/chinavisit3/#chinese-sim) card, you won't be able to call them and send them SMS. Hence, in this case, you should have WeChat installed and set. On the other hand, if communicating by email is enough, you might as well not clutter up your phone with another app. The best thing to do is to ask your hosts in China if they think you should have it installed.
+In my opinion, installing WeChat is optional, and whether you should install it
+or not depends on the nature of your visit. An example of a use case is if you
+need to send messages or call your academic hosts or other peers you might meet
+during your visit. If you choose not to get a 
+[Chinese SIM](https://bvieuble.me/blog/2025/chinavisit3/#chinese-sim) card, you
+may not be able to call them and send them SMS. Hence, in this case, you should
+have WeChat installed and set. On the other hand, if communicating by email is 
+enough, you might as well not clutter up your phone with another app. The best
+thing to do is to ask your hosts in China if they think you should have it 
+installed.
 
 Because WeChat requires phone number verification, it is better to have it set up and running before your departure if you do not plan to get a Chinese phone number. To set up WeChat, I recommend following the video tutorial [Setup WeChat](https://www.youtube.com/watch?v=UTors6B0bSQ). In addition, I encourage you to watch the following tutorial to see how to use the basic chat functionalities of WeChat: [Add friend, chat, and translate](https://www.youtube.com/watch?v=7qRucDPdDaE).
 
@@ -190,7 +209,13 @@ Because WeChat requires phone number verification, it is better to have it set u
 
 ### Amap
 
-Your last fundamental for traveling in China is a good map app. Of course, Google Maps, as a Google product, is blocked. You may still use it if you can access the unblocked Western internet on your phone; see [Internet in China](#internet-in-china). However, even in this case, Google Maps won't provide you with updated information and routes. If you have an iPhone, the built-in iOS map app offers a decent service but does not provide the same level of detail as Chinese map apps.
+Your last fundamental for traveling in China is a good map app. Of course, 
+Google Maps, as a Google product, is blocked. You may still use it if you can 
+access the unblocked Western internet on your phone; see 
+[Internet in China](#internet-in-china). However, even in this case, Google 
+Maps won't provide you with updated information and routes. If you have an 
+iPhone, the built-in iOS map app offers a decent service but does not provide 
+the same level of detail as Chinese map apps.
 
 Until very recently, it was actually tricky to have a map app that is both in English and works well in China. Chinese map apps are feature-full and efficient, but they were ultimately in Chinese... Thankfully, recent efforts to boost tourism led to an English version of one of the leading map apps in China: Amap. I strongly recommend installing it. The app should be available on both the Google Play store and the iOS appstore.
 
