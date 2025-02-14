@@ -27,7 +27,9 @@ arrived. For simplicity of exposition, I assume that you are entering China
 through one of the country's major international airports. I imagine the 
 process to be relatively equivalent when crossing the border by boat, train, or
 car. If you missed or forgot about the first two parts of the guide, you can 
-check them out in [Continue the Guide](#continue-the-guide).
+check them out in [Continue the Guide](#continue-the-guide). You can also print
+and review your [TODO list](https://bvieuble.me/blog/2025/chinavisit4) to
+guarantee you missed nothing.
 
 ## Arrival and immigration
 
@@ -301,5 +303,6 @@ you back your passport.
 
   - Go back to Part 1 (introdution and visa): [Academic visit in China (1/3)](https://bvieuble.me/blog/2025/chinavisit1)
   - Go back to Part 2 (internet, payments, and other essentials): [Academic visit in China (2/3)](https://bvieuble.me/blog/2025/chinavisit2)
+  - Print your TODO list: [Academic visit in China (TODO list)](https://bvieuble.me/blog/2025/chinavisit4)
 
 

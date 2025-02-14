@@ -37,7 +37,8 @@ covers your right of entry into mainland Chinese territory. This
 includes your eligibility for visa exemption and, if not eligible, the 
 procedure to apply for a visa for the purpose of an academic visit. If you are
 already up-to-date on visa matters, you can go check out the next parts of the
-guide listed in [Continue the Guide](#continue-the-guide).
+guide listed in [Continue the Guide](#continue-the-guide) and print your [TODO
+list](https://bvieuble.me/blog/2025/chinavisit4).
 
 ## Visa or not visa?
 
@@ -168,6 +169,7 @@ documents listed in
 
   - Continue to Part 2 (internet, payments, and other essentials): [Academic visit in China (2/3)](https://bvieuble.me/blog/2025/chinavisit2)
   - Continue to Part 3 (once arrived): [Academic visit in China (3/3)](https://bvieuble.me/blog/2025/chinavisit3)
+  - Print your TODO list: [Academic visit in China (TODO list)](https://bvieuble.me/blog/2025/chinavisit4)
 
 
 

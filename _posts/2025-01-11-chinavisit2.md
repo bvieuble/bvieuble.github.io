@@ -27,7 +27,8 @@ you'll be fully ready and equipped to carry out your work in this new
 environment and navigate Chinese cities (almost) as a Chinese.
 If you are already a veteran of the Chinese life-style and can blend like a
 chameleon into Chinese cities, you can go check out the other parts of the guide
-listed in [Continue the Guide](#continue-the-guide).
+listed in [Continue the Guide](#continue-the-guide) and print your [TODO
+list](https://bvieuble.me/blog/2025/chinavisit4).
 
 ## Internet in China
 
@@ -255,6 +256,7 @@ I would also strongly recommend talking to your general practitioner about poten
 
   - Go back to Part 1 (introdution and visa): [Academic visit in China (1/3)](https://bvieuble.me/blog/2025/chinavisit1)
   - Continue to Part 3 (once arrived): [Academic visit in China (3/3)](https://bvieuble.me/blog/2025/chinavisit3)
+  - Print your TODO list: [Academic visit in China (TODO list)](https://bvieuble.me/blog/2025/chinavisit4)
 
 
 
