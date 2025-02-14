@@ -30,12 +30,12 @@ profiles:
       <p>Bordeaux, France</p>
   - align: right
     image: /casanla25/avatar.png
-    content: /casanla25/casanla_gratton.md
+    content: /casanla25/casanla_c_zhang.md
     image_circular: true # crops the image to make it circular
     more_info: >
-      <p><a href="https://scholar.google.com/citations?user=q9HdQc4AAAAJ&hl=fr">Serge Gratton</a></p><br>
-      <p>ENSEEIHT, ANITI</p>
-      <p>Toulouse, France</p>
+      <p><a href="https://lsec.cc.ac.cn/~zhangcs/">Chensong Zhang</a></p><br>
+      <p>LSEC, AMSS, Chinese Academy of Sciences</p>
+      <p>Beijing, China</p>
   - align: left
     image: /casanla25/avatar.png
     content: /casanla25/casanla_yin.md
@@ -46,12 +46,28 @@ profiles:
       <p>Shanghai, China</p>
   - align: right
     image: /casanla25/avatar.png
-    content: /casanla25/casanla_zhang.md
+    content: /casanla25/casanla_z_zhang.md
     image_circular: true # crops the image to make it circular
     more_info: >
       <p><a href="https://www.zhangzk.net/">Zaikun Zhang</a></p><br>
       <p>Hong Kong Polytechnic University</p>
       <p>Hong Kong, China</p>
+  - align: left
+    image: /casanla25/avatar.png
+    content: /casanla25/casanla_shao.md
+    image_circular: true # crops the image to make it circular
+    more_info: >
+      <p><a href="https://scholar.google.com/citations?user=yk0MnRQAAAAJ&hl=en">Meiyue Shao</a></p><br>
+      <p>Fudan University</p>
+      <p>Shanghai, China</p>
+  - align: right
+    image: /casanla25/avatar.png
+    content: /casanla25/casanla_liu.md
+    image_circular: true # crops the image to make it circular
+    more_info: >
+      <p><a href="https://www.ssslab.cn/people/weifengliu.html">Weifeng Liu</a></p><br>
+      <p>University of Petroleum</p>
+      <p>Beijing, China</p>
   - align: left
     image: /casanla25/avatar.png
     content: /casanla25/casanla_li.md
@@ -84,6 +100,14 @@ profiles:
       <p><a href="https://mmikaitis.github.io/">Mantas Mikaitis</a></p><br>
       <p>University of Leeds</p>
       <p>Leeds, UK</p>
+  - align: left
+    image: /casanla25/avatar.png
+    content: /casanla25/casanla_kopanicakova.md
+    image_circular: true # crops the image to make it circular
+    more_info: >
+      <p><a href="https://kopanicakova.github.io/">Alena Kopanicakova</a></p><br>
+      <p>INPT/ENSEEIHT, ANITI</p>
+      <p>Toulouse, France</p>
   - align: left
     content: /casanla25/casanla_howtocome.md
 ---
