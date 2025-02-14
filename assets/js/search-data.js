@@ -44,7 +44,18 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/casanla/";
           },
-        },{id: "post-academic-visit-in-china-3-3",
+        },{id: "post-academic-visit-in-china-todo-list",
+      
+        title: "Academic visit in China (TODO list)",
+      
+      description: "Everything you need to know about preparing your short academic visit in China. Summary in a form of a TODO list.",
+      section: "Posts",
+      handler: () => {
+        
+          window.location.href = "/assets/pdf/blog/academic_visit_in_china_todo.pdf";
+        
+      },
+    },{id: "post-academic-visit-in-china-3-3",
       
         title: "Academic visit in China (3/3)",
       
