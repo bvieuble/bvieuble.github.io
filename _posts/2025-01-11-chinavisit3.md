@@ -25,7 +25,7 @@ In part three of the “Academic visit in China” guide, we will review the
 process at border control and the few basics to start your trip serenely once
 arrived. For simplicity of exposition, I assume that you are entering China 
 through one of the country's major international airports. I imagine the 
-process to be relatively equivalent when crossing the border by boat, train, or
+process to be relatively similar when crossing the border by boat, train, or
 car. If you missed or forgot about the first two parts of the guide, you can 
 check them out in [Continue the Guide](#continue-the-guide). You can also print
 and review your [TODO list](https://bvieuble.me/blog/2025/chinavisit4) to
@@ -41,7 +41,12 @@ when you will face the border agent.
 
 > ##### 🚫 Don't do drugs!
 >
-> As for many Asian countries, carrying drugs or even just being tested positive for drug consumption can get you in extremely severe trouble. It includes marijuana. So, if marijuana is legal back in your home country and you are consuming it frequently, you should make sure to have no residuals on your clothes and luggage. You should also stop your consumption early before your trip to have no residual in your blood.
+> As for many Asian countries, carrying drugs or even just testing 
+> positive for drug consumption can get you in extremely severe trouble. It
+> includes marijuana. So, if marijuana is legal back in your home country and 
+> you are consuming it frequently, you should make sure to have no residuals on
+> your clothes and luggage. You should also stop your consumption early before 
+> your trip to have no residual in your blood.
 {: .block-danger }
 
 Importantly, you will need to fill an **arrival card** before entering China,
@@ -53,7 +58,7 @@ demanded information is worse preparing in advance:
   - You will have to tick the **reason of stay** amongst various choices. Those
     include "Visiting/Business", "Tourism", "Transit", "Visiting Relatives", 
     "Employment", or "Study". It may not appear with the exact same formulations 
-    when you will fill out the card yourself. Tick what is the most relevant to 
+    when you fill out the card yourself. Tick what is the most relevant to 
     your situation. If, for instance, you are coming for an academic workshop 
     or conference, I would tick "Visiting/Business". If none of the choices in 
     the list seem adequate, you might tick "Others" if proposed. If you are
@@ -69,7 +74,7 @@ demanded information is worse preparing in advance:
     any. In the case of an academic exchange, it refers to the entity or person
     who gave you the invitation letter. Write the name of the institute, 
     university, company, or person who invited you and their address. As for 
-    the previous bullet, ensure that you have this information accessible
+    the previous bullet point, ensure that you have this information accessible
     offline.
 
 The border agent might ask you for further documents to validate the 
@@ -213,7 +218,7 @@ To pay for the subway service, you mostly have three options:
   if you already have [Alipay set up](http://bvieuble.me/blog/2025/chinavisit2/#alipay) 
   for payment by following part two of this guide. In addition, it has the 
   advantage of working with buses and is widely implemented and useable
-  in all major Chinese cities. You can find a good tuto to set up your Alipay 
+  in all major Chinese cities. You can find a good tutorial to set up your Alipay 
   for taking public transport on 
   [The Beijinger](https://www.thebeijinger.com/blog/2024/08/02/welcome-beijing-how-ride-subway) 
   website and you can learn more about how to use Alipay with public transports
@@ -250,9 +255,13 @@ If you are confused and don't know how to use the subway, go to the service cent
 Note that the ticket price varies according to the distance. If you use Alipay or a contactless card payment, it is automatically deducted when you exit the subway or bus. If you buy a ticket at a counter, you must specify your destination carefully and pay the ticket upfront. For instance, you can expect to pay 3-4-5RMB for one travel on the standard lines of the Beijing subway. The airport express lines are more expensive.
 
 
-> ##### ⚠️ Nothing sharp in the subway
+> ##### ⚠️ Nothing sharp in the subway and water bottles
 >
-> Your bags and luggage have to go through a detector each time you take the subway. In particular, knives are not allowed in, so forget about traveling with your Swiss Army knife in the luggage!
+> Your bags and luggage have to go through a detector each time you take the 
+> subway. In particular, knives are not allowed in, so forget about traveling 
+> with your Swiss Army knife in the luggage! Note also that water bottles are 
+> usually tested separately at the entrance of the subway, so they must be taken out of your 
+> bags.
 {: .block-warning }
 
 
@@ -275,12 +284,17 @@ you back your passport.
 > institution, or if you are staying at a relative or friend's place, you and 
 > your host should reach the nearest police station to register within 24 hours
 > of your arrival. Failing to comply with this rule will expose you and your
-> host to trouble... This can also be done online with the proper mobile app. Note
+> host to trouble... Depending on the city you are staying in, this can 
+> sometimes be done online. Note
 > that hotels proceed to the registration without you having to do anything.
 {: .block-danger }
 
 
+## Acknowledgment
 
+Many thanks to 
+[Max Fasi](https://eps.leeds.ac.uk/computing/staff/14034/massimiliano-fasi) for 
+fact-checking this guide and providing me with corrections!
 
 ## List of useful material
 

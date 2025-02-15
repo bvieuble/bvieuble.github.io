@@ -17,9 +17,9 @@ thumbnail: assets/img/blog/china-wall.jpg
 You are a senior or young researcher and have been invited by a peer to give a 
 talk at a Chinese institute or university, to give a class, to attend a 
 conference or a workshop? You wish to accept but wonder if you need to apply 
-for a visa? And if so, what documents do you need for the application? How to 
+for a visa? And if so, what documents you need for the application? How to 
 organize your trip? What you should know before going? How will you sustain 
-yourself when you're there? Say no more, you are at the right place!
+yourself when you're there? Say no more, you are in the right place!
 
 First things first, if you are dealing with a renowned Chinese academic 
 institute, you can sit back and relax, you are in good hands! They know their 
@@ -33,7 +33,7 @@ good tips.
 If you wish to keep up with me, we will cover three main topics which should
 help you get the best experience possible out of your academic visit in China. 
 The first part of my guide, which you are now reading,
-covers your right of entry into mainland Chinese territory. This 
+covers your right of entry into mainland China. This 
 includes your eligibility for visa exemption and, if not eligible, the 
 procedure to apply for a visa for the purpose of an academic visit. If you are
 already up-to-date on visa matters, you can go check out the next parts of the
@@ -43,14 +43,16 @@ list](https://bvieuble.me/blog/2025/chinavisit4).
 ## Visa or not visa?
 
 Ultimately, if you read this post, you are likely NOT to hold a Chinese
-passport or a Chinese residence permit. Hence, you need to carefully check the rules that apply to you to enter mainland Chinese territory. Regulations in the matter have highly fluctuated these last few years, most often in the direction of leveraging or simplifying the requirements. Hence, at the time you read this post, certain information I present might be incomplete or wrong. I therefore strongly recommend checking the regulations presented on the official websites of your government or the websites of the Chinese embassies, consulates, or visa application centers in your country.
+passport or a Chinese residence permit. Hence, you need to carefully check the
+rules that apply to you to enter mainland China. Regulations in the matter have
+highly fluctuated these last few years, most often in the direction of leveraging or simplifying the requirements. Hence, at the time you read this post, certain information I present might be incomplete or wrong. I therefore strongly recommend checking the regulations presented on the official websites of your government or the websites of the Chinese embassies, consulates, or visa application centers in your country.
 
 ### Visa exemption
 
-As of today, if you hold a passport from a country in the European Union, East 
-Asia, Oceania, and more, the chance is you can be exempt from holding a visa 
+As of today, if you hold a passport from certain countries in the European Union, East 
+Asia, Oceania, and more, chances are that you are exempt from holding a visa 
 for academic exchange for a duration of less than 30 days. This would give you
-far enough time to attend most workshops, conferences, or seminars. The most 
+more than enough time to attend most workshops, conferences, or seminars. The most 
 reliable way to know if you are eligible for such an exemption is to check the
 travel information provided by your government or the Chinese embassies in your
 home country. You can also check the [Travel 
@@ -60,12 +62,14 @@ government](https://www.mfa.gov.cn/wjbzwfwpt/kzx/tzgg/202411/t20241130_11535783.
 
 > ##### ✅ Valid purposes of visit for visa exemption
 >
-> The exemptions generally cover entries on mainland Chinese territory for the purpose of business, tourism, family or friends visits, exchange, and transit. Short academic visits fall within the "exchange" classification.
+> The exemptions generally cover entries to mainland China for the purpose of
+> business, tourism, family or friends visits, exchange, and transit. Short 
+> academic visits fall within the "exchange" classification.
 {: .block-tip }
 
 Be careful, being exempt from holding a visa does not mean you can arrive at 
-the border unprepared. You need to be ready to provide to the border agent some 
-proof of the purpose of your visit if asked. In the case of a short academic 
+the border unprepared. You need to be ready to provide the border agent with 
+some proof of the purpose of your visit if asked. In the case of a short academic 
 visit, it falls down to the following documents:
   - A **valid passport** (I mean...).
   - An **invitation letter** from your academic host in China. The letter 
@@ -79,15 +83,19 @@ visit, it falls down to the following documents:
     find are slightly vague. If your academic host provides you with other form 
     of accommodation (e.g., the University owns flats dedicated to host 
     visitors and staffs), I think the host should mention it on the invitation letter 
-    or provide you with another document certifying that they are providing you 
-    with an accommodation. If you stay at a 
-    relative or friend's place, ask them for a letter indicating the address 
-    and the dates of stay as well as their contact information. In addition, 
-    ask them to provide you with a scan of their Chinese ID. Beware that if you
+    and maybe provide you with a filled 
+    [invitation form](https://bio.visaforchina.cn/MAC3_EN/qianzhengyewu/jichuzhishi/changjianwenti/230221174293008384.html).
+    <!-- with another document certifying that they are providing you  -->
+    <!-- with an accommodation.  -->
+  If you stay at a 
+    relative or friend's place, ask them to fill an 
+    [invitation form](https://bio.visaforchina.cn/MAC3_EN/qianzhengyewu/jichuzhishi/changjianwenti/230221174293008384.html) which
+    contains various information including dates of stay, address, and Chinese
+    ID number. Beware that if you
     are not staying in a hotel, you will have to register at the police station
     within 24 hours; more is said about this in section [Hotel](https://bvieuble.me/blog/2025/chinavisit3/#hotel).
 
-It is very recommended to have everything printed and ready to be presented at
+It is strongly recommended that you have everything printed and ready to be presented at
 the border. Note that you may not be asked to show all these 
 documents; this is up to the judgment of the border agent.
 If you wish, you can also complete this list with other documents that might 
@@ -100,12 +108,12 @@ obtain, it certainly won't hurt.
 
 > ##### ⚠️ The PhD student case
 >
-> Beware that a visa exemption does not cover entrance to mainland Chinese territory for the purpose of work, journalism, and **STUDY**. In particular, in China, a PhD student is fully considered a "student". Hence, if you are a PhD student, it should be clarified with your host institution or organism in China if your visit falls within the "study" or "exchange" classification. With the first, you are provided with an admission notice or letter that you should use to apply for a study visa. With the second, you should be provided with an invitation letter and, depending on your nationality, can be exempt from holding a visa.
+> Beware that a visa exemption does not cover entrance to mainland China for the purpose of work, journalism, and **STUDY**. In particular, in China, a PhD student is fully considered a "student". Hence, if you are a PhD student, it should be clarified with your host institution or organism in China if your visit falls within the "study" or "exchange" classification. With the first, you are provided with an admission notice or letter that you should use to apply for a study visa. With the second, you should be provided with an invitation letter and, depending on your nationality, can be exempt from holding a visa.
 {: .block-warning }
 
 ### If you need a visa
 
-There are different kinds of visas you can apply for to enter mainland Chinese territory, and all have different requirements. The type of visa you need depends on the purpose and length of your visit. If you are coming to China for a short academic trip (e.g., invited to give a talk at a seminar, visiting a scholar for collaboration, attending conferences or workshops, etc.), you likely need an F visa. You can find more detailed information about F visa on [Travel China Guide](https://www.travelchinaguide.com/embassy/visa/f-visa.htm) for instance. In addition, a step-by-step visa application guide can be found on [Travel China](https://travelchina.guide/visa/application).
+There are different kinds of visas you can apply for to enter mainland China, and all have different requirements. The type of visa you need depends on the purpose and length of your visit. If you are coming to China for a short academic trip (e.g., invited to give a talk at a seminar, visiting a scholar for collaboration, attending conferences or workshops, etc.), you likely need an F visa. You can find more detailed information about F visa on [Travel China Guide](https://www.travelchinaguide.com/embassy/visa/f-visa.htm) for instance. In addition, a step-by-step visa application guide can be found on [Travel China](https://travelchina.guide/visa/application).
 
 In short, you should be asked to provide the following documents to apply for an F visa:
   - **Passport** with two blank visa pages, plus a photocopy of the passport's bio page.
@@ -142,8 +150,8 @@ about the requirements and documents you need to prepare.
 {: .block-warning }
 
 
-To pass the border you imperatively need to hold a valid visa for the period
-of your academic visit. Pay much attention to the number of entries you need
+To cross the border you imperatively need to hold a valid visa for the period
+of your academic visit. Pay attention to the number of entries you need
 while applying for the visa and the number of entries that have been granted
 once the visa is issued. In particular, any trip to Hong Kong, Macau, or Taiwan
 is an exit from mainland China. Hence, if you take a day break in Hong Kong 
@@ -159,6 +167,7 @@ documents listed in
 ## List of useful material
 
   - Visa exemption: [Travel China](https://travelchina.guide/visa/free), [Chinese government](https://www.mfa.gov.cn/wjbzwfwpt/kzx/tzgg/202411/t20241130_11535783.html)
+  - Invitation form: [Visa for China](https://bio.visaforchina.cn/MAC3_EN/qianzhengyewu/jichuzhishi/changjianwenti/230221174293008384.html)
   - F visa application: [Travel China Guide](https://www.travelchinaguide.com/embassy/visa/f-visa.htm)
   - Tuto for visa application: [Travel China](https://travelchina.guide/visa/application)
   - Applying for a visa online: [Chinese Visa Application Center](https://bio.visaforchina.cn)
