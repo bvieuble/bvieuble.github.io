@@ -101,8 +101,8 @@ emails, internet browsing, checking Google Scholar and GMail, watching videos,
 etc.). However, if your work absolutely requires more usage-heavy access to 
 blocked Western services (e.g., download and sync big files on Dropbox), 
 **reach out for advice** from the scholars working in mainland China who 
-invited you. They are likely to provide you with better advices than what you 
-can find online.
+invited you. They are likely to provide you with better advices and solutions 
+than what you can find online.
 
 > ##### ⚠️ Resilience is key!
 >
@@ -295,21 +295,5 @@ than what is already recommended in your own country.
   - Go back to Part 1 (introdution and visa): [Academic visit in China (1/3)](https://bvieuble.me/blog/2025/chinavisit1)
   - Continue to Part 3 (once arrived): [Academic visit in China (3/3)](https://bvieuble.me/blog/2025/chinavisit3)
   - Print your TODO list: [Academic visit in China (TODO list)](https://bvieuble.me/blog/2025/chinavisit4)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 

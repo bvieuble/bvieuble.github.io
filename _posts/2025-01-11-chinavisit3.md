@@ -248,7 +248,7 @@ If you are confused and don't know how to use the subway, go to the service cent
 > available in the English version of the app. Forget about any receipt if you
 > use contactless payment; all you have is the card payment that should appear 
 > on your bank account's personal space. Your best bet is to buy your ticket at
-> the staffed ticket counter and explicitly ask for a receipt.
+> the staffed ticket counter and explicitly ask for a printed receipt.
 {: .block-tip }
 
 
