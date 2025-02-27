@@ -108,6 +108,14 @@ profiles:
       <p><a href="https://kopanicakova.github.io/">Alena Kopanicakova</a></p><br>
       <p>INPT/ENSEEIHT, ANITI</p>
       <p>Toulouse, France</p>
+  - align: right
+    image: /casanla25/avatar.png
+    content: /casanla25/casanla_chen.md
+    image_circular: true # crops the image to make it circular
+    more_info: >
+      <p><a href="https://xinyechen.com/">Xinye Chen</a></p><br>
+      <p>Sorbonne University</p>
+      <p>Paris, France</p>
   - align: left
     content: /casanla25/casanla_howtocome.md
 ---
