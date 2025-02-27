@@ -50,8 +50,8 @@ profiles:
     image_circular: true # crops the image to make it circular
     more_info: >
       <p><a href="https://www.zhangzk.net/">Zaikun Zhang</a></p><br>
-      <p>Hong Kong Polytechnic University</p>
-      <p>Hong Kong, China</p>
+      <p>Sun Yat-sen University</p>
+      <p>Guangzhou, China</p>
   - align: left
     image: /casanla25/avatar.png
     content: /casanla25/casanla_shao.md
