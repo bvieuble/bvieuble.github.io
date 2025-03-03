@@ -110,6 +110,14 @@ profiles:
       <p>Toulouse, France</p>
   - align: right
     image: /casanla25/avatar.png
+    content: /casanla25/casanla_zou.md
+    image_circular: true # crops the image to make it circular
+    more_info: >
+      <p><a href="https://sites.google.com/view/zouqinmeng/">Qinmeng Zou</a></p><br>
+      <p>Beijing University of Posts and Telecommunications</p>
+      <p>Beijing, China</p>
+  - align: left
+    image: /casanla25/avatar.png
     content: /casanla25/casanla_chen.md
     image_circular: true # crops the image to make it circular
     more_info: >
