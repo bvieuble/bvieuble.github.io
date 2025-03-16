@@ -1,4 +1,4 @@
-<h3 style="text-align: left;font-size:26px !important;">Exploiting low-precision arithmetic in eigensolvers</h3>
+<h3 id="shao" style="text-align: left;font-size:26px !important;">Exploiting low-precision arithmetic in eigensolvers</h3>
 {:data-toc-text="Meiyue Shao"}
 
 In recent years mixed-precision algorithms have received increasing attention 

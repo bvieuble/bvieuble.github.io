@@ -1,4 +1,4 @@
-<h3 style="text-align: left;font-size:26px !important;">Mixed-precision HODLR matrices</h3>
+<h3 id="chen" style="text-align: left;font-size:26px !important;">Mixed-precision HODLR matrices</h3>
 {:data-toc-text="Xinye Chen"}
 
 Hierarchical matrix computations have attracted significant attention in the 

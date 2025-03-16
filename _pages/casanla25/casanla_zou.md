@@ -6,7 +6,7 @@ widely used in solving linear systems and least squares problems. For example,
 the generalized minimal residual method (GMRES) usually employs QR 
 factorization to orthogonalize the basis of Krylov subspace. This talk 
 discusses a class of low-synchronization MGS algorithms, denoted as MGS-LTS,
-which can date back to Bjorck's work in 1969. We give a stability analysis of 
+which can date back to Bjorck's work in 1967. We give a stability analysis of 
 MGS-LTS, proving that the loss of orthogonality of its basic form as well as
 the block and normalization lagging variants is proportional to the condition 
 number. We also discuss the probabilistic tools and investigate the causes of 
