@@ -8,6 +8,7 @@ nav_order: 7
 toc:
   sidebar: left
 map: true
+pretty_table: true
 
 profiles:
   # if you want to include more than one profile, just replicate the following block
@@ -166,9 +167,47 @@ and Systems Science in **room N204** (2nd floor) on **April 23rd and 24th, 2025*
 encourage) to attend the talks, meet our speakers, ask questions, and,
 eventually, start a fruitful collaboration. 
 
-<!-- # Program (TBA) -->
-<!-- {:data-toc-text="Program"} -->
+<!-- ## Program day 1 (April 23rd) -->
 <!---->
+<!-- <br> -->
+<!---->
+<!-- | Time         | Speakers       | -->
+<!-- | :-----------: | :------------ | -->
+<!-- | 8:30 - 8:50    | Welcoming       | -->
+<!-- | 8:50 - 9:00    | Opening Remarks | -->
+<!-- | 9:00 - 9:50    | [Chensong Zhang](#czhang) | -->
+<!-- | 9:50 - 10:40   | [Tomohiro Sogabe](#sogabe) | -->
+<!-- | 10:40 - 11:00  | Coffee break | -->
+<!-- | 11:00 - 11:50  | [Junfeng Yin](#yin) | -->
+<!-- | 12:00 - 14:00  | Lunch break | -->
+<!-- | 14:00 - 14:50  | [Luc Giraud](#giraud) | -->
+<!-- | 14:50 - 15:40  | [Meiyue Shao](#shao) | -->
+<!-- | 15:40 - 16:00  | Coffee break | -->
+<!-- | 15:00 - 16:50  | [Weifeng Liu](#liu) | -->
+<!-- | 16:50 - 17:40  | [Xinye Chen](#chen) | -->
+<!---->
+<!-- <br> -->
+<!---->
+<!-- ## Program day 2 (April 24th) -->
+<!---->
+<!-- <br> -->
+<!---->
+<!-- | Time         | Speakers       | -->
+<!-- | :-----------: | :------------ | -->
+<!-- | 8:30 - 9:00    | Welcoming       | -->
+<!-- | 9:00 - 9:50    | [Chensong Zhang](#czhang) | -->
+<!-- | 9:50 - 10:40   | [Tomohiro Sogabe](#sogabe) | -->
+<!-- | 10:40 - 11:00  | Coffee break | -->
+<!-- | 11:00 - 11:50  | [Junfeng Yin](#yin) | -->
+<!-- | 12:00 - 14:00  | Lunch break | -->
+<!-- | 14:00 - 14:50  | [Luc Giraud](#giraud) | -->
+<!-- | 14:50 - 15:40  | [Meiyue Shao](#shao) | -->
+<!-- | 15:40 - 16:00  | Coffee break | -->
+<!-- | 15:00 - 16:50  | [Weifeng Liu](#liu) | -->
+<!-- | 16:50 - 17:40  | [Xinye Chen](#chen) | -->
+<!-- | 9:50 - 10:40   | [Zaikun Zhang](#zzhang) | -->
+<!---->
+<!-- <br> -->
 
-## Preliminary list of speakers
+## List of speakers
 {:data-toc-text="Speakers"}
