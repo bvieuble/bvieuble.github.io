@@ -180,7 +180,7 @@ Reddit, etc., to troubleshoot and find a solution.
 During your stay, you'll likely need to pay for goods and services on mainland China. It is important to know that the Chinese do not use a bank card as a general means of payment; many shops do not accept it. Cash payment in RMB currency can be used and is reliable, but it is not practical and can sometimes be a bit restrictive. For instance, taxi drivers, small restaurants, or small businesses can accept cash but might not be able to give you the change. Instead, the Chinese use digital payment methods through phone apps like Alipay.
 
 
-<h5 style="text-align: center;"> <em> When in Rome, do as the Romans do! </em> </h5>
+<h5 style="text-align: center;"> <em> When in Rome, pay as the Romans pay! </em> </h5>
 
 Setting up Alipay with one of your bank cards will substantially improve your payment experience in China. However, as evoked previously, this matter should require your attention early because the app will proceed to an identity check. This process simply consists of filling in some basic information and sending a photo of your passport. Upon sending the required information, it may take up to a few hours or days to receive the clearance and finally be able to pay with the app. Alipay may also need phone verifications to register and link a bank card. Hence, if you are uncertain whether you can receive SMS in China, it is important to have your bank card linked before your trip. 
 
