@@ -1,4 +1,4 @@
-<h3 style="text-align: right;font-size:26px !important;">Stability of modified Gram-Schmidt and its low-synchronization variants</h3>
+<h3 id="zou" style="text-align: right;font-size:26px !important;">Stability of modified Gram-Schmidt and its low-synchronization variants</h3>
 {:data-toc-text="Qinmeng Zou"}
 
 Modified Gram-Schmidt (MGS) is a traditional QR factorization process that are
