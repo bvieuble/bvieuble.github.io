@@ -1,6 +1,6 @@
-<!-- ## Poster -->
-<!---->
-<!--  {% include figure.liquid loading="eager" path="assets/img/casanla25/poster.jpg" class="img-fluid rounded z-depth-1" zoomable=true %}  -->
+## Poster
+
+ {% include figure.liquid loading="eager" path="assets/img/casanla25/poster.png" class="img-fluid rounded z-depth-1" zoomable=true %} 
 
 ## How to come?
 
