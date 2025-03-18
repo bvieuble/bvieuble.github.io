@@ -1,3 +1,7 @@
+<!-- ## Poster -->
+<!---->
+<!--  {% include figure.liquid loading="eager" path="assets/img/casanla25/poster.jpg" class="img-fluid rounded z-depth-1" zoomable=true %}  -->
+
 ## How to come?
 
 地址: 北京市海淀区中关村东路55号 邮政编码：100190.

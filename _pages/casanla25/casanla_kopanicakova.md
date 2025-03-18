@@ -1,4 +1,4 @@
-<h3 style="text-align: left;font-size:26px !important;">Towards trustworthy use of scientific machine-learning in large scale numerical simulations</h3>
+<h3 id="kopanicakova" style="text-align: right;font-size:26px !important;">Towards trustworthy use of scientific machine-learning in large scale numerical simulations</h3>
 {:data-toc-text="Alena Kopanicakova"}
 
 Recently, scientific machine learning (SciML) has expanded the capabilities of 
