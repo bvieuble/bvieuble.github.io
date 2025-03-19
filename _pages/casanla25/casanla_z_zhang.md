@@ -1,4 +1,4 @@
-<h3 id="zzhang" style="text-align: right;font-size:26px !important;">Solving 10,000-Dimensional Optimization Problems Using Inaccurate Function Values: An Old Algorithm</h3>
+<h3 id="zzhang" style="text-align: left;font-size:26px !important;">Solving 10,000-Dimensional Optimization Problems Using Inaccurate Function Values: An Old Algorithm</h3>
 {:data-toc-text="Zaikun Zhang"}
 
 We reintroduce a derivative-free subspace optimization framework 

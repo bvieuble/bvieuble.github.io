@@ -15,11 +15,11 @@ profiles:
   # and create one content file for each profile inside _pages/
   - align: right
     image: /casanla25/avatar.png
-    content: /casanla25/casanla_c_zhang.md
+    content: /casanla25/casanla_liu.md
     image_circular: true # crops the image to make it circular
     more_info: >
-      <div align="right"><a href="https://lsec.cc.ac.cn/~zhangcs/">Chensong Zhang</a></div>
-      <div align="right">LSEC, AMSS, Chinese Academy of Sciences</div>
+      <div align="right"><a href="https://www.ssslab.cn/people/weifengliu.html">Weifeng Liu</a></div>
+      <div align="right">University of Petroleum</div>
       <div align="right">Beijing, China</div>
   - align: left
     image: /casanla25/sogabe.jpg
@@ -55,11 +55,11 @@ profiles:
       <div align="right">Shanghai, China</div>
   - align: left
     image: /casanla25/avatar.png
-    content: /casanla25/casanla_liu.md
+    content: /casanla25/casanla_c_zhang.md
     image_circular: true # crops the image to make it circular
     more_info: >
-      <div align="left"><a href="https://www.ssslab.cn/people/weifengliu.html">Weifeng Liu</a></div>
-      <div align="left">University of Petroleum</div>
+      <div align="left"><a href="https://lsec.cc.ac.cn/~zhangcs/">Chensong Zhang</a></div>
+      <div align="left">LSEC, AMSS, Chinese Academy of Sciences</div>
       <div align="left">Beijing, China</div>
   - align: right
     image: /casanla25/chen.png
@@ -70,20 +70,21 @@ profiles:
       <div align="right">Sorbonne University</div>
       <div align="right">Paris, France</div>
   - align: left
-    image: /casanla25/zzhang.png
-    content: /casanla25/casanla_z_zhang.md
+    image: /casanla25/tisseur.jpg
+    content: /casanla25/casanla_tisseur.md
     image_circular: true # crops the image to make it circular
     more_info: >
-      <div align="left"><a href="https://www.zhangzk.net/">Zaikun Zhang</a></div>
-      <div align="left">Sun Yat-sen University</div>
-      <div align="left">Guangzhou, China</div>
+      <div align="left"><a href="https://personal.maths.manchester.ac.uk/tisseur/">Françoise Tisseur</a></div>
+      <div align="left">The University of Manchester</div>
+      <div align="left">Manchester, UK</div>
   - align: right
-    image: /casanla25/li.jpg
-    content: /casanla25/casanla_li.md
+    image: /casanla25/zou.jpg
+    content: /casanla25/casanla_zou.md
     image_circular: true # crops the image to make it circular
     more_info: >
-      <div align="right"><a href="https://pure.bit.edu.cn/en/persons/qingna-li">Qingna Li</a></div>
-      <div align="right">Beijing Institute of Technology</div>
+      <div align="right"><a href="https://sites.google.com/view/zouqinmeng/">Qinmeng Zou</a></div>
+      <div align="right">Beijing University of Posts and
+      Telecommunications</div>
       <div align="right">Beijing, China</div>
   - align: left
     image: /casanla25/avatar.png
@@ -94,21 +95,20 @@ profiles:
       <div align="left">INPT/ENSEEIHT, ANITI</div>
       <div align="left">Toulouse, France</div>
   - align: right
-    image: /casanla25/tisseur.jpg
-    content: /casanla25/casanla_tisseur.md
+    image: /casanla25/zzhang.png
+    content: /casanla25/casanla_z_zhang.md
     image_circular: true # crops the image to make it circular
     more_info: >
-      <div align="right"><a href="https://personal.maths.manchester.ac.uk/tisseur/">Françoise Tisseur</a></div>
-      <div align="right">The University of Manchester</div>
-      <div align="right">Manchester, UK</div>
+      <div align="right"><a href="https://www.zhangzk.net/">Zaikun Zhang</a></div>
+      <div align="right">Sun Yat-sen University</div>
+      <div align="right">Guangzhou, China</div>
   - align: left
-    image: /casanla25/zou.jpg
-    content: /casanla25/casanla_zou.md
+    image: /casanla25/li.jpg
+    content: /casanla25/casanla_li.md
     image_circular: true # crops the image to make it circular
     more_info: >
-      <div align="left"><a href="https://sites.google.com/view/zouqinmeng/">Qinmeng Zou</a></div>
-      <div align="left">Beijing University of Posts and
-      Telecommunications</div>
+      <div align="left"><a href="https://pure.bit.edu.cn/en/persons/qingna-li">Qingna Li</a></div>
+      <div align="left">Beijing Institute of Technology</div>
       <div align="left">Beijing, China</div>
   - align: right
     image: /casanla25/avatar.png
@@ -175,7 +175,7 @@ eventually, start a fruitful collaboration.
 | :-----------: | :------------ |
 | 8:30 - 8:50    | Welcoming       |
 | 8:50 - 9:00    | Opening Remarks |
-| 9:00 - 9:50    | [Chensong Zhang](#czhang) |
+| 9:00 - 9:50    | [Weifeng Liu](#liu) |
 | 9:50 - 10:40   | [Tomohiro Sogabe](#sogabe) |
 | 10:40 - 11:00  | Coffee break |
 | 11:00 - 11:50  | [Junfeng Yin](#yin) |
@@ -183,7 +183,7 @@ eventually, start a fruitful collaboration.
 | 14:00 - 14:50  | [Luc Giraud](#giraud) |
 | 14:50 - 15:40  | [Meiyue Shao](#shao) |
 | 15:40 - 16:00  | Coffee break |
-| 15:00 - 16:50  | [Weifeng Liu](#liu) |
+| 15:00 - 16:50  | [Chensong Zhang](#czhang) |
 | 16:50 - 17:40  | [Xinye Chen](#chen) |
 
 <br>
@@ -195,16 +195,17 @@ eventually, start a fruitful collaboration.
 | Time         | Speakers       |
 | :-----------: | :------------ |
 | 8:30 - 9:00    | Welcoming       |
-| 9:00 - 9:50    | [Zaikun Zhang](#zzhang) |
-| 9:50 - 10:40   | [Qingna Li](#li) |
+| 9:00 - 9:50    | [Françoise Tisseur](#tisseur) |
+| 9:50 - 10:40   | [Qinmeng Zou](#zou) |
 | 10:40 - 11:00  | Coffee break |
 | 11:00 - 11:50  | [Alena Kopanicakova](#kopanicakova) |
 | 12:00 - 14:00  | Lunch break |
-| 14:00 - 14:50  | [Françoise Tisseur](#tisseur) |
-| 14:50 - 15:40  | [Qinmeng Zou](#zou) |
+| 14:00 - 14:50  | [Zaikun Zhang](#zzhang) |
+| 14:50 - 15:40  | [Qingna Li](#li) |
 | 15:40 - 16:00  | Coffee break |
 | 15:00 - 16:50  | [Massimiliano Fasi](#fasi) |
 | 16:50 - 17:40  | [Mantas Mikaitis](#mikaitis) |
+| 17:40 - 17:50  | Closing Remarks |
 
 <br>
 
