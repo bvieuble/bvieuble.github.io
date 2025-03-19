@@ -29,3 +29,13 @@ Closest subway station: Zhichunlu (line 10).
   ]
 }
 ```
+
+<br>
+
+## Our sponsors
+
+- Academy of Mathematics and Systems Science, Chinese Academy of Sciences
+- CAS AMSS-PolyU Joint Laboratory of Applied Mathematics
+- National Key R&D Program of China
+- National Natural Science Foundation of China
+- State Key Laboratory of Mathematical Sciences, AMSS, CAS

@@ -1,4 +1,4 @@
-<h3 id="li" style="text-align: left;font-size:26px !important;">A Fast BB Reduced Minimization Algorithm for Nonnegative Viscosity Optimization in Optimal Damping</h3>
+<h3 id="li" style="text-align: right;font-size:26px !important;">A Fast BB Reduced Minimization Algorithm for Nonnegative Viscosity Optimization in Optimal Damping</h3>
 {:data-toc-text="Qingna Li"}
 
 We consider the fast optimization algorithm for optimal viscosities in damping 

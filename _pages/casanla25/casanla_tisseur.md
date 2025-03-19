@@ -1,4 +1,4 @@
-<h3 id="tisseur" style="text-align: left;font-size:26px !important;">Computing accurate eigenvalues using a mixed-precision Jacobi algorithm <div style="font-size:12px !important;">joint work with N. J. Higham, M. Webb, and Z. Zhou</div></h3>
+<h3 id="tisseur" style="text-align: right;font-size:26px !important;">Computing accurate eigenvalues using a mixed-precision Jacobi algorithm <div style="font-size:12px !important;">joint work with N. J. Higham, M. Webb, and Z. Zhou</div></h3>
 {:data-toc-text="Françoise Tisseur"}
 
 Efforts on developing mixed precision algorithms

@@ -1,4 +1,4 @@
-<h3 id="czhang" style="text-align: left;font-size:26px !important;">Learning-based Multilevel Solvers for Large-Scale Linear Systems</h3>
+<h3 id="czhang" style="text-align: right;font-size:26px !important;">Learning-based Multilevel Solvers for Large-Scale Linear Systems</h3>
 {:data-toc-text="Chensong Zhang"}
 
 This talk presents our efforts on developing learning-based solvers for 
