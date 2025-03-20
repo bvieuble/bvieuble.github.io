@@ -111,7 +111,7 @@ profiles:
       <div align="left">Beijing Institute of Technology</div>
       <div align="left">Beijing, China</div>
   - align: right
-    image: /casanla25/avatar.png
+    image: /casanla25/fasi.jpg
     content: /casanla25/casanla_fasi.md
     image_circular: true # crops the image to make it circular
     more_info: >
