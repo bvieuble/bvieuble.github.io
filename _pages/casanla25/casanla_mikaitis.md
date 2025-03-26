@@ -1,4 +1,4 @@
-<h3 id="mikaitis" style="text-align: right;font-size:26px !important;">Error Analysis of Matrix Multiplication with Narrow Range Floating-Point Arithmetic</h3>
+<h3 id="mikaitis" style="text-align: left;font-size:26px !important;">Error Analysis of Matrix Multiplication with Narrow Range Floating-Point Arithmetic</h3>
 {:data-toc-text="Mantas Mikaitis"}
 
 High-performance computing hardware now supports many different floating-point 
