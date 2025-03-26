@@ -111,19 +111,19 @@ profiles:
       <div align="left">Beijing Institute of Technology</div>
       <div align="left">Beijing, China</div>
   - align: right
-    image: /casanla25/fasi.jpg
-    content: /casanla25/casanla_fasi.md
-    image_circular: true # crops the image to make it circular
-    more_info: >
-      <div align="right"><a href="https://eps.leeds.ac.uk/computing/staff/14034/massimiliano-fasi">Massimiliano Fasi</a></div>
-      <div align="right">University of Leeds</div>
-      <div align="right">Leeds, UK</div>
-  - align: left
     image: /casanla25/mikaitis.jpg
     content: /casanla25/casanla_mikaitis.md
     image_circular: true # crops the image to make it circular
     more_info: >
-      <div align="left"><a href="https://mmikaitis.github.io/">Mantas Mikaitis</a></div>
+      <div align="right"><a href="https://mmikaitis.github.io/">Mantas Mikaitis</a></div>
+      <div align="right">University of Leeds</div>
+      <div align="right">Leeds, UK</div>
+  - align: left
+    image: /casanla25/fasi.jpg
+    content: /casanla25/casanla_fasi.md
+    image_circular: true # crops the image to make it circular
+    more_info: >
+      <div align="left"><a href="https://eps.leeds.ac.uk/computing/staff/14034/massimiliano-fasi">Massimiliano Fasi</a></div>
       <div align="left">University of Leeds</div>
       <div align="left">Leeds, UK</div>
   - align: left
@@ -203,8 +203,8 @@ eventually, start a fruitful collaboration.
 | 14:00 - 14:50  | [Zaikun Zhang](#zzhang) |
 | 14:50 - 15:40  | [Qingna Li](#li) |
 | 15:40 - 16:00  | Coffee break |
-| 15:00 - 16:50  | [Massimiliano Fasi](#fasi) |
-| 16:50 - 17:40  | [Mantas Mikaitis](#mikaitis) |
+| 15:00 - 16:50  | [Mantas Mikaitis](#mikaitis) |
+| 16:50 - 17:40  | [Massimiliano Fasi](#fasi) |
 | 17:40 - 17:50  | Closing Remarks |
 
 <br>

@@ -1,4 +1,4 @@
-<h3 id="fasi" style="text-align: left;font-size:26px !important;">Analysis of Floating-Point Matrix Products Computed via Low-Precision Integer Arithmetic</h3>
+<h3 id="fasi" style="text-align: right;font-size:26px !important;">Analysis of Floating-Point Matrix Products Computed via Low-Precision Integer Arithmetic</h3>
 {:data-toc-text="Massimiliano Fasi"}
 
 Matrix multiplication is arguably a fundamental kernel in scientific computing,
