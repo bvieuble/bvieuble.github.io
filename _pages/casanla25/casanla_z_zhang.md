@@ -23,6 +23,5 @@ the open-source package CM3
 NEWUOAs has been used by Intel in the design of chips, including its flagship
 product Atom P5900.
 
-More information about the framework can be found in the paper \[Z. Zhang, 
-Scalable Derivative-Free Optimization Algorithms With Low-Dimensional Subspace 
-Techniques, arXiv:2501.04536, 2025].
+More information about the framework can be found in the paper: [Scalable Derivative-Free Optimization Algorithms With Low-Dimensional Subspace 
+Techniques](https://arxiv.org/abs/2501.04536).
