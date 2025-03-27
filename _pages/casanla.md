@@ -19,7 +19,7 @@ profiles:
     image_circular: true # crops the image to make it circular
     more_info: >
       <div align="right"><a href="https://www.ssslab.cn/people/weifengliu.html">Weifeng Liu</a></div>
-      <div align="right">University of Petroleum</div>
+      <div align="right">China University of Petroleum-Beijing</div>
       <div align="right">Beijing, China</div>
   - align: left
     image: /casanla25/sogabe.jpg
