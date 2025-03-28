@@ -30,7 +30,7 @@ profiles:
       <div align="left">Nagoya University</div>
       <div align="left">Nagoya, Japan</div>
   - align: right
-    image: /casanla25/avatar.png
+    image: /casanla25/yin.jpg
     content: /casanla25/casanla_yin.md
     image_circular: true # crops the image to make it circular
     more_info: >
