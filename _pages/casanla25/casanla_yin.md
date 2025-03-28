@@ -1,4 +1,4 @@
-<h3 id="yin" style="text-align: left;font-size:26px !important;">Title (TBA)</h3>
+<h3 id="yin" style="text-align: left;font-size:26px !important;">Surrogate hyperplane Bregman–Kaczmarz methods for solving linear inverse problems</h3>
 {:data-toc-text="Junfeng Yin"}
 
-Abstract (TBA)
+Linear inverse problems arise in many practical applications, for instance, compressed sensing, phase retrieval and regularized basis pursuit problem. We propose a residual-based surrogate hyperplane Bregman-Kaczmarz method (RSHBK) for solving this kind of problems. The convergence theory of the proposed method is investigated in details. When the data is contaminated by the independent noise, an adaptive version of our RSHBK method is developed. An adaptive relaxation parameter is derived for optimizing the bound on the expectation error. We demonstrate the efficiency of our proposed methods for both noise-free and independent noise problems by comparing with other state-of-the-art Kaczmarz methods in terms of computation time and convergence rate through synthetic experiments and real-world applications.
