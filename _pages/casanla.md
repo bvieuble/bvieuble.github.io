@@ -54,7 +54,7 @@ profiles:
       <div align="right">Fudan University</div>
       <div align="right">Shanghai, China</div>
   - align: left
-    image: /casanla25/avatar.png
+    image: /casanla25/czhang.jpg
     content: /casanla25/casanla_c_zhang.md
     image_circular: true # crops the image to make it circular
     more_info: >
@@ -183,7 +183,7 @@ eventually, start a fruitful collaboration.
 | 14:00 - 14:50  | [Luc Giraud](#giraud) |
 | 14:50 - 15:40  | [Meiyue Shao](#shao) |
 | 15:40 - 16:00  | Coffee break |
-| 15:00 - 16:50  | [Chensong Zhang](#czhang) |
+| 16:00 - 16:50  | [Chensong Zhang](#czhang) |
 | 16:50 - 17:40  | [Xinye Chen](#chen) |
 
 <br>
@@ -203,7 +203,7 @@ eventually, start a fruitful collaboration.
 | 14:00 - 14:50  | [Zaikun Zhang](#zzhang) |
 | 14:50 - 15:40  | [Qingna Li](#li) |
 | 15:40 - 16:00  | Coffee break |
-| 15:00 - 16:50  | [Mantas Mikaitis](#mikaitis) |
+| 16:00 - 16:50  | [Mantas Mikaitis](#mikaitis) |
 | 16:50 - 17:40  | [Massimiliano Fasi](#fasi) |
 | 17:40 - 17:50  | Closing Remarks |
 
