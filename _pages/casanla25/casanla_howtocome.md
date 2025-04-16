@@ -39,3 +39,7 @@ Closest subway station: Zhichunlu (line 10).
 - National Key R&D Program of China
 - National Natural Science Foundation of China
 - State Key Laboratory of Mathematical Sciences, AMSS, CAS
+
+## Book of abstracts
+
+You can download the program and book of abstracts in PDF format [here](/assets/pdf/casanla/program.pdf).

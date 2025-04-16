@@ -147,7 +147,7 @@ approximations, mixed precision, randomization, or tensor compression.
 The Chinese Academy of Sciences Workshop on Approximate Computing in Numerical 
 Linear Algebra (CAS-ANLA) aims to provide greater exposure to the topic of 
 approximate computing techniques to the local Chinese and Asian scientific 
-community. It will gather outstanding researchers and students from China
+community. It will gather outstanding researchers from China
 working in approximate computing together with some of the best international
 experts in the field. The speakers will illustrate theoretically and
 experimentally the benefit of cutting-edge approximate computing techniques and
@@ -173,8 +173,7 @@ eventually, start a fruitful collaboration.
 
 | Time         | Speakers       |
 | :-----------: | :------------ |
-| 8:30 - 8:50    | Welcoming       |
-| 8:50 - 9:00    | Opening Remarks |
+| 8:30 - 9:00    | Opening Remarks by Weiying Zheng |
 | 9:00 - 9:50    | [Weifeng Liu](#liu) |
 | 9:50 - 10:40   | [Tomohiro Sogabe](#sogabe) |
 | 10:40 - 11:00  | Coffee break |
