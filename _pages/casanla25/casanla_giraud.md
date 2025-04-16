@@ -1,4 +1,4 @@
-<h3 id="giraud" style="text-align: right;font-size:26px !important;">A journey through some numerical linear algebra algorithms with variable accuracy <div style="font-size:12px !important;">joint work with E. Agullo, O. Coulaud, M. Iannacito. M. Issa, G. Marait, M. Rozloznik</div></h3>
+<h3 id="giraud" style="text-align: right;font-size:26px !important;">A journey through some numerical linear algebra algorithms with variable accuracy<div style="font-size:12px !important;">joint work with E. Agullo, O. Coulaud, M. Iannacito. M. Issa, G. Marait, M. Rozloznik</div></h3>
 {:data-toc-text="Luc Giraud"}
 
 In this talk, we will explore the numerical behavior of widely used numerical 
