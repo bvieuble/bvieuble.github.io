@@ -173,7 +173,7 @@ eventually, start a fruitful collaboration.
 
 | Time         | Speakers       |
 | :-----------: | :------------ |
-| 8:30 - 9:00    | Opening Remarks by Weiying Zheng |
+| 8:30 - 9:00    | Opening Remarks by <br> Weiying Zheng and Ya-xiang Yuan |
 | 9:00 - 9:50    | [Weifeng Liu](#liu) |
 | 9:50 - 10:40   | [Tomohiro Sogabe](#sogabe) |
 | 10:40 - 11:00  | Coffee break |
