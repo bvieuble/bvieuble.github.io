@@ -134,6 +134,8 @@ profiles:
 
 <!-- [Custom foo description](#mantas-mikaitis) -->
 
+ {% include figure.liquid loading="eager" path="assets/img/casanla25/group_photo.jpg" class="img-fluid rounded z-depth-1" zoomable=true %} 
+
 Linear algebra kernels and algorithms are prevalent in scientific computing, 
 machine learning, statistics, image processing, and much more. With the 
 ever-increasing scale and complexity of some of those computational problems,
