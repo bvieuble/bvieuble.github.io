@@ -1,4 +1,45 @@
-@article{bhmv24,
+@article{blmv25,
+    bibtex_show={true},
+    selected={true},
+    abbr = {Preprint},
+    journal = {Preprint},
+    slides = {p_gamm25.pdf},
+    title = {Mixed precision strategies for preconditioned GMRES: a comprehensive analysis},
+    author = {Buttari, Alfredo and Liu, Xin and Mary, Théo and Vieublé, Bastien},
+    year = {2025},
+    pdf = {https://hal.science/hal-05071696v1},
+    abstract={The Generalized Minimal Residual method (GMRES) for the solution of 
+    general square linear systems $Ax=b$ is often combined with a preconditioner to
+    improve the convergence speed of the method. Successful mixed precision 
+    implementations for the application of the preconditioner inside GMRES have 
+    been previously proposed: certain strategies prescribe to apply the preconditioner
+    in low precision to reduce overall time and memory consumption, and other 
+    strategies propose to apply the matrix $A$ and the preconditioner in higher 
+    precision to improve robustness and accuracy. These existing studies tend to 
+    focus on one kind of preconditioner combined with one kind of preconditioning 
+    technique (left-, right-, and flexible-preconditioning). In this article, we 
+    wish to unify most of the state-of-the-art mixed precision implementations for 
+    preconditioned GMRES under the same comprehensive theory, give a clear and 
+    exhaustive list of the possible strategies to set the precisions, and explain how
+    these strategies compare numerically. To achieve this, we derive rounding error 
+    analyses with generic preconditioners for the left-, right-, and 
+    flexible-preconditioned GMRES processes in mixed precision and obtain descriptive 
+    bounds for the attainable forward errors of the computed solutions. Specifically, 
+    we substantially improve the sharpness of the right- and flexible-preconditioned 
+    GMRES forward error bounds compared with the existing literature. From the study of
+    these bounds, we discover new meaningful mixed precision implementations that were 
+    not previously known; these new strategies achieve new tradeoffs between the employment 
+    of computationally effective low precision and accuracy. Moreover, we also uncover 
+    critical differences in robustness and accuracy between left-, right-, and 
+    flexible-preconditioning for a same given set of precisions: the choice among the three
+    preconditioning techniques therefore has higher stakes in mixed precision. We 
+    substantiate our theoretical findings with a comprehensive experimental study on random
+    dense and real-life sparse matrices from the SuiteSparse collection with various 
+    preconditioners: low precision LU factorization, incomplete LU, sparse approximate 
+    inverse, and polynomial preconditioners.},
+}
+
+@article{bhmv25,
     bibtex_show={true},
     selected={true},
     abbr = {IMAJNA},
