@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Plots grid
-description: A set of plots spread over a 2x4 grid comparing the norms of two quantities for different matrix and preconditioner properties. 
+description: A set of plots spread over a 2x4 grid comparing the norms of two quantities for different matrix/preconditioner properties. 
 img: assets/img/texfantasy/tex19-front.png
 importance: 1
 category: lua
@@ -22,9 +22,10 @@ category: lua
 % Compiled with LuaLaTeX
 % TeX-command-extra-options: "-shell-escape"
 \documentclass[convert={outext=.png},border=10pt]{standalone}
+\usepackage{fontspec}
+\setmainfont{Roboto}
 \usepackage{pgfplots}
 \pgfplotsset{compat=newest}
-\usepackage{amsmath}
 \usepackage{luacode}
 \usepackage{xcolor}
 
@@ -76,15 +77,13 @@ category: lua
 %
 \begin{tikzpicture}[fg]%
   \begin{luacode*}
-    grid = myutils.get_grid_left_err_matvec(#myconfig.left_err_matvec.plots, 
-                                            myconfig.left_err_matvec.gridcols,
-                                            myconfig.left_err_matvec.xsize, 
-                                            myconfig.left_err_matvec.ysize)
+    grid = myutils.get_grid(#myconfig.plots, myconfig.gridcols,
+                            myconfig.xsize, myconfig.ysize)
 
-    for i = 1, #myconfig.left_err_matvec.plots
+    for i = 1, #myconfig.plots
     do
-      title    = myconfig.left_err_matvec.plots[i][2]
-      plotdata = myconfig.left_err_matvec.plots[i][1]
+      title    = myconfig.plots[i][2]
+      plotdata = myconfig.plots[i][1]
       pathcsv  = "data.csv"
  
       tex.print("\\def\\varplota{"  .. plotdata                     .. "-a}")
@@ -93,8 +92,8 @@ category: lua
       tex.print("\\def\\vartitle{"  .. title                          .. "}")
       tex.print("\\def\\varcoordx{" .. grid.coordx[i]                 .. "}")
       tex.print("\\def\\varcoordy{" .. grid.coordy[i]                 .. "}")
-      tex.print("\\def\\varxsize{"  .. myconfig.left_err_matvec.xsize .. "}")
-      tex.print("\\def\\varysize{"  .. myconfig.left_err_matvec.ysize .. "}")
+      tex.print("\\def\\varxsize{"  .. myconfig.xsize .. "}")
+      tex.print("\\def\\varysize{"  .. myconfig.ysize .. "}")
       tex.print("\\def\\varxlabel{" .. grid.xlabel[i]                 .. "}")
       tex.print("\\def\\varylabel{" .. grid.ylabel[i]                 .. "}")
       tex.print("\\def\\varytick{"  .. grid.ytick[i]                  .. "}")
@@ -105,7 +104,7 @@ category: lua
       tex.print("\\def\\varcolora{" .. myutils.plotstyle.colors[1]  .. "}")
       tex.print("\\def\\varcolorb{" .. myutils.plotstyle.colors[2]  .. "}")
   
-      if i == #myconfig.left_err_matvec.plots then 
+      if i == #myconfig.plots then 
         tex.print("\\def\\varlegendx{" .. grid.legendx .. "}")
         tex.print("\\def\\varlegendy{" .. grid.legendy .. "}")
         tex.print("\\def\\varlegendname{plotlegend}")

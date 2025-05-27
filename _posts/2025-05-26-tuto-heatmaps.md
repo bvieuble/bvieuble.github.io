@@ -170,7 +170,7 @@ on each tile.
 It is generally good practice to keep the Lua scripting out of the .tex file as
 much as possible. For this tutorial, we create a simple Lua module
 in a separate file `utils.lua` containing the function 
-`get_grid_heatmaps(...)`. Based on the inputs provided by the user, this 
+`get_grid(...)`. Based on the inputs provided by the user, this 
 function will provide three main information to the main .tex file:
   - The position of each heatmap in the grid.
   - Tell if the x- and/or y-axis labels should be displayed for a given heatmap.
@@ -183,7 +183,7 @@ The results are passed to the .tex file through the `grid` object, which is a ta
 
 local utils = {}
 
-function utils.get_grid_heatmaps(nbelt, nbcols, relativesize)
+function utils.get_grid(nbelt, nbcols, relativesize)
 
   -- Variables declaration
   local grid = {}
@@ -398,11 +398,10 @@ document (e.g., article, beamer, book, etc.).
   \begin{luacode*}
 
     -- Get the grid information based on the user input parameters in
-    -- config.lua and computed from the function `get_grid_heatmaps(...)`
+    -- config.lua and computed from the function `get_grid(...)`
     -- loaded from utils.lua.
-    grid = myutils.get_grid_heatmaps(#myconfig.plots, 
-                                     myconfig.gridcols,
-                                     myconfig.relativesize)
+    grid = myutils.get_grid(#myconfig.plots, myconfig.gridcols,
+                            myconfig.relativesize)
 
     -- Loop over the heatmaps
     for i = 1, #myconfig.plots
@@ -525,7 +524,7 @@ Finally, we enter the definition of the TikZpicture which is fully automated by 
 ```
 We first call 
 ```lua
-grid = myutils.get_grid_heatmaps(#myconfig.plots, myconfig.gridcols, myconfig.relativesize)
+grid = myutils.get_grid(#myconfig.plots, myconfig.gridcols, myconfig.relativesize)
 ```
 which [computes the grid layout](#compute-the-grid-layout-with-lua) based on
 the [user input parameters of the config file](#lua-based-config-file). With 
@@ -679,5 +678,5 @@ other examples:
 </div>
 <div class="caption">
   Other figures of the TeXFantasy collection using Lua. Click on the image to
-  see to the full plot.
+  see the full plot.
 </div>
