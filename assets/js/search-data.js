@@ -162,6 +162,9 @@ ninja.data = [{
           section: "News",},{id: "news-new-preprint-it-s-called-mixed-precision-strategies-for-preconditioned-gmres-a-comprehensive-analysis-you-can-find-the-full-pdf-version-here",
           title: 'NEW PREPRINT!!! It’s called “Mixed precision strategies for preconditioned GMRES: a comprehensive analysis”,...',
           description: "",
+          section: "News",},{id: "news-new-latex-tuto-in-this-tuto-we-learn-how-to-draw-efficiently-a-grid-of-heatmaps-using-pgfplots-and-lua-you-can-check-it-out-here",
+          title: 'NEW LaTeX tuto!!! In this tuto we learn how to draw efficiently a...',
+          description: "",
           section: "News",},{id: "texfantasy-plot-gif",
           title: 'Plot (gif)',
           description: "An animated plot representing the percentage of convergence according to the condition number for different algorithms.",
@@ -192,8 +195,8 @@ ninja.data = [{
           description: "A bar plot representing the execution time and the memory consumption for different threshold parameters.",
           section: "Texfantasy",handler: () => {
               window.location.href = "/texfantasy/15_tex/";
-            },},{id: "texfantasy-plot",
-          title: 'Plot',
+            },},{id: "texfantasy-plots",
+          title: 'Plots',
           description: "A plot representing the convergence of mixed precision restarted GMRES for different set of precisions and matrices.",
           section: "Texfantasy",handler: () => {
               window.location.href = "/texfantasy/16_tex/";
@@ -207,11 +210,21 @@ ninja.data = [{
           description: "Heatmap plots spread over a 3x3 grid and representing the number of iterations for different variants of an algorithm.",
           section: "Texfantasy",handler: () => {
               window.location.href = "/texfantasy/18_tex/";
+            },},{id: "texfantasy-plots-grid",
+          title: 'Plots grid',
+          description: "A set of plots spread over a 2x4 grid comparing the norms of two quantities for different matrix and preconditioner properties.",
+          section: "Texfantasy",handler: () => {
+              window.location.href = "/texfantasy/19_tex/";
             },},{id: "texfantasy-performance-profile",
           title: 'Performance profile',
           description: "A performance profile plot comparing the number of iterations of seven algorithms.",
           section: "Texfantasy",handler: () => {
               window.location.href = "/texfantasy/1_tex/";
+            },},{id: "texfantasy-plots",
+          title: 'Plots',
+          description: "Plots representing the convergence of the left-, right-, and flexible-preconditioned GMRES errors.",
+          section: "Texfantasy",handler: () => {
+              window.location.href = "/texfantasy/20_tex/";
             },},{id: "texfantasy-bar-plot",
           title: 'Bar plot',
           description: "A bar plot representing the memory consumption of three algorithms over different problems.",
@@ -222,8 +235,8 @@ ninja.data = [{
           description: "A scatter plot representing the condition numbers of SuiteSparse matrices after scaling.",
           section: "Texfantasy",handler: () => {
               window.location.href = "/texfantasy/3_tex/";
-            },},{id: "texfantasy-scatter-plot",
-          title: 'Scatter plot',
+            },},{id: "texfantasy-scatter-plots-grid",
+          title: 'Scatter plots grid',
           description: "A scatter plot displaying the error after convergence of six algorithms on various SuiteSparse problems.",
           section: "Texfantasy",handler: () => {
               window.location.href = "/texfantasy/4_tex/";
