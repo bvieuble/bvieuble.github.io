@@ -149,10 +149,6 @@
 146
 147
 148
-149
-150
-151
-152
 </pre></td> <td class="code"><pre><span class="c">%%% Full, compilable sources including data files are on Github: </span>
 <span class="c">%%% https://github.com/bvieuble/TeXFantasy/tree/main/plots/fig4</span>
 <span class="c">%%% Appears in my article ``Mixed precision strategies for preconditioned </span>
@@ -235,56 +231,52 @@
 <span class="c">%</span>
 <span class="nt">\begin{tikzpicture}</span>[fg]
   <span class="nt">\begin{luacode*}</span> 
-      grid = myutils.get<span class="p">_</span>grid<span class="p">_</span>cvg<span class="p">_</span>sparse(myconfig.cvg<span class="p">_</span>sparse.title,
-                                         myconfig.cvg<span class="p">_</span>sparse.xsize, 
-                                         myconfig.cvg<span class="p">_</span>sparse.ysize)
+      grid = myutils.get<span class="p">_</span>grid(myconfig.title, myconfig.xsize, myconfig.ysize)
 
-      left<span class="p">_</span>right<span class="p">_</span>flex = <span class="p">{</span>myconfig.cvg<span class="p">_</span>sparse.left, myconfig.cvg<span class="p">_</span>sparse.right, 
-                         myconfig.cvg<span class="p">_</span>sparse.flexible<span class="p">}</span>
+      left<span class="p">_</span>right<span class="p">_</span>flex = <span class="p">{</span>myconfig.left, myconfig.right, myconfig.flexible<span class="p">}</span>
 
       for j = 1, #left<span class="p">_</span>right<span class="p">_</span>flex
       do
         kind = left<span class="p">_</span>right<span class="p">_</span>flex[j]
 
-        pathcsv = "./data/" .. myconfig.cvg<span class="p">_</span>sparse.matrix .. "/" .. 
-                  kind.dircsv .. "/" .. kind.csv .. ".csv"
+        pathcsv = "./data/" .. myconfig.matrix .. "/" .. kind.csv 
             
         line<span class="p">_</span>plots = ""
         mark<span class="p">_</span>plots = ""
         legend<span class="p">_</span>plots = ""
         legend     = "<span class="k">\\</span>legend<span class="p">{</span>"
 
-        for i = 1, #kind.plots
+        for i = 1, #myconfig.plots
         do
             local line, mark, color = myutils.get<span class="p">_</span>style()
             line<span class="p">_</span>plots = line<span class="p">_</span>plots .. 
                 "<span class="k">\\</span>varplotline<span class="p">{</span>" .. line .. "<span class="p">}</span>" ..
                 "<span class="p">{</span>" .. color .. "<span class="p">}</span>" ..
-                "<span class="p">{</span>" .. kind.plots[i] .. "<span class="p">}</span> "
+                "<span class="p">{</span>" .. myconfig.plots[i] .. "<span class="p">}</span> "
 
             mark<span class="p">_</span>plots = mark<span class="p">_</span>plots .. 
                 "<span class="k">\\</span>varplotmark<span class="p">{</span>" .. mark .. "<span class="p">}</span>" ..
                 "<span class="p">{</span>" .. color .. "<span class="p">}</span>" ..
-                "<span class="p">{</span>" .. kind.plots[i] .. "-rstrt" .. "<span class="p">}</span> "
+                "<span class="p">{</span>" .. myconfig.plots[i] .. "-rstrt" .. "<span class="p">}</span> "
 
             legend<span class="p">_</span>plots = legend<span class="p">_</span>plots .. 
                 "<span class="k">\\</span>varplotlegend<span class="p">{</span>" .. mark .. "<span class="p">}</span>" ..
                 "<span class="p">{</span>" .. line .. "<span class="p">}</span>" .. "<span class="p">{</span>" .. color .. "<span class="p">}</span> " 
 
-            legend = legend .. "<span class="k">\\</span>textsc<span class="p">{</span>" .. kind.plots[i] ..
+            legend = legend .. "<span class="k">\\</span>textsc<span class="p">{</span>" .. myconfig.plots[i] ..
                 "<span class="p">}</span>" .. ", "
         end
         legend     = legend .. "<span class="p">}</span>"
 
-        if myconfig.cvg<span class="p">_</span>sparse.header then
+        if myconfig.header then
             tex.print("<span class="k">\\</span>def<span class="k">\\</span>vartitle<span class="p">{</span>"   .. grid.title[j] .. "<span class="p">}</span>")
         else
             tex.print("<span class="k">\\</span>def<span class="k">\\</span>vartitle<span class="p">{</span> <span class="p">{}</span> <span class="p">}</span>")
         end
 
-        tex.print("<span class="k">\\</span>def<span class="k">\\</span>varxsize<span class="p">{</span>"   .. myconfig.cvg<span class="p">_</span>sparse.xsize .. "<span class="p">}</span>")
-        tex.print("<span class="k">\\</span>def<span class="k">\\</span>varysize<span class="p">{</span>"   .. myconfig.cvg<span class="p">_</span>sparse.ysize .. "<span class="p">}</span>")
-        tex.print("<span class="k">\\</span>def<span class="k">\\</span>varmaxit<span class="p">{</span>"   .. myconfig.cvg<span class="p">_</span>sparse.maxit .. "<span class="p">}</span>")
+        tex.print("<span class="k">\\</span>def<span class="k">\\</span>varxsize<span class="p">{</span>"   .. myconfig.xsize .. "<span class="p">}</span>")
+        tex.print("<span class="k">\\</span>def<span class="k">\\</span>varysize<span class="p">{</span>"   .. myconfig.ysize .. "<span class="p">}</span>")
+        tex.print("<span class="k">\\</span>def<span class="k">\\</span>varmaxit<span class="p">{</span>"   .. myconfig.maxit .. "<span class="p">}</span>")
         tex.print("<span class="k">\\</span>def<span class="k">\\</span>varcoordx<span class="p">{</span>"  .. grid.coordx[j]            .. "<span class="p">}</span>")
         tex.print("<span class="k">\\</span>def<span class="k">\\</span>varcoordy<span class="p">{</span>"  .. grid.coordy[j]            .. "<span class="p">}</span>")
         tex.print("<span class="k">\\</span>def<span class="k">\\</span>varytick<span class="p">{</span>"   .. grid.ytick[j]             .. "<span class="p">}</span>")
@@ -297,7 +289,7 @@
         tex.print("<span class="k">\\</span>cvgsparse")
       end
 
-      if myconfig.cvg<span class="p">_</span>sparse.header then
+      if myconfig.header then
         tex.print("<span class="k">\\</span>def<span class="k">\\</span>varlegendx<span class="p">{</span>" .. grid.legendx .. "<span class="p">}</span>")
         tex.print("<span class="k">\\</span>def<span class="k">\\</span>varlegendy<span class="p">{</span>" .. grid.legendy .. "<span class="p">}</span>")
         tex.print("<span class="k">\\</span>ref<span class="p">{</span>plotlegend<span class="p">}</span>")

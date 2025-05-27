@@ -212,7 +212,7 @@ ninja.data = [{
               window.location.href = "/texfantasy/18_tex/";
             },},{id: "texfantasy-plots-grid",
           title: 'Plots grid',
-          description: "A set of plots spread over a 2x4 grid comparing the norms of two quantities for different matrix and preconditioner properties.",
+          description: "A set of plots spread over a 2x4 grid comparing the norms of two quantities for different matrix/preconditioner properties.",
           section: "Texfantasy",handler: () => {
               window.location.href = "/texfantasy/19_tex/";
             },},{id: "texfantasy-performance-profile",
