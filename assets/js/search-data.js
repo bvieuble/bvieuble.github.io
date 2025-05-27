@@ -44,7 +44,18 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/casanla/";
           },
-        },{id: "post-academic-visit-in-china-todo-list",
+        },{id: "post-latex-tuto-heatmaps-grid-with-lua",
+      
+        title: "LaTeX tuto - Heatmaps grid with Lua",
+      
+      description: "Learn to draw a grid of heatmaps using PGFPlots and Lua.",
+      section: "Posts",
+      handler: () => {
+        
+          window.location.href = "/blog/2025/tuto-heatmaps/";
+        
+      },
+    },{id: "post-academic-visit-in-china-todo-list",
       
         title: "Academic visit in China (TODO list)",
       
@@ -191,6 +202,11 @@ ninja.data = [{
           description: "An illustration explaining floating-point computation.",
           section: "Texfantasy",handler: () => {
               window.location.href = "/texfantasy/17_tex/";
+            },},{id: "texfantasy-heatmaps-grid-tuto",
+          title: 'Heatmaps grid (tuto)',
+          description: "Heatmap plots spread over a 3x3 grid and representing the number of iterations for different variants of an algorithm.",
+          section: "Texfantasy",handler: () => {
+              window.location.href = "/texfantasy/18_tex/";
             },},{id: "texfantasy-performance-profile",
           title: 'Performance profile',
           description: "A performance profile plot comparing the number of iterations of seven algorithms.",
