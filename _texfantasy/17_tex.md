@@ -18,8 +18,6 @@ category: illustrations
 %%% TeX-command-extra-options: "-shell-escape"
 %%% Original illustration in: https://jasss.soc.surrey.ac.uk/9/4/4.html
 \documentclass[convert={outext=.png},border=10pt]{standalone}
-% \usepackage{fontspec}
-% \setmainfont{Roboto Light}
 \usepackage{tikz}
 \usetikzlibrary{calc,positioning,shapes.geometric,arrows.meta}
 \usepackage{amsmath}

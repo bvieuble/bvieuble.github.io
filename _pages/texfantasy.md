@@ -5,7 +5,7 @@ permalink: /texfantasy/
 description: Gallery of LaTeX figures and tables.
 nav: true
 nav_order: 3
-display_categories: [plots,illustrations,tables]
+display_categories: [plots,lua,illustrations,tables]
 horizontal: false
 ---
 TeXFantasy is a gallery of Latex figures that I used for various documents, 

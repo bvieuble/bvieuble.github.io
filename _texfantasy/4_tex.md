@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Scatter plot
+title: Scatter plots grid
 description: A scatter plot displaying the error after convergence of six algorithms on various SuiteSparse problems. 
 img: assets/img/texfantasy/tex4-front.png
 importance: 1

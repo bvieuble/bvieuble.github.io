@@ -18,10 +18,10 @@ thumbnail: assets/img/texfantasy/tuto_heatmaps_lua/front2.png
 
 ## Tutorial: use Lua to automate a grid of heatmaps
 
-Consider the above $$3\times 3$$ grid of nine heatmaps, where each heatmap represents the 
-number of iterations across various values of $$\kappa(A)$$ and $$\kappa(M)$$ 
-for a given variant of a numerical algorithm (e.g., L-DSD, F-DBD, or R-SBS as 
-displayed in the figure). A relatively naive way to draw this plot would be to 
+Consider the above $$3\times 3$$ grid of heatmaps, where each heatmap represents the 
+number of iterations according to $$\kappa(A)$$ and $$\kappa(M)$$ 
+for a given variant of a numerical algorithm (e.g., L-DSD, F-DBD, or R-SBS). A
+relatively naive way to draw this plot would be to 
 write a dedicated PGFPlots script for each of the nine heatmaps. 
 As you can imagine, this approach has some big limitations. More specifically:
   - If you need to change the style of the heatmaps, you need to propagate the
@@ -38,7 +38,8 @@ slight variations of style; for instance, the labels of the x- and/or y-axis may
 may not be diplayed depending on the position of the heatmap in the grid. In addition, we want 
 a convenient way to set different options for generating the grid. 
 Specifically, we want to be able to change the grid layout (not necessarily 
-$$3\times 3$$), the plot's size, or the sources of the data.
+$$3\times 3$$), the heatmaps' size, or the sources of the data through user
+input parameters.
 
 **Source code for the tuto:** the full compilable sources of the tuto can be 
 [downloaded from github](https://github.com/bvieuble/TeXFantasy/tree/main/heatmaps/fig1). 
@@ -70,13 +71,12 @@ some form of automation. Notably:
   - Given a grid layout and the size of the heatmaps, we need to compute the 
   position of each heatmap in the figure, accounting for the spacing between 
   two heatmaps.
-  - Given a grid layout and the size of the heatmaps, we need to compute the 
-  position and size of the colorbar.
+  - We need to compute the position and size of the colorbar.
   - We need to decide which heatmap will display tick labels on the x- and 
   y-axes. In our figure, we display only x-axis labels for the heatmaps at 
   the very bottom, and we display only the y-axis labels for the heatmaps at 
   the very left of the grid. This allows us to save space and
-  render a figure which is more compact and more suited for scientific journal.
+  render a figure which is more compact and more suited for scientific journals.
 
 
 <h5 style="text-align: center;"> <em> This requires some scripting! </em> </h5>
@@ -112,7 +112,7 @@ local config = {}
 
 config.gridcols = 3
 config.relativesize = .31
-config.dircsv = "./data/csv/heatmaps"
+config.dircsv = "./data"
 config.plots = {
   {"left_sbs", "\\textsc{l-sbs}"},
   {"right_sbs", "\\textsc{r-sbs}"},
@@ -148,7 +148,7 @@ input parameters:
   each heatmap to be displayed in the top right corner of the plot (e.g., L-DSD, F-DBD, or 
   R-SBS).
 
-Our data directory `dircsv`, containing the heatmaps' plot data, looks as follows:
+Our data directory `dircsv` looks as follows:
 ```
 dircsv
 ├── bounds
@@ -262,20 +262,19 @@ end
 return utils
 {% endhighlight %}
 
-
-
-
-
-
-
-
 ### Overview of the main LuaLaTeX code
 
-We present the main LuaLaTeX code below that will generate the grid of heatmaps. One can compile the figure with
+We present the main LuaLaTeX code below that will generate the grid of 
+heatmaps. One can compile the figure with
 ```bash
 lualatex --shell-escape heatmaps.tex
 ```
-The option `--shell-escape` is not essential and is only used to generate a .png alongside the .pdf. The overall is embedded in a `standalone` LaTeX document class, which is generally the way to go to draw and generate figures outside of a main LaTeX document. Through the `\includestandalone{figure}` command, it is also straightforward to embed this figure into another LaTeX document (e.g., article, beamer, book, etc.).
+The option `--shell-escape` is not essential and is only used to generate a 
+.png alongside the .pdf. The overall is embedded in a `standalone` LaTeX 
+document class, which is generally the way to go to draw and generate figures 
+outside of a main LaTeX document. Through the `\includestandalone{figure}` 
+command, it is also straightforward to embed this figure into another LaTeX 
+document (e.g., article, beamer, book, etc.).
 
 {% highlight latex linenos %}
 % figure.tex
@@ -442,6 +441,7 @@ The option `--shell-escape` is not essential and is only used to generate a .png
 
     -- Generate the colorbar
     tex.print("\\heatcolorbar")
+
   \end{luacode*}
 \end{tikzpicture}%
 \end{document}
@@ -580,6 +580,19 @@ tex.print("\\def\\varcbarsizeh{"  .. grid.cbarsizeh .. "}")
 
 tex.print("\\heatcolorbar")
 ```
+<h5 style="text-align: center;"> <em> With this approach we keep as much as
+possible the LaTeX instructions outside of Lua scripts, and vice versa. </em> </h5>
+<br>
+The overlap between LaTeX and Lua is confined to the environment
+```latex
+\begin{tikzpicture}[fg]
+  \begin{luacode*}
+    % [...]
+  \end{luacode*}
+\end{tikzpicture}
+```
+where we orchestrate the interactions between the user input parameters, the
+Lua logic, and the style of the plots expressed in LaTeX.
 
 ### Examples of run
 
@@ -587,8 +600,6 @@ Generating different grids of heatmaps requires only changing the parameters of
 the `config.lua` file.
 
 #### Example 1
-
-Example with four heatmaps in one row.
 
 {% highlight lua linenos %}
 -- config.lua
@@ -614,10 +625,11 @@ return config
         {% include figure.liquid loading="eager" path="/assets/img/texfantasy/tuto_heatmaps_lua/example1.png" title="example image" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
+<div class="caption">
+    Example with four heatmaps in one row.
+</div>
 
 #### Example 2
-
-Example with a $$2\times 2$$ grid.
 
 {% highlight lua linenos %}
 -- config.lua
@@ -643,35 +655,29 @@ return config
         {% include figure.liquid loading="eager" path="/assets/img/texfantasy/tuto_heatmaps_lua/example2.png" title="example image" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
+<div class="caption">
+    Example with a two by two grid.
+</div>
 
-#### Example 3
+### Other Lua-powered figures
 
-Example with one big heatmap of size `0.7\linewidth`. Because the police size
-is fixed and do not scale with the heatmap, there is a proporition issue.
-Depending on the use case, one may want to scale the police size according to
-the heatmap. This could be done by revisiting the code presented previously.
-However, if the figure is supposed to be embedded in a LaTeX document (e.g.,
-article, book, beamer, etc.), it is often preferable for visual homogeneity to
-match the police sizes of the document.
+The same system combining Lua config file and Lua scripts with a TikZ/PGFPlots 
+project can be used to draw many different scientific figures. Find below a few
+other examples:
 
-{% highlight lua linenos %}
--- config.lua
-
-local config = {}
-
-config.gridcols = 1
-config.relativesize = .7
-config.dircsv = "./data/csv/heatmaps"
-config.plots = {
-  {"left_sbs", "\\textsc{l-sbs}"},
-}
-
-return config
-{% endhighlight %}
-
-
-<div class="row">
+<div class="row mt-3">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="/assets/img/texfantasy/tuto_heatmaps_lua/example3.png" title="example image" class="img-fluid rounded z-depth-1" %}
+      <a href="http://bvieuble.me/texfantasy/19_tex/">
+        {% include figure.liquid loading="eager" path="assets/img/texfantasy/tex19-front.png" class="img-fluid rounded z-depth-1" %}
+      </a>
     </div>
+    <div class="col-sm mt-3 mt-md-0">
+      <a href="http://bvieuble.me/texfantasy/20_tex/">
+        {% include figure.liquid loading="eager" path="assets/img/texfantasy/tex20-front.png" class="img-fluid rounded z-depth-1" %}
+      </a>
+    </div>
+</div>
+<div class="caption">
+  Other figures of the TeXFantasy collection using Lua. Click on the image to
+  see to the full plot.
 </div>
