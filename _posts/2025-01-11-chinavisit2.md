@@ -3,7 +3,7 @@ layout: post
 title: Academic visit in China (2/3)
 date: 2025-02-10 00:01:00
 description: Everything you need to know about preparing your short academic visit in China. Part 2/3 - Internet, payments, and other essentials.
-tags: china travel visit
+tags: china travel
 categories: chinalife
 thumbnail: assets/img/blog/temple-heaven.jpg
 ---
