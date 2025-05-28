@@ -287,6 +287,7 @@ document (e.g., article, beamer, book, etc.).
 \usepackage{luacode}
 
 \definecolor{fg}{RGB}{150,150,150} % Foreground color
+\pgfplotsset{filter discard warning=false}
 
 \begin{document}
 %
@@ -311,12 +312,6 @@ document (e.g., article, beamer, book, etc.).
 \newcommand{\heatmap}
 { %
   \begin{axis}[
-    enlarge x limits={abs=0.5},
-    enlarge y limits={abs=0.},
-    grid=minor,
-    tick style={draw=none}, % Hide the ticks
-    minor grid style={fg,very thin},
-    axis on top,
     % x-axis style
     minor xtick={1.5,2.5,...,16.5},
     x label style={font=\normalsize},
@@ -329,6 +324,7 @@ document (e.g., article, beamer, book, etc.).
     },
     x tick label style={font=\small},
     xlabel=\varxlabel, % Recover the x-axis label from macro
+    enlarge x limits={abs=0.},
     % y-axis style
     minor ytick={1.5,2.5,...,16.5},
     y label style={at={(axis description cs:-0.15,0.5)},rotate=0,font=\normalsize},
@@ -341,6 +337,12 @@ document (e.g., article, beamer, book, etc.).
     },
     y tick label style={font=\small,rotate=90},
     ylabel=\varylabel, % Recover the y-axis label from macro
+    enlarge y limits={abs=0.},
+    % Other style
+    grid=minor,
+    tick style={draw=none}, % Hide the ticks
+    minor grid style={fg,very thin},
+    axis on top,
     mesh/ordering=y varies, 
     unbounded coords=jump,
     height=\varsize\linewidth, % Set the size (height and width) from macro
@@ -356,11 +358,11 @@ document (e.g., article, beamer, book, etc.).
     at={(\varcoordx,\varcoordy)}, % Recover the position of the heatmap from
                                   % macro
   ]%
-  \addplot[matrix plot*,mesh/cols=17,point meta=explicit]
+  \addplot[matrix plot*,mesh/rows=17,point meta=explicit]
       table[meta expr=lg10(\thisrow{it}),col sep=comma]
       {\vardatait}; % Obtain the data path from macro
   \addplot[white,only marks,mark=*,mark size=0.75pt] 
-      table[col sep=comma] {\vardatabounds};
+      table[col sep=comma] {\vardatabounds}; % Obtain the data path from macro
   \end{axis}
 }%
 %
@@ -386,8 +388,7 @@ document (e.g., article, beamer, book, etc.).
        at={(\varcbarx\linewidth,\varcbary\linewidth)}, 
        width=\varcbarsizew\linewidth,
        anchor=center, % The position of the colorbar defined with `at` is now
-                      % based on the center of the figure rather than the left
-                      % bottom corner
+       % based on the center of the figure rather than the left bottom corner
     },
     colorbar/width=\varcbarsizeh\linewidth,
     colormap access=map,
@@ -398,7 +399,7 @@ document (e.g., article, beamer, book, etc.).
   \begin{luacode*}
 
     -- Get the grid information based on the user input parameters in
-    -- config.lua and computed from the function `get_grid(...)`
+    -- config.lua and computed from the function `get_grid_heatmaps(...)`
     -- loaded from utils.lua.
     grid = myutils.get_grid(#myconfig.plots, myconfig.gridcols,
                             myconfig.relativesize)
