@@ -386,6 +386,7 @@
 165
 166
 167
+168
 </pre></td> <td class="code"><pre><span class="c">% figure.tex</span>
 
 <span class="k">\documentclass</span><span class="na">[convert={outext=.png},border=10pt]</span><span class="p">{</span>standalone<span class="p">}</span>
@@ -396,6 +397,7 @@
 <span class="k">\usepackage</span><span class="p">{</span>luacode<span class="p">}</span>
 
 <span class="k">\definecolor</span><span class="p">{</span>fg<span class="p">}{</span>RGB<span class="p">}{</span>150,150,150<span class="p">}</span> <span class="c">% Foreground color</span>
+<span class="k">\pgfplotsset</span><span class="p">{</span>filter discard warning=false<span class="p">}</span>
 
 <span class="nt">\begin{document}</span>
 <span class="c">%</span>
@@ -420,12 +422,6 @@
 <span class="k">\newcommand</span><span class="p">{</span><span class="k">\heatmap</span><span class="p">}</span>
 <span class="p">{</span> <span class="c">%</span>
   <span class="nt">\begin{axis}</span>[
-    enlarge x limits=<span class="p">{</span>abs=0.5<span class="p">}</span>,
-    enlarge y limits=<span class="p">{</span>abs=0.<span class="p">}</span>,
-    grid=minor,
-    tick style=<span class="p">{</span>draw=none<span class="p">}</span>, <span class="c">% Hide the ticks</span>
-    minor grid style=<span class="p">{</span>fg,very thin<span class="p">}</span>,
-    axis on top,
     <span class="c">% x-axis style</span>
     minor xtick=<span class="p">{</span>1.5,2.5,...,16.5<span class="p">}</span>,
     x label style=<span class="p">{</span>font=<span class="k">\normalsize</span><span class="p">}</span>,
@@ -438,6 +434,7 @@
     <span class="p">}</span>,
     x tick label style=<span class="p">{</span>font=<span class="k">\small</span><span class="p">}</span>,
     xlabel=<span class="k">\varxlabel</span>, <span class="c">% Recover the x-axis label from macro</span>
+    enlarge x limits=<span class="p">{</span>abs=0.<span class="p">}</span>,
     <span class="c">% y-axis style</span>
     minor ytick=<span class="p">{</span>1.5,2.5,...,16.5<span class="p">}</span>,
     y label style=<span class="p">{</span>at=<span class="p">{</span>(axis description cs:-0.15,0.5)<span class="p">}</span>,rotate=0,font=<span class="k">\normalsize</span><span class="p">}</span>,
@@ -450,6 +447,12 @@
     <span class="p">}</span>,
     y tick label style=<span class="p">{</span>font=<span class="k">\small</span>,rotate=90<span class="p">}</span>,
     ylabel=<span class="k">\varylabel</span>, <span class="c">% Recover the y-axis label from macro</span>
+    enlarge y limits=<span class="p">{</span>abs=0.<span class="p">}</span>,
+    <span class="c">% Other style</span>
+    grid=minor,
+    tick style=<span class="p">{</span>draw=none<span class="p">}</span>, <span class="c">% Hide the ticks</span>
+    minor grid style=<span class="p">{</span>fg,very thin<span class="p">}</span>,
+    axis on top,
     mesh/ordering=y varies, 
     unbounded coords=jump,
     height=<span class="k">\varsize\linewidth</span>, <span class="c">% Set the size (height and width) from macro</span>
@@ -465,11 +468,11 @@
     at=<span class="p">{</span>(<span class="k">\varcoordx</span>,<span class="k">\varcoordy</span>)<span class="p">}</span>, <span class="c">% Recover the position of the heatmap from</span>
                                   <span class="c">% macro</span>
   ]<span class="c">%</span>
-  <span class="k">\addplot</span><span class="na">[matrix plot*,mesh/cols=17,point meta=explicit]</span>
+  <span class="k">\addplot</span><span class="na">[matrix plot*,mesh/rows=17,point meta=explicit]</span>
       table[meta expr=lg10(<span class="k">\thisrow</span><span class="p">{</span>it<span class="p">}</span>),col sep=comma]
       <span class="p">{</span><span class="k">\vardatait</span><span class="p">}</span>; <span class="c">% Obtain the data path from macro</span>
   <span class="k">\addplot</span><span class="na">[white,only marks,mark=*,mark size=0.75pt]</span> 
-      table[col sep=comma] <span class="p">{</span><span class="k">\vardatabounds</span><span class="p">}</span>;
+      table[col sep=comma] <span class="p">{</span><span class="k">\vardatabounds</span><span class="p">}</span>; <span class="c">% Obtain the data path from macro</span>
   <span class="nt">\end{axis}</span>
 <span class="p">}</span><span class="c">%</span>
 <span class="c">%</span>
@@ -495,8 +498,7 @@
        at=<span class="p">{</span>(<span class="k">\varcbarx\linewidth</span>,<span class="k">\varcbary\linewidth</span>)<span class="p">}</span>, 
        width=<span class="k">\varcbarsizew\linewidth</span>,
        anchor=center, <span class="c">% The position of the colorbar defined with `at` is now</span>
-                      <span class="c">% based on the center of the figure rather than the left</span>
-                      <span class="c">% bottom corner</span>
+       <span class="c">% based on the center of the figure rather than the left bottom corner</span>
     <span class="p">}</span>,
     colorbar/width=<span class="k">\varcbarsizeh\linewidth</span>,
     colormap access=map,
@@ -507,7 +509,7 @@
   <span class="nt">\begin{luacode*}</span>
 
     -- Get the grid information based on the user input parameters in
-    -- config.lua and computed from the function `get<span class="p">_</span>grid(...)`
+    -- config.lua and computed from the function `get<span class="p">_</span>grid<span class="p">_</span>heatmaps(...)`
     -- loaded from utils.lua.
     grid = myutils.get<span class="p">_</span>grid(#myconfig.plots, myconfig.gridcols,
                             myconfig.relativesize)

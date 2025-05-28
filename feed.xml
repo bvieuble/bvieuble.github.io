@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="4.3.4">Jekyll</generator><link href="https://bvieuble.me/feed.xml" rel="self" type="application/atom+xml"/><link href="https://bvieuble.me/" rel="alternate" type="text/html" hreflang="en"/><updated>2025-05-27T14:31:11+00:00</updated><id>https://bvieuble.me/feed.xml</id><title type="html">blank</title><subtitle>A simple, whitespace theme for academics. Based on [*folio](https://github.com/bogoli/-folio) design. </subtitle><entry><title type="html">LaTeX tuto - Heatmaps grid with Lua</title><link href="https://bvieuble.me/blog/2025/tuto-heatmaps/" rel="alternate" type="text/html" title="LaTeX tuto - Heatmaps grid with Lua"/><published>2025-05-25T00:00:00+00:00</published><updated>2025-05-25T00:00:00+00:00</updated><id>https://bvieuble.me/blog/2025/tuto-heatmaps</id><content type="html" xml:base="https://bvieuble.me/blog/2025/tuto-heatmaps/"><![CDATA[<style>body{text-align:justify}</style> <div class="row"> <div class="col-sm mt-3 mt-md-0"> <figure> <picture> <source class="responsive-img-srcset" srcset="/assets/img/texfantasy/tuto_heatmaps_lua/tuto_heatmaps-480.webp 480w,/assets/img/texfantasy/tuto_heatmaps_lua/tuto_heatmaps-800.webp 800w,/assets/img/texfantasy/tuto_heatmaps_lua/tuto_heatmaps-1400.webp 1400w," type="image/webp" sizes="95vw"/> <img src="/assets/img/texfantasy/tuto_heatmaps_lua/tuto_heatmaps.png" class="img-fluid rounded z-depth-1" width="100%" height="auto" title="example image" loading="eager" onerror="this.onerror=null; $('.responsive-img-srcset').remove();"/> </picture> </figure> </div> </div> <h2 id="tutorial-use-lua-to-automate-a-grid-of-heatmaps">Tutorial: use Lua to automate a grid of heatmaps</h2> <p>Consider the above \(3\times 3\) grid of heatmaps, where each heatmap represents the number of iterations according to \(\kappa(A)\) and \(\kappa(M)\) for a given variant of a numerical algorithm (e.g., L-DSD, F-DBD, or R-SBS). A relatively naive way to draw this plot would be to write a dedicated PGFPlots script for each of the nine heatmaps. As you can imagine, this approach has some big limitations. More specifically:</p> <ul> <li>If you need to change the style of the heatmaps, you need to propagate the change nine times.</li> <li>The source code will be larger and larger the bigger the number of heatmaps is.</li> <li>The layout of the grid, the size of the grid, or the sources of the data cannot be changed simply.</li> </ul> <p>Ultimately, we wish to write the PGFPlots script defining the style of the heatmap once and apply it nine times. Doing so, we need to take into account that from one heatmap to another there can be slight variations of style; for instance, the labels of the x- and/or y-axis may or may not be diplayed depending on the position of the heatmap in the grid. In addition, we want a convenient way to set different options for generating the grid. Specifically, we want to be able to change the grid layout (not necessarily \(3\times 3\)), the heatmaps’ size, or the sources of the data through user input parameters.</p> <p><strong>Source code for the tuto:</strong> the full compilable sources of the tuto can be <a href="https://github.com/bvieuble/TeXFantasy/tree/main/heatmaps/fig1">downloaded from github</a>. One can compile it at the root of the directory with</p> <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>lualatex <span class="nt">--shell-escape</span> figure.tex
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="4.3.4">Jekyll</generator><link href="https://bvieuble.me/feed.xml" rel="self" type="application/atom+xml"/><link href="https://bvieuble.me/" rel="alternate" type="text/html" hreflang="en"/><updated>2025-05-28T01:45:05+00:00</updated><id>https://bvieuble.me/feed.xml</id><title type="html">blank</title><subtitle>A simple, whitespace theme for academics. Based on [*folio](https://github.com/bogoli/-folio) design. </subtitle><entry><title type="html">LaTeX tuto - Heatmaps grid with Lua</title><link href="https://bvieuble.me/blog/2025/tuto-heatmaps/" rel="alternate" type="text/html" title="LaTeX tuto - Heatmaps grid with Lua"/><published>2025-05-25T00:00:00+00:00</published><updated>2025-05-25T00:00:00+00:00</updated><id>https://bvieuble.me/blog/2025/tuto-heatmaps</id><content type="html" xml:base="https://bvieuble.me/blog/2025/tuto-heatmaps/"><![CDATA[<style>body{text-align:justify}</style> <div class="row"> <div class="col-sm mt-3 mt-md-0"> <figure> <picture> <source class="responsive-img-srcset" srcset="/assets/img/texfantasy/tuto_heatmaps_lua/tuto_heatmaps-480.webp 480w,/assets/img/texfantasy/tuto_heatmaps_lua/tuto_heatmaps-800.webp 800w,/assets/img/texfantasy/tuto_heatmaps_lua/tuto_heatmaps-1400.webp 1400w," type="image/webp" sizes="95vw"/> <img src="/assets/img/texfantasy/tuto_heatmaps_lua/tuto_heatmaps.png" class="img-fluid rounded z-depth-1" width="100%" height="auto" title="example image" loading="eager" onerror="this.onerror=null; $('.responsive-img-srcset').remove();"/> </picture> </figure> </div> </div> <h2 id="tutorial-use-lua-to-automate-a-grid-of-heatmaps">Tutorial: use Lua to automate a grid of heatmaps</h2> <p>Consider the above \(3\times 3\) grid of heatmaps, where each heatmap represents the number of iterations according to \(\kappa(A)\) and \(\kappa(M)\) for a given variant of a numerical algorithm (e.g., L-DSD, F-DBD, or R-SBS). A relatively naive way to draw this plot would be to write a dedicated PGFPlots script for each of the nine heatmaps. As you can imagine, this approach has some big limitations. More specifically:</p> <ul> <li>If you need to change the style of the heatmaps, you need to propagate the change nine times.</li> <li>The source code will be larger and larger the bigger the number of heatmaps is.</li> <li>The layout of the grid, the size of the grid, or the sources of the data cannot be changed simply.</li> </ul> <p>Ultimately, we wish to write the PGFPlots script defining the style of the heatmap once and apply it nine times. Doing so, we need to take into account that from one heatmap to another there can be slight variations of style; for instance, the labels of the x- and/or y-axis may or may not be diplayed depending on the position of the heatmap in the grid. In addition, we want a convenient way to set different options for generating the grid. Specifically, we want to be able to change the grid layout (not necessarily \(3\times 3\)), the heatmaps’ size, or the sources of the data through user input parameters.</p> <p><strong>Source code for the tuto:</strong> the full compilable sources of the tuto can be <a href="https://github.com/bvieuble/TeXFantasy/tree/main/heatmaps/fig1">downloaded from github</a>. One can compile it at the root of the directory with</p> <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>lualatex <span class="nt">--shell-escape</span> figure.tex
 </code></pre></div></div> <p>The option <code class="language-plaintext highlighter-rouge">--shell-escape</code> is optional and is only used to generate a .png alongside the .pdf.</p> <p><strong>Prerequisites for the tuto:</strong></p> <ul> <li>Basic notions of Lua. The Lua tutorial of <a href="https://www.tutorialspoint.com/lua/index.htm">tutorialspoint</a> is a good start.</li> <li>Good notions of PGFPlots, TikZ, and LaTeX. Specifically: drawing PGFPlots axis and knowing some of the basic axis options; have a basic understanding of the LaTeX macro system. One can check the <a href="https://mirror-hk.koddos.net/CTAN/graphics/pgf/contrib/pgfplots/doc/pgfplots.pdf">PGFPlots manual</a> if they encounter an axis option or a <code class="language-plaintext highlighter-rouge">pgfplots</code> command they don’t know.</li> <li>Basic notions of Lua code injections in .tex document. The <a href="https://www.alanshawn.com/tech/2020/06/20/luatex-intro.html">Alan Xiang’s Blog</a> provides a compact and good introduction.</li> </ul> <p><strong>Origin of the figure:</strong> the figure appears in the scientific article <a href="https://hal.science/hal-05071696/">Mixed precision strategies for preconditioned GMRES: a comprehensive analysis</a>.</p> <h3 id="lua-automation">Lua automation</h3> <p>Achieving the above goals requires a little more than <em>“simple LaTeX”</em> since we need some form of automation. Notably:</p> <ul> <li>Given a grid layout and the size of the heatmaps, we need to compute the position of each heatmap in the figure, accounting for the spacing between two heatmaps.</li> <li>We need to compute the position and size of the colorbar.</li> <li>We need to decide which heatmap will display tick labels on the x- and y-axes. In our figure, we display only x-axis labels for the heatmaps at the very bottom, and we display only the y-axis labels for the heatmaps at the very left of the grid. This allows us to save space and render a figure which is more compact and more suited for scientific journals.</li> </ul> <h5 style="text-align: center;"> <em> This requires some scripting! </em> </h5> <p><br/> While LaTeX already offers scripting capabilities through, for instance, the LaTeX3 commands and interfaces, or other utility commands found in various libraries such as the <code class="language-plaintext highlighter-rouge">\foreach</code> or <code class="language-plaintext highlighter-rouge">\pgfmathparse</code> of the package <code class="language-plaintext highlighter-rouge">pgfplots</code>, the syntax is arguably less intuitive and does not match the level of tools, efficiency, and simplicity that Lua can offer.</p> <h3 id="lua-based-config-file">Lua-based config file</h3> <p>We first tackle the problem of generating a grid of heatmaps given certain user input parameters. For this plot, we want the user to be able to set the following: the source of the data for each heatmap, the size of the heatmaps, and the number of heatmaps in one row of the grid.</p> <p>Naturally, it follows the question: how does the user provide values for these parameters? As for many things in LaTeX, there is no unanimous <em>“good answer”</em> on how to proceed, and different approaches are valid depending on the use cases and people’s preferences. I, your tutorial master and writer of this post, have a personal preference for defining those parameters in a separate Lua config file, which is simply a Lua module that will be loaded during the compilation. This has the advantage of clearly isolating the user inputs in one dedicated place, and to not have to be stored with the rest of the LaTeX source. In this tuto, we call this file <code class="language-plaintext highlighter-rouge">config.lua</code>, and you can find its content below:</p> <figure class="highlight"><pre><code class="language-lua" data-lang="lua"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
 2
 3
@@ -381,6 +381,7 @@
 165
 166
 167
+168
 </pre></td><td class="code"><pre><span class="c">% figure.tex</span>
 
 <span class="k">\documentclass</span><span class="na">[convert={outext=.png},border=10pt]</span><span class="p">{</span>standalone<span class="p">}</span>
@@ -391,6 +392,7 @@
 <span class="k">\usepackage</span><span class="p">{</span>luacode<span class="p">}</span>
 
 <span class="k">\definecolor</span><span class="p">{</span>fg<span class="p">}{</span>RGB<span class="p">}{</span>150,150,150<span class="p">}</span> <span class="c">% Foreground color</span>
+<span class="k">\pgfplotsset</span><span class="p">{</span>filter discard warning=false<span class="p">}</span>
 
 <span class="nt">\begin{document}</span>
 <span class="c">%</span>
@@ -415,12 +417,6 @@
 <span class="k">\newcommand</span><span class="p">{</span><span class="k">\heatmap</span><span class="p">}</span>
 <span class="p">{</span> <span class="c">%</span>
   <span class="nt">\begin{axis}</span>[
-    enlarge x limits=<span class="p">{</span>abs=0.5<span class="p">}</span>,
-    enlarge y limits=<span class="p">{</span>abs=0.<span class="p">}</span>,
-    grid=minor,
-    tick style=<span class="p">{</span>draw=none<span class="p">}</span>, <span class="c">% Hide the ticks</span>
-    minor grid style=<span class="p">{</span>fg,very thin<span class="p">}</span>,
-    axis on top,
     <span class="c">% x-axis style</span>
     minor xtick=<span class="p">{</span>1.5,2.5,...,16.5<span class="p">}</span>,
     x label style=<span class="p">{</span>font=<span class="k">\normalsize</span><span class="p">}</span>,
@@ -433,6 +429,7 @@
     <span class="p">}</span>,
     x tick label style=<span class="p">{</span>font=<span class="k">\small</span><span class="p">}</span>,
     xlabel=<span class="k">\varxlabel</span>, <span class="c">% Recover the x-axis label from macro</span>
+    enlarge x limits=<span class="p">{</span>abs=0.<span class="p">}</span>,
     <span class="c">% y-axis style</span>
     minor ytick=<span class="p">{</span>1.5,2.5,...,16.5<span class="p">}</span>,
     y label style=<span class="p">{</span>at=<span class="p">{</span>(axis description cs:-0.15,0.5)<span class="p">}</span>,rotate=0,font=<span class="k">\normalsize</span><span class="p">}</span>,
@@ -445,6 +442,12 @@
     <span class="p">}</span>,
     y tick label style=<span class="p">{</span>font=<span class="k">\small</span>,rotate=90<span class="p">}</span>,
     ylabel=<span class="k">\varylabel</span>, <span class="c">% Recover the y-axis label from macro</span>
+    enlarge y limits=<span class="p">{</span>abs=0.<span class="p">}</span>,
+    <span class="c">% Other style</span>
+    grid=minor,
+    tick style=<span class="p">{</span>draw=none<span class="p">}</span>, <span class="c">% Hide the ticks</span>
+    minor grid style=<span class="p">{</span>fg,very thin<span class="p">}</span>,
+    axis on top,
     mesh/ordering=y varies, 
     unbounded coords=jump,
     height=<span class="k">\varsize\linewidth</span>, <span class="c">% Set the size (height and width) from macro</span>
@@ -460,11 +463,11 @@
     at=<span class="p">{</span>(<span class="k">\varcoordx</span>,<span class="k">\varcoordy</span>)<span class="p">}</span>, <span class="c">% Recover the position of the heatmap from</span>
                                   <span class="c">% macro</span>
   ]<span class="c">%</span>
-  <span class="k">\addplot</span><span class="na">[matrix plot*,mesh/cols=17,point meta=explicit]</span>
+  <span class="k">\addplot</span><span class="na">[matrix plot*,mesh/rows=17,point meta=explicit]</span>
       table[meta expr=lg10(<span class="k">\thisrow</span><span class="p">{</span>it<span class="p">}</span>),col sep=comma]
       <span class="p">{</span><span class="k">\vardatait</span><span class="p">}</span>; <span class="c">% Obtain the data path from macro</span>
   <span class="k">\addplot</span><span class="na">[white,only marks,mark=*,mark size=0.75pt]</span> 
-      table[col sep=comma] <span class="p">{</span><span class="k">\vardatabounds</span><span class="p">}</span>;
+      table[col sep=comma] <span class="p">{</span><span class="k">\vardatabounds</span><span class="p">}</span>; <span class="c">% Obtain the data path from macro</span>
   <span class="nt">\end{axis}</span>
 <span class="p">}</span><span class="c">%</span>
 <span class="c">%</span>
@@ -490,8 +493,7 @@
        at=<span class="p">{</span>(<span class="k">\varcbarx\linewidth</span>,<span class="k">\varcbary\linewidth</span>)<span class="p">}</span>, 
        width=<span class="k">\varcbarsizew\linewidth</span>,
        anchor=center, <span class="c">% The position of the colorbar defined with `at` is now</span>
-                      <span class="c">% based on the center of the figure rather than the left</span>
-                      <span class="c">% bottom corner</span>
+       <span class="c">% based on the center of the figure rather than the left bottom corner</span>
     <span class="p">}</span>,
     colorbar/width=<span class="k">\varcbarsizeh\linewidth</span>,
     colormap access=map,
@@ -502,7 +504,7 @@
   <span class="nt">\begin{luacode*}</span>
 
     -- Get the grid information based on the user input parameters in
-    -- config.lua and computed from the function `get<span class="p">_</span>grid(...)`
+    -- config.lua and computed from the function `get<span class="p">_</span>grid<span class="p">_</span>heatmaps(...)`
     -- loaded from utils.lua.
     grid = myutils.get<span class="p">_</span>grid(#myconfig.plots, myconfig.gridcols,
                             myconfig.relativesize)
