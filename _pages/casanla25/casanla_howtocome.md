@@ -11,26 +11,26 @@ Zhongguancun East Road, Haidian Beijing China, 100190.
 
 Closest subway station: Zhichunlu (line 10).
 
-```geojson
-{
-  "type": "FeatureCollection",
-  "features": [
-    {
-      "type": "Feature",
-      "properties": {},
-      "geometry": {
-        "coordinates": [
-          116.3259971722868,
-          39.98092190406621
-        ],
-        "type": "Point"
-      }
-    }
-  ]
-}
-```
+<!-- ```geojson -->
+<!-- { -->
+<!--   "type": "FeatureCollection", -->
+<!--   "features": [ -->
+<!--     { -->
+<!--       "type": "Feature", -->
+<!--       "properties": {}, -->
+<!--       "geometry": { -->
+<!--         "coordinates": [ -->
+<!--           116.3259971722868, -->
+<!--           39.98092190406621 -->
+<!--         ], -->
+<!--         "type": "Point" -->
+<!--       } -->
+<!--     } -->
+<!--   ] -->
+<!-- } -->
+<!-- ``` -->
 
-<br>
+<!-- <br> -->
 
 ## Our sponsors
 
