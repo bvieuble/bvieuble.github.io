@@ -3,8 +3,8 @@ layout: post
 title: Academic visit in China (3/3)
 date: 2025-02-10 00:01:00
 description: Everything you need to know about preparing your short academic visit in China. Part 3/3 - Once arrived.
-tags: china travel
-categories: chinalife
+tags: china travel academia
+categories: china-academic-visit
 thumbnail: assets/img/blog/palace.jpg
 ---
 

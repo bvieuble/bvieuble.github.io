@@ -447,8 +447,8 @@ document (e.g., article, beamer, book, etc.).
 \end{document}
 {% endhighlight %}
 
-<div style="text-align: center;"> <b> Let's describe the file and its logic 
-piece by piece, from top to bottom. </b> </div>
+<h5 style="text-align: center;"> <em>  Let's describe the file and its logic 
+piece by piece, from top to bottom. </em> </h5>
 <br>
 After the document class declaration, we load the different useful packages to 
 compile the figure. The dependencies are relatively lightweight; we 
