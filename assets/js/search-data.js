@@ -44,7 +44,18 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/casanla/";
           },
-        },{id: "post-latex-tuto-heatmaps-grid-with-lua",
+        },{id: "post-coming-to-live-in-china-trash-your-cloud-services-and-get-yourself-a-nas",
+      
+        title: "Coming to live in China, trash your cloud services and get yourself a...",
+      
+      description: "When coming to live in China, you won&#39;t be able to rely anymore on many Western services that were maybe essential to your workflow and daily life. That&#39;s the perfect opportunity to take back some of your data under your control by self-hosting!",
+      section: "Posts",
+      handler: () => {
+        
+          window.location.href = "/blog/2025/china-life-1/";
+        
+      },
+    },{id: "post-latex-tuto-heatmaps-grid-with-lua",
       
         title: "LaTeX tuto - Heatmaps grid with Lua",
       
@@ -173,6 +184,12 @@ ninja.data = [{
           description: "",
           section: "News",},{id: "news-it-was-my-honor-to-give-a-talk-at-the-xiangtan-summer-school-2025-edition-organized-by-prof-juan-zhang-the-title-of-my-talk-was-mixed-precision-iterative-refinement-a-brief-historical-journey",
           title: 'It was my honor to give a talk at the Xiangtan summer school...',
+          description: "",
+          section: "News",},{id: "news-many-thanks-to-the-organizers-of-the-15th-international-conference-on-numerical-optimization-and-numerical-linear-algebra-for-giving-me-the-opportunity-to-present-my-work-in-a-contributed-talk-the-title-of-my-presentation-was-mixed-precision-strategies-for-preconditioned-gmres",
+          title: 'Many thanks to the organizers of the 15th International Conference on Numerical Optimization...',
+          description: "",
+          section: "News",},{id: "news-new-blog-post-it-s-called-coming-to-live-in-china-trash-your-cloud-services-and-get-yourself-a-nas-because-many-western-cloud-storage-services-do-not-operate-in-china-i-explain-how-you-can-easily-replace-those-services-with-a-self-hosted-nas-it-is-the-first-post-of-my-series-china-life-where-i-share-some-tips-to-fellow-expats-coming-to-live-in-china-don-t-hesitate-to-check-it-out-here",
+          title: 'NEW BLOG POST!!! It’s called “Coming to live in China, trash your cloud...',
           description: "",
           section: "News",},{id: "texfantasy-plot-gif",
           title: 'Plot (gif)',
