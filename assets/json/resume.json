@@ -93,6 +93,13 @@
   ],
   "awards": [
     {
+      "title": "International Scientists Project Fund",
+      "date": "2025-09",
+      "awarder": "Beijing Natural Science Foundation",
+      "url": "https://kw.beijing.gov.cn/",
+      "summary": "Grant of 200,000RMB awarded by the Beijing Natural Science Foundation for my project 'On improving the refinement of inaccurate linear solvers for the solution of real-life large-scale problems'."
+    },
+    {
       "title": "Research Fund for International Young Scientists",
       "date": "2024-09",
       "awarder": "Natural Science Foundation of China",
