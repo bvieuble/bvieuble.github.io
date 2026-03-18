@@ -27,9 +27,9 @@ arrived. For simplicity of exposition, I assume that you are entering China
 through one of the country's major international airports. I imagine the 
 process to be relatively similar when crossing the border by boat, train, or
 car. If you missed or forgot about the first two parts of the guide, you can 
-check them out in [Continue the Guide](#continue-the-guide). You can also print
+check them out [at the bottom of this page](#continue-the-guide). You can also print
 and review your [TODO list](https://bvieuble.me/blog/2025/chinavisit4) to
-guarantee you missed nothing.
+ensure you missed nothing.
 
 ## Arrival and immigration
 
@@ -50,9 +50,11 @@ when you will face the border agent.
 {: .block-danger }
 
 Importantly, you will need to fill an **arrival card** before entering China,
-which you will hand to the border agent. The card is generally yellow or blue
-and distributed on the plane or, if not, also available at the airport on 
-arrival. The card asks for basic information such as name, passport number, 
+which you will hand to the border agent. You have the option to fill out the 
+card online on the 
+[National Immigration Administration Government Service Platform](https://s.nia.gov.cn/ArrivalCardFillingPC/entry-registation-home),
+or get a physical form available at the airport on arrival. The card asks for 
+basic information such as name, passport number, 
 visa number, flight number, expected date of departure, etc. Some of the 
 demanded information is worse preparing in advance:
   - You will have to tick the **reason of stay** amongst various choices. Those
@@ -85,9 +87,10 @@ or carry-on luggage.
 
 > ##### ✅ Have a pen in your carry-on luggage
 >
-> There aren't many pens available at the airport to complete the arrival card. If
-> you don't want to wait and reach the queue as quickly as possible, bring a 
-> pen in your carry-on and fill out the card in advance while on the plane.
+> There aren't many pens available at the airport to fill out a physical arrival card.
+> If you have not completed the card on the online platform and don't want to 
+> wait and reach the queue as quickly as possible, bring a pen in your carry-on
+> and fill out the physical form as soon as you get a copy.
 {: .block-tip }
 
 
@@ -267,9 +270,15 @@ Note that the ticket price varies according to the distance. If you use Alipay o
 
 ### Hotel
 
-Many hotels in major Chinese cities can be booked through Western services such as [Booking.com](https://www.booking.com) or 
-[Trip.com](https://www.trip.com/). You can also use [Alipay](http://bvieuble.me/blog/2025/chinavisit2/#alipay) to book your hotel; you can check out the video tutorial [Plane, train, and hotel](https://www.youtube.com/watch?v=BHz5M9Cuyfg) to learn how to do so.
-If you use a Chinese service to book your hotel or someone is booking the hotel for you, ensure that the hotel can accept foreigners. Don't worry. It is not because certain businesses despise foreigners, but rather because they don't know the procedure to register you. 
+Many hotels in major Chinese cities can be booked through Western services such
+as [Booking.com](https://www.booking.com) or [Trip.com](https://www.trip.com/).
+You can also use [Alipay](http://bvieuble.me/blog/2025/chinavisit2/#alipay) to 
+book your hotel; you can check out the video tutorial
+[Plane, train, and hotel](https://www.youtube.com/watch?v=BHz5M9Cuyfg) to learn
+how to do so. If you use a Chinese service to book your hotel or someone is
+booking the hotel for you, ensure that the hotel can accept foreigners. Don't 
+worry. It is not because certain businesses despise foreigners, but rather 
+because they don't know the procedure to register you. 
 
 Every hotel must proceed to your registration when you check in, which is 
 basically about declaring to the local police station that you are staying at 
@@ -300,6 +309,7 @@ fact-checking this guide and providing me with corrections!
 
   
   - Customs declaration: [Customs Clearance Guidelines](http://english.customs.gov.cn/Statics/88707c1e-aa4e-40ca-a968-bdbdbb565e4f.html)
+  - Online arrival card: [National Immigration Administration Government Service Platform](https://s.nia.gov.cn/ArrivalCardFillingPC/entry-registation-home)
   - Arriving at the airport: [Ruqin China Travel - Beijing airport](https://ruqintravel.com/survival-guide/beijing-airport/)
   - Taking the taxi: [Ruqin China Travel - Taxi](https://ruqintravel.com/china-destination-guides/beijing-taxi-guide/)
   - Ride the subway: [The Beijinger](https://www.thebeijinger.com/blog/2024/08/02/welcome-beijing-how-ride-subway)

@@ -14,20 +14,20 @@ thumbnail: assets/img/blog/temple-heaven.jpg
 
 ## On the importance of being prepared before the trip
 
-Apart from cultural and language differences, mainland Chinese society uses and 
-relies on tools that are critically different from what you may be used to. From 
-paying to ordering at the restaurant, including taking public transport and 
-browsing the internet, you are here for quite an adventure. Being aware and 
-prepared for these differences is all the more important because you are coming
-for work. Hence, I imagine you'd prefer being efficient on day one rather than
-troubleshooting your internet access for hours and hours to come. 
+Apart from cultural and language differences, mainland Chinese society
+relies on day-to-day tools that are critically different from what you may be 
+used to. From paying to ordering at the restaurant, including taking public 
+transport and browsing the internet, you are here for quite an adventure. Being
+aware and prepared for these differences is all the more important because you
+are coming for work. Hence, I imagine you'd prefer being efficient on day one 
+rather than troubleshooting your internet access for hours and hours to come. 
 
 Fortunately, after reading part two of the *"Academic visit in China"* guide, 
 you'll be fully ready and equipped to carry out your work in this new 
 environment and navigate Chinese cities (almost) as a Chinese.
 If you are already a veteran of the Chinese life-style and can blend like a
 chameleon into Chinese cities, you can go check out the other parts of the guide
-listed in [Continue the Guide](#continue-the-guide) and print your [TODO
+listed [at the bottom of this page](#continue-the-guide) and print your [TODO
 list](https://bvieuble.me/blog/2025/chinavisit4).
 
 ## Internet in China

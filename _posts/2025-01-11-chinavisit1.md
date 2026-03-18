@@ -19,7 +19,9 @@ talk at a Chinese institute or university, to give a class, to attend a
 conference or a workshop? You wish to accept but wonder if you need to apply 
 for a visa? And if so, what documents you need for the application? How to 
 organize your trip? What you should know before going? How will you sustain 
-yourself when you're there? Say no more, you are in the right place!
+yourself when you're there? 
+
+<h5 style="text-align: center;"> <em> Say no more, you are at the right place! </em> </h5>
 
 First things first, if you are dealing with a renowned Chinese academic 
 institute, you can sit back and relax, you are in good hands! They know their 
@@ -30,22 +32,27 @@ accurate instructions and information than this simple guide. Yet, as I was
 once in your exact situation, I might still be able to provide you with some 
 good tips.
 
-If you wish to keep up with me, we will cover three main topics which should
+If you wish to keep reading my web pamphlet, we will cover three main topics which should
 help you get the best experience possible out of your academic visit in China. 
 The first part of my guide, which you are now reading,
 covers your right of entry into mainland China. This 
 includes your eligibility for visa exemption and, if not eligible, the 
 procedure to apply for a visa for the purpose of an academic visit. If you are
 already up-to-date on visa matters, you can go check out the next parts of the
-guide listed in [Continue the Guide](#continue-the-guide) and print your [TODO
+guide listed [at the bottom of this page](#continue-the-guide) and print your [TODO
 list](https://bvieuble.me/blog/2025/chinavisit4).
 
 ## Visa or not visa?
 
 Ultimately, if you read this post, you are likely NOT to hold a Chinese
-passport or a Chinese residence permit. Hence, you need to carefully check the
+passport or a Chinese residence permit. Therefore, you need to carefully check the
 rules that apply to you to enter mainland China. Regulations in the matter have
-highly fluctuated these last few years, most often in the direction of leveraging or simplifying the requirements. Hence, at the time you read this post, certain information I present might be incomplete or wrong. I therefore strongly recommend checking the regulations presented on the official websites of your government or the websites of the Chinese embassies, consulates, or visa application centers in your country.
+highly fluctuated these last few years, most often in the direction of 
+leveraging or simplifying the requirements. Hence, at the time you read this 
+post, certain information I present might be incomplete or wrong. I therefore 
+strongly recommend checking the regulations presented on the official websites
+of your government or the websites of the Chinese embassies, consulates, or 
+visa application centers in your country.
 
 ### Visa exemption
 
@@ -64,7 +71,8 @@ government](https://www.mfa.gov.cn/wjbzwfwpt/kzx/tzgg/202411/t20241130_11535783.
 >
 > The exemptions generally cover entries to mainland China for the purpose of
 > business, tourism, family or friends visits, exchange, and transit. Short 
-> academic visits fall within the "exchange" classification.
+> academic visits fall within the "exchange" classification and are eligible
+> for the visa-free policy.
 {: .block-tip }
 
 Be careful, being exempt from holding a visa does not mean you can arrive at 
@@ -79,31 +87,21 @@ visit, it falls down to the following documents:
   - Reservation of **airplane tickets**, especially the flight out of China
     proving that you are scheduled to leave the Chinese territory.
   - Reservations of **accommodation** (e.g., hotel reservations). If you are 
-    not staying in a hotel, the official recommendations I could 
-    find are slightly vague. If your academic host provides you with other form 
-    of accommodation (e.g., the University owns flats dedicated to host 
-    visitors and staffs), I think the host should mention it on the invitation letter 
-    and maybe provide you with a filled 
-    [invitation form](https://bio.visaforchina.cn/MAC3_EN/qianzhengyewu/jichuzhishi/changjianwenti/230221174293008384.html).
-    <!-- with another document certifying that they are providing you  -->
-    <!-- with an accommodation.  -->
-  If you stay at a 
-    relative or friend's place, ask them to fill an 
-    [invitation form](https://bio.visaforchina.cn/MAC3_EN/qianzhengyewu/jichuzhishi/changjianwenti/230221174293008384.html) which
-    contains various information including dates of stay, address, and Chinese
-    ID number. Beware that if you
-    are not staying in a hotel, you will have to register at the police station
-    within 24 hours; more is said about this in section [Hotel](https://bvieuble.me/blog/2025/chinavisit3/#hotel).
+    not staying in a hotel, the official recommendations I could find are vague. 
+    If your academic host provides you with another form of accommodation (e.g.,
+    the university owns flats dedicated to hosting visitors and staff), I think 
+    the host should mention it on the invitation letter and maybe provide you 
+    with a filled [invitation form](https://bio.visaforchina.cn/MAC3_EN/qianzhengyewu/jichuzhishi/changjianwenti/230221174293008384.html). 
+    If you stay at a relative or friend's place, ask them to fill out an
+    [invitation form](https://bio.visaforchina.cn/MAC3_EN/qianzhengyewu/jichuzhishi/changjianwenti/230221174293008384.html) 
+    which contains various information, including dates of stay, address, and 
+    Chinese ID number. Beware that if you are not staying in a hotel, you will 
+    have to register at the police station within 24 hours; more is said about 
+    this in section [Hotel](https://bvieuble.me/blog/2025/chinavisit3/#hotel).
 
-It is strongly recommended that you have everything printed and ready to be presented at
-the border. Note that you may not be asked to show all these 
-documents; this is up to the judgment of the border agent.
-If you wish, you can also complete this list with other documents that might 
-serve as proof that you have an on-going working contract as an academic
-or a researcher outside of China, that you are covered by a travel insurance,
-that you have enough money to sustain yourself, etc. You will most likely not
-be asked to provide one of these, yet, if this is not too inconvenient to 
-obtain, it certainly won't hurt.
+It is strongly recommended that you have everything printed and ready to be presented at the border. Note that you may not even be asked to show these documents; this is up to the judgment of the border agent. As a matter of fact, most of the overseas colleagues I invited that were eligible for a visa-free entry only needed to present their passport.
+
+ If you wish, you can also complete this list with other documents that might serve as proof that you have an ongoing working contract as an academic or a researcher outside of China, that you are covered by a travel insurance, that you have enough money to sustain yourself, etc. You will most likely not be asked to provide one of these. Yet, if this is not too inconvenient to obtain, it certainly won't hurt.
 
 
 > ##### ⚠️ The PhD student case
@@ -115,25 +113,27 @@ obtain, it certainly won't hurt.
 
 There are different kinds of visas you can apply for to enter mainland China, and all have different requirements. The type of visa you need depends on the purpose and length of your visit. If you are coming to China for a short academic trip (e.g., invited to give a talk at a seminar, visiting a scholar for collaboration, attending conferences or workshops, etc.), you likely need an F visa. You can find more detailed information about F visa on [Travel China Guide](https://www.travelchinaguide.com/embassy/visa/f-visa.htm) for instance. In addition, a step-by-step visa application guide can be found on [Travel China](https://travelchina.guide/visa/application).
 
-In short, you should be asked to provide the following documents to apply for an F visa:
+To apply for an F visa, you may be required to provide the following documents:
   - **Passport** with two blank visa pages, plus a photocopy of the passport's bio page.
   - A **Visa Application Form** which has to be filled out online on the [Chinese visa Application Center](https://bio.visaforchina.cn/) website and which should be printed and signed. Note that you must pick the country/city where you wish to apply for the visa at this step.
   - Passport-sized **photo** in color and with a white background.
   - An **official invitation letter** from your host. A scanned and printed version of the letter is generally acceptable. Sometimes, the invitation mentions the city where you must apply for the visa. For this reason, let your host know early in which city you would like to submit your application. 
   - A proof of legal residence if you are applying in a country other than your home country (e.g., a visa or residence permit).
 
-Once you have filled and validated the application on the [Chinese visa 
+Once you have filled out and validated the application on the [Chinese Visa 
 Application Center](https://bio.visaforchina.cn/) website, you must bring all 
 the required documents to the visa application center of the city of your 
 choice. From my understanding, appointments are no longer required in many visa
 centers, and you can visit the center during working hours to submit the 
 application at the time of your convenience. You will also have to pay the visa
-fee at the center while applying.
+fee at the center while applying. 
 
-Again, this is a very important business and you don't want to mess it up, so 
-don't take my words for granted and check carefully the requirements that apply
-to you on the [Chinese visa Application Center](https://bio.visaforchina.cn/) 
-website. After you have entered your country and city of application on the 
+I cannot emphasize enough that the above should only be understood as a 
+general rule of thumb of what your visa procedure may look like. Ultimately,
+the visa process and requirements may vary from country to country, so that **you 
+should carefully check the requirements that apply to you** on the
+[Chinese Visa Application Center](https://bio.visaforchina.cn/) website.
+After you have entered your country and city of application on the 
 aforementioned website, you can go to the *Visa Category* link to learn more 
 about the requirements and documents you need to prepare.
 
